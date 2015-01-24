@@ -1,6 +1,7 @@
 # Tema ArteSol
 
-Base da documentação do tema da ArteSol. Aqui entra a descrição se ele foi feito com base no Odin ou no _s por exemplo.
+Base da documentação do tema WordPress da ArteSol. 
+O tema está sendo desenvolvido principalmente com o Odin Framework e Advanced Custom Fields.
 
 # Conteúdo do Repositório
 
