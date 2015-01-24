@@ -44,8 +44,54 @@
 				
 				<div class="icon-search"></div><!-- icon-search -->
 				<div class="icon-menu"></div><!-- icon-menu -->
-				
+
 			</div><!-- logo -->
+
+			<?php if ( $background1 = get_field( 'background_destaque_1', 'options' ) ) : ?>
+
+				<div style="background: url(' <?php echo $background1; ?>' ) center center no-repeat" class="destaque-1 col-sm-4">
+					
+					<?php if ( $url1 = get_field( 'link_destaque_1', 'options' ) ) : ?>
+						<a class="link" href="<?php echo $url1; ?>">
+					<?php endif; ?>
+
+					<?php if ( $title1 = get_field( 'titulo_destaque_1', 'options' ) ) : ?>
+						<h2><?php echo $title1; ?></h2>
+					<?php endif; ?>
+					<?php if ( $subtitle1 = get_field( 'sub_titulo_destaque_1', 'options' ) ) : ?>
+						<h3><?php echo $subtitle1; ?></h3>
+					<?php endif; ?>
+
+					<?php if ( $url1 = get_field( 'link_destaque_1', 'options' ) ) : ?>
+						</a>	
+					<?php endif; ?>
+					
+				</div><!-- destaque-1 -->
+
+			<?php endif; ?>
+
+			<?php if ( $background2 = get_field( 'background_destaque_2', 'options' ) ) : ?>
+
+				<div style="background: url(' <?php echo $background2; ?>' ) center center no-repeat" class="destaque-2 col-sm-4">
+					
+					<?php if ( $url2 = get_field( 'link_destaque_2', 'options' ) ) : ?>
+						<a class="link" href="<?php echo $url2; ?>">
+					<?php endif; ?>
+
+					<?php if ( $title2 = get_field( 'titulo_destaque_2', 'options' ) ) : ?>
+						<h2><?php echo $title2; ?></h2>
+					<?php endif; ?>
+					<?php if ( $subtitle2 = get_field( 'sub_titulo_destaque_2', 'options' ) ) : ?>
+						<h3><?php echo $subtitle2; ?></h3>
+					<?php endif; ?>
+
+					<?php if ( $url2 = get_field( 'link_destaque_2', 'options' ) ) : ?>
+						</a>	
+					<?php endif; ?>
+					
+				</div><!-- destaque-2 -->
+
+			<?php endif; ?>
 
 			<div class="clear"></div>
 
