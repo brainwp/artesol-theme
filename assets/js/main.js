@@ -18,4 +18,17 @@ jQuery(document).ready(function($) {
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
 
+	$('#menu-click').on('click',function(e){
+		var open = $(this).attr('data-open');
+		if(open == 'false'){
+			$('#menu-top').fadeIn('medium');
+			$(this).attr('data-open','true');
+		}
+		else{
+			$('#menu-top').fadeOut('medium');
+			$(this).attr('data-open','false');
+		}
+
+	});
 });
+

@@ -41,16 +41,29 @@
 					<a href="<?php echo esc_url( home_url() ); ?>/apresentacao" class="link">
 					</a><!-- link -->
 				<?php endif; ?>
-				
+
 				<div class="icon-search"></div><!-- icon-search -->
-				<div class="icon-menu"></div><!-- icon-menu -->
+				<div class="icon-menu" id="menu-click" data-open="false"></div><!-- icon-menu -->
 
 			</div><!-- logo -->
-
+			<nav id="menu-top">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'main-menu',
+						'depth'          => 2,
+						'container'      => false,
+						'menu_class'     => 'nav navbar-nav',
+						'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+						'walker'         => new Odin_Bootstrap_Nav_Walker()
+						)
+				);
+				?>
+			</nav><!-- #menu -->
 			<?php if ( $background1 = get_field( 'background_destaque_1', 'options' ) ) : ?>
 
 				<div style="background: url(' <?php echo $background1; ?>' ) center center no-repeat" class="destaque-1 col-sm-4">
-					
+
 					<?php if ( $url1 = get_field( 'link_destaque_1', 'options' ) ) : ?>
 						<a class="link" href="<?php echo $url1; ?>">
 					<?php endif; ?>
@@ -63,9 +76,9 @@
 					<?php endif; ?>
 
 					<?php if ( $url1 = get_field( 'link_destaque_1', 'options' ) ) : ?>
-						</a>	
+						</a>
 					<?php endif; ?>
-					
+
 				</div><!-- destaque-1 -->
 
 			<?php endif; ?>
@@ -73,7 +86,7 @@
 			<?php if ( $background2 = get_field( 'background_destaque_2', 'options' ) ) : ?>
 
 				<div style="background: url(' <?php echo $background2; ?>' ) center center no-repeat" class="destaque-2 col-sm-4">
-					
+
 					<?php if ( $url2 = get_field( 'link_destaque_2', 'options' ) ) : ?>
 						<a class="link" href="<?php echo $url2; ?>">
 					<?php endif; ?>
@@ -86,9 +99,9 @@
 					<?php endif; ?>
 
 					<?php if ( $url2 = get_field( 'link_destaque_2', 'options' ) ) : ?>
-						</a>	
+						</a>
 					<?php endif; ?>
-					
+
 				</div><!-- destaque-2 -->
 
 			<?php endif; ?>
