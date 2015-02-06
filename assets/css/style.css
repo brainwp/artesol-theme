@@ -122,4 +122,16 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 #menu-top a{
 	background:transparent !important;
 	color:white !important;
+
+}
+@media only screen and (max-width:600px) {
+	#menu-top>ul{
+		display:block;
+		width:100%;
+		position:relative;
+		margin:0 !important;
+	}
+	#menu-top li, #menu-top a{
+		text-align: center;
+	}
 }
