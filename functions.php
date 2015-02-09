@@ -206,7 +206,13 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
-
+	wp_enqueue_script('jquery');
+	wp_enqueue_script(
+		'brasa_slider_jqueryui_js',
+			$template_url . 'assets/js/slick.min.js',
+			array('jquery')
+		);
+	wp_enqueue_style( 'brasa_slider_css_frontend', $template_url . 'assets/css/slick.css' );
 	// Grunt main file with Bootstrap, FitVids and others libs.
 	// wp_enqueue_script( 'odin-main-min', $template_url . '/assets/js/main.min.js', array(), null, true );
 
