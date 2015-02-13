@@ -272,7 +272,7 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 	background:url('../images/slider-home-mult-bg.jpg') repeat !important;
 }
 /*footer*/
-#footer nav, #footer nav ul, #footer .col-md-6.pull-left{
+#footer nav, #footer nav ul, #footer .col-md-6.pull-left, #footer .endereco{
 	padding:0;
 	margin:0;
 	float:left;
@@ -292,4 +292,98 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 #footer h3{
 	font-family: 'Gotham-Bold';
 	color:#efb310;
+}
+#footer .endereco{
+	font-family: 'Istok Web', sans-serif;
+	color:white;
+	font-size:16px;
+}
+#footer .parceiro-iguatemi{
+	color:white;
+	font-size:26px;
+	font-family: 'Gotham-Bold';
+	text-align: right;
+	display:inline-block;
+	float:right;
+	width:100%;
+	text-transform: uppercase;
+}
+#footer .pull-right h3{
+	text-align: right;
+	clear:both;
+	margin-bottom:5px;
+}
+.release-btn{
+	color:white !important;
+	font-size:12px;
+	font-family: 'Gotham-Bold';
+	font-weight: bold;
+	background: #efb310;
+	padding:5px;
+	border-radius:7px;
+	display:inline-block;
+	text-decoration: none !important;
+	text-transform: uppercase;
+}
+#footer .imprensa-link{
+	color:white;
+	font-size:16px;
+	font-family: 'Gotham-Bold';
+	text-align: right;
+	display:inline-block;
+	float:right;
+	width:100%;
+	text-transform: uppercase;
+}
+#footer .separator{
+	width:100%;
+	height:10px;
+	clear:both;
+}
+#footer .end-footer{
+	margin-top:10px;
+}
+#footer .end-footer, #footer .end-footer .col-md-12{
+	margin:0;
+	padding:0;
+}
+#footer .end-footer .social span, #footer .end-footer .social a{
+	font-size:32px;
+	color:white !important;
+	text-decoration: none !important;
+	border:transparent !important;
+}
+#footer .end-footer .social a{
+	margin-left:10px;
+}
+#footer .end-footer .social a.cc-icon{
+	background:url('../images/cc-icon.png') no-repeat;
+	background-size:cover;
+	width:32px;
+	height:32px;
+	display:inline-block;
+}
+#footer .end-footer .social h4{
+	font-family: 'Istok Web', sans-serif;
+	color:white;
+	font-size:16px;
+	font-style: italic;
+	display:inline;
+}
+.shape {
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-bottom: 70px solid red;
+	position: relative;
+	top: -50px;
+}
+.shape:after {
+	content: '';
+	position: absolute;
+	left: -50px; top: 70px;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top: 70px solid red;
 }
