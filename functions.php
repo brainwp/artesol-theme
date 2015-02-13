@@ -62,7 +62,10 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 */
 		register_nav_menus(
 			array(
-				'main-menu' => __( 'Main Menu', 'odin' )
+				'main-menu' => __( 'Main Menu', 'odin' ),
+				'footer-menu-1' => __( 'Footer Menu 1', 'odin' ),
+				'footer-menu-2' => __( 'Footer Menu 2', 'odin' ),
+				'footer-menu-3' => __( 'Footer Menu 3', 'odin' ),
 			)
 		);
 
@@ -192,6 +195,7 @@ function odin_enqueue_scripts() {
 	$template_url = get_template_directory_uri();
 
 	// Loads Odin main stylesheet.
+	wp_enqueue_style( 'istok-font-css', 'http://fonts.googleapis.com/css?family=Istok+Web', array(), null, 'all' );
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
 	// jQuery.

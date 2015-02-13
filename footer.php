@@ -10,15 +10,48 @@
  */
 ?>
 
-		</div><!-- #main -->
-
-		<footer id="footer" role="contentinfo">
-			<div class="site-info">
-				<span>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Odin</a> forces and <a href="%s" rel="nofollow" target="_blank">WordPress</a>.', 'odin' ), 'http://wpod.in/', 'http://wordpress.org/' ); ?></span>
-			</div><!-- .site-info -->
-		</footer><!-- #footer -->
+</div><!-- #main -->
+</div><!-- .container -->
+<footer id="footer" role="contentinfo">
+	<div class="container">
+		<div class="col-md-6 pull-left">
+			<h3><?php _e('Mapa do site','odin'); ?></h3>
+			<nav class="col-md-4 pull-left">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'footer-menu-1',
+						'depth'          => 1,
+						'container'      => false,
+					)
+				);
+				?>
+			</nav><!-- .col-md-2 pull-left -->
+			<nav class="col-md-4 pull-left">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'footer-menu-2',
+						'depth'          => 1,
+						'container'      => false,
+					)
+				);
+				?>
+			</nav><!-- .col-md-2 pull-left -->
+			<nav class="col-md-4 pull-left">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'footer-menu-3',
+						'depth'          => 1,
+						'container'      => false,
+					)
+				);
+				?>
+			</nav><!-- .col-md-2 pull-left -->
+		</div><!-- .col-md-6 pull-left -->
 	</div><!-- .container -->
-
-	<?php wp_footer(); ?>
+</footer><!-- #footer -->
+<?php wp_footer(); ?>
 </body>
 </html>
