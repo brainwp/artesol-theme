@@ -47,7 +47,13 @@ get_header( 'home' ); ?>
 				</div>
 
 				<div class="col-md-4">
-					Projetos
+
+					<a href="" class="projetos">
+						<div class="icon"></div>
+						<h3>Projetos da Artesol</h3>
+						<p>Conheça todos os projetos desenvolvidos pela Artesol e também os ainda em captação</p>
+					</a><!-- projetos -->
+
 				</div>
 			</div><!-- boxes -->
 
