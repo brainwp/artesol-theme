@@ -33,12 +33,19 @@ get_header( 'home' ); ?>
 
 						<a class="btn-artesol bg-azul-artesol" href="">Veja a Agenda</a>
 
-					</div>
+					</div><!-- agenda -->
 
 				</div>
+
 				<div class="col-md-4">
-					Aceleração Social
+
+					<a href="" class="aceleracao">
+						<div class="icon"></div>
+						<h3>Conheça o trabalho de aceleração social da Artesol</h3>
+					</a><!-- aceleracao -->
+
 				</div>
+
 				<div class="col-md-4">
 					Projetos
 				</div>
