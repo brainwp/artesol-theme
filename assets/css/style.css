@@ -225,3 +225,9 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 	padding: 0 15px;
 	text-align: center;
 }
+
+/* Footer */
+.footer-full {
+	background: url('../images/bg-footer.jpg') center center no-repeat transparent;
+	width: 100%;
+}
