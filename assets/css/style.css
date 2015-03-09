@@ -349,7 +349,11 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 	list-style: none !important;
 	color:white;
 	text-decoration: none !important;
-	font-size:18px;
+	font-size:16px;
+	line-height: 1.6em;
+}
+#footer nav {
+	padding-right: 10px;
 }
 #footer{
 	background:url('../images/bg-footer.jpg') no-repeat;
