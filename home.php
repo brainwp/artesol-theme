@@ -50,13 +50,44 @@ get_header( 'home' ); ?>
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 			<div class="boxes">
 				<div class="col-md-4">
-					Serviços
+
+					<div class="servicos">
+
+						<h3>Serviços</h3>
+						<span>Seja bem vind@ ao site da ArteSol, se está procurando nossos serviços.</span>
+
+						<a class="btn-artesol bg-marrom-artesol" href="">Clique Aqui</a>
+
+					</div><!-- servicos -->
+
+					<div class="agenda">
+						
+						<h3>Agenda</h3>
+						<span>Participamos e realizamos de diversos eventos e feiras</span>
+
+						<a class="btn-artesol bg-azul-artesol" href="">Veja a Agenda</a>
+
+					</div><!-- agenda -->
+
 				</div>
+
 				<div class="col-md-4">
-					Aceleração Social
+
+					<a href="" class="aceleracao">
+						<div class="icon"></div>
+						<h3>Conheça o trabalho de aceleração social da Artesol</h3>
+					</a><!-- aceleracao -->
+
 				</div>
+
 				<div class="col-md-4">
-					Projetos
+
+					<a href="" class="projetos">
+						<div class="icon"></div>
+						<h3>Projetos da Artesol</h3>
+						<p>Conheça todos os projetos desenvolvidos pela Artesol e também os ainda em captação</p>
+					</a><!-- projetos -->
+
 				</div>
 			</div><!-- boxes -->
 

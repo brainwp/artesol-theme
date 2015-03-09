@@ -9,8 +9,10 @@
  * @since 2.2.0
  */
 ?>
+
 </div><!-- #main -->
 </div><!-- .container -->
+<div class="footer-full">
 <footer id="footer" role="contentinfo">
 	<div class="container">
 		<div class="col-md-6 pull-left">
@@ -96,6 +98,8 @@
 		</div><!-- .col-md-12 -->
 	</div><!-- .container -->
 </footer><!-- #footer -->
+</div><!-- footer-full -->
 <?php wp_footer(); ?>
+
 </body>
 </html>
