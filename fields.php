@@ -166,3 +166,123 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_home',
+		'title' => 'Home',
+		'fields' => array (
+			array (
+				'key' => 'field_54ff1ac1a6fbe',
+				'label' => 'Box de informações',
+				'name' => 'box_home_repeater',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'field_54ff2451a6fbf',
+						'label' => 'Titulo',
+						'name' => 'box_home_repeater_title',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_54ff251ba6fc1',
+						'label' => 'Texto',
+						'name' => 'box_home_repeater_text',
+						'type' => 'textarea',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'formatting' => 'br',
+					),
+					array (
+						'key' => 'field_54ff247ca6fc0',
+						'label' => 'Classe do icone',
+						'name' => 'box_home_repeater_icon',
+						'type' => 'radio',
+						'column_width' => '',
+						'choices' => array (
+							'servicos' => 'Marrom',
+							'agenda' => 'Azul',
+						),
+						'other_choice' => 0,
+						'save_other_choice' => 0,
+						'default_value' => 'servicos',
+						'layout' => 'vertical',
+					),
+					array (
+						'key' => 'field_54ff27a896406',
+						'label' => 'Classe do botão',
+						'name' => 'box_home_repeater_btn',
+						'type' => 'radio',
+						'column_width' => '',
+						'choices' => array (
+							'bg-marrom-artesol' => 'Marrom',
+							'bg-azul-artesol' => 'Azul',
+						),
+						'other_choice' => 0,
+						'save_other_choice' => 0,
+						'default_value' => 'bg-marrom-artesol',
+						'layout' => 'vertical',
+					),
+					array (
+						'key' => 'field_54ff27ec96407',
+						'label' => 'Texto do botão',
+						'name' => 'box_home_repeater_btn_text',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'field_54ff293928f57',
+						'label' => 'Link',
+						'name' => 'box_home_repeater_link',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => 0,
+				'row_limit' => 2,
+				'layout' => 'row',
+				'button_label' => 'Adicionar novo',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
