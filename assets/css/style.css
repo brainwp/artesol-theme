@@ -55,7 +55,6 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 
 /* Home */
 .container.home {
-	background: url('../images/bg-container.jpg') center top no-repeat;
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
@@ -510,4 +509,8 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 .container.home .boxes .projetos p {
 	padding: 0 15px;
 	text-align: center;
+}
+body.home{
+	background: url('../images/bg-container.jpg') center top;
+	background-size:cover;
 }
