@@ -50,25 +50,23 @@ get_header( 'home' ); ?>
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 			<div class="boxes">
 				<div class="col-md-4">
-
-					<div class="servicos">
-
-						<h3>Serviços</h3>
-						<span>Seja bem vind@ ao site da ArteSol, se está procurando nossos serviços.</span>
-
-						<a class="btn-artesol bg-marrom-artesol" href="">Clique Aqui</a>
-
-					</div><!-- servicos -->
-
-					<div class="agenda">
-						
-						<h3>Agenda</h3>
-						<span>Participamos e realizamos de diversos eventos e feiras</span>
-
-						<a class="btn-artesol bg-azul-artesol" href="">Veja a Agenda</a>
-
-					</div><!-- agenda -->
-
+				<?php if( get_field('box_home_repeater', 'option') ): ?>
+				    <div class="pull-right">
+				    	<?php while ( has_sub_field('box_home_repeater','option') ): ?>
+				    	    <div class="<?php echo get_sub_field('box_home_repeater_icon');?>">
+				    	    	<h3>
+				    	    		<?php echo get_sub_field('box_home_repeater_title');?>
+				    	    	</h3>
+				    	    	<span>
+				    	    		<?php echo get_sub_field('box_home_repeater_text');?>
+				    	    	</span>
+				    	    	<a class="btn-artesol <?php echo get_sub_field('box_home_repeater_btn');?>" href="<?php echo get_sub_field('box_home_repeater_link');?>">
+				    	    		<?php echo get_sub_field('box_home_repeater_btn_text');?>
+				    	    	</a>
+				    	    </div><!-- servicos -->
+                        <?php endwhile; ?>
+				    </div><!-- .pull-right -->
+                <?php endif;?>
 				</div>
 
 				<div class="col-md-4">
