@@ -196,11 +196,10 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 	font-weight: 600;
 	margin-top: 10px;
 }
-#menu-top{
-	display:none;
-}
 /*menu*/
 #menu-top>ul{
+	display:none;
+	z-index:99;
 	background: none repeat scroll 0% 0% #dd7a04;
 	position: absolute;
 	margin-left: 21.7%;

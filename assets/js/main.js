@@ -20,12 +20,13 @@ jQuery(document).ready(function($) {
 
 	$('#menu-click').on('click',function(e){
 		var open = $(this).attr('data-open');
+		console.log('hi');
 		if(open == 'false'){
-			$('#menu-top').fadeIn('medium');
+			$('#menu-top .menu-top').fadeIn('medium');
 			$(this).attr('data-open','true');
 		}
 		else{
-			$('#menu-top').fadeOut('medium');
+			$('#menu-top .menu-top').fadeOut('medium');
 			$(this).attr('data-open','false');
 		}
 
