@@ -225,6 +225,7 @@ body.home{
 }
 /*home slider */
 .slider-icon{
+	margin-top:32px;
 	background:#dd7a04;
 	border-radius:20px;
 	padding:5px;
