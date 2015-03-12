@@ -12,6 +12,23 @@
 
 </div><!-- #main -->
 </div><!-- .container -->
+<div id="como-apoiar">
+	<div class="image">
+		<h3><?php _e('Como Apoiar?','odin');?></h3>
+		<div class="links">
+			<div class="link-container separator">
+				<a href="#" class="pull-left">
+					<?php _e('Pessoa Física','odin');?>
+				</a>
+			</div><!-- .link-container -->
+			<div class="link-container">
+				<a href="#" class="pull-right">
+					<?php _e('Pessoa Jurídica','odin');?>
+			    </a>
+			</div><!-- .link-container -->
+		</div><!-- .links -->
+	</div><!-- .image -->
+</div><!-- #como-apoiar -->
 <div class="footer-full">
 <footer id="footer" role="contentinfo">
 	<div class="container">

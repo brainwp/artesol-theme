@@ -30,6 +30,10 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 }
 
 /* Geral */
+body.home{
+	background: url('../images/bg-container.jpg') center top;
+	background-size:cover;
+}
 .btn-artesol {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -356,6 +360,7 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 #footer{
 	background:url('../images/bg-footer.jpg') no-repeat;
 	background-size:cover;
+	padding-top:80px;
 }
 #footer h3{
 	font-family: 'Gotham-Bold';
@@ -510,7 +515,55 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 	padding: 0 15px;
 	text-align: center;
 }
-body.home{
-	background: url('../images/bg-container.jpg') center top;
-	background-size:cover;
+/* Como apoiar */
+#como-apoiar{
+	margin-left: 33%;
+	height:179px;
+}
+#como-apoiar .image{
+	width:405px;
+	height:404px;
+	background:url('../images/bg-como-apoiar.png') no-repeat;
+	position: absolute;
+}
+#como-apoiar h3{
+	margin-top:25%;
+	margin-left:20%;
+	color:white;
+	font-family: 'Gotham-Bold';
+	font-size:2.5em;
+	width:224px;
+	text-align: center
+}
+#como-apoiar a{
+	float:inherit!important;
+	font-family: "Istok Web",sans-serif;
+	color:white;
+	font-size:2.0em;
+}
+#como-apoiar .link-container{
+	float:left;
+	width:94px;
+	padding-left:5px;
+}
+#como-apoiar .separator{
+	width:110px;
+	border-right:6px solid white;
+}
+#como-apoiar .links{
+	margin-left:22%;
+}
+@media screen and (max-width:700px) {
+	#footer{
+		padding-top:200px;
+	}
+	#como-apoiar{
+		margin-left:15%;
+	}
+
+}
+@media screen and (max-width:400px) {
+	#como-apoiar{
+		margin-left:0;
+	}
 }
