@@ -260,6 +260,9 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+}
+if(function_exists("register_field_group"))
+{
 	register_field_group(array (
 		'id' => 'acf_slider-home',
 		'title' => 'Slider home',
@@ -283,8 +286,8 @@ if(function_exists("register_field_group"))
 			array (
 				array (
 					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'page',
+					'operator' => '!=',
+					'value' => 'brasa_slider_cpt',
 					'order_no' => 0,
 					'group_no' => 0,
 				),
