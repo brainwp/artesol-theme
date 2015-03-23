@@ -68,25 +68,19 @@ get_header( 'home' ); ?>
 				    </div><!-- .pull-right -->
                 <?php endif;?>
 				</div>
-
-				<div class="col-md-4">
-
-					<a href="" class="aceleracao">
-						<div class="icon"></div>
-						<h3>Conheça o trabalho de aceleração social da Artesol</h3>
-					</a><!-- aceleracao -->
-
-				</div>
-
-				<div class="col-md-4">
-
-					<a href="" class="projetos">
-						<div class="icon"></div>
-						<h3>Projetos da Artesol</h3>
-						<p>Conheça todos os projetos desenvolvidos pela Artesol e também os ainda em captação</p>
-					</a><!-- projetos -->
-
-				</div>
+				<?php if( get_field('box_projetos', 'option') ): ?>
+				    <?php while ( has_sub_field('box_projetos','option') ): ?>
+				    	    <div class="col-md-4">
+				    	    	<a href="<?php echo get_sub_field('box_home_repeater_link');?>" class="<?php echo get_sub_field('box_home_repeater_class');?>">
+				    	    		<div class="icon"></div>
+				    	    		<h3><?php echo get_sub_field('box_home_repeater_title');?></h3>
+				    	    		<?php if(get_sub_field('box_home_repeater_class') == 'projetos'): ?>
+				    	    		    <p><?php echo get_sub_field('box_home_repeater_text');?></p>
+				    	    	    <?php endif; ?>
+				    	    	</a>
+				    	    </div><!-- servicos -->
+                        <?php endwhile; ?>
+                <?php endif;?>
 			</div><!-- boxes -->
 
 		</div><!-- #content -->

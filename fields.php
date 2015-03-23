@@ -11,7 +11,7 @@ if(function_exists("register_field_group"))
 		'fields' => array (
 			array (
 				'key' => 'field_54c38279b37e8',
-				'label' => 'Home',
+				'label' => __('Home','odin'),
 				'name' => '',
 				'type' => 'tab',
 			),
@@ -306,7 +306,7 @@ if(function_exists("register_field_group"))
 {
 	register_field_group(array (
 		'id' => 'acf_home',
-		'title' => 'Home',
+		'title' => __('Home - Widgets','odin'),
 		'fields' => array (
 			array (
 				'key' => 'field_54ff1ac1a6fbe',
