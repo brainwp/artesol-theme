@@ -17,12 +17,12 @@
 		<h3><?php _e('Como Apoiar?','odin');?></h3>
 		<div class="links">
 			<div class="link-container separator">
-				<a href="#" class="pull-left">
+				<a href="<?php echo esc_url(get_field('link_pessoa_fisica', 'option'));?>" class="pull-left">
 					<?php _e('Pessoa Física','odin');?>
 				</a>
 			</div><!-- .link-container -->
 			<div class="link-container">
-				<a href="#" class="pull-right">
+				<a href="<?php echo esc_url(get_field('link_pessoa_juridica', 'option'));?>" class="pull-right">
 					<?php _e('Pessoa Jurídica','odin');?>
 			    </a>
 			</div><!-- .link-container -->
