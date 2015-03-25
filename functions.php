@@ -63,6 +63,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		register_nav_menus(
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
+				'menu-institucional' => __( 'Menu Institucional', 'odin' ),
 				'footer-menu-1' => __( 'Footer Menu 1', 'odin' ),
 				'footer-menu-2' => __( 'Footer Menu 2', 'odin' ),
 				'footer-menu-3' => __( 'Footer Menu 3', 'odin' ),
@@ -142,7 +143,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		/**
 		 * Support The Excerpt on pages.
 		 */
-		// add_post_type_support( 'page', 'excerpt' );
+		add_post_type_support( 'page', 'excerpt' );
 	}
 }
 
@@ -196,7 +197,7 @@ function odin_enqueue_scripts() {
 
 	// Loads Odin main stylesheet.
 	wp_enqueue_style( 'fonticon-style', $template_url . '/assets/css/genericons.css', array(), null, 'all' );
-	wp_enqueue_style( 'istok-font-css', 'http://fonts.googleapis.com/css?family=Istok+Web', array(), null, 'all' );
+	wp_enqueue_style( 'istok-font-css', 'http://fonts.googleapis.com/css?family=Istok+Web:400,700italic,700,400italic', array(), null, 'all' );
 	wp_enqueue_style( 'odin-style', get_stylesheet_uri(), array(), null, 'all' );
 
 	// jQuery.

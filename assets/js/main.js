@@ -65,5 +65,6 @@ jQuery(document).ready(function($) {
 			localStorage.removeItem('slider_mult');
 	    }
 	});
+	$('#aceleracao-footer-margin').css('height',$('#aceleracao-footer').outerHeight(false) + 'px');
 });
 

@@ -539,3 +539,96 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_institucional-widgets-projetos-rede',
+		'title' => 'Page Institucional - Widgets - Projetos & Rede',
+		'fields' => array (
+			array (
+				'key' => 'box_projetos_institucional',
+				'label' => '',
+				'name' => 'box_projetos_institucional',
+				'type' => 'repeater',
+				'sub_fields' => array (
+					array (
+						'key' => 'box_institucional_repeater_title',
+						'label' => 'Titulo',
+						'name' => 'box_home_repeater_title',
+						'type' => 'text',
+						'instructions' => 'Deixe vazio para não exibir',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+					array (
+						'key' => 'box_institucionalfield_551060b9c0834',
+						'label' => 'Texto',
+						'name' => 'box_home_repeater_text',
+						'type' => 'textarea',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'maxlength' => '',
+						'rows' => '',
+						'formatting' => 'br',
+					),
+					array (
+						'key' => 'box_institucionalfield_551060b9c0835',
+						'label' => 'Classe do Box',
+						'name' => 'box_home_repeater_class',
+						'type' => 'radio',
+						'column_width' => '',
+						'choices' => array (
+							'aceleracao' => 'Rede',
+							'projetos' => 'Projetos',
+						),
+						'other_choice' => 0,
+						'save_other_choice' => 0,
+						'default_value' => 'aceleracao',
+						'layout' => 'vertical',
+					),
+					array (
+						'key' => 'box_institucionalfield_551060b9c0838',
+						'label' => 'Link',
+						'name' => 'box_home_repeater_link',
+						'type' => 'text',
+						'column_width' => '',
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'formatting' => 'html',
+						'maxlength' => '',
+					),
+				),
+				'row_min' => 1,
+				'row_limit' => 1,
+				'layout' => 'row',
+				'button_label' => 'Adicionar novo',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'options_page',
+					'operator' => '==',
+					'value' => 'acf-options',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}

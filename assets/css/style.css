@@ -30,7 +30,7 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 }
 
 /* Geral */
-body.home{
+body.home, body.page{
 	background: url('../images/bg-container.jpg') center top;
 	background-size:cover;
 }
@@ -567,4 +567,122 @@ body.home{
 	#como-apoiar{
 		margin-left:0;
 	}
+}
+/*page institucional */
+body.page .destaque-1{
+	max-width: inherit !important;
+	margin:0 !important;
+}
+body.page .destaque-1 h2{
+	color:white !important;
+	font-family: "Istok Web",sans-serif;
+	font-size:3.2em !important;
+	font-weight: 400 !important;
+	text-shadow:none !important;
+}
+body.page #menu-institucional{
+	background:#c2b59b;
+	padding:10px;
+	padding-left:0;
+}
+body.page #menu-institucional h3{
+	padding-left:5px;
+	font-family: 'Gotham-Bold';
+	font-size:0.9em !important;
+	color:#494949;
+	text-transform: uppercase;
+}
+body.page #menu-institucional ul{
+	margin:0;
+	padding:0;
+}
+body.page #menu-institucional ul li{
+	margin:0;
+	display:block !important;
+	clear:both;
+}
+body.page #menu-institucional ul li a{
+	font-family: "Istok Web",sans-serif;
+	display:inline-block;
+	padding:10px;
+	padding-left:15px;
+	transition:200ms ease all;
+	color:#494949;
+	text-decoration: none !important;
+}
+body.page #menu-institucional ul li a:hover{
+	background:#c7bba7;
+	color:white;
+}
+body.page .boxes{
+	padding:0;
+	margin-top:10px;
+}
+body.page article h1.post-title{
+	font-family: 'Gotham-Bold';
+	padding-bottom:10px;
+	padding-top:10px;
+	padding-right:10px;
+	padding-left: 80px;
+	margin:0 !important;
+	display: block;
+	width: 100%;
+	background: #C2B59B url("../images/bg-page-title.jpg") no-repeat scroll left center;
+	background-position: 25px;
+	color:#726658;
+	text-transform: uppercase;
+	font-size:2.4em;
+}
+body.page article .content{
+	font-family: "Istok Web",sans-serif;
+	padding:10px;
+}
+@media screen and (min-width:900px) {
+	body.page .destaque-1{
+		width:68.667%;
+	}
+}
+@media screen and(max-width:700px){
+	body.page article h1.post-title{
+		background: #C2B59B !important;
+		padding-left:10px;
+	}
+	body.page .sidebar{
+		float:right !important;
+	}
+	body.page article{
+		float:left !important;
+	}
+}
+/* Aceleracao footer */
+#aceleracao-footer{
+	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
+	background-size:cover;
+	position: absolute;
+	margin-top:-458px;
+	background-attachment: fixed;
+}
+#aceleracao-footer div.row{
+	padding-bottom:287px;
+}
+#aceleracao-footer .icon{
+	background:url('../images/rede-artesol.png') no-repeat center;
+	height:240px;
+}
+#aceleracao-footer h3.section-title{
+	font-family: 'Gotham-Bold';
+	color:white;
+	font-size:2.5em;
+	text-align: center;
+}
+#aceleracao-footer a{
+	display:inline-block;
+	background:#199b6c;
+	padding:10px;
+	padding-left:15px;
+	padding-right:15px;
+	font-family: "Istok Web",sans-serif;
+	font-size:1.2em;
+	color:white;
+	text-align: center;
 }
