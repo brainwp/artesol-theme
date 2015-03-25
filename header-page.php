@@ -37,10 +37,8 @@
 
 			<div class="logo col-sm-4">
 
-				<?php if( get_page_by_title( 'Apresentação' ) && is_home() ) : ?>
-					<a href="<?php echo esc_url( home_url() ); ?>/apresentacao" class="link">
-					</a><!-- link -->
-				<?php endif; ?>
+				<a href="<?php echo esc_url( home_url() ); ?>" class="link">
+				</a><!-- link -->
 
 				<div class="icon-search"></div><!-- icon-search -->
 				<div class="icon-menu" id="menu-click" data-open="false"></div><!-- icon-menu -->
