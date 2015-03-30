@@ -70,9 +70,19 @@ get_header( 'home' ); ?>
 				</div>
 				<?php if( get_field('box_projetos', 'option') ): ?>
 				    <?php while ( has_sub_field('box_projetos','option') ): ?>
+				            <?php $style = ''; ?>
+				            <?php if(get_sub_field('box_home_repeater_bg')): ?>
+				                <?php $style = get_sub_field('box_home_repeater_bg');?>
+				                <?php $style = 'background:transparent url("'.$style['sizes']['large'].'") no-repeat scroll center center;background-size:cover;'; ?>
+				            <?php endif;?>
 				    	    <div class="col-md-4">
-				    	    	<a href="<?php echo get_sub_field('box_home_repeater_link');?>" class="<?php echo get_sub_field('box_home_repeater_class');?>">
-				    	    		<div class="icon"></div>
+				    	    	<a href="<?php echo get_sub_field('box_home_repeater_link');?>" class="<?php echo get_sub_field('box_home_repeater_class');?>" style="<?php echo esc_attr($style);?>">
+				    	    	    <?php $style = ''; ?>
+				    	    	    <?php if(get_sub_field('box_home_repeater_icon')): ?>
+				    	    	        <?php $style = get_sub_field('box_home_repeater_icon');?>
+				    	    	        <?php $style = 'background:transparent url("'.$style['sizes']['thumbnail'].'") no-repeat scroll center center;'; ?>
+				    	    	    <?php endif;?>
+				    	    		<div class="icon" style="<?php echo esc_attr($style);?>"></div>
 				    	    		<h3><?php echo get_sub_field('box_home_repeater_title');?></h3>
 				    	    		<?php if(get_sub_field('box_home_repeater_class') == 'projetos'): ?>
 				    	    		    <p><?php echo get_sub_field('box_home_repeater_text');?></p>
