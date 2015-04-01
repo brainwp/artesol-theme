@@ -68,28 +68,89 @@ get_header( 'home' ); ?>
 				    </div><!-- .pull-right -->
                 <?php endif;?>
 				</div>
-				<?php if( get_field('box_projetos', 'option') ): ?>
-				    <?php while ( has_sub_field('box_projetos','option') ): ?>
-				            <?php $style = ''; ?>
-				            <?php if(get_sub_field('box_home_repeater_bg')): ?>
-				                <?php $style = get_sub_field('box_home_repeater_bg');?>
+				<?php if( get_field('home_feature_1_title', 'option') ): ?>
+				        <?php $style = ''; ?>
+				        <?php if(get_field('home_feature_1_bg','option')): ?>
+				              <?php $style = get_field('home_feature_1_bg','option');?>
 				                <?php $style = 'background:transparent url("'.$style['sizes']['large'].'") no-repeat scroll center center;background-size:cover;'; ?>
-				            <?php endif;?>
+				        <?php endif;?>
 				    	    <div class="col-md-4">
-				    	    	<a href="<?php echo get_sub_field('box_home_repeater_link');?>" class="<?php echo get_sub_field('box_home_repeater_class');?>" style="<?php echo esc_attr($style);?>">
+				    	    	<a href="<?php echo get_field('home_feature_1_link','option');?>" class="<?php echo get_field('home_feature_1_class','option');?>" style="<?php echo esc_attr($style);?>">
 				    	    	    <?php $style = ''; ?>
-				    	    	    <?php if(get_sub_field('box_home_repeater_icon')): ?>
-				    	    	        <?php $style = get_sub_field('box_home_repeater_icon');?>
+				    	    	    <?php if(get_field('home_feature_1_icon','option')): ?>
+				    	    	        <?php $style = get_field('home_feature_1_icon','option');?>
 				    	    	        <?php $style = 'background:transparent url("'.$style['sizes']['thumbnail'].'") no-repeat scroll center center;'; ?>
 				    	    	    <?php endif;?>
 				    	    		<div class="icon" style="<?php echo esc_attr($style);?>"></div>
-				    	    		<h3><?php echo get_sub_field('box_home_repeater_title');?></h3>
-				    	    		<?php if(get_sub_field('box_home_repeater_class') == 'projetos'): ?>
-				    	    		    <p><?php echo get_sub_field('box_home_repeater_text');?></p>
+				    	    		<h3><?php echo get_field('home_feature_1_title','option');?></h3>
+				    	    		<?php if(get_field('home_feature_1_class','option') == 'projetos'): ?>
+				    	    		    <p><?php echo get_field('home_feature_1_resume','option');?></p>
 				    	    	    <?php endif; ?>
 				    	    	</a>
 				    	    </div><!-- servicos -->
-                        <?php endwhile; ?>
+                <?php endif;?>
+                <?php if( get_field('home_feature_2_title', 'option') ): ?>
+				        <?php $style = ''; ?>
+				        <?php if(get_field('home_feature_2_bg','option')): ?>
+				              <?php $style = get_field('home_feature_2_bg','option');?>
+				                <?php $style = 'background:transparent url("'.$style['sizes']['large'].'") no-repeat scroll center center;background-size:cover;'; ?>
+				        <?php endif;?>
+				    	    <div class="col-md-4">
+				    	    	<a href="<?php echo get_field('home_feature_2_link','option');?>" class="<?php echo get_field('home_feature_2_class','option');?>" style="<?php echo esc_attr($style);?>">
+				    	    	    <?php $style = ''; ?>
+				    	    	    <?php if(get_field('home_feature_2_icon','option')): ?>
+				    	    	        <?php $style = get_field('home_feature_2_icon','option');?>
+				    	    	        <?php $style = 'background:transparent url("'.$style['sizes']['thumbnail'].'") no-repeat scroll center center;'; ?>
+				    	    	    <?php endif;?>
+				    	    		<div class="icon" style="<?php echo esc_attr($style);?>"></div>
+				    	    		<h3><?php echo get_field('home_feature_2_title','option');?></h3>
+				    	    		<?php if(get_field('home_feature_2_class','option') == 'projetos'): ?>
+				    	    		    <p><?php echo get_field('home_feature_2_resume','option');?></p>
+				    	    	    <?php endif; ?>
+				    	    	</a>
+				    	    </div><!-- servicos -->
+                <?php endif;?>
+                <?php if( get_field('home_feature_3_title', 'option') ): ?>
+				        <?php $style = ''; ?>
+				        <?php if(get_field('home_feature_3_bg','option')): ?>
+				              <?php $style = get_field('home_feature_3_bg','option');?>
+				                <?php $style = 'background:transparent url("'.$style['sizes']['large'].'") no-repeat scroll center center;background-size:cover;'; ?>
+				        <?php endif;?>
+				    	    <div class="col-md-4">
+				    	    	<a href="<?php echo get_field('home_feature_3_link','option');?>" class="<?php echo get_field('home_feature_3_class','option');?>" style="<?php echo esc_attr($style);?>">
+				    	    	    <?php $style = ''; ?>
+				    	    	    <?php if(get_field('home_feature_3_icon','option')): ?>
+				    	    	        <?php $style = get_field('home_feature_3_icon','option');?>
+				    	    	        <?php $style = 'background:transparent url("'.$style['sizes']['thumbnail'].'") no-repeat scroll center center;'; ?>
+				    	    	    <?php endif;?>
+				    	    		<div class="icon" style="<?php echo esc_attr($style);?>"></div>
+				    	    		<h3><?php echo get_field('home_feature_3_title','option');?></h3>
+				    	    		<?php if(get_field('home_feature_3_class','option') == 'projetos'): ?>
+				    	    		    <p><?php echo get_field('home_feature_3_resume','option');?></p>
+				    	    	    <?php endif; ?>
+				    	    	</a>
+				    	    </div><!-- servicos -->
+                <?php endif;?>
+                <?php if( get_field('home_feature_4_title', 'option') ): ?>
+				        <?php $style = ''; ?>
+				        <?php if(get_field('home_feature_4_bg','option')): ?>
+				              <?php $style = get_field('home_feature_4_bg','option');?>
+				                <?php $style = 'background:transparent url("'.$style['sizes']['large'].'") no-repeat scroll center center;background-size:cover;'; ?>
+				        <?php endif;?>
+				    	    <div class="col-md-4">
+				    	    	<a href="<?php echo get_field('home_feature_4_link','option');?>" class="<?php echo get_field('home_feature_4_class','option');?>" style="<?php echo esc_attr($style);?>">
+				    	    	    <?php $style = ''; ?>
+				    	    	    <?php if(get_field('home_feature_4_icon','option')): ?>
+				    	    	        <?php $style = get_field('home_feature_4_icon','option');?>
+				    	    	        <?php $style = 'background:transparent url("'.$style['sizes']['thumbnail'].'") no-repeat scroll center center;'; ?>
+				    	    	    <?php endif;?>
+				    	    		<div class="icon" style="<?php echo esc_attr($style);?>"></div>
+				    	    		<h3><?php echo get_field('home_feature_4_title','option');?></h3>
+				    	    		<?php if(get_field('home_feature_4_class','option') == 'projetos'): ?>
+				    	    		    <p><?php echo get_field('home_feature_4_resume','option');?></p>
+				    	    	    <?php endif; ?>
+				    	    	</a>
+				    	    </div><!-- servicos -->
                 <?php endif;?>
 			</div><!-- boxes -->
 
