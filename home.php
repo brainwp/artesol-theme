@@ -46,7 +46,7 @@ get_header( 'home' ); ?>
 				     		    <?php endif;?>
 				     		</h4><!-- .area -->
 				     		<span><?php the_excerpt();?></span>
-				     		<span class="leia-mais"><?php _e('Leia mais', 'odin'); ?></span>
+				     		<span class="leia-mais btn-artesol"><?php _e('Leia mais', 'odin'); ?></span>
 				     	</a><!-- .item-container -->
 				     </div><!-- .item -->
 				<?php endwhile; ?>
