@@ -207,7 +207,11 @@ body.home, body.page{
 }
 #menu-top a{
 	background:transparent !important;
-	color:white !important;
+	color:white;
+	transition:200ms ease all;
+}
+#menu-top a:hover{
+	color: #992D00;
 }
 @media only screen and (max-width:600px) {
 	#menu-top>ul{
@@ -428,6 +432,10 @@ body.home, body.page{
 	line-height: 1.6em;
 	list-style: none !important;
 	text-decoration: none !important;
+	transition:200ms ease all;
+}
+#footer nav ul li a:hover {
+	color: #EFB310;
 }
 #footer nav { padding-right: 15px; }
 #footer{
@@ -454,6 +462,11 @@ body.home, body.page{
 	float:right;
 	width:100%;
 	text-transform: uppercase;
+	transition:200ms ease all;
+}
+#footer .parceiro-iguatemi:hover{
+	color: #EFB310;
+	text-decoration: none;
 }
 #footer .pull-right h3{
 	text-align: right;
@@ -621,6 +634,11 @@ body.home, body.page{
 	color:white;
 	font-size:1.7em;
 	font-weight: 300;
+	transition:200ms ease all;
+}
+#como-apoiar a:hover{
+	color: #EFB310;
+	text-decoration: none;
 }
 #como-apoiar .link-container{
 	padding-left: 5px;
