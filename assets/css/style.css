@@ -207,7 +207,13 @@ body.home, body.page{
 }
 #menu-top a{
 	background:transparent !important;
-	color:white !important;
+	color:white;
+	font-size: 0.9em;
+	text-transform: uppercase;
+	transition:200ms ease all;
+}
+#menu-top a:hover{
+	color: #992D00;
 }
 @media only screen and (max-width:600px) {
 	#menu-top>ul{
@@ -246,18 +252,6 @@ body.home, body.page{
 	cursor:pointer;
 	margin-top:32px;
 	padding:5px;
-}
-.slider-icon:hover {
-	background: #bf3600; /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2JmMzYwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijk5JSIgc3RvcC1jb2xvcj0iI2RjNWIwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-	background: -moz-linear-gradient(top,  #bf3600 0%, #dc5b00 99%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bf3600), color-stop(99%,#dc5b00)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #bf3600 0%,#dc5b00 99%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #bf3600 0%,#dc5b00 99%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #bf3600 0%,#dc5b00 99%); /* IE10+ */
-	background: linear-gradient(to bottom,  #bf3600 0%,#dc5b00 99%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf3600', endColorstr='#dc5b00',GradientType=0 ); /* IE6-8 */
 }
 .slider-icon span{
 	width:16px;
@@ -432,6 +426,10 @@ body.home, body.page{
 	line-height: 1.6em;
 	list-style: none !important;
 	text-decoration: none !important;
+	transition:200ms ease all;
+}
+#footer nav ul li a:hover {
+	color: #EFB310;
 }
 #footer nav { padding-right: 15px; }
 #footer{
@@ -458,6 +456,11 @@ body.home, body.page{
 	float:right;
 	width:100%;
 	text-transform: uppercase;
+	transition:200ms ease all;
+}
+#footer .parceiro-iguatemi:hover{
+	color: #EFB310;
+	text-decoration: none;
 }
 #footer .pull-right h3{
 	text-align: right;
@@ -628,6 +631,11 @@ body.page-template-page-institucional-php #como-apoiar{
 	color:white;
 	font-size:1.7em;
 	font-weight: 300;
+	transition:200ms ease all;
+}
+#como-apoiar a:hover{
+	color: #EFB310;
+	text-decoration: none;
 }
 #como-apoiar .link-container{
 	padding-left: 5px;
@@ -773,4 +781,59 @@ body.page article .content{
 	font-size:1.2em;
 	color:white;
 	text-align: center;
+}
+
+/* Projetos */
+body.post-type-archive-projetos {
+	background: url('../images/bg-projetos.jpg') center top transparent;
+}
+.post-type-archive-projetos .navbar-default {
+	background-color: #DD7A00;
+	border: none;
+	border-radius: 0;
+}
+.post-type-archive-projetos .navbar-default .logo {
+	float: left;
+	padding: 7px 15px;
+	width: auto;
+}
+.post-type-archive-projetos .navbar-default .logo img {
+	max-width: 160px;
+}
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a {
+	color: #FFF;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	text-transform: uppercase;
+}
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover {
+	background-color: #ad6813;
+}
+.bg-title-projetos {
+	background: url('../images/bg-title-projetos.jpg') center center #B5AEA5;
+	height: 150px;
+	position: absolute;
+	top: 70px;
+	width: 100%;
+}
+.post-type-archive-projetos .page-header {
+	border: none;
+	color: #FFF;
+	display: block;
+	margin: 17px 0 50px 0;
+	overflow: hidden;
+	width: 100%;
+}
+.post-type-archive-projetos .page-header h1 {
+	display: inline-block;
+	float: left;
+	font-weight: bolder;
+	width: auto;
+}
+.post-type-archive-projetos .page-header span {
+	display: inline-block;
+	float: left;
+	font-size: 1em;
+	margin-left: 5%;
+	width: 75%;
 }
