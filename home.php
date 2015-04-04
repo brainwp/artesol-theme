@@ -20,7 +20,7 @@ get_header( 'home' ); ?>
 			<?php
 			// WP_Query arguments
 			$args = array (
-			'post_type' => 'page',
+			'post_type' => array('post','page'),
 			'meta_query'            => array(
 				array(
 					'key'       => 'slider_home',
@@ -39,7 +39,12 @@ get_header( 'home' ); ?>
 				     	<a class="item-container" style="background-image:url(<?php echo esc_attr($src[0]);?>)" href="<?php the_permalink();?>">
 				     		<?php the_post_thumbnail( 'medium', array('class' => 'mult-only') ); ?>
 				     		<h3><?php the_title(); ?></h3>
-				     		<h4 class="area"><?php echo 'area'; ?></h4><!-- .area -->
+				     		<h4 class="area">
+				     			<?php $cat = get_the_category();?>
+				     			<?php if($cat):?>
+				     				<?php echo $cat[0]->cat_name;?>
+				     		    <?php endif;?>
+				     		</h4><!-- .area -->
 				     		<span><?php the_excerpt();?></span>
 				     	</a><!-- .item-container -->
 				     </div><!-- .item -->
