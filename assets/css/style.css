@@ -782,3 +782,58 @@ body.page article .content{
 	color:white;
 	text-align: center;
 }
+
+/* Projetos */
+body.post-type-archive-projetos {
+	background: url('../images/bg-projetos.jpg') center top transparent;
+}
+.post-type-archive-projetos .navbar-default {
+	background-color: #DD7A00;
+	border: none;
+	border-radius: 0;
+}
+.post-type-archive-projetos .navbar-default .logo {
+	float: left;
+	padding: 7px 15px;
+	width: auto;
+}
+.post-type-archive-projetos .navbar-default .logo img {
+	max-width: 160px;
+}
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a {
+	color: #FFF;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	text-transform: uppercase;
+}
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover {
+	background-color: #ad6813;
+}
+.bg-title-projetos {
+	background: url('../images/bg-title-projetos.jpg') center center #B5AEA5;
+	height: 150px;
+	position: absolute;
+	top: 70px;
+	width: 100%;
+}
+.post-type-archive-projetos .page-header {
+	border: none;
+	color: #FFF;
+	display: block;
+	margin: 17px 0 50px 0;
+	overflow: hidden;
+	width: 100%;
+}
+.post-type-archive-projetos .page-header h1 {
+	display: inline-block;
+	float: left;
+	font-weight: bolder;
+	width: auto;
+}
+.post-type-archive-projetos .page-header span {
+	display: inline-block;
+	float: left;
+	font-size: 1em;
+	margin-left: 5%;
+	width: 75%;
+}
