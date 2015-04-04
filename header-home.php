@@ -42,7 +42,7 @@
 					</a><!-- link -->
 				<?php endif; ?>
 
-				<div class="icon-search"></div><!-- icon-search -->
+				<div class="icon-search" id="search-click" data-open="false"></div><!-- icon-search -->
 				<div class="icon-menu" id="menu-click" data-open="false"></div><!-- icon-menu -->
 
 			</div><!-- logo -->
@@ -60,6 +60,9 @@
 				);
 				?>
 			</nav><!-- #menu -->
+			<form action="<?php echo home_url('/');?>" id="search-form">
+				<input type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
+			</form><!-- #search-form -->
 			<?php if ( $background1 = get_field( 'background_destaque_1', 'options' ) ) : ?>
 
 				<div style="background: url(' <?php echo $background1; ?>' ) center center no-repeat" class="destaque-1 col-sm-4">

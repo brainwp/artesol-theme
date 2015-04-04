@@ -20,13 +20,25 @@ jQuery(document).ready(function($) {
 
 	$('#menu-click').on('click',function(e){
 		var open = $(this).attr('data-open');
-		console.log('hi');
 		if(open == 'false'){
 			$('#menu-top .menu-top').fadeIn('medium');
 			$(this).attr('data-open','true');
 		}
 		else{
 			$('#menu-top .menu-top').fadeOut('medium');
+			$(this).attr('data-open','false');
+		}
+
+	});
+	$('#search-click').on('click',function(e){
+		var open = $(this).attr('data-open');
+		if(open == 'false'){
+			$('#search-form').fadeIn('medium');
+			$('#search-form input').focus();
+			$(this).attr('data-open','true');
+		}
+		else{
+			$('#search-form').fadeOut('medium');
 			$(this).attr('data-open','false');
 		}
 
