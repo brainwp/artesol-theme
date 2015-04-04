@@ -24,6 +24,16 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('../fonts/gotham-book/gotham-book.eot');
+    src: url('../fonts/gotham-book/gotham-book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-book/gotham-book.woff') format('woff'),
+         url('../fonts/gotham-book/gotham-book.ttf') format('truetype'),
+         url('../fonts/gotham-book/gotham-book.svg#gotham-book') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 .clear{
 	clear:both;
 	height:10px;
@@ -787,26 +797,26 @@ body.page article .content{
 body.post-type-archive-projetos {
 	background: url('../images/bg-projetos.jpg') center top transparent;
 }
-.post-type-archive-projetos .navbar-default {
+.post-type-archive-projetos .navbar-default,.single-projetos .navbar-default {
 	background-color: #DD7A00;
 	border: none;
 	border-radius: 0;
 }
-.post-type-archive-projetos .navbar-default .logo {
+.post-type-archive-projetos .navbar-default .logo, .single-projetos .navbar-default .logo {
 	float: left;
 	padding: 7px 15px;
 	width: auto;
 }
-.post-type-archive-projetos .navbar-default .logo img {
+.post-type-archive-projetos .navbar-default .logo img, .single-projetos .navbar-default .logo img {
 	max-width: 160px;
 }
-.post-type-archive-projetos .navbar-default .navbar-nav > li > a {
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a, .single-projetos .navbar-default .navbar-nav > li > a {
 	color: #FFF;
 	padding-bottom: 25px;
 	padding-top: 25px;
 	text-transform: uppercase;
 }
-.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover {
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover, .single-projetos .navbar-default .navbar-nav > li > a:hover {
 	background-color: #ad6813;
 }
 .bg-title-projetos {
@@ -816,7 +826,7 @@ body.post-type-archive-projetos {
 	top: 70px;
 	width: 100%;
 }
-.post-type-archive-projetos .page-header {
+.post-type-archive-projetos .page-header, .single-projetos .page-header {
 	border: none;
 	color: #FFF;
 	display: block;
@@ -824,16 +834,47 @@ body.post-type-archive-projetos {
 	overflow: hidden;
 	width: 100%;
 }
-.post-type-archive-projetos .page-header h1 {
+.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1 {
 	display: inline-block;
 	float: left;
 	font-weight: bolder;
 	width: auto;
 }
-.post-type-archive-projetos .page-header span {
+.post-type-archive-projetos .page-header span, .single-projetos .page-header span {
 	display: inline-block;
 	float: left;
 	font-size: 1em;
 	margin-left: 5%;
 	width: 75%;
+}
+article#projetos-post{
+	margin-bottom:80px;
+	padding-bottom:10px;
+	background:url('../images/bg-single-projetos.jpg') no-repeat;
+	background-size:cover;
+}
+article#projetos-post h1{
+	font-family: 'Gotham-Bold';
+	color:#818181;
+}
+article#projetos-post h3{
+	margin-top:0;
+	font-family: 'Gotham-Book';
+	text-transform: uppercase;
+	color:#818181;
+}
+article#projetos-post .thumbnail-projetos img{
+	width:100%;
+}
+article#projetos-post .projetos-meta h4{
+	font-family: 'Gotham-Bold';
+	color:#818181;
+}
+article#projetos-post .projetos-meta .meta-content{
+	font-family: "Istok Web",sans-serif;
+	color:#818181;
+}
+article#projetos-post .projetos-meta .repeater-projetos img{
+	width:40px;
+	height:40px;
 }
