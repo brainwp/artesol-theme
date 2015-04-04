@@ -62,7 +62,6 @@ body.home, body.page{
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
-
 .container.home .logo {
 	background: url('../images/logo-artesol.jpg') center 75px no-repeat #dd7a04;
 	min-height: 360px;
@@ -70,21 +69,19 @@ body.home, body.page{
 	overflow: hidden;
 	position: relative;
 }
-
 .container.home .logo .link {
 	display: block;
 	height: 290px;
 	overflow: hidden;
 	width: 100%;
 }
-
 .container.home .logo .icon-search {
 	background: url('../images/icon-search.jpg') center center no-repeat;
+	cursor: pointer;
 	float: left;
 	height: 60px;
 	width: 60px;
 }
-
 .container.home .logo .icon-menu {
 	background: url('../images/icon-menu.jpg') center center no-repeat;
 	cursor: pointer;
@@ -92,11 +89,9 @@ body.home, body.page{
 	height: 60px;
 	width: 60px;
 }
-
 .container.home .destaque-1 {
 	margin: 0 3%;
 }
-
 .container.home .destaque-1,
 .container.home .destaque-2 {
 	max-width: 31.3%;
@@ -456,6 +451,9 @@ body.home, body.page{
 	text-decoration: none !important;
 	border:transparent !important;
 }
+#footer .end-footer .social {
+	margin-top: 25px;
+}
 #footer .end-footer .social a{
 	margin-left:10px;
 }
@@ -467,11 +465,11 @@ body.home, body.page{
 	display:inline-block;
 }
 #footer .end-footer .social h4{
-	font-family: 'Istok Web', sans-serif;
 	color:white;
-	font-size:16px;
+	display:inline-block;
+	font-family: 'Istok Web', sans-serif;
+	font-size: 1em;
 	font-style: italic;
-	display:inline;
 }
 .shape {
 	width: 0;
@@ -575,19 +573,19 @@ body.home, body.page{
 	font-size:1.7em;
 	font-weight: 300;
 }
-#como-apoiar .links .link-container:first-child {
-	border-right:3px solid white;
-	text-align: right;
-}
 #como-apoiar .link-container{
-	float:left;
-	width:94px;
-	padding-left:5px;
+	padding-left: 5px;
 	text-align: left;
+	padding-left: 15px;
+	padding-right: 0;
 }
-#como-apoiar .links{
-	margin-left:22%;
+#como-apoiar .links .link-container:first-child {
+	border-right: 2px solid white;
+	text-align: right;
+	padding-left: 15px;
+	padding-right: 15px;
 }
+#como-apoiar .links{}
 @media screen and (max-width:700px) {
 	#footer{
 		padding-top:200px;
