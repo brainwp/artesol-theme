@@ -16,12 +16,12 @@
 	<div class="image">
 		<h3><?php _e('Como Apoiar?','odin');?></h3>
 		<div class="links">
-			<div class="link-container separator">
+			<div class="link-container col-sm-6">
 				<a href="<?php echo esc_url(get_field('link_pessoa_fisica', 'option'));?>" class="pull-left">
 					<?php _e('Pessoa Física','odin');?>
 				</a>
 			</div><!-- .link-container -->
-			<div class="link-container">
+			<div class="link-container col-sm-6">
 				<a href="<?php echo esc_url(get_field('link_pessoa_juridica', 'option'));?>" class="pull-right">
 					<?php _e('Pessoa Jurídica','odin');?>
 			    </a>
@@ -90,9 +90,15 @@
 		    <?php endif; ?>
 		</div><!-- .col-md-6 pull-right -->
 		<div class="col-md-12 end-footer">
-			<div class="col-md-5 endereco">
-				 <?php echo get_field('endereco', 'option'); ?>
-			</div><!-- .endereco -->
+
+			<?php if ( $endereco = get_field( 'endereco', 'option' ) ): ?>
+				
+				<div class="col-md-6 endereco">
+					 <?php echo $endereco; ?>
+				</div><!-- .endereco -->
+
+			<?php endif ?>
+
 			<div class="col-md-6 pull-right social">
 				<h4><?php _e('Alguns direitos reservados','odin');?></h4>
 				<?php if( get_field('social_repeater', 'option') ): ?>

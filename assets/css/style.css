@@ -378,16 +378,14 @@ body.home, body.page{
 	text-align:left;
 }
 #footer nav ul, #footer nav ul li a{
-	font-family: 'Istok Web', sans-serif;
-	list-style: none !important;
 	color:white;
-	text-decoration: none !important;
-	font-size:16px;
+	font-family: 'Istok Web', sans-serif;
+	font-size: 1em;
 	line-height: 1.6em;
+	list-style: none !important;
+	text-decoration: none !important;
 }
-#footer nav {
-	padding-right: 10px;
-}
+#footer nav { padding-right: 15px; }
 #footer{
 	background:url('../images/bg-footer.jpg') no-repeat;
 	background-size:cover;
@@ -398,9 +396,10 @@ body.home, body.page{
 	color:#efb310;
 }
 #footer .endereco{
-	font-family: 'Istok Web', sans-serif;
 	color:white;
-	font-size:16px;
+	font-family: 'Istok Web', sans-serif;
+	font-size: 1.1em;
+	margin-top: 25px;
 }
 #footer .parceiro-iguatemi{
 	color:white;
@@ -576,14 +575,15 @@ body.home, body.page{
 	font-size:1.7em;
 	font-weight: 300;
 }
+#como-apoiar .links .link-container:first-child {
+	border-right:3px solid white;
+	text-align: right;
+}
 #como-apoiar .link-container{
 	float:left;
 	width:94px;
 	padding-left:5px;
-}
-#como-apoiar .separator{
-	width:110px;
-	border-right:3px solid white;
+	text-align: left;
 }
 #como-apoiar .links{
 	margin-left:22%;
