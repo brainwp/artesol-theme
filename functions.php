@@ -286,3 +286,7 @@ require_once get_template_directory() . '/inc/advanced-custom-fields/acf.php';
 require_once get_template_directory() . '/inc/acf-options-page/acf-options-page.php';
 require_once get_template_directory() . '/fields.php';
 //require_once get_template_directory() . '/inc/options.php';
+/**
+ * Custom post types
+ */
+require_once get_template_directory() . '/inc/cpts.php';
