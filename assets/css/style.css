@@ -87,6 +87,7 @@ body.home, body.page{
 
 .container.home .logo .icon-menu {
 	background: url('../images/icon-menu.jpg') center center no-repeat;
+	cursor: pointer;
 	float: right;
 	height: 60px;
 	width: 60px;
@@ -205,8 +206,9 @@ body.home, body.page{
 	z-index:99;
 	background: none repeat scroll 0% 0% #dd7a04;
 	position: absolute;
-	margin-left: 21.7%;
-	margin-top: 23%;
+	margin-left: 16.7%;
+	margin-top: 300px;
+	width: 39%
 }
 #menu-top a{
 	background:transparent !important;
@@ -278,11 +280,14 @@ body.home, body.page{
 	background:url('../images/slider-home-next.png') no-repeat;
 }
 #slider-home.single .slick-prev{
-	left:0;
+	left:10px;
 	width:31px;
 	height:106px;
 	background:url('../images/slider-home-prev.png') no-repeat;
 	z-index:99;
+}
+#slider-home.single .slick-prev:hover{
+	left: 5px;
 }
 #slider-home.mult .slick-next{
 	right:0;
@@ -291,12 +296,19 @@ body.home, body.page{
 	z-index:99;
 	background:url('../images/slider-home-mult-next.png') no-repeat;
 }
+#slider-home.single .slick-next:hover{
+	right: 5px;
+}
 #slider-home.mult .slick-prev{
 	left:0;
 	width:16px;
 	height:93px;
 	background:url('../images/slider-home-mult-prev.png') no-repeat;
 	z-index:99;
+}
+.slick-prev, .slick-next {
+	transition: all 0.3s linear;
+	top: 41%;
 }
 #slider-home.single h3{
 	color:white;
@@ -520,27 +532,31 @@ body.home, body.page{
 #como-apoiar{
 	margin-left: 33%;
 	height:179px;
+	position: relative;
+	width: 350px;
+	margin: -100px auto -26px;
 }
 #como-apoiar .image{
-	width:405px;
-	height:404px;
-	background:url('../images/bg-como-apoiar.png') no-repeat;
+	width:350px;
+	height:350px;
+	background:url('../images/bg-como-apoiar.png') center center no-repeat;
+	background-size: 100%;
 	position: absolute;
 }
 #como-apoiar h3{
-	margin-top:25%;
-	margin-left:20%;
+	margin: 25% auto 15px;
 	color:white;
 	font-family: 'Gotham-Bold';
-	font-size:2.5em;
-	width:224px;
+	font-size:2.3em;
+	width: 200px;
 	text-align: center
 }
 #como-apoiar a{
 	float:inherit!important;
 	font-family: "Istok Web",sans-serif;
 	color:white;
-	font-size:2.0em;
+	font-size:1.7em;
+	font-weight: 300;
 }
 #como-apoiar .link-container{
 	float:left;
@@ -549,7 +565,7 @@ body.home, body.page{
 }
 #como-apoiar .separator{
 	width:110px;
-	border-right:6px solid white;
+	border-right:3px solid white;
 }
 #como-apoiar .links{
 	margin-left:22%;
