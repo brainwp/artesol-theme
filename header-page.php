@@ -40,7 +40,7 @@
 				<a href="<?php echo esc_url( home_url() ); ?>" class="link">
 				</a><!-- link -->
 
-				<div class="icon-search"></div><!-- icon-search -->
+				<div class="icon-search" id="search-click" data-open="false"></div><!-- icon-search -->
 				<div class="icon-menu" id="menu-click" data-open="false"></div><!-- icon-menu -->
 
 			</div><!-- logo -->
@@ -58,6 +58,9 @@
 				);
 				?>
 			</nav><!-- #menu -->
+			<form action="<?php echo home_url('/');?>" id="search-form">
+				<input type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
+			</form><!-- #search-form -->
 			<?php while ( have_posts() ) : the_post(); ?>
 					<?php if ( has_post_thumbnail() ) : ?>
 					    <?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(),'large'); ?>
