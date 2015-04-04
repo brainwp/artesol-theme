@@ -208,6 +208,8 @@ body.home, body.page{
 #menu-top a{
 	background:transparent !important;
 	color:white;
+	font-size: 0.9em;
+	text-transform: uppercase;
 	transition:200ms ease all;
 }
 #menu-top a:hover{
