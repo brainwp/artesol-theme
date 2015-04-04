@@ -7,11 +7,11 @@ if(function_exists("register_field_group"))
 {
 	register_field_group(array (
 		'id' => 'acf_options',
-		'title' => 'Options',
+		'title' => 'Home - Destaque - Superiores',
 		'fields' => array (
 			array (
 				'key' => 'field_54c38279b37e8',
-				'label' => __('Home','odin'),
+				'label' => __('Destaque 1','odin'),
 				'name' => '',
 				'type' => 'tab',
 			),
@@ -64,6 +64,12 @@ if(function_exists("register_field_group"))
 				'save_format' => 'url',
 				'preview_size' => 'medium',
 				'library' => 'all',
+			),
+			array (
+				'key' => 'field_54c3827944b37e8',
+				'label' => __('Destaque 2','odin'),
+				'name' => '',
+				'type' => 'tab',
 			),
 			array (
 				'key' => 'field_54c397bda7029',
@@ -122,7 +128,7 @@ if(function_exists("register_field_group"))
 					'param' => 'options_page',
 					'operator' => '==',
 					'value' => 'acf-options',
-					'order_no' => 0,
+					'order_no' => 1,
 					'group_no' => 0,
 				),
 			),
@@ -659,11 +665,11 @@ if(function_exists("register_field_group"))
 {
 	register_field_group(array (
 		'id' => 'acf_home-destaques',
-		'title' => 'Home - Destaques',
+		'title' => 'Home - Destaques - Inferiores',
 		'fields' => array (
 			array (
-				'key' => 'field_551bf1312785c',
-				'label' => 'Superiores',
+				'key' => 'field_551bf1312785dwdwc',
+				'label' => 'Destaque 1',
 				'name' => '',
 				'type' => 'tab',
 			),
@@ -735,6 +741,12 @@ if(function_exists("register_field_group"))
 				'layout' => 'vertical',
 			),
 			array (
+				'key' => 'field_551fkfk2785dwdwc',
+				'label' => 'Destaque 2',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
 				'key' => 'field_551bf14001929922785d',
 				'label' => 'Título - 2',
 				'name' => 'home_feature_2_title',
@@ -802,8 +814,8 @@ if(function_exists("register_field_group"))
 				'layout' => 'vertical',
 			),
 			array (
-				'key' => 'field_292fd9292785c',
-				'label' => 'Inferiores',
+				'key' => 'field_29752fd9292785c',
+				'label' => 'Destaque 3',
 				'name' => '',
 				'type' => 'tab',
 			),
@@ -873,6 +885,12 @@ if(function_exists("register_field_group"))
 				'save_other_choice' => 0,
 				'default_value' => '',
 				'layout' => 'vertical',
+			),
+			array (
+				'key' => 'field_551bgkgkg2785dwdwc',
+				'label' => 'Destaque 4',
+				'name' => '',
+				'type' => 'tab',
 			),
 			array (
 				'key' => 'field_home_feature_4_title',
@@ -949,7 +967,7 @@ if(function_exists("register_field_group"))
 					'param' => 'options_page',
 					'operator' => '==',
 					'value' => 'acf-options',
-					'order_no' => 0,
+					'order_no' => 2,
 					'group_no' => 0,
 				),
 			),
