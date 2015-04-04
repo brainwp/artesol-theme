@@ -43,6 +43,37 @@ function artesol_custom_post_type() {
 	);
 	register_post_type( 'projetos', $args );
 
+	// register taxonomy tipo
+	$labels = array(
+		'name'                       => _x( 'Tipologia', 'Taxonomy General Name', 'odin' ),
+		'singular_name'              => _x( 'Tipologia', 'Taxonomy Singular Name', 'odin' ),
+		'menu_name'                  => __( 'Tipologia', 'odin' ),
+		'all_items'                  => __( 'Todos tipos', 'odin' ),
+		'parent_item'                => __( 'Tipo parente', 'odin' ),
+		'parent_item_colon'          => __( 'Tipo parente:', 'odin' ),
+		'new_item_name'              => __( 'Adicionar nova Tipologia', 'odin' ),
+		'add_new_item'               => __( 'Adicionar nova Tipologia', 'odin' ),
+		'edit_item'                  => __( 'Editar tipo', 'odin' ),
+		'update_item'                => __( 'Atualizar tipo', 'odin' ),
+		'view_item'                  => __( 'Ver tipo', 'odin' ),
+		'separate_items_with_commas' => __( 'Tipos separados por virgula', 'odin' ),
+		'add_or_remove_items'        => __( 'Adicionar ou remover tipos', 'odin' ),
+		'choose_from_most_used'      => __( 'Escolha pelos mais usados', 'odin' ),
+		'popular_items'              => __( 'Tipos populares', 'odin' ),
+		'search_items'               => __( 'Buscar tipo', 'odin' ),
+		'not_found'                  => __( 'Não encontrado', 'odin' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => false,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'tipos', array( 'projetos' ), $args );
+
 }
 
 // Hook into the 'init' action
