@@ -375,7 +375,11 @@ body.home, body.page{
 	padding-right:10px;
 	display:block;
 }
+#slider-home .item span.leia-mais{
+	display:none;
+}
 #slider-home.mult .item span.leia-mais{
+	display:inline;
 	border: 1px solid #bf3600;
 	border-radius: 3px;
 	float: right;
@@ -599,6 +603,9 @@ body.home, body.page{
 	position: relative;
 	width: 350px;
 	margin: -100px auto -26px;
+}
+body.page-template-page-institucional-php #como-apoiar{
+	margin: 26px auto -26px;
 }
 #como-apoiar .image{
 	width:350px;
