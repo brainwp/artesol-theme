@@ -49,4 +49,4 @@ get_header( 'projetos' ); ?>
 	</section><!-- #primary -->
 
 <?php
-get_footer();
+get_footer('aceleracao');

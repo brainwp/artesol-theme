@@ -45,4 +45,5 @@
 			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_type', true ));?>
 		</div><!-- .col-md-12 meta-content -->
 	</div><!-- .col-md-4 projetos-meta -->
+	<div class="col-md-12 projetos-content"><?php the_content();?></div><!-- .col-md-12 projetos-content -->
 </article><!-- #projetos-post -->

@@ -617,7 +617,7 @@ body.home, body.page{
 	width: 350px;
 	margin: -100px auto -26px;
 }
-body.page-template-page-institucional-php #como-apoiar{
+body.page-template-page-institucional-php #como-apoiar, body.single-projetos #como-apoiar{
 	margin: 26px auto -26px;
 }
 #como-apoiar .image{
@@ -826,7 +826,39 @@ body.post-type-archive-projetos {
 	top: 70px;
 	width: 100%;
 }
-.post-type-archive-projetos .page-header, .single-projetos .page-header {
+.post-type-archive-projetos .each-projeto {
+	background: url('../images/bg-content-each-projeto.jpg') left top repeat-y #E2E2E2;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	padding-bottom: 40px;
+	position: relative;
+}
+.post-type-archive-projetos header.bg {
+	background: url('../images/bg-header-each-projeto.jpg') left top no-repeat transparent;
+	display: block;
+	height: 20px;
+	overflow: hidden;
+	width: 100%;
+}
+.post-type-archive-projetos footer.bg {
+	background: url('../images/bg-footer-each-projeto.jpg') right bottom repeat-x transparent;
+	display: block;
+	height: 20px;
+	overflow: hidden;
+	width: 98.8%;
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+}
+.post-type-archive-projetos .each-projeto h1.entry-title,
+.post-type-archive-projetos .each-projeto h1.entry-title a {
+	color: #726658;
+	font-size: 1.5em;
+	font-weight: 600;
+	margin-bottom: 20px;
+	text-decoration: none;
+}
+.post-type-archive-projetos .page-header {
 	border: none;
 	color: #FFF;
 	display: block;
@@ -843,7 +875,7 @@ body.post-type-archive-projetos {
 .post-type-archive-projetos .page-header span, .single-projetos .page-header span {
 	display: inline-block;
 	float: left;
-	font-size: 1em;
+	font-size: 0.9em;
 	margin-left: 5%;
 	width: 75%;
 }
@@ -877,4 +909,40 @@ article#projetos-post .projetos-meta .meta-content{
 article#projetos-post .projetos-meta .repeater-projetos img{
 	width:40px;
 	height:40px;
+}
+article#projetos-post .projetos-content{
+	color:#6e6e6e;
+	font-family: 'Gotham-Bold';
+}
+body.single-projetos{
+	background:url('../images/bg-body-single-projetos.jpg') no-repeat;
+	background-size:cover;
+}
+.post-type-archive-projetos .summary span:first-child {
+	color: #58595b;
+	display: block;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.post-type-archive-projetos .summary .entry-summary {
+	color: #58595b;
+	font-size: 0.9em;
+}
+.post-type-archive-projetos .summary .btn-artesol {
+	background-color: #EFB310;
+	color: #FFF;
+	font-size: 0.9em;
+}
+.post-type-archive-projetos .summary .btn-artesol:hover {
+	text-decoration: none;
+}
+.post-type-archive-projetos .infos span {
+	border-bottom: 1px solid #afafaf;
+	color: #58595b;
+	display: block;
+	font-size: 0.9em;
+	padding: 10px;
+}
+.post-type-archive-projetos .thumb {
+	margin-top: 20px;
 }
