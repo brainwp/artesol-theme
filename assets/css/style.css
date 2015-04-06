@@ -761,8 +761,15 @@ body.page article .content{
 	}
 }
 /* Aceleracao footer */
-#aceleracao-footer{
+#aceleracao-footer.verde{
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
+	background-size:cover;
+	position: absolute;
+	margin-top:-458px;
+	background-attachment: fixed;
+}
+#aceleracao-footer.bege{
+	background:url('../images/bg-aceleracao-footer-bege.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
 	margin-top:-458px;
@@ -783,7 +790,6 @@ body.page article .content{
 }
 #aceleracao-footer a{
 	display:inline-block;
-	background:#199b6c;
 	padding:10px;
 	padding-left:15px;
 	padding-right:15px;
@@ -792,7 +798,14 @@ body.page article .content{
 	color:white;
 	text-align: center;
 }
-
+#aceleracao-footer.verde a{
+	background:#199b6c;
+}
+#aceleracao-footer.bege a{
+	border-radius:2px;
+	border-bottom:1px solid #998b70;
+	background:#c2b59b;
+}
 /* Projetos */
 body.post-type-archive-projetos {
 	background: url('../images/bg-projetos.jpg') center top transparent;
