@@ -8,14 +8,12 @@
  * @package Odin
  * @since 2.2.0
  */
-$class = array('verde','bege');
-$class_random = array_rand($class,1);
 ?>
 
 </div><!-- #main -->
 </div><!-- .container -->
 <div id="aceleracao-footer-margin"></div><!-- #aceleracao-footer-margin -->
-<div class="col-md-12 <?php echo $class[$class_random];?>" id="aceleracao-footer">
+<div class="col-md-12" id="aceleracao-footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">

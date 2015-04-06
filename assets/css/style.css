@@ -761,14 +761,14 @@ body.page article .content{
 	}
 }
 /* Aceleracao footer */
-#aceleracao-footer.verde{
+body.page-template-page-institucional-php #aceleracao-footer{
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
 	margin-top:-458px;
 	background-attachment: fixed;
 }
-#aceleracao-footer.bege{
+body.single-projetos #aceleracao-footer{
 	background:url('../images/bg-aceleracao-footer-bege.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
@@ -798,10 +798,10 @@ body.page article .content{
 	color:white;
 	text-align: center;
 }
-#aceleracao-footer.verde a{
+body.page-template-page-institucional-php #aceleracao-footer a{
 	background:#199b6c;
 }
-#aceleracao-footer.bege a{
+body.single-projetos #aceleracao-footer a{
 	border-radius:2px;
 	border-bottom:1px solid #998b70;
 	background:#c2b59b;
