@@ -871,7 +871,7 @@ body.post-type-archive-projetos {
 	margin-bottom: 20px;
 	text-decoration: none;
 }
-.post-type-archive-projetos .page-header {
+.post-type-archive-projetos .page-header, .single-projetos .page-header{
 	border: none;
 	color: #FFF;
 	display: block;
