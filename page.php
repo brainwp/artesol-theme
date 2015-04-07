@@ -33,4 +33,4 @@ get_header( 'page' ); ?>
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+get_footer( 'aceleracao' );
