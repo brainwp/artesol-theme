@@ -897,3 +897,44 @@ body.post-type-archive-projetos {
 .post-type-archive-projetos .thumb {
 	margin-top: 20px;
 }
+
+/* Page */
+.page .navbar-default {
+	background-color: #DD7A00;
+	border: none;
+	border-radius: 0;
+}
+.page .navbar-default .logo {
+	float: left;
+	padding: 7px 15px;
+	width: auto;
+}
+.page .navbar-default .logo img {
+	max-width: 160px;
+}
+.page .navbar-default .navbar-nav > li > a {
+	color: #FFF;
+	padding-bottom: 25px;
+	padding-top: 25px;
+	text-transform: uppercase;
+}
+.page .navbar-default .navbar-nav > li > a:hover {
+	background-color: #ad6813;
+}
+.page .entry-header {
+	color: #716557;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.page .entry-header h1 {
+	font-weight: bolder;
+}
+.page .site-main {
+	margin-bottom: 120px;
+}
+blockquote {
+    font-size: 15.5px;
+    border-left: 3px solid #716557;
+}
