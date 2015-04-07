@@ -810,26 +810,26 @@ body.single-projetos #aceleracao-footer a{
 body.post-type-archive-projetos {
 	background: url('../images/bg-projetos.jpg') center top transparent;
 }
-.post-type-archive-projetos .navbar-default,.single-projetos .navbar-default {
+.post-type-archive-projetos .navbar-default,.single-projetos .navbar-default, .page-template-page-rede-php .navbar-default {
 	background-color: #DD7A00;
 	border: none;
 	border-radius: 0;
 }
-.post-type-archive-projetos .navbar-default .logo, .single-projetos .navbar-default .logo {
+.post-type-archive-projetos .navbar-default .logo, .single-projetos .navbar-default .logo, .page-template-page-rede-php .navbar-default .logo {
 	float: left;
 	padding: 7px 15px;
 	width: auto;
 }
-.post-type-archive-projetos .navbar-default .logo img, .single-projetos .navbar-default .logo img {
+.post-type-archive-projetos .navbar-default .logo img, .single-projetos .navbar-default .logo img, .page-template-page-rede-php .logo img {
 	max-width: 160px;
 }
-.post-type-archive-projetos .navbar-default .navbar-nav > li > a, .single-projetos .navbar-default .navbar-nav > li > a {
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a, .single-projetos .navbar-default .navbar-nav > li > a, .page-template-page-rede-php .navbar-nav > li > a {
 	color: #FFF;
 	padding-bottom: 25px;
 	padding-top: 25px;
 	text-transform: uppercase;
 }
-.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover, .single-projetos .navbar-default .navbar-nav > li > a:hover {
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover, .single-projetos .navbar-default .navbar-nav > li > a:hover, .page-template-page-rede-php .navbar-default .navbar-nav > li > a:hover {
 	background-color: #ad6813;
 }
 .bg-title-projetos {
@@ -871,7 +871,7 @@ body.post-type-archive-projetos {
 	margin-bottom: 20px;
 	text-decoration: none;
 }
-.post-type-archive-projetos .page-header, .single-projetos .page-header{
+.post-type-archive-projetos .page-header, .single-projetos .page-header, .page-template-page-rede-php .page-header{
 	border: none;
 	color: #FFF;
 	display: block;
@@ -879,13 +879,13 @@ body.post-type-archive-projetos {
 	overflow: hidden;
 	width: 100%;
 }
-.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1 {
+.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1 {
 	display: inline-block;
 	float: left;
 	font-weight: bolder;
 	width: auto;
 }
-.post-type-archive-projetos .page-header span, .single-projetos .page-header span {
+.post-type-archive-projetos .page-header span, .single-projetos .page-header span, .page-template-page-rede-php .page-header span {
 	display: inline-block;
 	float: left;
 	font-size: 0.9em;
@@ -922,12 +922,12 @@ article#projetos-post .projetos-meta .meta-content{
 article#projetos-post .projetos-meta .repeater-projetos img{
 	width:40px;
 	height:40px;
-}
+}/
 article#projetos-post .projetos-content{
 	color:#6e6e6e;
 	font-family: 'Gotham-Bold';
 }
-body.single-projetos{
+body.single-projetos, body.page-template-page-rede-php{
 	background:url('../images/bg-body-single-projetos.jpg') no-repeat;
 	background-size:cover;
 }
@@ -958,4 +958,85 @@ body.single-projetos{
 }
 .post-type-archive-projetos .thumb {
 	margin-top: 20px;
+}
+/*page template page-rede.php */
+.page-template-page-rede-php .bg-title-projetos{
+	display:none;
+}
+#rede-submenu{
+	padding:0;
+	background:#d3c5b3;
+}
+.page-template-page-rede-php #main{
+	margin:0;
+}
+.page-template-page-rede-php nav#main-navigation{
+	margin-bottom: 0;
+}
+#rede-submenu nav a{
+	background:transparent !important;
+	padding-top:7px;
+	padding-bottom:7px;
+	font-family: "Istok Web",sans-serif;
+	font-size:1.1em;
+}
+#rede-submenu nav a:hover{
+	text-decoration: underline !important;
+}
+.page-template-page-rede-php section#entenda .icon{
+	background:url('../images/rede-artesol.png') no-repeat center;
+	height:240px;
+}
+.page-template-page-rede-php section#entenda{
+	background:url('../images/bg-rede-entenda.jpg') no-repeat center;
+	background-size:cover;
+}
+.page-template-page-rede-php #como-apoiar{
+	clear:both;
+}
+.page-template-page-rede-php section#entenda a.entenda-btn-txt{
+	font-family: 'Gotham-Book',sans-serif;
+	color:white !important;
+	text-align: center;
+	font-size:1.2em;
+}
+.page-template-page-rede-php section#entenda a.entenda-btn{
+	background:url('../images/btn-rede-entenda.jpg') no-repeat center;
+	height:22px;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.page-template-page-rede-php section#conheca{
+	background:url('../images/bg-rede-conheca.png') no-repeat center;
+	background-size: cover;
+}
+.page-template-page-rede-php section#conheca .section-title{
+	font-family: 'Gotham-Bold';
+	color:#58595b;
+	text-align: center;
+	padding-top:30px;
+}
+.page-template-page-rede-php section#conheca a.post-container{
+	display: block;
+	text-decoration: none !important;
+}
+.page-template-page-rede-php section#conheca a.post-container *{
+	font-family: 'Gotham-Bold';
+}
+.page-template-page-rede-php section#conheca a.post-container h3{
+	text-align: center;
+	color:#756b5f;
+}
+.page-template-page-rede-php section#conheca a.post-container .post-content{
+	color:#58595b;
+}
+.page-template-page-rede-php section#conheca .text-center{
+	padding-bottom:20px;
+	padding-top:20px;
+}
+.page-template-page-rede-php section#conheca .text-center .btn{
+	font-family: 'Gotham-Bold';
+	color:white !important;
+	background:#199b6c;
+	border:transparent !important;
 }

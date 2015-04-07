@@ -64,6 +64,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 			array(
 				'main-menu' => __( 'Main Menu', 'odin' ),
 				'menu-institucional' => __( 'Menu Institucional', 'odin' ),
+				'rede-submenu' => __( 'Menu Rede', 'odin' ),
 				'footer-menu-1' => __( 'Footer Menu 1', 'odin' ),
 				'footer-menu-2' => __( 'Footer Menu 2', 'odin' ),
 				'footer-menu-3' => __( 'Footer Menu 3', 'odin' ),
