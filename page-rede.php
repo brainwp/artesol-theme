@@ -44,4 +44,41 @@ get_header('rede');
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #conheca.col-md-12 -->
+<section id="tipos" class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<?php $page = get_page_by_path( 'rede/tipologia', OBJECT, 'page' );?>
+			<h2 class="section-title"><?php echo $page->post_title;?></h2><!-- .section-title -->
+			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
+			<?php foreach ($tipos as $tipo):?>
+			     <a class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
+			     		<?php if($thumb = get_field('tipo_thumb', 'tipos_'.$tipo->term_id)): ?>
+			     		    <div class="img-container">
+			     		    	<img class="tipo-thumb" src="<?php echo $thumb['sizes']['medium'];?>">
+			                </div><!-- .img-container -->
+			            <?php endif;?>
+			        <h3 class="post-title"><?php echo $tipo->name;?></h3><!-- .post-title -->
+			     </a><!-- .col-md-4 post-container -->
+			<?php endforeach;?>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #tipos.col-md-12 -->
+<section id="participe" class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<?php $page = get_page_by_path( 'rede/participe', OBJECT, 'page' );?>
+			<h2 class="section-title"><?php echo $page->post_title;?></h2><!-- .section-title -->
+			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
+			<?php if(get_field('rede_participe_repeater')): ?>
+			<?php while(has_sub_field('rede_participe_repeater')): ?>
+			    <div class="col-md-3 each">
+			        <a href="<?php the_sub_field('link');?>">
+			        	<?php the_sub_field('text');?>
+			        </a>
+			    </div><!-- .col-md-3 -->
+	        <?php endwhile; ?>
+            <?php endif; ?>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #participe.col-md-12 -->
 <?php get_footer('rede');?>
