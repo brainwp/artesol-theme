@@ -1,6 +1,6 @@
 <?php
 /**
- * The Header page for our theme.
+ * The Header for our theme.
  *
  * Displays all of the <head> section and everything up till #main div
  *
@@ -32,47 +32,46 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="container home">
-		<header id="header" role="banner" class="header-home">
 
-			<div class="logo col-sm-4">
+	<div class="container">
+		<header id="header" role="banner">
 
-				<a href="<?php echo esc_url( home_url() ); ?>" class="link">
-				</a><!-- link -->
+			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 
-				<div class="icon-search" id="search-click" data-open="false"></div><!-- icon-search -->
-				<div class="icon-menu" id="menu-click" data-open="false"></div><!-- icon-menu -->
+				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-artesol-projetos.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+				</a>
 
-			</div><!-- logo -->
-			<nav id="menu-top">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'main-menu',
-						'depth'          => 2,
-						'container'      => false,
-						'menu_class'     => 'nav navbar-nav menu-top',
-						'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-						'walker'         => new Odin_Bootstrap_Nav_Walker()
-						)
-				);
-				?>
-			</nav><!-- #menu -->
-			<form action="<?php echo home_url('/');?>" id="search-form">
-				<input type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
-			</form><!-- #search-form -->
-			<?php while ( have_posts() ) : the_post(); ?>
-					<?php if ( has_post_thumbnail() ) : ?>
-					    <?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(),'large'); ?>
-					    <div style="background: url(' <?php echo $img[0]; ?>' ) center center no-repeat" class="destaque-1 col-md-8 col-sm-12 page-thumbnail">
-					    	<a class="link" href="#">
-					    		<h2><?php the_excerpt(); ?></h2>
-					    	</a>
-					    </div><!-- destaque-1 -->
-					<?php endif; ?>
-			<?php endwhile; ?>
-			<div class="clear"></div>
+				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<?php /*
 
+					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
+					*/ ?>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-main-navigation">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main-menu',
+								'depth'          => 2,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav',
+								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+								'walker'         => new Odin_Bootstrap_Nav_Walker()
+							)
+						);
+					?>
+				</div><!-- .navbar-collapse -->
+			</nav><!-- #main-menu -->
 		</header><!-- #header -->
 
 		<div id="main" class="site-main row">

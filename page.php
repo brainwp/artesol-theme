@@ -10,7 +10,7 @@
  * @since 2.2.0
  */
 
-get_header(); ?>
+get_header( 'page' ); ?>
 
 	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
 		<div id="content" class="site-content" role="main">
@@ -33,4 +33,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_footer();
+get_footer( 'aceleracao' );
