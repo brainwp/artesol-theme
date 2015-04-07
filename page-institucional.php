@@ -1,6 +1,6 @@
 <?php
 /* Template name: Institucional */
-get_header('page');
+get_header( 'institucional' );
 ?>
 <aside class="col-md-4 col-xs-12 pull-left sidebar">
 	<?php get_sidebar('institucional');?>
