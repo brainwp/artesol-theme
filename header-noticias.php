@@ -64,5 +64,17 @@
 			<form action="<?php echo home_url('/');?>" id="search-form">
 				<input type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
 			</form><!-- #search-form -->
-
+			<?php if(is_single()): ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if ( has_post_thumbnail() ) : ?>
+					    <?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(),'large'); ?>
+					    <div style="background: url(' <?php echo $img[0]; ?>' ) center center;" class="destaque-1 col-md-8 col-sm-12 page-thumbnail">
+					    	<a class="link" href="#">
+					    		<h1><?php the_title(); ?></h1>
+					    	</a>
+					    </div><!-- destaque-1 -->
+					<?php endif; ?>
+			   <?php endwhile; ?>
+			   <div class="col-md-12 clear" style="height:0px;"></div>
+			<?php endif;?>
 		</header><!-- #header -->

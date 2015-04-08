@@ -40,7 +40,7 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 }
 
 /* Geral */
-body.home, body.page, body.blog{
+body.home, body.page, body.blog, body.single{
 	background: url('../images/bg-container.jpg') center top;
 	background-size:cover;
 }
@@ -1267,7 +1267,7 @@ blockquote {
 .noticias-loop-container .btn-leia:hover{
 	background: #dd5a00;
 }
-body.blog .container.home .logo{
+body.blog .container.home .logo, body.single .container.home .logo{
 	max-width: inherit !important;
 }
 .noticias-pagination *{
@@ -1285,4 +1285,87 @@ body.blog .container.home .logo{
 .noticias-pagination a.next, .noticias-pagination a.prev{
 	color:#dd7c27;
 	font-size: 1.4em;
+}
+/* single.php */
+body.single .page-thumbnail{
+	max-width: inherit !important;
+	margin:0 !important;
+}
+.page-thumbnail h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-shadow:none !important;
+	width:100%;
+	display: block;
+	position: absolute;
+	bottom:0;
+	color: white !important;
+}
+.page-thumbnail a.link{
+	background-color:rgba(0,0,0,0.4);
+}
+.page-thumbnail a.link:hover{
+	background-color:rgba(0,0,0,0.2);
+}
+#single-noticias-container{
+	background:white;
+}
+.noticias-single-each{
+	font-family: "Istok Web",sans-serif;
+	color:black;
+}
+#secondary h3.widgettitle{
+	font-family: 'Gotham-Bold',sans-serif;
+	text-transform: uppercase;
+	color:#494949;
+	font-size:1.0em;
+}
+#secondary{
+	padding-top:20px;
+}
+#secondary .widget{
+	padding:5px;
+}
+#secondary .widget ul{
+	list-style: none !important;
+	padding:0px;
+}
+#secondary .widget ul a{
+	font-family: "Istok Web",sans-serif;
+	color:black;
+}
+
+#secondary .jetpack_subscription_widget{
+	padding:5px;
+	width:100%;
+	background:#c2b59b;
+}
+#secondary .jetpack_subscription_widget h3.widgettitle{
+	text-align: center;
+}
+#secondary .jetpack_subscription_widget input[type="email"]{
+	padding:2px;
+	border-radius:7px;
+	color:black;
+	font-family: "Istok Web",sans-serif;
+	border:none !important;
+}
+#secondary .jetpack_subscription_widget p{
+	display: block;
+	padding-left:5px;
+	padding-right:5px;
+}
+#secondary .jetpack_subscription_widget p#subscribe-submit{
+	text-align: right;
+}
+#secondary .jetpack_subscription_widget input[type="submit"]{
+	font-size: 0.8em;
+	font-family: 'Gotham-Bold',sans-serif;
+	background:#dd5a00;
+	text-transform: uppercase;
+	padding:3px;
+	border-radius:3px;
+	color:white;
+	border: none !important;
 }
