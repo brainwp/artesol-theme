@@ -13,14 +13,12 @@
  * @since 2.2.0
  */
 
-get_header(); ?>
+get_header('noticias'); ?>
 
-	<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
-		<div id="content" class="site-content" role="main">
-
-			<?php
+		<?php
 				if ( have_posts() ) :
 					// Start the Loop.
+					$i = 1;
 					while ( have_posts() ) : the_post();
 
 						/*
@@ -28,12 +26,17 @@ get_header(); ?>
 						 * use this in a child theme, then include a file called called content-___.php
 						 * (where ___ is the post format) and that will be used instead.
 						 */
-						get_template_part( 'content', get_post_format() );
-
+						if($i == 3){
+							echo '<div class="col-md-12 clear"></div>';
+						}
+						get_template_part( 'content', 'noticias' );
+						$i++;
 					endwhile;
 
 					// Post navigation.
-					odin_paging_nav();
+					echo '<div class="text-center noticias-pagination">';
+					brasa_noticias_pagination();
+					echo '</div>';
 
 				else :
 					// If no content, include the "No posts found" template.
@@ -41,10 +44,5 @@ get_header(); ?>
 
 				endif;
 			?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
 <?php
-get_sidebar();
-get_footer();
+get_footer('noticias');

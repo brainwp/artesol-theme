@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying all pages.
- *
+ * Template name: Home
  * This is the template that display Home.
  *
  * @package Odin

@@ -40,7 +40,7 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 }
 
 /* Geral */
-body.home, body.page{
+body.home, body.page, body.blog{
 	background: url('../images/bg-container.jpg') center top;
 	background-size:cover;
 }
@@ -618,7 +618,10 @@ body.page .destaque-1 h3,
 	width: 350px;
 	margin: -100px auto -26px;
 }
-body.page-template-page-institucional-php #como-apoiar, body.single-projetos #como-apoiar{
+body.page-template-page-institucional-php #como-apoiar,
+body.single-projetos #como-apoiar,
+body.blog #como-apoiar
+{
 	margin: 26px auto -26px;
 }
 #como-apoiar .image{
@@ -762,7 +765,7 @@ body.page article .content{
 	}
 }
 /* Aceleracao footer */
-body.page-template-page-institucional-php #aceleracao-footer{
+body.page-template-page-institucional-php #aceleracao-footer, body.blog #aceleracao-footer{
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
@@ -799,7 +802,7 @@ body.single-projetos #aceleracao-footer{
 	color:white;
 	text-align: center;
 }
-body.page-template-page-institucional-php #aceleracao-footer a{
+body.page-template-page-institucional-php #aceleracao-footer a, body.blog #aceleracao-footer a{
 	background:#199b6c;
 }
 body.single-projetos #aceleracao-footer a{
@@ -1199,4 +1202,87 @@ iframe#section-mapa{
 blockquote {
     font-size: 15.5px;
     border-left: 3px solid #716557;
+}
+/* index.php */
+.noticias-loop-container{
+	height:370px;
+}
+.noticias-loop-container:nth-of-type(1),.noticias-loop-container:nth-of-type(2){
+	height:360px;
+}
+@media screen and(max-width:700px){
+	.noticias-loop-container{
+		height:auto !important;
+	}
+}
+.noticias-loop-container .img-container{
+	display: block;
+	background:#c2b59b;
+	height:130px;
+	overflow:hidden;
+	padding:0;
+}
+.noticias-loop-container .img-container img{
+	width:100%;
+}
+.noticias-loop-container .inside{
+	text-decoration: none !important;
+	height:230px;
+	display: block;
+	background:#c2b59b;
+}
+.noticias-loop-container .inside a{
+	text-decoration: none !important;
+}
+.noticias-loop-container .inside h4{
+	text-align: center;
+	padding-top:10px;
+	font-family: 'Gotham-Bold',sans-serif;
+	color:#494949;
+	text-transform: uppercase;
+}
+.noticias-loop-container .inside h5{
+	margin:0;
+	text-align: center;
+	font-family: 'Gotham-Bold',sans-serif;
+	color:white !important;
+	text-transform: uppercase;
+}
+.noticias-loop-container .post-content{
+	color:#494949;
+	font-size:0.8em;
+	font-family: 'Verdana',sans-serif;
+	padding-top:5px;
+}
+.noticias-loop-container .btn-leia{
+	font-family: 'Gotham-Bold',sans-serif;
+	color:white;
+	background:#494949;
+	text-align: center;
+	padding:2px;
+	text-transform: uppercase;
+	border-radius: 2px;
+	transition:400ms ease all;
+}
+.noticias-loop-container .btn-leia:hover{
+	background: #dd5a00;
+}
+body.blog .container.home .logo{
+	max-width: inherit !important;
+}
+.noticias-pagination *{
+	font-family: 'Gotham-Bold',sans-serif;
+	font-size:1.2em;
+	color:#6a6b6e;
+}
+.noticias-pagination a:hover{
+	color:#dd7c27;
+	text-decoration: none !important;
+}
+.noticias-pagination .current{
+	color:#dd7c27;
+}
+.noticias-pagination a.next, .noticias-pagination a.prev{
+	color:#dd7c27;
+	font-size: 1.4em;
 }
