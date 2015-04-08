@@ -681,11 +681,11 @@ body.single #como-apoiar
 	}
 }
 /*page institucional */
-body.page .destaque-1{
+body.page-template-page-institucional-php .destaque-1{
 	max-width: inherit !important;
 	margin:0 !important;
 }
-body.page .destaque-1 h2{
+body.page-template-page-institucional-php .destaque-1 h2{
 	color:white !important;
 	font-family: "Istok Web",sans-serif;
 	font-size:3.2em !important;
