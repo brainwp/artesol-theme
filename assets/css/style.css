@@ -620,7 +620,9 @@ body.page .destaque-1 h3,
 }
 body.page-template-page-institucional-php #como-apoiar,
 body.single-projetos #como-apoiar,
-body.blog #como-apoiar
+body.blog #como-apoiar,
+body.page-template-default #como-apoiar,
+body.single #como-apoiar
 {
 	margin: 26px auto -26px;
 }
@@ -765,7 +767,11 @@ body.page article .content{
 	}
 }
 /* Aceleracao footer */
-body.page-template-page-institucional-php #aceleracao-footer, body.blog #aceleracao-footer{
+body.page-template-page-institucional-php #aceleracao-footer,
+body.blog #aceleracao-footer,
+body.page-template-default #aceleracao-footer,
+body.single #aceleracao-footer
+{
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
@@ -802,7 +808,11 @@ body.single-projetos #aceleracao-footer{
 	color:white;
 	text-align: center;
 }
-body.page-template-page-institucional-php #aceleracao-footer a, body.blog #aceleracao-footer a{
+body.page-template-page-institucional-php #aceleracao-footer a,
+body.blog #aceleracao-footer a,
+body.single #aceleracao-footer a,
+body.page-template-default #aceleracao a
+{
 	background:#199b6c;
 }
 body.single-projetos #aceleracao-footer a{
