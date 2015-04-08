@@ -142,6 +142,7 @@ body.home, body.page{
 	padding-top: 80px;
 }
 
+body.page .destaque-1 h3,
 .container.home .destaque-1 h3,
 .container.home .destaque-2 h3 {
 	color: #FFF;
@@ -1074,7 +1075,22 @@ body.single-projetos, body.page-template-page-rede-php{
 .page-template-page-rede-php section#participe h2.section-title{
 	color:#424242;
 	text-align: center;
+	padding-top:20px;
+	padding-bottom:10px;
 }
+.page-template-page-rede-php section#beneficios *{
+	font-family: 'Gotham-Bold';
+}
+.page-template-page-rede-php section#beneficios h2.section-title{
+	color:#424242;
+	text-align: center;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+.page-template-page-rede-php section#beneficios{
+	background:#d2d1c7;
+}
+
 .page-template-page-rede-php section#participe a{
 	display:block;
 	background:rgba(176,173,154,0.3);
@@ -1087,6 +1103,61 @@ body.single-projetos, body.page-template-page-rede-php{
 .page-template-page-rede-php section#participe a:hover{
 	background:rgba(176,173,154,0.7);
 	padding-top:10px;
+}
+.page-template-page-rede-php section#beneficios a.post-container{
+	display: block;
+	text-decoration: none !important;
+}
+.page-template-page-rede-php section#beneficios a.post-container *{
+	font-family: 'Gotham-Bold';
+}
+.page-template-page-rede-php section#beneficios a.post-container h3{
+	text-align: center;
+	color:#756b5f;
+}
+.page-template-page-rede-php section#beneficios a.post-container .post-content{
+	color:#58595b;
+}
+.page-template-page-rede-php section#destaques .destaque{
+	width:33.3333%;
+}
+.page-template-page-rede-php section#destaques .destaque-2{
+	margin-left:15px;
+}
+.page-template-page-rede-php section#destaques .destaque-3{
+	float:right;
+	margin-right:0!important;
+}
+@media screen and(max-width:600px){
+	.page-template-page-rede-php section#destaques .destaque{
+		width:100% !important;
+		margin-bottom:10px;
+		margin-left:0;
+		clear: both;
+	}
+}
+.page-template-page-rede-php section#destaques .is_slider{
+	margin-top:30px;
+}
+.page-template-page-rede-php section#destaques .is_slider .slick-track{
+	max-height: 320px;
+	overflow: hidden;
+}
+.page-template-page-rede-php section#destaques .is_slider .slick-dots li button::before{
+	font-size:16px;
+}
+.page-template-page-rede-php section#destaques h2.section-title{
+	font-family: 'Gotham-Bold',sans-serif;
+	color:#424242;
+	text-align: center;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+iframe#section-mapa{
+	width:100%;
+	display: block;
+	height:700px;
+	margin-bottom: -174px;
 }
 /* Page */
 .page .navbar-default {

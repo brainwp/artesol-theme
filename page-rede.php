@@ -81,4 +81,109 @@ get_header('rede');
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #participe.col-md-12 -->
+<section id="beneficios" class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<?php $page = get_page_by_path( 'rede/beneficios', OBJECT, 'page' );?>
+			<h2 class="section-title"><?php echo $page->post_title;?></h2><!-- .section-title -->
+			<?php
+			$args = array(
+				'post_type'      => 'page',
+				'posts_per_page' => -1,
+				'post_parent'    => $page->ID,
+			);
+
+			$parent = new WP_Query( $args );
+			if ( $parent->have_posts() ) : ?>
+			<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+			    <a class="post-container col-md-4" href="<?php the_permalink();?>">
+			    	<h3 class="post-title"><?php the_title();?></h3><!-- .post-title -->
+			    	<div class="post-content"><?php the_excerpt();?></div><!-- .content -->
+			    </a>
+		    <?php endwhile; ?>
+		    <?php wp_reset_postdata();  endif; ?>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #beneficios -->
+<section id="destaques" class="col-md-12">
+	<div class="container home">
+		<div class="row">
+			<?php if ( $background1 = get_field( 'background_destaque_1', $page->ID ) ) : ?>
+				    <div style="background: url(' <?php echo $background1; ?>' ) center center no-repeat" class="destaque destaque-1 col-md-4 col-sm-4">
+				    	<?php if ( $url1 = get_field( 'link_destaque_1', $page->ID ) ) : ?>
+				            <a class="link" href="<?php echo $url1; ?>">
+			            <?php endif; ?>
+
+			           <?php if ( $title1 = get_field( 'titulo_destaque_1', $page->ID ) ) : ?>
+					        <h2><?php echo $title1; ?></h2>
+			            <?php endif; ?>
+			            <?php if ( $subtitle1 = get_field( 'sub_titulo_destaque_1', $page->ID ) ) : ?>
+				            <h3><?php echo $subtitle1; ?></h3>
+			            <?php endif; ?>
+
+			            <?php if ( $url1 = get_field( 'link_destaque_1', $page->ID ) ) : ?>
+			                </a>
+			            <?php endif; ?>
+
+		            </div><!-- destaque-1 -->
+
+                <?php endif; ?>
+
+	        <?php if ( $background2 = get_field( 'background_destaque_2', $page->ID ) ) : ?>
+
+		        <div style="background: url(' <?php echo $background2; ?>' ) center center no-repeat" class="destaque destaque-2 col-md-4 col-sm-4">
+
+			        <?php if ( $url2 = get_field( 'link_destaque_2', $page->ID ) ) : ?>
+			            <a class="link" href="<?php echo $url2; ?>">
+			        <?php endif; ?>
+
+			       <?php if ( $title2 = get_field( 'titulo_destaque_2', $page->ID ) ) : ?>
+				        <h2><?php echo $title2; ?></h2>
+			        <?php endif; ?>
+		            <?php if ( $subtitle2 = get_field( 'sub_titulo_destaque_2', $page->ID ) ) : ?>
+			            <h3><?php echo $subtitle2; ?></h3>
+			        <?php endif; ?>
+
+			        <?php if ( $url2 = get_field( 'link_destaque_2', $page->ID ) ) : ?>
+				        </a>
+			        <?php endif; ?>
+
+		        </div><!-- destaque-2 -->
+
+	        <?php endif; ?>
+	        <?php if ( $background3 = get_field( 'background_destaque_3', $page->ID ) ) : ?>
+
+		        <div style="background: url(' <?php echo $background3; ?>' ) center center no-repeat" class="destaque destaque-3 destaque-2 col-md-4 col-sm-4">
+
+			        <?php if ( $url3 = get_field( 'link_destaque_3', $page->ID ) ) : ?>
+			            <a class="link" href="<?php echo $url3; ?>">
+			        <?php endif; ?>
+
+			       <?php if ( $title3 = get_field( 'titulo_destaque_3', $page->ID ) ) : ?>
+				        <h2><?php echo $title3; ?></h2>
+			        <?php endif; ?>
+		            <?php if ( $subtitle3 = get_field( 'sub_titulo_destaque_3', $page->ID ) ) : ?>
+			            <h3><?php echo $subtitle3; ?></h3>
+			        <?php endif; ?>
+
+			        <?php if ( $url3 = get_field( 'link_destaque_3', $page->ID ) ) : ?>
+				        </a>
+			        <?php endif; ?>
+
+		        </div><!-- destaque-2 -->
+
+	        <?php endif; ?>
+	        <div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
+	        <h2 class="section-title">
+	        	<?php _e('Destaques da Rede','odin');?>
+	        </h2><!-- .section-title -->
+	        <?php echo do_shortcode('[brasa_slider name="Destaques Rede"]');?>
+	        <div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
+	        <h2 class="section-title">
+	        	<?php _e('O Mapa','odin');?>
+	        </h2><!-- .section-title -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #destaques -->
+<iframe src="http://a.brasawp.art.br/artesol/" id="section-mapa"></iframe>
 <?php get_footer('rede');?>
