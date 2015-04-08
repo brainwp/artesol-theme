@@ -185,5 +185,5 @@ get_header('rede');
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #destaques -->
-<iframe src="http://a.brasawp.art.br/artesol/" id="section-mapa"></iframe>
+<iframe src="http://a.brasawp.art.br/artesol/?embed" id="section-mapa"></iframe>
 <?php get_footer('rede');?>

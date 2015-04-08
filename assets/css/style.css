@@ -1158,6 +1158,7 @@ iframe#section-mapa{
 	display: block;
 	height:700px;
 	margin-bottom: -174px;
+	border:transparent !important;
 }
 /* Page */
 .page .navbar-default {
