@@ -109,7 +109,6 @@ body.home, body.page, body.blog, body.single{
 	overflow: hidden;
 	position: relative;
 }
-
 .container.home .destaque-1 .link,
 .container.home .destaque-2 .link {
 	height: 100%;
