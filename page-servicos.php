@@ -48,6 +48,18 @@ get_header('rede');
 	
 <?php endif ?>
 
+<?php $page = get_page_by_path( 'servicos/fale-conosco', OBJECT, 'page' );?>
+<?php if ( !empty( $page ) ): ?>
+
+<section id="fale-conosco" class="col-md-8">
+	<div class="desc">
+		<h1><?php echo $page->post_title; ?></h1>
+		<?php echo apply_filters('the_content', $page->post_content); ?>
+	</div>
+</section><!-- #fale-conosco -->
+	
+<?php endif ?>
+
 <iframe src="http://a.brasawp.art.br/artesol/?embed" id="section-mapa"></iframe>
 
 <?php get_footer('rede');?>

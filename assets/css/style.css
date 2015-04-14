@@ -38,6 +38,9 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 	clear:both;
 	height:10px;
 }
+.red {
+	color: #9D0526;
+}
 
 /* Geral */
 body.home, body.page, body.blog, body.single{
@@ -1202,7 +1205,7 @@ body.single-projetos, body.page-template-page-rede-php{
 /* >> Já nos Contrataram */
 .page-template-page-servicos #contrataram {
 	background-position: center;
-	min-height: 470px;
+	min-height: 370px;
 	position: relative;
 }
 .page-template-page-servicos #contrataram h1 {
@@ -1215,6 +1218,40 @@ body.single-projetos, body.page-template-page-rede-php{
 .page-template-page-servicos #contrataram .desc img {
 	margin: 0 auto;
 	max-width: 100%;
+}
+/* >> Fale Conosco */
+.page-template-page-servicos #fale-conosco {
+	float: none;
+	margin: 0 auto;
+}
+.page-template-page-servicos #fale-conosco h1 {
+	color: #726658;
+	margin: 50px auto 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+.page-template-page-servicos #fale-conosco p {
+	color: #333;
+	display: block;
+	font-size: 0.75em;
+	text-align: left;
+}
+.page-template-page-servicos #fale-conosco input[type='text'],
+.page-template-page-servicos #fale-conosco input[type='email'],
+.page-template-page-servicos #fale-conosco textarea {
+	background-color: #D1CBB9;
+	border: 1px solid #C4BFAD;
+	margin-bottom: 10px;
+	margin-top: 3px;
+	padding: 5px;
+	width: 100%;
+}
+.page-template-page-servicos #fale-conosco input[type="submit"] {
+	background-color: #C16803;
+	border: none;
+	border-radius: 3px;
+	color: #FFF;
 }
 @media screen and(max-width:600px){
 	.page-template-page-rede-php section#destaques .destaque{
