@@ -1140,6 +1140,82 @@ body.single-projetos, body.page-template-page-rede-php{
 	float:right;
 	margin-right:0!important;
 }
+/* SERVIÇOS */
+.page-template-page-servicos #titulo h1 {
+	font-family: "Gotham-Bold";
+	padding: 20px 10px 30px 10px;
+	margin: 0px !important;
+	display: block;
+	width: 100%;
+	color: #726658;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.4em;
+}
+.page-template-page-servicos .desc {
+	color: #494949;
+	float: none;
+	font-size: 1.2em;
+	margin: 0 auto 50px;
+	text-align: center;
+}
+/* >> Captação */
+.page-template-page-servicos #captacao {
+	background-position: center;
+	min-height: 470px;
+	position: relative;
+}
+.page-template-page-servicos #captacao .desc {
+	color: #FFF;
+	bottom: 70px;
+	font-size: 1.4em;
+	left: 40px;
+	text-align: left;
+	position: absolute;
+	width: 70%;
+}
+.page-template-page-servicos #captacao .desc h1 {
+	color: #dd7a00;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+/* >> Projetos Culturais */
+.page-template-page-servicos #projetos-culturais {
+	background-position: center;
+	min-height: 470px;
+	position: relative;
+}
+.page-template-page-servicos #projetos-culturais .desc {
+	color: #FFF;
+	bottom: 70px;
+	font-size: 1.4em;
+	right: 40px;
+	text-align: right;
+	position: absolute;
+	width: 70%;
+}
+.page-template-page-servicos #projetos-culturais .desc h1 {
+	color: #dd7a00;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+/* >> Já nos Contrataram */
+.page-template-page-servicos #contrataram {
+	background-position: center;
+	min-height: 470px;
+	position: relative;
+}
+.page-template-page-servicos #contrataram h1 {
+	color: #726658;
+	margin: 50px auto 30px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+.page-template-page-servicos #contrataram .desc img {
+	margin: 0 auto;
+	max-width: 100%;
+}
 @media screen and(max-width:600px){
 	.page-template-page-rede-php section#destaques .destaque{
 		width:100% !important;

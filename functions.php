@@ -309,3 +309,9 @@ function modal() {
 	<?php }
 }
 add_action('wp_footer', 'modal');
+
+function thumbnail_bg( $id = '', $tamanho = 'thumbnail' ) {
+	global $post;
+    $get_post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), $tamanho, false, '' );
+    echo 'style="background: url(' . $get_post_thumbnail[0] . ' )"';
+}
