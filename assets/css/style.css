@@ -662,6 +662,10 @@ body.single
 	font-weight: 300;
 	transition:200ms ease all;
 }
+#como-apoiar.is-aceleracao .link-container{
+	display: inline-block;
+	width:48%;
+}
 #como-apoiar a:hover{
 	color: #EFB310;
 	text-decoration: none;
@@ -694,7 +698,7 @@ body.single
 	}
 }
 #como-apoiar.is-aceleracao{
-	margin: 26px auto -26px;
+	margin: 66px auto -26px;
 }
 /*page institucional */
 body.page-template-page-institucional-php .destaque-1{
@@ -1659,13 +1663,13 @@ a.zilla-button:visited {
 }
 
 .zilla-toggle-title {
-	background: none repeat scroll 0 0 #DD7A04 !important;	
+	background: none repeat scroll 0 0 #DD7A04 !important;
 	font-family: "Gotham-Bold", sans-serif !important;
 }
 
 .zilla-toggle-inner {
     background: none repeat scroll 0px 0px #DD7A04 !important;
 }
-.zilla-tabs ul.zilla-nav li a { 
+.zilla-tabs ul.zilla-nav li a {
 	font-family: "Gotham-Bold", sans-serif !important;
 }
