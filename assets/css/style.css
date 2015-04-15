@@ -1470,6 +1470,9 @@ blockquote {
 	font-size:0.8em;
 	font-family: 'Verdana',sans-serif;
 	padding-top:5px;
+	height:90px;
+	overflow: hidden;
+	display: block;
 }
 .noticias-loop-container .btn-leia{
 	font-family: 'Gotham-Bold',sans-serif;
