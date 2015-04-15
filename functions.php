@@ -146,6 +146,11 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 		 * Support The Excerpt on pages.
 		 */
 		add_post_type_support( 'page', 'excerpt' );
+		/**
+		 * Support The Excerpt on posts.
+		 */
+		add_post_type_support( 'post', 'excerpt' );
+
 	}
 }
 
@@ -297,7 +302,7 @@ require_once get_template_directory() . '/inc/cpts.php';
 function modal() {
     	$option_home = get_option('home_cfg');
 		if ($option_home['modal_na_home'] != ""){?>
-			<div id="fundo-modal" 
+			<div id="fundo-modal"
 			id="fundo-modal"></div>
 			<div id="reveal-modal-id" class="reveal-modal open" data-reveal="" >
 				<?php echo $option_home['modal_na_home']?>
