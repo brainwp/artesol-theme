@@ -38,9 +38,6 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 	clear:both;
 	height:10px;
 }
-.red {
-	color: #9D0526;
-}
 
 /* Geral */
 body.home, body.page, body.blog, body.single{
@@ -53,21 +50,23 @@ body.home, body.page, body.blog, body.single{
 	border-radius: 5px;
 	padding: 2px 5px;
 }
-
 .azul-artesol {
 	color: #1fa9b5; /* Azul */
 }
-
 .bg-azul-artesol {
 	background-color: #1fa9b5; /* Azul */
 }
-
 .marrom-artesol {
 	color: #726658; /* Marrom */
 }
-
 .bg-marrom-artesol {
 	background-color: #726658; /* Marrom */
+}
+.red {
+	color: #9D0526;
+}
+#header {
+	position: relative;
 }
 
 /* Home */
@@ -826,17 +825,17 @@ body.single-projetos #aceleracao-footer a{
 body.post-type-archive-projetos {
 	background: url('../images/bg-projetos.jpg') center top transparent;
 }
-.post-type-archive-projetos .navbar-default,.single-projetos .navbar-default, .page-template-page-rede-php .navbar-default {
+.post-type-archive-projetos .navbar-default,.single-projetos .navbar-default, .page-template-page-rede-php .navbar-default, .page-template-page-servicos .navbar-default {
 	background-color: #DD7A00;
 	border: none;
 	border-radius: 0;
 }
-.post-type-archive-projetos .navbar-default .logo, .single-projetos .navbar-default .logo, .page-template-page-rede-php .navbar-default .logo {
+.post-type-archive-projetos .navbar-default .logo, .single-projetos .navbar-default .logo, .page-template-page-rede-php .navbar-default .logo, .page-template-page-servicos .navbar-default .logo {
 	float: left;
 	padding: 7px 15px;
 	width: auto;
 }
-.post-type-archive-projetos .navbar-default .logo img, .single-projetos .navbar-default .logo img, .page-template-page-rede-php .logo img {
+.post-type-archive-projetos .navbar-default .logo img, .single-projetos .navbar-default .logo img, .page-template-page-rede-php .logo img, .page-template-page-servicos .logo img {
 	max-width: 160px;
 }
 .post-type-archive-projetos .navbar-default .navbar-nav > li > a, .single-projetos .navbar-default .navbar-nav > li > a, .page-template-page-rede-php .navbar-nav > li > a {
@@ -887,7 +886,7 @@ body.post-type-archive-projetos {
 	margin-bottom: 20px;
 	text-decoration: none;
 }
-.post-type-archive-projetos .page-header, .single-projetos .page-header, .page-template-page-rede-php .page-header{
+.post-type-archive-projetos .page-header, .single-projetos .page-header, .page-template-page-rede-php .page-header, .page-template-page-servicos .page-header{
 	border: none;
 	color: #FFF;
 	display: block;
@@ -1144,6 +1143,32 @@ body.single-projetos, body.page-template-page-rede-php{
 	margin-right:0!important;
 }
 /* SERVIÇOS */
+.page-template-page-servicos .navbar {
+	margin-bottom: 0;
+}
+#servicos-submenu {
+	background: url('../images/bg-submenu-servicos.jpg');
+	max-width: 890px;
+	text-transform: uppercase;
+	transition:400ms ease all;
+}
+#servicos-submenu a {
+	color: #FFF;
+}
+#servicos-submenu .navbar-nav > li > a {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+#servicos-submenu .navbar-nav > li > a:hover,
+#servicos-submenu .nav > li > a:focus {
+	background-color: #C16803;
+}
+#servicos-submenu .navbar-nav {
+	margin-left: 10%;
+}
+.page-template-page-servicos .bg-title-projetos {
+	display: none;
+}
 .page-template-page-servicos #titulo h1 {
 	font-family: "Gotham-Bold";
 	padding: 20px 10px 30px 10px;
@@ -1198,6 +1223,46 @@ body.single-projetos, body.page-template-page-rede-php{
 	width: 70%;
 }
 .page-template-page-servicos #projetos-culturais .desc h1 {
+	color: #dd7a00;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+/* >> Consultorias */
+.page-template-page-servicos #consultorias {
+	background-position: center;
+	min-height: 470px;
+	position: relative;
+}
+.page-template-page-servicos #consultorias .desc {
+	color: #FFF;
+	bottom: 70px;
+	font-size: 1.4em;
+	left: 40px;
+	text-align: left;
+	position: absolute;
+	width: 70%;
+}
+.page-template-page-servicos #consultorias .desc h1 {
+	color: #dd7a00;
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+/* >> Projetos Personalizados */
+.page-template-page-servicos #personalizados {
+	background-position: center;
+	min-height: 470px;
+	position: relative;
+}
+.page-template-page-servicos #personalizados .desc {
+	color: #FFF;
+	bottom: 70px;
+	font-size: 1.4em;
+	right: 40px;
+	text-align: right;
+	position: absolute;
+	width: 70%;
+}
+.page-template-page-servicos #personalizados .desc h1 {
 	color: #dd7a00;
 	text-transform: uppercase;
 	font-weight: bolder;

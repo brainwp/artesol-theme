@@ -65,6 +65,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 				'main-menu' => __( 'Main Menu', 'odin' ),
 				'menu-institucional' => __( 'Menu Institucional', 'odin' ),
 				'rede-submenu' => __( 'Menu Rede', 'odin' ),
+				'servicos-submenu' => __( 'Menu Serviços', 'odin' ),
 				'footer-menu-1' => __( 'Footer Menu 1', 'odin' ),
 				'footer-menu-2' => __( 'Footer Menu 2', 'odin' ),
 				'footer-menu-3' => __( 'Footer Menu 3', 'odin' ),
@@ -213,6 +214,7 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+	wp_enqueue_script( 'scroll', $template_url . '/assets/js/scroll.js', array(), null, true );
 	wp_enqueue_script('jquery');
 	wp_enqueue_script(
 		'brasa_slider_jqueryui_js',
