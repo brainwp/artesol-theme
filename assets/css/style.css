@@ -154,11 +154,11 @@ body.page .destaque-1 h3,
 .container.home h1.entry-title {
 	color: #dd7a04;
 	font-size: 2.5em;
-	font-weight: bold;
 	padding-bottom: 10px;
 	padding-left: 15px;
 	padding-top: 10px;
 	text-transform: uppercase;
+	font-family: 'Gotham-Bold',sans-serif;
 }
 
 .container.home .slider {
@@ -183,6 +183,7 @@ body.page .destaque-1 h3,
 	font-weight: 600;
 	padding: 20px 0 20px 75px;
 	text-transform: uppercase;
+	font-family: 'Gotham-Bold',sans-serif;
 }
 
 .container.home .boxes .agenda {
@@ -197,6 +198,7 @@ body.page .destaque-1 h3,
 	font-weight: 600;
 	padding: 20px 0 20px 75px;
 	text-transform: uppercase;
+	font-family: 'Gotham-Bold',sans-serif;
 }
 
 .container.home .boxes .servicos .btn-artesol,
@@ -206,6 +208,14 @@ body.page .destaque-1 h3,
 	font-size: 0.85em;
 	font-weight: 600;
 	margin-top: 10px;
+	font-family: "Gotham-Bold",sans-serif;
+	text-transform: uppercase;
+
+}
+
+.container.home .boxes .servicos a.btn-artesol,
+.container.home .boxes .agenda a.btn-artesol {
+	text-decoration: none;
 }
 /*menu*/
 #menu-top>ul{
@@ -213,9 +223,9 @@ body.page .destaque-1 h3,
 	z-index:99;
 	background: none repeat scroll 0% 0% #dd7a04;
 	position: absolute;
-	margin-left: 16.7%;
+	margin-left: 33%;
 	margin-top: 300px;
-	width: 39%
+	width: 70%;
 }
 #menu-top a{
 	background:transparent !important;
@@ -244,8 +254,8 @@ body.page .destaque-1 h3,
 	z-index:99;
 	background: none repeat scroll 0% 0% #dd7a04;
 	position: absolute;
-	margin-left: 5%;
-	margin-top: 23%;
+	margin-left: 8%;
+	margin-top: 33%;
 	width:280px;
 }
 @media only screen and (max-width:600px) {
@@ -475,6 +485,8 @@ body.page .destaque-1 h3,
 	text-decoration: none;
 }
 #footer .pull-right h3{
+	margin-left: 8%;
+	margin-top: 5%;
 	text-align: right;
 	clear:both;
 	margin-bottom:5px;
@@ -601,6 +613,7 @@ body.page .destaque-1 h3,
 }
 
 .container.home .boxes .projetos h3 {
+	font-family: "Gotham-Bold", sans-serif;
 	font-weight: 600px;
 	margin-top: 10px;
 	padding: 0 15px;
@@ -617,13 +630,13 @@ body.page .destaque-1 h3,
 	height:179px;
 	position: relative;
 	width: 350px;
-	margin: -100px auto -26px;
+	margin: -105px auto -26px;
 }
-body.page-template-page-institucional-php #como-apoiar,
-body.single-projetos #como-apoiar,
-body.blog #como-apoiar,
-body.page-template-default #como-apoiar,
-body.single #como-apoiar
+body.page-template-page-institucional-php,
+body.single-projetos,
+body.blog,
+body.page-template-default,
+body.single
 {
 	margin: 26px auto -26px;
 }
@@ -664,7 +677,7 @@ body.single #como-apoiar
 	border-right: 2px solid white;
 	text-align: right;
 	padding-left: 15px;
-	padding-right: 15px;
+	padding-right: 17px;
 }
 #como-apoiar .links{}
 @media screen and (max-width:700px) {
@@ -699,8 +712,8 @@ body.page #menu-institucional{
 	padding-left:0;
 }
 body.page #menu-institucional h3{
-	padding-left:5px;
-	font-family: 'Gotham-Bold';
+	padding-left:15px;
+	font-family: 'Gotham-Bold',sans-serif;
 	font-size:0.9em !important;
 	color:#494949;
 	text-transform: uppercase;
@@ -717,8 +730,7 @@ body.page #menu-institucional ul li{
 body.page #menu-institucional ul li a{
 	font-family: "Istok Web",sans-serif;
 	display:inline-block;
-	padding:10px;
-	padding-left:15px;
+	padding: 10px 10px 10px 25px;
 	transition:200ms ease all;
 	color:#494949;
 	text-decoration: none !important;
