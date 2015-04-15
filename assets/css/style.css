@@ -1472,7 +1472,7 @@ blockquote {
 	padding-top:5px;
 	height:90px;
 	overflow: hidden;
-	display: block;
+	display:inline-block;
 }
 .noticias-loop-container .btn-leia{
 	font-family: 'Gotham-Bold',sans-serif;
