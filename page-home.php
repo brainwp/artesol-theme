@@ -37,15 +37,16 @@ get_header( 'home' ); ?>
 				     <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
 				     <div class="item">
 				     	<a class="item-container" style="background-image:url(<?php echo esc_attr($src[0]);?>)" href="<?php the_permalink();?>">
-				     		<?php the_post_thumbnail( 'medium', array('class' => 'mult-only') ); ?>
+				     		<div class="mult-only">
+				     			<?php the_post_thumbnail( 'medium' ); ?>
+				     		</div><!-- .col-md-12 multi-only -->
 				     		<h3><?php the_title(); ?></h3>
 				     		<h4 class="area">
-				     			<?php $cat = get_the_category();?>
-				     			<?php if($cat):?>
+				     			<?php if($cat = get_the_category()):?>
 				     				<?php echo $cat[0]->cat_name;?>
 				     		    <?php endif;?>
 				     		</h4><!-- .area -->
-				     		<span><?php the_excerpt();?></span>
+				     		<span class="resumo"><?php the_excerpt();?></span>
 				     		<span class="leia-mais btn-artesol"><?php _e('Leia mais', 'odin'); ?></span>
 				     	</a><!-- .item-container -->
 				     </div><!-- .item -->
