@@ -3,12 +3,12 @@
 get_header( 'servicos' );
 ?>
 
-<?php $captacao = get_page_by_path( 'servicos/projetos-de-captacao', OBJECT, 'page' );?>
+<?php $capacitacao = get_page_by_path( 'servicos/projetos-de-capacitacao', OBJECT, 'page' );?>
 <?php $projetos_culturais = get_page_by_path( 'servicos/projetos-culturais', OBJECT, 'page' );?>
 <?php $consultorias = get_page_by_path( 'servicos/consultorias', OBJECT, 'page' );?>
 <?php $projetos_personalizados = get_page_by_path( 'servicos/projetos-personalizados', OBJECT, 'page' );?>
 <?php $contrataram = get_page_by_path( 'servicos/ja-nos-contrataram', OBJECT, 'page' );?>
-<?php $fale_conosco = get_page_by_path( 'servicos/fale-conosco', OBJECT, 'page' );?>
+<?php $fale_conosco = get_page_by_path( 'servicos/fale-com-a-artesol', OBJECT, 'page' );?>
 
 <div class="container">
 
@@ -19,14 +19,14 @@ get_header( 'servicos' );
 	</div>
 </section>
 
-<?php if ( !empty( $captacao ) ): ?>
+<?php if ( !empty( $capacitacao ) ): ?>
 
-<section id="captacao" class="col-md-12" <?php thumbnail_bg( $captacao->ID, 'full' ); ?>>
+<section id="capacitacao" class="col-md-12" <?php thumbnail_bg( $capacitacao->ID, 'full' ); ?>>
 	<div class="desc">
-		<h1><?php echo $captacao->post_title; ?></h1>
-		<?php echo $captacao->post_excerpt; ?>
+		<h1><?php echo $capacitacao->post_title; ?></h1>
+		<?php echo $capacitacao->post_excerpt; ?>
 	</div>
-</section><!-- #captacao -->
+</section><!-- #capacitacao -->
 	
 <?php endif ?>
 

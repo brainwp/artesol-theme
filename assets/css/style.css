@@ -711,6 +711,9 @@ body.page #menu-institucional{
 	padding:10px;
 	padding-left:0;
 }
+body.page footer #menu-institucional{
+	background-color: transparent;
+}
 body.page #menu-institucional h3{
 	padding-left:15px;
 	font-family: 'Gotham-Bold',sans-serif;
@@ -1199,13 +1202,13 @@ body.single-projetos, body.page-template-page-rede-php{
 	margin: 0 auto 50px;
 	text-align: center;
 }
-/* >> Captação */
-.page-template-page-servicos #captacao {
+/* >> Capacitacao */
+.page-template-page-servicos #capacitacao {
 	background-position: center;
 	min-height: 470px;
 	position: relative;
 }
-.page-template-page-servicos #captacao .desc {
+.page-template-page-servicos #capacitacao .desc {
 	color: #FFF;
 	bottom: 70px;
 	font-size: 1.4em;
@@ -1214,7 +1217,7 @@ body.single-projetos, body.page-template-page-rede-php{
 	position: absolute;
 	width: 70%;
 }
-.page-template-page-servicos #captacao .desc h1 {
+.page-template-page-servicos #capacitacao .desc h1 {
 	color: #dd7a00;
 	text-transform: uppercase;
 	font-weight: bolder;
@@ -1308,11 +1311,15 @@ body.single-projetos, body.page-template-page-rede-php{
 	text-transform: uppercase;
 	font-weight: bolder;
 }
-.page-template-page-servicos #fale-conosco p {
+.page-template-page-servicos #fale-conosco p,
+.page-template-page-servicos #fale-conosco label {
 	color: #333;
 	display: block;
 	font-size: 0.75em;
 	text-align: left;
+}
+.page-template-page-servicos #fale-conosco label span {
+	color: #9D0526;
 }
 .page-template-page-servicos #fale-conosco input[type='text'],
 .page-template-page-servicos #fale-conosco input[type='email'],
