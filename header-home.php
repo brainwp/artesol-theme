@@ -37,8 +37,11 @@
 
 			<div class="logo col-sm-4">
 
-				<?php if( get_page_by_title( 'Apresentação' ) && is_home() ) : ?>
+				<?php if( get_page_by_title( 'Institucional' ) && is_home() ) : ?>
 					<a href="<?php echo esc_url( home_url() ); ?>/institucional" class="link">
+					</a><!-- link -->
+				<?php else: ?>
+					<a href="<?php echo esc_url( home_url() ); ?>" class="link">
 					</a><!-- link -->
 				<?php endif; ?>
 
