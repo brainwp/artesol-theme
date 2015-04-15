@@ -27,7 +27,7 @@ get_header( 'servicos' );
 		<?php echo $capacitacao->post_excerpt; ?>
 	</div>
 </section><!-- #capacitacao -->
-	
+
 <?php endif ?>
 
 <?php if ( !empty( $projetos_culturais ) ): ?>
@@ -40,7 +40,7 @@ get_header( 'servicos' );
 </section><!-- #projetos-culturais -->
 
 <?php endif ?>
-	
+
 <?php if ( !empty( $consultorias ) ): ?>
 
 <section id="consultorias" class="col-md-12" <?php thumbnail_bg( $consultorias->ID, 'full' ); ?>>
@@ -72,7 +72,7 @@ get_header( 'servicos' );
 		<?php the_post_thumbnail(); ?>
 	</div>
 </section><!-- #contrataram -->
-	
+
 <?php endif ?>
 
 <?php if ( !empty( $fale_conosco ) ): ?>
@@ -83,11 +83,9 @@ get_header( 'servicos' );
 		<?php echo apply_filters('the_content', $fale_conosco->post_content); ?>
 	</div>
 </section><!-- #fale-conosco -->
-	
-<?php endif ?>
 
-<iframe src="http://a.brasawp.art.br/artesol/?embed" id="section-mapa"></iframe>
+<?php endif ?>
 
 </div>
 
-<?php get_footer('rede');?>
+<?php get_footer('aceleracao');?>

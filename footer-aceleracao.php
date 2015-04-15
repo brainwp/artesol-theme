@@ -28,7 +28,7 @@
 		</div><!-- .row -->
 	</div><!-- .container -->
 </div><!-- #aceleracao-footer.col-md-12 -->
-<div id="como-apoiar">
+<div id="como-apoiar" class="is-aceleracao">
 	<div class="image">
 		<h3><?php _e('Como Apoiar?','odin');?></h3>
 		<div class="links">
