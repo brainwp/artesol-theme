@@ -75,7 +75,7 @@
 					?>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
-			<div class="col-md-12" id="servicos-submenu">
+			<div class="col-md-12 sticky-menu" id="servicos-submenu">
 				<nav class="col-md-12">
 					<?php
 					    wp_nav_menu(

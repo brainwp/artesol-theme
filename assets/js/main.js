@@ -9,7 +9,6 @@ jQuery(document).ready(function($) {
 	 * Odin Core shortcodes
 	 */
 	jQuery(function($) {
-		console.log("aloalo")
 		$('#search-toggle').on('click',function(e){
 			var open = $(this).attr('data-open');
 			if(open == 'false'){

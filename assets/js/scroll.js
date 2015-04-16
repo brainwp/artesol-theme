@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
-    $('#servicos-submenu a[href^="#"]').on('click', function(event) {
-
+    $('.sticky-menu a[href^="#"]').on('click', function(event) {
+    	console.log('wtf');
         var target = $( $(this).attr('href') );
 
         if( target.length ) {
@@ -12,38 +12,18 @@ jQuery(document).ready(function($) {
         }
 
     });
-
-});
-
-jQuery(window).scroll(function(){
-    if  (jQuery(window).scrollTop() >= 70){
-		 jQuery('#rede-submenu').css({'position': 'fixed', 'z-index':'999', 'top': '0', 'margin-top': '0'});
-    } else {
-         jQuery('#rede-submenu').css({'position': 'relative', 'z-index': 'auto', 'margin-top': '0'});
-    }
-});
-
-jQuery(document).ready(function($) {
-
-    $('#rede-submenu a[href^="#"]').on('click', function(event) {
-
-        var target = $( $(this).attr('href') );
-
-        if( target.length ) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: target.offset().top
-            }, 1000);
-        }
-
+    var _width = jQuery('.sticky-menu').parent('header').width();
+    jQuery(window).scroll(function(){
+    	if  (jQuery(window).scrollTop() >= 70){
+    		if(!jQuery('body').hasClass('admin-bar')){
+    			jQuery('.sticky-menu').css({'position': 'fixed', 'z-index':'999', 'top': '0', 'margin-top': '0', 'width' : _width});
+    		}
+    		else{
+    			jQuery('.sticky-menu').css({'position': 'fixed', 'z-index':'999', 'top': '0', 'margin-top': '30px', 'width' : _width});
+    		}
+    	} else {
+    		jQuery('.sticky-menu').removeAttr('style');
+    	}
     });
 
-});
-
-jQuery(window).scroll(function(){
-    if  (jQuery(window).scrollTop() >= 70){
-		 jQuery('#srede-submenu').css({'position': 'fixed', 'z-index':'999', 'top': '0', 'margin-top': '0'});
-    } else {
-         jQuery('#rede-submenu').css({'position': 'relative', 'z-index': 'auto', 'margin-top': '0'});
-    }
 });

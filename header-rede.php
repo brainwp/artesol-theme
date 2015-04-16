@@ -75,7 +75,7 @@
 					?>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
-			<div class="col-md-12" id="rede-submenu">
+			<div class="col-md-12 sticky-menu" id="rede-submenu">
 				<nav class="col-md-10 pull-right">
 					<?php
 					    wp_nav_menu(
