@@ -6,7 +6,7 @@ get_header('rede');
 	<div class="col-md-8 col-md-offset-2">
 		<div class="icon"></div><!-- .icon -->
 		<a class="col-md-12 entenda-btn-txt">Entenda</a>
-		<a class="col-md-12 entenda-btn"></a>
+		<a class="col-md-12 entenda-btn" href="<?php echo home_url(); ?>/rede/#conheca"></a>
 	</div><!-- .col-md-8 col-md-offset-2 -->
 </section><!-- #entenda -->
 <section id="conheca" class="col-md-12">
