@@ -184,7 +184,7 @@ get_header('rede');
 	        <div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
 	 	<div id="map"></div>       
 		<h2 class="section-title">
-	        	<?php _e('O Mapa','odin');?>
+	        	<?php _e('A Rede no Brasil','odin');?>
 	        </h2><!-- .section-title -->
 		</div><!-- .row -->
 	</div><!-- .container -->

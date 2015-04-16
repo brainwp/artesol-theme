@@ -1472,7 +1472,8 @@ iframe#section-mapa{
 	text-transform: uppercase;
 }
 .page .entry-header h1 {
-	font-weight: bolder;
+	font-weight: normal;
+	font-family: 'Gotham-Bold',sans-serif;
 }
 .page .site-main {
 	margin-bottom: 120px;
