@@ -112,7 +112,7 @@ get_header('rede');
 	<div class="container home">
 		<div class="row">
 			<?php if ( $background1 = get_field( 'background_destaque_1', $page->ID ) ) : ?>
-				    <div style="background: url(' <?php echo $background1; ?>' ) center center no-repeat" class="destaque destaque-1 col-md-4 col-sm-4">
+				    <div style="background: url(' <?php echo $background1; ?>' ) center center no-repeat" class="destaque destaque-3 col-md-4 col-sm-4">
 				    	<?php if ( $url1 = get_field( 'link_destaque_1', $page->ID ) ) : ?>
 				            <a class="link" href="<?php echo $url1; ?>">
 			            <?php endif; ?>
@@ -134,7 +134,7 @@ get_header('rede');
 
 	        <?php if ( $background2 = get_field( 'background_destaque_2', $page->ID ) ) : ?>
 
-		        <div style="background: url(' <?php echo $background2; ?>' ) center center no-repeat" class="destaque destaque-2 col-md-4 col-sm-4">
+		        <div style="background: url(' <?php echo $background2; ?>' ) center center no-repeat" class="destaque destaque-3 col-md-4 col-sm-4">
 
 			        <?php if ( $url2 = get_field( 'link_destaque_2', $page->ID ) ) : ?>
 			            <a class="link" href="<?php echo $url2; ?>">
@@ -156,7 +156,7 @@ get_header('rede');
 	        <?php endif; ?>
 	        <?php if ( $background3 = get_field( 'background_destaque_3', $page->ID ) ) : ?>
 
-		        <div style="background: url(' <?php echo $background3; ?>' ) center center no-repeat" class="destaque destaque-3 destaque-2 col-md-4 col-sm-4">
+		        <div style="background: url(' <?php echo $background3; ?>' ) center center no-repeat" class="destaque destaque-3 col-md-4 col-sm-4">
 
 			        <?php if ( $url3 = get_field( 'link_destaque_3', $page->ID ) ) : ?>
 			            <a class="link" href="<?php echo $url3; ?>">
