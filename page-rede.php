@@ -22,6 +22,9 @@ get_header('rede');
 				'post_type'      => 'page',
 				'posts_per_page' => -1,
 				'post_parent'    => $page->ID,
+				'orderby'    => 'menu_order',
+				'order'   => 'ASC',
+
 			);
 
 			$parent = new WP_Query( $args );
@@ -36,9 +39,9 @@ get_header('rede');
 		    <?php $page = get_page_by_path( 'rede', OBJECT, 'page' );?>
 		    <?php if($btn_txt = get_post_meta( $page->ID, 'conheca_btn_txt', true )): ?>
 		         <div class="col-md-12 text-center">
-		         	<a href="<?php echo esc_url(get_post_meta( $page->ID, 'conheca_btn', true ));?>" class="btn btn-primary btn-lg">
+		         	<div class="btn btn-primary btn-lg">
 		         		<?php echo esc_textarea($btn_txt);?>
-		         	</a>
+		         	</div>
 		         </div><!-- .col-md-12 text-center -->
 		    <?php endif;?>
 		</div><!-- .row -->
@@ -48,17 +51,17 @@ get_header('rede');
 	<div class="container">
 		<div class="row">
 			<?php $page = get_page_by_path( 'rede/tipologia', OBJECT, 'page' );?>
-			<h2 class="section-title"><?php echo $page->post_title;?></h2><!-- .section-title -->
+			<h2 class="section-title">Tipologia</h2><!-- .section-title -->
 			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
 			<?php foreach ($tipos as $tipo):?>
-			     <a class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
+			     <div class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
 			     		<?php if($thumb = get_field('tipo_thumb', 'tipos_'.$tipo->term_id)): ?>
 			     		    <div class="img-container">
 			     		    	<img class="tipo-thumb" src="<?php echo $thumb['sizes']['medium'];?>">
 			                </div><!-- .img-container -->
 			            <?php endif;?>
 			        <h3 class="post-title"><?php echo $tipo->name;?></h3><!-- .post-title -->
-			     </a><!-- .col-md-4 post-container -->
+			     </div><!-- .col-md-4 post-container -->
 			<?php endforeach;?>
 		</div><!-- .row -->
 	</div><!-- .container -->
@@ -170,16 +173,17 @@ get_header('rede');
 				        </a>
 			        <?php endif; ?>
 
-		        </div><!-- destaque-2 -->
+		        </div><!-- destaque-3 -->
 
 	        <?php endif; ?>
-	        <div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
+		<div class="col-md-12 clear" style="height:50px;"></div><!-- .col-md-12 clear -->
 	        <h2 class="section-title">
 	        	<?php _e('Destaques da Rede','odin');?>
 	        </h2><!-- .section-title -->
 	        <?php echo do_shortcode('[brasa_slider name="Destaques Rede"]');?>
 	        <div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
-	        <h2 class="section-title">
+	 	<div id="map"></div>       
+		<h2 class="section-title">
 	        	<?php _e('O Mapa','odin');?>
 	        </h2><!-- .section-title -->
 		</div><!-- .row -->

@@ -15,7 +15,7 @@ get_header( 'servicos' );
 <section id="titulo" class="col-md-12">
 	<h1><?php echo get_the_title(); ?></h1>
 	<div class="col-md-8 desc">
-		A artesol presta serviços para empresa, governos, associações e fundações desde o início. Conheça melhor as frente de nossa atuação.
+		A ArteSol presta serviços para todos os agentes da cadeia produtiva do artesanato, como empresas, associações e instituições públicas e privadas. Conheça nossas especialidades:
 	</div>
 </section>
 
@@ -69,7 +69,6 @@ get_header( 'servicos' );
 	<div class="desc">
 		<h1><?php echo $contrataram->post_title; ?></h1>
 		<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id( $contrataram->ID ) ); ?>" alt="">
-		<?php the_post_thumbnail(); ?>
 	</div>
 </section><!-- #contrataram -->
 

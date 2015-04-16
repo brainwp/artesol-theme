@@ -78,10 +78,10 @@
 		    <div class="separator"></div><!-- .separator -->
 		    <?php if(get_field('link-imprensa', 'option')): ?>
 		         <h3><?php _e('Imprensa','odin'); ?></h3>
-			     <a href="<?php echo get_field('link-release', 'option');?>" class="imprensa-link">
+			     <a href="<?php echo get_field('link-imprensa', 'option');?>" class="imprensa-link">
 			     	<?php _e('Contate nossa assessoria','odin'); ?>
 			     </a>
-			     <a href="<?php echo get_field('todos-parceiros', 'option');?>" class="release-btn pull-right">
+			     <a href="<?php echo get_field('link-release', 'option');?>" class="release-btn pull-right">
 			     	<?php _e('Download do release','odin'); ?>
 			     </a>
 		    <?php endif; ?>

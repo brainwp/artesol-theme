@@ -56,7 +56,7 @@ get_header( 'home' ); ?>
 			</div><!-- #slider-home -->
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 			<div class="boxes">
-				<div class="col-md-4">
+				<div class="col-md-4" style="margin-top:-40px;">
 				<?php if( get_field('box_home_repeater', 'option') ): ?>
 				    <div class="pull-right">
 				    	<?php while ( has_sub_field('box_home_repeater','option') ): ?>

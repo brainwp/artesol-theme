@@ -20,7 +20,7 @@
 					<?php _e('Conheça o trabalho de aceleração social da Artesol','odin');?>
 				</h3><!-- .section-title -->
 				<div class="col-md-8 col-md-offset-4">
-					<a href="#rede"><?php _e('Mais sobre a Rede','odin');?></a>
+					<a href="<?php echo esc_url( home_url() ); ?>/rede"><?php _e('Mais sobre a Rede','odin');?></a>
 				</div><!-- .col-md-8 col-md-offset-2 -->
 			</div><!-- .col-md-8 col-md-offset-2 -->
 		</div><!-- .row -->
@@ -95,10 +95,10 @@
 		    <div class="separator"></div><!-- .separator -->
 		    <?php if(get_field('link-imprensa', 'option')): ?>
 		         <h3><?php _e('Imprensa','odin'); ?></h3>
-			     <a href="<?php echo get_field('link-release', 'option');?>" class="imprensa-link">
+			     <a href="<?php echo get_field('link-imprensa', 'option');?>" class="imprensa-link">
 			     	<?php _e('Contate nossa assessoria','odin'); ?>
 			     </a>
-			     <a href="<?php echo get_field('todos-parceiros', 'option');?>" class="release-btn pull-right">
+			     <a href="<?php echo get_field('link-release', 'option');?>" class="release-btn pull-right">
 			     	<?php _e('Download do release','odin'); ?>
 			     </a>
 		    <?php endif; ?>

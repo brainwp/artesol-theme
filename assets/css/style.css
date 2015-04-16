@@ -110,7 +110,7 @@ body.home, body.page, body.blog, body.single{
 	width: 60px;
 }
 .container.home .destaque-1 {
-	margin: 0 2%;
+	margin: 0 3%;
 }
 .container.home .destaque-1,
 .container.home .destaque-2 {
@@ -151,6 +151,12 @@ body.home, body.page, body.blog, body.single{
 	padding-top: 80px;
 }
 
+.container.home .destaque-2 h2 {
+	background: url('../images/logo-rede-home.png') center top no-repeat;
+	text-indent: -999999px;
+	height: 132px;
+	margin-top: 40px;
+}
 body.page .destaque-1 h3,
 .container.home .destaque-1 h3,
 .container.home .destaque-2 h3 {
@@ -164,7 +170,6 @@ body.page .destaque-1 h3,
 	font-size: 2.5em;
 	padding-bottom: 10px;
 	padding-left: 15px;
-	padding-top: 10px;
 	text-transform: uppercase;
 	font-family: 'Gotham-Bold',sans-serif;
 }
@@ -274,7 +279,6 @@ body.page .destaque-1 h3,
 }
 /* Home Slider */
 .slider-icon{
-	border: 1px solid #bf3600;
 	background:#dd7a04;
 	border-radius:20px;
 	cursor:pointer;
@@ -294,7 +298,7 @@ body.page .destaque-1 h3,
 	clear:both;
 }
 #slider-home.single .item-container{
-	height:440px;
+	height: 365px;
 }
 #slider-home.single .item-container{
 	padding:60px;
@@ -364,17 +368,17 @@ body.page .destaque-1 h3,
 }
 #slider-home.single h3{
 	color:white;
-	font-weight: bold;
-	font-size:1.7em;
+	font-size:1.9em;
 	text-transform: uppercase;
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
+	font-family: "Gotham-Bold",sans-serif;
 }
 #slider-home.single .area{
 	color:#efb310;
-	font-weight: bold;
 	font-size:1.4em;
 	text-transform: uppercase;
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
+	font-family: "Gotham-Bold",sans-serif;
 }
 #slider-home.single .item span{
 	color:white;
@@ -424,12 +428,20 @@ body.page .destaque-1 h3,
 }
 #slider-home.mult span.resumo{
 	display: inline-block;
-	max-height:100px;
+	max-height:95px;
+	margin-bottom:5px;
 	overflow: hidden;
 	color:#494949;
 	font-family: 'Gotham-Book',sans-serif;
 }
 /* Footer */
+
+ .separator{
+	width:100%;
+	height:190px;
+	clear:both;
+}
+
 .footer-full {
 	background: url('../images/bg-footer.jpg') center center no-repeat transparent;
 	width: 100%;
@@ -622,6 +634,7 @@ body.page .destaque-1 h3,
 .container.home .boxes .projetos p {
 	padding: 0 15px;
 	text-align: center;
+	font-size: 1.2em;
 }
 /* Como apoiar */
 #como-apoiar{
@@ -665,6 +678,7 @@ body.single
 #como-apoiar.is-aceleracao .link-container{
 	display: inline-block;
 	width:48%;
+	height: auto;
 }
 #como-apoiar a:hover{
 	color: #EFB310;
@@ -809,12 +823,12 @@ body.single-projetos #aceleracao-footer{
 	background-attachment: fixed;
 }
 #aceleracao-footer div.row{
-	padding-bottom:287px;
+	padding-bottom:247px;
 }
 #aceleracao-footer .icon{
 	background:url('../images/rede-artesol.png') no-repeat center;
 	height:240px;
-	margin-top: 40px;
+	margin-top: 80px;
 }
 #aceleracao-footer h3.section-title{
 	font-family: 'Gotham-Bold';
@@ -1016,6 +1030,7 @@ body.single-projetos, body.page-template-page-rede-php{
 #rede-submenu{
 	padding:0;
 	background:#d3c5b3;
+	font-size: 0.9em;
 }
 .page-template-page-rede-php #main{
 	margin:0;
@@ -1031,7 +1046,7 @@ body.single-projetos, body.page-template-page-rede-php{
 	font-size:1.1em;
 }
 #rede-submenu nav a:hover{
-	text-decoration: underline !important;
+	text-decoration: none;
 }
 .page-template-page-rede-php section#entenda .icon{
 	background:url('../images/rede-artesol.png') no-repeat center;
@@ -1089,9 +1104,14 @@ body.single-projetos, body.page-template-page-rede-php{
 	color:white !important;
 	background:#199b6c;
 	border:transparent !important;
+	margin-bottom: 30px;
 }
 .page-template-page-rede-php section#tipos *{
 	font-family: 'Gotham-Bold';
+}
+
+.page-template-page-rede-php section#tipos{
+	margin-bottom: 10px;
 }
 .page-template-page-rede-php section#tipos h2.section-title{
 	color:#424242;
@@ -1138,6 +1158,8 @@ body.single-projetos, body.page-template-page-rede-php{
 }
 .page-template-page-rede-php section#beneficios{
 	background:#d2d1c7;
+	margin-bottom: 20px;
+	padding-bottom: 40px;
 }
 
 .page-template-page-rede-php section#participe a{
@@ -1168,7 +1190,7 @@ body.single-projetos, body.page-template-page-rede-php{
 	color:#58595b;
 }
 .page-template-page-rede-php section#destaques .destaque{
-	width:33.3333%;
+	width:30%;
 }
 .page-template-page-rede-php section#destaques .destaque-2{
 	margin-left:15px;
@@ -1192,6 +1214,7 @@ body.page-template-page-servicos .desc{
 	max-width: 890px;
 	text-transform: uppercase;
 	transition:400ms ease all;
+	font-size: 0.9em;
 }
 #servicos-submenu a {
 	color: #FFF;
@@ -1220,7 +1243,6 @@ body.page-template-page-servicos .desc{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2.4em;
-	text-shadow: 0px 4px 6px #000;
 }
 .page-template-page-servicos .desc {
 	color: #494949;
@@ -1228,14 +1250,13 @@ body.page-template-page-servicos .desc{
 	font-size: 1.2em;
 	margin: 0 auto 50px;
 	text-align: center;
-	text-shadow: 0px 4px 6px #000;
 }
 /* >> Capacitacao */
 .page-template-page-servicos #capacitacao {
 	background-position: center;
 	min-height: 470px;
 	position: relative;
-	background-size: 100%;
+	background-size: 100% auto !important;
 }
 .page-template-page-servicos #capacitacao .desc {
 	color: #FFF;
@@ -1245,18 +1266,20 @@ body.page-template-page-servicos .desc{
 	text-align: left;
 	position: absolute;
 	width: 70%;
+	text-shadow: 0px 4px 6px #000;
 }
 .page-template-page-servicos #capacitacao .desc h1 {
 	color: #dd7a00;
 	text-transform: uppercase;
 	font-weight: bolder;
+	text-shadow: 0px 4px 6px #000;
 }
 /* >> Projetos Culturais */
 .page-template-page-servicos #projetos-culturais {
 	background-position: center;
 	min-height: 470px;
 	position: relative;
-	background-size: 100%;
+	background-size: 100% auto !important;
 }
 .page-template-page-servicos #projetos-culturais .desc {
 	color: #FFF;
@@ -1266,18 +1289,20 @@ body.page-template-page-servicos .desc{
 	text-align: right;
 	position: absolute;
 	width: 70%;
+	text-shadow: 0px 4px 6px #000;
 }
 .page-template-page-servicos #projetos-culturais .desc h1 {
 	color: #dd7a00;
 	text-transform: uppercase;
 	font-weight: bolder;
+	text-shadow: 0px 4px 6px #000;
 }
 /* >> Consultorias */
 .page-template-page-servicos #consultorias {
 	background-position: center;
 	min-height: 470px;
 	position: relative;
-	background-size: 100%;
+	background-size: 100% auto !important;
 }
 .page-template-page-servicos #consultorias .desc {
 	color: #FFF;
@@ -1287,18 +1312,20 @@ body.page-template-page-servicos .desc{
 	text-align: left;
 	position: absolute;
 	width: 70%;
+	text-shadow: 0px 4px 6px #000;
 }
 .page-template-page-servicos #consultorias .desc h1 {
 	color: #dd7a00;
 	text-transform: uppercase;
 	font-weight: bolder;
+	text-shadow: 0px 4px 6px #000;
 }
 /* >> Projetos Personalizados */
 .page-template-page-servicos #personalizados {
 	background-position: center;
 	min-height: 470px;
 	position: relative;
-	background-size: 100%;
+	background-size: 100% auto !important;
 }
 .page-template-page-servicos #personalizados .desc {
 	color: #FFF;
@@ -1308,11 +1335,13 @@ body.page-template-page-servicos .desc{
 	text-align: right;
 	position: absolute;
 	width: 70%;
+	text-shadow: 0px 4px 6px #000;
 }
 .page-template-page-servicos #personalizados .desc h1 {
 	color: #dd7a00;
 	text-transform: uppercase;
 	font-weight: bolder;
+	text-shadow: 0px 4px 6px #000;
 }
 /* >> Já nos Contrataram */
 .page-template-page-servicos #contrataram {
@@ -1444,6 +1473,7 @@ blockquote {
 /* index.php */
 .noticias-loop-container{
 	height:370px;
+	margin-bottom: 20px;
 }
 .noticias-loop-container:nth-of-type(1),.noticias-loop-container:nth-of-type(2){
 	height:360px;
@@ -1492,9 +1522,10 @@ blockquote {
 	font-size:0.8em;
 	font-family: 'Verdana',sans-serif;
 	padding-top:5px;
-	height:70px;
+	height: 66px;
 	overflow: hidden;
 	display:inline-block;
+	margin-bottom: 5px;
 }
 .noticias-loop-container .btn-leia{
 	font-family: 'Gotham-Bold',sans-serif;
@@ -1651,6 +1682,11 @@ body.single .page-thumbnail{
 }
 
 /* Shortcodes */
+
+.zilla-one-fourth {
+    width: 21% !important;
+}
+
 
 a.zilla-button.orange {
     border-color: #CE7406;
