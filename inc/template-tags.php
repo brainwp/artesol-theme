@@ -118,3 +118,10 @@ if ( ! function_exists( 'brasa_noticias_pagination' ) ) {
 		);
 	}
 }
+if ( ! function_exists( 'brasa_download_link' ) ) {
+
+	function brasa_download_link($id, $class, $text) {
+		$download = new DLM_Download($id);
+		echo sprintf('<a class="%s" href="%s">%s</a>',$class,$download->get_the_download_link(),$text);
+	}
+}

@@ -322,3 +322,16 @@ function thumbnail_bg( $id = '', $tamanho = 'thumbnail' ) {
     $get_post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $id ), $tamanho, false, '' );
     echo 'style="background: url(' . $get_post_thumbnail[0] . ' )"';
 }
+
+function brasa_change_slug_dlm($args){
+	$args['rewrite'] = array(
+		'slug'                => 'publicacoes',
+		'with_front'          => true,
+		'pages'               => true,
+		'feeds'               => true,
+	);
+	$args['publicly_queryable'] = true;
+	$args['has_archive'] = true;
+	return $args;
+}
+add_filter('dlm_cpt_dlm_download_args','brasa_change_slug_dlm');

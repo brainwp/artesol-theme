@@ -818,7 +818,8 @@ body.page-template-page-institucional-php #aceleracao-footer,
 body.blog #aceleracao-footer,
 body.page-template-default #aceleracao-footer,
 body.single #aceleracao-footer,
-body.page-template-page-servicos-php #aceleracao-footer
+body.page-template-page-servicos-php #aceleracao-footer,
+body.post-type-archive-dlm_download #aceleracao-footer
 {
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
@@ -861,7 +862,8 @@ body.page-template-page-institucional-php #aceleracao-footer a,
 body.blog #aceleracao-footer a,
 body.single #aceleracao-footer a,
 body.page-template-default #aceleracao a,
-body.page-template-page-servicos-php #aceleracao-footer a
+body.page-template-page-servicos-php #aceleracao-footer a,
+body.post-type-archive-dlm_download #aceleracao-footer a
 {
 	background:#199b6c;
 	border-radius: 6px;
@@ -871,7 +873,8 @@ body.page-template-page-institucional-php #aceleracao-footer a:hover,
 body.blog #aceleracao-footer a:hover,
 body.single #aceleracao-footer a:hover,
 body.page-template-default #aceleracao a:hover,
-body.page-template-page-servicos-php #aceleracao-footer a:hover
+body.page-template-page-servicos-php #aceleracao-footer a:hover,
+body.post-type-archive-dlm_download #aceleracao-footer a:hover
 {
 	background: #0E7A52;
 }
@@ -885,26 +888,45 @@ body.single-projetos #aceleracao-footer a{
 body.post-type-archive-projetos {
 	background: url('../images/bg-projetos.jpg') center top transparent;
 }
-.post-type-archive-projetos .navbar-default,.single-projetos .navbar-default, .page-template-page-rede-php .navbar-default, .page-template-page-servicos .navbar-default {
+.post-type-archive-projetos .navbar-default,
+.single-projetos .navbar-default, .page-template-page-rede-php .navbar-default,
+.page-template-page-servicos .navbar-default,
+.post-type-archive-dlm_download .navbar-default{
 	background-color: #DD7A00;
 	border: none;
 	border-radius: 0;
 }
-.post-type-archive-projetos .navbar-default .logo, .single-projetos .navbar-default .logo, .page-template-page-rede-php .navbar-default .logo, .page-template-page-servicos .navbar-default .logo {
+.post-type-archive-projetos .navbar-default .logo,
+.single-projetos .navbar-default .logo,
+.page-template-page-rede-php .navbar-default .logo,
+.page-template-page-servicos .navbar-default .logo,
+.post-type-archive-dlm_download .navbar-default .logo{
 	float: left;
 	padding: 7px 15px;
 	width: auto;
 }
-.post-type-archive-projetos .navbar-default .logo img, .single-projetos .navbar-default .logo img, .page-template-page-rede-php .logo img, .page-template-page-servicos .logo img {
+.post-type-archive-projetos .navbar-default .logo img,
+.single-projetos .navbar-default .logo img,
+.page-template-page-rede-php .logo img,
+.page-template-page-servicos .logo img,
+.post-type-archive-dlm_download .logo img{
 	max-width: 160px;
 }
-.post-type-archive-projetos .navbar-default .navbar-nav > li > a, .single-projetos .navbar-default .navbar-nav > li > a, .page-template-page-rede-php .navbar-nav > li > a {
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a,
+.single-projetos .navbar-default .navbar-nav > li > a,
+.page-template-page-rede-php .navbar-nav > li > a,
+.post-type-archive-dlm_download .navbar-nav > li > a
+{
 	color: #FFF;
 	padding-bottom: 25px;
 	padding-top: 25px;
 	text-transform: uppercase;
 }
-.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover, .single-projetos .navbar-default .navbar-nav > li > a:hover, .page-template-page-rede-php .navbar-default .navbar-nav > li > a:hover {
+.post-type-archive-projetos .navbar-default .navbar-nav > li > a:hover,
+.single-projetos .navbar-default .navbar-nav > li > a:hover,
+.page-template-page-rede-php .navbar-default .navbar-nav > li > a:hover,
+.post-type-archive-dlm_download .navbar-default .navbar-nav > li > a:hover
+{
 	background-color: #ad6813;
 }
 .bg-title-projetos {
@@ -914,7 +936,8 @@ body.post-type-archive-projetos {
 	top: 70px;
 	width: 100%;
 }
-.post-type-archive-projetos .each-projeto {
+.post-type-archive-projetos .each-projeto,
+.post-type-archive-dlm_download .each-projeto {
 	background: url('../images/bg-content-each-projeto.jpg') left top repeat-y #E2E2E2;
 	margin-bottom: 15px;
 	margin-top: 15px;
@@ -939,14 +962,20 @@ body.post-type-archive-projetos {
 	bottom: 0;
 }
 .post-type-archive-projetos .each-projeto h1.entry-title,
-.post-type-archive-projetos .each-projeto h1.entry-title a {
+.post-type-archive-projetos .each-projeto h1.entry-title a,
+.post-type-archive-dlm_download .each-projeto h1.entry-title,
+.post-type-archive-dlm_download .each-projeto h1.entry-title{
 	color: #726658;
 	font-size: 1.5em;
 	font-weight: 600;
 	margin-bottom: 20px;
 	text-decoration: none;
 }
-.post-type-archive-projetos .page-header, .single-projetos .page-header, .page-template-page-rede-php .page-header, .page-template-page-servicos .page-header{
+.post-type-archive-projetos .page-header,
+.single-projetos .page-header,
+.page-template-page-rede-php .page-header,
+.page-template-page-servicos .page-header,
+.post-type-archive-dlm_download .page-header{
 	border: none;
 	color: #FFF;
 	display: block;
@@ -954,13 +983,19 @@ body.post-type-archive-projetos {
 	overflow: hidden;
 	width: 100%;
 }
-.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1 {
+.post-type-archive-projetos .page-header h1,
+.single-projetos .page-header h1,
+.page-template-page-rede-php .page-header h1,
+.post-type-archive-dlm_download .page-header h1{
 	display: inline-block;
 	float: left;
 	font-weight: bolder;
 	width: auto;
 }
-.post-type-archive-projetos .page-header span, .single-projetos .page-header span, .page-template-page-rede-php .page-header span {
+.post-type-archive-projetos .page-header span,
+.single-projetos .page-header span,
+.page-template-page-rede-php .page-header span,
+.post-type-archive-dlm_download .page-header span{
 	display: inline-block;
 	float: left;
 	font-size: 0.9em;
@@ -1740,4 +1775,57 @@ a.zilla-button:visited {
 
 .ui-accordion .ui-accordion-header .ui-icon {
     margin-top: 0px !important;
+}
+
+/* archive publicações */
+.post-type-archive-dlm_download{
+	background:url('../images/bg-container.jpg') no-repeat;
+	background-size:cover;
+}
+.post-type-archive-dlm_download .bg-title-projetos {
+	background: url('../images/bg-title-publicacoes.jpg') center center #B5AEA5;
+	height: 150px;
+	position: absolute;
+	top: 70px;
+	width: 100%;
+}
+.post-type-archive-dlm_download .page-header span{
+	float:right;
+	width:65%;
+}
+.each-publicacao{
+	height:280px;
+	background:#E2E2E2 !important;
+	border-left:10px solid #dd7a00;
+	border-bottom:10px solid #dd7a00;
+}
+.download-btn{
+	display: inline;
+	border-radius: 3px;
+	float: right;
+	font-size: 1em;
+	margin-right: 10px;
+	background: #DD7A04 none repeat scroll 0% 0%;
+	font-family: "Gotham-Bold",sans-serif;
+	text-transform: uppercase;
+	color:white !important;
+	padding:3px;
+}
+.each-publicacao .image-container{
+	padding-top:15px;
+}
+.each-publicacao .image-container img{
+	width:100%;
+}
+.each-publicacao h1{
+	font-family: 'Gotham-Bold',sans-serif;
+	font-weight: normal;
+}
+.each-publicacao h1 a{
+	color:#726658 !important;
+	font-family: 'Gotham-Bold',sans-serif;
+	font-weight: normal;
+}
+.each-publicacao .content{
+	font-family: "Istok Web",sans-serif;
 }
