@@ -17,7 +17,7 @@
 			<?php the_post_thumbnail('thumbnail');?>
 	    </div><!-- .col-md-4 pull-left image-container -->
 	    <div class="col-md-8 pull-right">
-	    	<?php the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );	?>
+	    	<?php the_title( '<h1 class="entry-title">', '</h1>' );	?>
 	    	<span class="content"><?php the_excerpt();?></span>
 	    </div>
 	    <div class="col-md-12 download-container">
