@@ -19,16 +19,30 @@
 	</div>
 
 	<div class="col-md-4 summary">
-		<span>Tipologia do Projeto - 2013</span>
+		<span>
+			<?php if($cat = get_the_terms(get_the_ID(),'tipos')): ?>
+			<?php $cat = array_pop($cat);?>
+			    <?php echo $cat->name . ' - ' . get_post_meta( get_the_ID(), 'project_year', true );?>
+			<?php endif;?>
+		</span>
 		<span class="entry-summary">
 			<?php the_excerpt(); ?>
 		</span>
-		<a class="btn-artesol" href="<?php the_permalink(); ?>"><?php _e( 'Saiba mais >>', 'odin' ); ?></a>
+		<a class="btn-artesol" href="<?php the_permalink(); ?>"><?php _e( 'Saiba mais', 'odin' ); ?></a>
 	</div>
 	<div class="col-md-4 infos">
-		<span><strong><?php _e( 'Localização:', $domain ); ?></strong></span>
-		<span><strong><?php _e( 'Duração:', $domain ); ?></strong></span>
-		<span><strong><?php _e( 'Artesãos beneficiados:', $domain ); ?></strong></span>
+		<span><strong><?php _e( 'Localização:', $domain ); ?></strong>
+		<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_local', true ));?>
+		</span>
+		<span><strong><?php _e( 'Duração:', $domain ); ?></strong>
+		<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_time', true ));?>
+		</span>
+		<span><strong><?php _e( 'Gênero:', $domain ); ?></strong>
+		<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_type', true ));?>
+		</span>
+		<span><strong><?php _e( 'Artesãos beneficiados:', $domain ); ?></strong>
+		<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_beneficiados', true ));?>
+		</span>
 	</div>
 	<div class="col-md-4 thumb">
 		<a href="<?php the_permalink(); ?>">

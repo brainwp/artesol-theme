@@ -656,13 +656,18 @@ body.page .destaque-1 h3,
 	margin: -205px auto -26px;
 }
 body.page-template-page-institucional-php,
-body.single-projetos,
 body.blog,
 body.page-template-default,
 body.single
 {
 	margin: 26px auto -26px;
 }
+
+body.single-projetos {
+margin: 0 auto -26px;
+}
+
+
 #como-apoiar .image{
 	width:350px;
 	height:350px;
@@ -828,7 +833,7 @@ body.post-type-archive-dlm_download #aceleracao-footer
 	background-attachment: fixed;
 }
 body.single-projetos #aceleracao-footer{
-	background:url('../images/bg-aceleracao-footer-bege.jpg') no-repeat;
+	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
 	margin-top:-458px;
@@ -886,7 +891,7 @@ body.single-projetos #aceleracao-footer a{
 }
 /* Projetos */
 body.post-type-archive-projetos {
-	background: url('../images/bg-projetos.jpg') center top transparent;
+	background: url('../images/bg-container.jpg') center top transparent;
 }
 .post-type-archive-projetos .navbar-default,
 .single-projetos .navbar-default, .page-template-page-rede-php .navbar-default,
@@ -934,7 +939,7 @@ body.post-type-archive-projetos {
 	height: 150px;
 	position: absolute;
 	top: 70px;
-	width: 100%;
+	width: 100%;	
 }
 .post-type-archive-projetos .each-projeto,
 .post-type-archive-dlm_download .each-projeto {
@@ -967,9 +972,10 @@ body.post-type-archive-projetos {
 .post-type-archive-dlm_download .each-projeto h1.entry-title{
 	color: #726658;
 	font-size: 1.5em;
-	font-weight: 600;
+	font-weight: 300;
 	margin-bottom: 20px;
 	text-decoration: none;
+	font-family: "Gotham-Bold", sans-serif;
 }
 .post-type-archive-projetos .page-header,
 .single-projetos .page-header,
@@ -989,8 +995,9 @@ body.post-type-archive-projetos {
 .post-type-archive-dlm_download .page-header h1{
 	display: inline-block;
 	float: left;
-	font-weight: bolder;
 	width: auto;
+	font-family: "Gotham-Bold", sans-serif;
+	text-transform: uppercase;
 }
 .post-type-archive-projetos .page-header span,
 .single-projetos .page-header span,
@@ -1035,10 +1042,10 @@ article#projetos-post .projetos-meta .repeater-projetos img{
 }/
 article#projetos-post .projetos-content{
 	color:#6e6e6e;
-	font-family: 'Gotham-Bold';
+	font-family: 'Gotham-Bold', sans-serif;
 }
 body.single-projetos, body.page-template-page-rede-php{
-	background:url('../images/bg-body-single-projetos.jpg') no-repeat;
+	background:url('../images/bg-container.jpg') no-repeat;
 	background-size:cover;
 }
 .post-type-archive-projetos .summary span:first-child {
@@ -1046,15 +1053,22 @@ body.single-projetos, body.page-template-page-rede-php{
 	display: block;
 	margin-bottom: 20px;
 	text-transform: uppercase;
+	font-family: 'Gotham-Bold', sans-serif;
+	
 }
 .post-type-archive-projetos .summary .entry-summary {
 	color: #58595b;
 	font-size: 0.9em;
+	margin-bottom: 20px;
+	display: block;
 }
 .post-type-archive-projetos .summary .btn-artesol {
 	background-color: #EFB310;
 	color: #FFF;
 	font-size: 0.9em;
+	font-family: "Gotham-Bold", sans-serif;
+	text-transform: uppercase;
+	padding: 7px;
 }
 .post-type-archive-projetos .summary .btn-artesol:hover {
 	text-decoration: none;
