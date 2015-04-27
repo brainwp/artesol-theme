@@ -939,7 +939,7 @@ body.post-type-archive-projetos {
 	height: 150px;
 	position: absolute;
 	top: 70px;
-	width: 100%;	
+	width: 100%;
 }
 .post-type-archive-projetos .each-projeto,
 .post-type-archive-dlm_download .each-projeto {
@@ -1054,7 +1054,7 @@ body.single-projetos, body.page-template-page-rede-php{
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	font-family: 'Gotham-Bold', sans-serif;
-	
+
 }
 .post-type-archive-projetos .summary .entry-summary {
 	color: #58595b;
@@ -1131,35 +1131,46 @@ body.single-projetos, body.page-template-page-rede-php{
 	margin-top:10px;
 	margin-bottom:20px;
 }
-.page-template-page-rede-php section#conheca{
+.page-template-page-rede-php section#conheca,
+.page-template-page-comercio-justo section#cadeia-produtiva{
 	background:url('../images/bg-rede-conheca.png') no-repeat center;
 	background-size: cover;
 }
-.page-template-page-rede-php section#conheca .section-title{
+.page-template-page-rede-php section#conheca .section-title,
+.page-template-page-comercio-justo section#cadeia-produtiva .section-title
+{
 	font-family: 'Gotham-Bold';
 	color:#58595b;
 	text-align: center;
 	padding-top:30px;
 }
-.page-template-page-rede-php section#conheca a.post-container{
+.page-template-page-rede-php section#conheca a.post-container,
+.page-template-page-comercio-justo section#cadeia-produtiva a.post-container
+{
 	display: block;
 	text-decoration: none !important;
 }
-.page-template-page-rede-php section#conheca a.post-container *{
+.page-template-page-rede-php section#conheca a.post-container *,
+.page-template-page-comercio-justo section#cadeia-produtiva a.post-container *
+{
 	font-family: 'Gotham-Bold';
 }
-.page-template-page-rede-php section#conheca a.post-container h3{
+.page-template-page-rede-php section#conheca a.post-container h3,
+.page-template-page-comercio-justo section#cadeia-produtiva a.post-container h3{
 	text-align: center;
 	color:#756b5f;
 }
-.page-template-page-rede-php section#conheca a.post-container .post-content{
+.page-template-page-rede-php section#conheca a.post-container .post-content,
+.page-template-page-comercio-justo section#cadeia-produtiva a.post-container .post-content{
 	color:#58595b;
 }
-.page-template-page-rede-php section#conheca .text-center{
+.page-template-page-rede-php section#conheca .text-center,
+.page-template-page-comercio-justo section#cadeia-produtiva .text-center{
 	padding-bottom:20px;
 	padding-top:20px;
 }
-.page-template-page-rede-php section#conheca .text-center .btn{
+.page-template-page-rede-php section#conheca .text-center .btn,
+.page-template-page-comercio-justo section#cadeia-produtiva .text-center .btn{
 	font-family: 'Gotham-Bold';
 	color:white !important;
 	background:#199b6c;
@@ -1266,28 +1277,35 @@ body.page-template-page-servicos h1{
 body.page-template-page-servicos .desc{
 	font-family: "Istok Web",sans-serif;
 }
-.page-template-page-servicos .navbar {
+.page-template-page-servicos .navbar,
+.page-template-page-comercio-justo .navbar{
 	margin-bottom: 0;
 }
-#servicos-submenu {
+#servicos-submenu,
+.page-template-page-comercio-justo #rede-submenu{
 	background: url('../images/bg-submenu-servicos.jpg');
 	max-width: 890px;
 	text-transform: uppercase;
 	transition:400ms ease all;
 	font-size: 0.9em;
 }
-#servicos-submenu a {
+#servicos-submenu a,
+.page-template-page-comercio-justo #rede-submenu a{
 	color: #FFF;
 }
-#servicos-submenu .navbar-nav > li > a {
+#servicos-submenu .navbar-nav > li > a,
+.page-template-page-comercio-justo #rede-submenu > li > a {
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
 #servicos-submenu .navbar-nav > li > a:hover,
-#servicos-submenu .nav > li > a:focus {
+#servicos-submenu .nav > li > a:focus,
+.page-template-page-comercio-justo #rede-submenu .navbar-nav > li > a:hover,
+.page-template-page-comercio-justo #rede-submenu .nav > li > a:focus{
 	background-color: #C16803;
 }
-#servicos-submenu .navbar-nav {
+#servicos-submenu .navbar-nav,
+.page-template-page-comercio-justo #rede-submenu .navbar-nav {
 	margin-left: 10%;
 }
 .page-template-page-servicos .bg-title-projetos {
@@ -1842,4 +1860,116 @@ a.zilla-button:visited {
 }
 .each-publicacao .content{
 	font-family: "Istok Web",sans-serif;
+}
+/* comercio justo template */
+.page-template-page-comercio-justo section#entenda{
+	background:url('../images/header-comercio-justo.jpg') no-repeat center;
+	background-size:cover;
+}
+.page-template-page-comercio-justo #como-apoiar{
+	clear:both;
+}
+.page-template-page-comercio-justo section#entenda a.entenda-btn-txt{
+	font-family: 'Gotham-Book',sans-serif;
+	color:white !important;
+	text-align: center;
+	font-size:1.2em;
+}
+.page-template-page-comercio-justo section#entenda a.entenda-btn{
+	background:url('../images/btn-comercio-justo-entenda.jpg') no-repeat center;
+	height:22px;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.page-template-page-comercio-justo section#entenda h1.section-title{
+	color:white;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.page-template-page-comercio-justo section#entenda .content{
+	font-family: "Istok Web",sans-serif;
+	font-size:1.2em;
+	color:white;
+	text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.page-template-page-comercio-justo section#principios{
+	background:url('../images/bg-comercio-justo-principios.jpg') no-repeat center;
+	background-size:cover;
+}
+.page-template-page-comercio-justo section#principios .section-title{
+	color:white;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-align: center;
+	font-size:2.7em;
+}
+.page-template-page-comercio-justo section#principios .row{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.page-template-page-comercio-justo section#cadeia-produtiva .row{
+	padding-bottom:20px;
+}
+.page-template-page-comercio-justo section#historico{
+	background:#c6c4b5;
+}
+.page-template-page-comercio-justo section#historico .row{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.page-template-page-comercio-justo section#historico .section-title{
+	color:#58595b;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-align: center;
+	font-size:2.7em;
+}
+.page-template-page-comercio-justo section#historico .content{
+	font-family: "Istok Web",sans-serif;
+	font-size:1.3em;
+	color:#58595b;
+	text-align: center;
+}
+.page-template-page-comercio-justo section#articulacao-internacional{
+	background:#d1d0c7;
+}
+.page-template-page-comercio-justo section#articulacao-internacional .row{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.page-template-page-comercio-justo section#articulacao-internacional .content{
+	font-family: "Istok Web",sans-serif;
+	font-size:1.1em;
+	color:#58595b;
+	text-align: center;
+}
+.page-template-page-comercio-justo section#articulacao-internacional .section-title{
+	color:#58595b;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-align: center;
+	font-size:2.7em;
+}
+.page-template-page-comercio-justo section#atuacao{
+	background:url('../images/bg-comercio-justo-atuacao.jpg') no-repeat center;
+	background-size:cover;
+}
+.page-template-page-comercio-justo section#atuacao .section-title{
+	color:white;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-align: center;
+	font-size:2.6em;
+	display: block;
+	text-transform: uppercase;
+}
+.page-template-page-comercio-justo section#atuacao .content{
+	font-family: "Istok Web",sans-serif;
+	font-size:1.2em;
+	color:white;
+	text-align: center;
+}
+.page-template-page-comercio-justo section#atuacao .row{
+	padding-top:20px;
 }

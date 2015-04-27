@@ -104,5 +104,7 @@ jQuery(document).ready(function($) {
 	    }
 	});
 	$('#aceleracao-footer-margin').css('height',$('#aceleracao-footer').outerHeight(false) + 'px');
+
+	$('.page-template-page-comercio-justo section#atuacao').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 });
 

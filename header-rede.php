@@ -33,8 +33,6 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="bg-title-projetos"></div>
-
 	<div class="container">
 		<header id="header" role="banner">
 
@@ -78,9 +76,11 @@
 			<div class="col-md-12 sticky-menu" id="rede-submenu">
 				<nav class="col-md-10 pull-right">
 					<?php
+					    $menu_id = 'rede-submenu';
+					    if(is_page_template('page-comercio-justo.php' )) $menu_id = 'comercio-justo-submenu';
 					    wp_nav_menu(
 					    	array(
-					    		'theme_location' => 'rede-submenu',
+					    		'theme_location' => $menu_id,
 					    		'depth'          => -1,
 					    		'container'      => false,
 					    		'menu_class'     => 'nav navbar-nav',
