@@ -78,6 +78,8 @@
 					<?php
 					    $menu_id = 'rede-submenu';
 					    if(is_page_template('page-comercio-justo.php' )) $menu_id = 'comercio-justo-submenu';
+					    if(is_page_template('page-artesanato-brasileiro.php' )) $menu_id = 'artesanato-brasileiro-submenu';
+
 					    wp_nav_menu(
 					    	array(
 					    		'theme_location' => $menu_id,

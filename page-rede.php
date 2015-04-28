@@ -51,7 +51,7 @@ get_header('rede');
 	<div class="container">
 		<div class="row">
 			<?php $page = get_page_by_path( 'rede/tipologia', OBJECT, 'page' );?>
-			<h2 class="section-title">Tipologia</h2><!-- .section-title -->
+			<h2 class="section-title"><?php _e('Tipologia','odin');?></h2><!-- .section-title -->
 			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
 			<?php foreach ($tipos as $tipo):?>
 			     <div class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
@@ -182,7 +182,7 @@ get_header('rede');
 	        </h2><!-- .section-title -->
 	        <?php echo do_shortcode('[brasa_slider name="Destaques Rede"]');?>
 	        <div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
-	 	<div id="map"></div>       
+	 	<div id="map"></div>
 		<h2 class="section-title">
 	        	<?php _e('A Rede no Brasil','odin');?>
 	        </h2><!-- .section-title -->

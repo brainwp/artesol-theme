@@ -824,7 +824,8 @@ body.blog #aceleracao-footer,
 body.page-template-default #aceleracao-footer,
 body.single #aceleracao-footer,
 body.page-template-page-servicos-php #aceleracao-footer,
-body.post-type-archive-dlm_download #aceleracao-footer
+body.post-type-archive-dlm_download #aceleracao-footer,
+body.page-template-page-artesanato-brasileiro #aceleracao-footer
 {
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
@@ -868,7 +869,8 @@ body.blog #aceleracao-footer a,
 body.single #aceleracao-footer a,
 body.page-template-default #aceleracao a,
 body.page-template-page-servicos-php #aceleracao-footer a,
-body.post-type-archive-dlm_download #aceleracao-footer a
+body.post-type-archive-dlm_download #aceleracao-footer a,
+body.page-template-page-artesanato-brasileiro #aceleracao-footer a
 {
 	background:#199b6c;
 	border-radius: 6px;
@@ -880,6 +882,7 @@ body.single #aceleracao-footer a:hover,
 body.page-template-default #aceleracao a:hover,
 body.page-template-page-servicos-php #aceleracao-footer a:hover,
 body.post-type-archive-dlm_download #aceleracao-footer a:hover
+body.page-template-page-artesanato-brasileiro #aceleracao-footer a:hover
 {
 	background: #0E7A52;
 }
@@ -1177,32 +1180,39 @@ body.single-projetos, body.page-template-page-rede-php{
 	border:transparent !important;
 	margin-bottom: 30px;
 }
-.page-template-page-rede-php section#tipos *{
+.page-template-page-rede-php section#tipos *,
+.page-template-page-artesanato-brasileiro section#tipos *{
 	font-family: 'Gotham-Bold';
 }
 
-.page-template-page-rede-php section#tipos{
+.page-template-page-rede-php section#tipos,
+.page-template-page-artesanato-brasileiro section#tipos{
 	margin-bottom: 10px;
 }
-.page-template-page-rede-php section#tipos h2.section-title{
+.page-template-page-rede-php section#tipos h2.section-title,
+.page-template-page-artesanato-brasileiro section#tipos h2.section-title{
 	color:#424242;
 	text-align: center;
 	padding-top:20px;
 	padding-bottom:30px;
 }
-.page-template-page-rede-php section#tipos .img-container{
+.page-template-page-rede-php section#tipos .img-container,
+.page-template-page-artesanato-brasileiro section#tipos .img-container{
 	height:180px;
 	width:100%;
 	overflow: hidden;
 }
-.page-template-page-rede-php section#tipos .post-container{
+.page-template-page-rede-php section#tipos .post-container,
+.page-template-page-artesanato-brasileiro section#tipos .post-container{
 	display: block;
 	text-decoration: none !important;
 }
-.page-template-page-rede-php section#tipos .img-container img{
+.page-template-page-rede-php section#tipos .img-container img,
+.page-template-page-artesanato-brasileiro section#tipos .img-container img{
 	width:100%;
 }
-.page-template-page-rede-php section#tipos h3.post-title{
+.page-template-page-rede-php section#tipos h3.post-title,
+.page-template-page-artesanato-brasileiro section#tipos h3.post-title{
 	text-align: center;
 	color:#424242;
 }
@@ -1278,11 +1288,13 @@ body.page-template-page-servicos .desc{
 	font-family: "Istok Web",sans-serif;
 }
 .page-template-page-servicos .navbar,
-.page-template-page-comercio-justo .navbar{
+.page-template-page-comercio-justo .navbar,
+.page-template-page-artesanato-brasileiro .navbar{
 	margin-bottom: 0;
 }
 #servicos-submenu,
-.page-template-page-comercio-justo #rede-submenu{
+.page-template-page-comercio-justo #rede-submenu,
+.page-template-page-artesanato-brasileiro #rede-submenu{
 	background: url('../images/bg-submenu-servicos.jpg');
 	max-width: 890px;
 	text-transform: uppercase;
@@ -1290,22 +1302,28 @@ body.page-template-page-servicos .desc{
 	font-size: 0.9em;
 }
 #servicos-submenu a,
-.page-template-page-comercio-justo #rede-submenu a{
+.page-template-page-comercio-justo #rede-submenu a,
+.page-template-page-artesanato-brasileiro #rede-submenu a{
 	color: #FFF;
 }
 #servicos-submenu .navbar-nav > li > a,
-.page-template-page-comercio-justo #rede-submenu > li > a {
+.page-template-page-comercio-justo #rede-submenu > li > a,
+.page-template-page-artesanato-brasileiro #rede-submenu > li > a
+{
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
 #servicos-submenu .navbar-nav > li > a:hover,
 #servicos-submenu .nav > li > a:focus,
 .page-template-page-comercio-justo #rede-submenu .navbar-nav > li > a:hover,
-.page-template-page-comercio-justo #rede-submenu .nav > li > a:focus{
+.page-template-page-comercio-justo #rede-submenu .nav > li > a:focus,
+.page-template-page-artesanato-brasileiro #rede-submenu .navbar-nav > li > a:hover,
+.page-template-page-artesanato-brasileiro #rede-submenu .nav > li > a:focus{
 	background-color: #C16803;
 }
 #servicos-submenu .navbar-nav,
-.page-template-page-comercio-justo #rede-submenu .navbar-nav {
+.page-template-page-comercio-justo #rede-submenu .navbar-nav,
+.page-template-page-artesanato-brasileiro #rede-submenu .navbar-nav {
 	margin-left: 10%;
 }
 .page-template-page-servicos .bg-title-projetos {
@@ -1972,4 +1990,124 @@ a.zilla-button:visited {
 }
 .page-template-page-comercio-justo section#atuacao .row{
 	padding-top:20px;
+}
+/* page artesanato brasileiro */
+.page-template-page-artesanato-brasileiro section#entenda{
+	background:url('../images/bg-header-artesanato-brasileiro.jpg') no-repeat center;
+	background-size:cover;
+}
+.page-template-page-artesanato-brasileiro #como-apoiar{
+	clear:both;
+}
+.page-template-page-artesanato-brasileiro section#entenda a.entenda-btn-txt{
+	font-family: 'Gotham-Book',sans-serif;
+	color:white !important;
+	text-align: center;
+	font-size:1.2em;
+}
+.page-template-page-artesanato-brasileiro section#entenda a.entenda-btn{
+	background:url('../images/btn-artesanato-brasileiro-entenda.jpg') no-repeat center;
+	height:22px;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.page-template-page-artesanato-brasileiro section#entenda h1.section-title{
+	color:white;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.page-template-page-artesanato-brasileiro section#entenda .content{
+	font-family: "Istok Web",sans-serif;
+	font-size:1.2em;
+	color:white;
+	text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao .section-title,
+.page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato .section-title{
+	font-family: 'Gotham-Bold';
+	color:#58595b;
+	text-align: center;
+	padding-top:30px;
+	font-size:2.7em;
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao a.post-container,
+.page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato a.post-container{
+	display: block;
+	text-decoration: none !important;
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao a.post-container *,
+.page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato a.post-container *{
+	font-family: 'Gotham-Bold';
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao a.post-container h3,
+.page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato a.post-container h3{
+	text-align: center;
+	color:#756b5f;
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao a.post-container .post-content,
+.page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato a.post-container .post-content{
+	color:#58595b;
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao .text-center,
+.page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato .text-center{
+	padding-bottom:20px;
+	padding-top:20px;
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao .text-center .btn{
+	font-family: 'Gotham-Bold';
+	color:white !important;
+	background:#199b6c;
+	border:transparent !important;
+	margin-bottom: 30px;
+}
+.page-template-page-artesanato-brasileiro section#valor-da-tradicao .content{
+	font-family: "Istok Web",sans-serif;
+	font-size:1.8em;
+	color:#58595b;
+	text-align: center;
+}
+.page-template-page-artesanato-brasileiro section#patrimonio-imaterial{
+	background:#cac8b9;
+}
+.page-template-page-artesanato-brasileiro section#patrimonio-imaterial .row{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.page-template-page-artesanato-brasileiro section#patrimonio-imaterial .content{
+	font-family: "Istok Web",sans-serif;
+	font-size:1.8em;
+	color:#58595b;
+	text-align: center;
+}
+.page-template-page-artesanato-brasileiro section#patrimonio-imaterial .section-title{
+	font-family: 'Gotham-Bold';
+	color:#58595b;
+	text-align: center;
+	font-size:2.7em;
+	display: block;
+}
+.page-template-page-artesanato-brasileiro section#patrimonio-imaterial-reconhecido .section-title{
+	font-family: 'Gotham-Bold';
+	color:#58595b;
+	text-align: center;
+	font-size:2.7em;
+	display: block;
+}
+.page-template-page-artesanato-brasileiro section#patrimonio-imaterial-reconhecido{
+	background:#d2d1c8;
+}
+.page-template-page-artesanato-brasileiro section#patrimonio-imaterial-reconhecido .post-container{
+	margin:0 !important;
+	max-width: inherit !important;
+}
+.page-template-page-artesanato-brasileiro section#tipos{
+	background:white;
+}
+.page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato .section-title{
+	display: block;
 }
