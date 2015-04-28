@@ -33,7 +33,7 @@
 
 <body <?php body_class(); ?>>
 
-	<div class="container">
+	<div class="container header-container">
 		<header id="header" role="banner">
 
 
@@ -73,6 +73,7 @@
 					?>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
+			<?php if(!is_page_template('page-como-apoiar-pessoa-fisica.php') && !is_page_template('page-como-apoiar-pessoa-juridica.php')): ?>
 			<div class="col-md-12 sticky-menu" id="rede-submenu">
 				<nav class="col-md-10 pull-right">
 					<?php
@@ -93,5 +94,6 @@
 					?>
 				</nav><!-- .col-md-8 pull-right -->
 			</div><!-- .col-md-12 -->
+		    <?php endif;?>
 		</header><!-- #header -->
 	</div>
