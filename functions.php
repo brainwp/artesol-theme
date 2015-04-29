@@ -300,6 +300,12 @@ require_once get_template_directory() . '/inc/options.php';
  * Custom post types
  */
 require_once get_template_directory() . '/inc/cpts.php';
+
+/**
+ * Agenda Functions
+ */
+require_once get_template_directory() . '/inc/agenda-class.php';
+
 function modal() {
     	$option_home = get_option('home_cfg');
 		if ($option_home['modal_na_home'] != ""){?>
