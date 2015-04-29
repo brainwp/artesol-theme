@@ -35,7 +35,9 @@
 	<div class="container home">
 		<header id="header" role="banner" class="header-home">
 
-			<div class="col-md-4 col-sm-4">
+			<?php $class = 'col-md-4 col-sm-4';?>
+			<?php if(is_search()) $class = 'col-md-12';?>
+			<div class="<?php echo $class;?>">
 				<div class="logo col-md-12">
 					<a href="<?php echo esc_url( home_url() ); ?>/" class="link">
 					</a><!-- link -->
@@ -75,4 +77,5 @@
 			   <?php endwhile; ?>
 			   <div class="col-md-12 clear" style="height:0px;"></div>
 			<?php endif;?>
+			<?php if(is_search()) get_sidebar();?>
 		</header><!-- #header -->
