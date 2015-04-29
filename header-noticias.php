@@ -62,7 +62,7 @@
 				?>
 			</nav><!-- #menu -->
 			<form action="<?php echo home_url('/');?>" id="search-form">
-				<input type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
+				<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
 			</form><!-- #search-form -->
 			<?php if(is_single()): ?>
 				<?php while ( have_posts() ) : the_post(); ?>
