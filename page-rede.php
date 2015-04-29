@@ -38,11 +38,11 @@ get_header('rede');
 		    <?php wp_reset_postdata();  endif; ?>
 		    <?php $page = get_page_by_path( 'rede', OBJECT, 'page' );?>
 		    <?php if($btn_txt = get_post_meta( $page->ID, 'conheca_btn_txt', true )): ?>
-		         <div class="col-md-12 text-center">
-		         	<div class="btn btn-primary btn-lg">
-		         		<?php echo esc_textarea($btn_txt);?>
-		         	</div>
-		         </div><!-- .col-md-12 text-center -->
+		        <div class="col-md-12 text-center">
+				<a href="<?php echo esc_url(get_post_meta( get_the_ID(), 'conheca_btn', true ));?>" class="btn btn-primary btn-lg">
+					<?php echo esc_textarea($btn_txt);?>
+				</a>
+			</div><!-- .col-md-12 text-center -->
 		    <?php endif;?>
 		</div><!-- .row -->
 	</div><!-- .container -->
@@ -182,12 +182,15 @@ get_header('rede');
 	        </h2><!-- .section-title -->
 	        <?php echo do_shortcode('[brasa_slider name="Destaques Rede"]');?>
 	        <div class="col-md-12 clear" style="height:30px"></div><!-- .col-md-12 clear -->
-	 	<div id="map"></div>
-		<h2 class="section-title">
-	        	<?php _e('A Rede no Brasil','odin');?>
-	        </h2><!-- .section-title -->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #destaques -->
+<section id="map" class="col-md-12">
+	<div class="container home">
+		<h2 class="section-title">
+	        	<?php _e('A Rede no Brasil','odin');?>
+	        </h2><!-- .section-title -->
+	</div><!-- .container -->
+</section><!-- #map -->
 <iframe src="http://a.brasawp.art.br/artesol/?embed" id="section-mapa"></iframe>
 <?php get_footer('rede');?>

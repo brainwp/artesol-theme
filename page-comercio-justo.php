@@ -81,7 +81,7 @@ get_header('rede');
 			    </div><!-- .col-md-12 image -->
 			<?php endif;?>
 			<h2 class="section-title"><?php echo $articulacao_internacional->post_title;?></h2><!-- .section-title -->
-			<div class="col-md-8 col-md-offset-2 content"><?php echo $articulacao_internacional->post_content;?></div><!-- .col-md-12 content -->
+			<div class="col-md-8 col-md-offset-2 content"><?php echo $articulacao_internacional->post_excerpt;?></div><!-- .col-md-12 content -->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #articulacao-internacional -->
@@ -91,7 +91,7 @@ get_header('rede');
 	<div class="container">
 		<div class="row">
 			<h2 class="col-md-8 col-md-offset-2 section-title"><?php echo $atuacao->post_title;?></h2><!-- .section-title -->
-			<div class="col-md-8 col-md-offset-2 content"><?php echo $atuacao->post_content;?></div><!-- .col-md-12 content -->
+			<div class="col-md-8 col-md-offset-2 content"><?php echo $atuacao->post_excerpt;?></div><!-- .col-md-12 content -->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #atuacao -->
