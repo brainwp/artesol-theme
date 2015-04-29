@@ -40,7 +40,7 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 }
 
 /* Geral */
-body.home, body.page, body.blog, body.single{
+body.home, body.page, body.blog, body.single, body.category-agenda{
 	background: url('../images/bg-container.jpg') center top;
 	background-size:cover;
 }
@@ -1289,11 +1289,13 @@ body.page-template-page-servicos .desc{
 }
 .page-template-page-servicos .navbar,
 .page-template-page-comercio-justo .navbar,
+body.category-agenda .navbar,
 .page-template-page-artesanato-brasileiro .navbar{
 	margin-bottom: 0;
 }
 #servicos-submenu,
 .page-template-page-comercio-justo #rede-submenu,
+body.category-agenda #rede-submenu,
 .page-template-page-artesanato-brasileiro #rede-submenu{
 	background: url('../images/bg-submenu-servicos.jpg');
 	max-width: 890px;
@@ -1303,6 +1305,7 @@ body.page-template-page-servicos .desc{
 }
 #servicos-submenu a,
 .page-template-page-comercio-justo #rede-submenu a,
+body.category-agenda #rede-submenu a,
 .page-template-page-artesanato-brasileiro #rede-submenu a{
 	color: #FFF;
 }
@@ -1527,26 +1530,31 @@ iframe#section-mapa{
 	border:transparent !important;
 }
 /* Page */
-.page .navbar-default {
+.page .navbar-default,
+body.category-agenda .navbar-default{
 	background-color: #DD7A00;
 	border: none;
 	border-radius: 0;
 }
-.page .navbar-default .logo {
+.page .navbar-default .logo,
+body.category-agenda .navbar-default .logo{
 	float: left;
 	padding: 7px 15px;
 	width: auto;
 }
-.page .navbar-default .logo img {
+.page .navbar-default .logo img,
+body.category-agenda .navbar-default .logo img{
 	max-width: 160px;
 }
-.page .navbar-default .navbar-nav > li > a {
+.page .navbar-default .navbar-nav > li > a,
+body.category-agenda .navbar-default .navbar-nav > li > a{
 	color: #FFF;
 	padding-bottom: 25px;
 	padding-top: 25px;
 	text-transform: uppercase;
 }
-.page .navbar-default .navbar-nav > li > a:hover {
+.page .navbar-default .navbar-nav > li > a:hover,
+body.category-agenda .navbar-default .navbar-nav > li > a:hover{
 	background-color: #ad6813;
 }
 .page .entry-header {
@@ -1747,38 +1755,6 @@ body.single .page-thumbnail{
 	color:white;
 	border: none !important;
 }
-#reveal-modal-id{
-	display: block;
- 	opacity: 1;
- 	visibility: visible;
- 	width: 70vw;
- 	background: white;
- 	margin: 0 auto;
- 	top: 15px;
- 	position: fixed;
- 	top: 10vh;
- 	z-index: 99999;
- 	padding: 30px 65px 65px;
- 	left: 15vw;	-webkit-transition: all 0.2s ease-in-out;
- 	  -moz-transition: all 0.2s ease-in-out;
- 	  -o-transition: all 0.2s ease-in-out;
- 	  transition: all 0.2s ease-in-out;
-}
-#fundo-modal {
-  	width: 100%;
-	top:0;
-  	background: black;
-  	height: 100vh;
-  	opacity: 0.3;
-  	position: fixed;
-  	z-index: 999;
-  	-webkit-transition: all 0.2s ease-in-out;
-  	-moz-transition: all 0.2s ease-in-out;
-  	-o-transition: all 0.2s ease-in-out;
-  	transition: all 0.2s ease-in-out;
-}
-
-/* Shortcodes */
 
 .zilla-one-fourth {
     width: 21% !important;
@@ -2239,4 +2215,109 @@ box-shadow:         0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+/* category agenda */
+body.category-agenda #como-apoiar{
+	clear:both;
+	margin: -212px auto -126px;
+}
+.header-agenda{
+	background:url('../images/bg-header-agenda.jpg') no-repeat;
+	background-size: cover;
+}
+.header-agenda .row{
+	padding-top:25px;
+	padding-bottom:25px;
+}
+.header-agenda .cat-title{
+	font-family: 'Gotham-Bold',sans-serif;
+	color:white;
+	text-shadow:2px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.header-agenda .description{
+	font-family: 'Istok Web',sans-serif;
+	color:white;
+}
+.agenda-container{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.agenda-container a{
+	background:#e2e2e2;
+	display: block;
+	padding-top:10px;
+	padding-bottom:10px;
+	box-shadow: -3px 4px 5px 0px rgba(141,182,185,0.5);
+	height:110px;
+}
+.agenda-container a .mes, .agenda-modal .mes{
+	text-align: left;
+	font-size:1.5em;
+	color:white !important;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-transform: uppercase;
+	margin:0;
+}
+.agenda-container a .dia, .agenda-modal .dia{
+	text-align: center;
+	font-size:2.3em;
+	color:white !important;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-transform: uppercase;
+	margin:0;
+}
+.agenda-container a .data, .agenda-modal .data{
+	background:#1fa9b5;
+	padding:0;
+	padding-top:3px;
+	padding-bottom:3px;
+	margin-top:10px;
+}
+.agenda-container a .content{
+	margin-top:10px;
+	font-family: 'Istok Web',sans-serif;
+	color:#58595b;
+	float:right;
+	background:url('../images/icon-agenda-mais.png') no-repeat right bottom;
+}
+.noticias-pagination{
+	clear:both;
+}
+.agenda-pagination *{
+	color:#1fa9b5;
+}
+.agenda-pagination .current{
+	color:white;
+	background:#1fa9b5;
+	padding:4px;
+	border-radius:2px;
+}
+.agenda-pagination a.next, .agenda-pagination a.prev{
+	color:#1fa9b5
+}
+body.category-agenda #como-apoiar .image{
+	top:-100px;
+}
+#reveal-modal-id .prev-post-reveal-nav, #reveal-modal-id .next-post-reveal-nav{
+	display:none;
+}
+#reveal-modal-id{
+	background:#e2e2e2 !important;
+}
+.agenda-modal .mes{
+	font-size:1.9em;
+}
+.agenda-modal .dia{
+	font-size:2.7em;
+}
+.agenda-modal .post-title{
+	color:#58595b;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-transform: uppercase;
+}
+.agenda-modal .content{
+	padding-top:15px;
+	color:#58595b;
+	font-family: 'Istok Web',sans-serif;
+	font-size:1.5em;
 }
