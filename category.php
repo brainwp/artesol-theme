@@ -1,57 +1,36 @@
 <?php
 /**
- * The template for displaying Category pages.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
+ * The Template for displaying all single posts.
  *
  * @package Odin
  * @since 2.2.0
  */
 
-get_header(); ?>
+get_header('noticias'); ?>
+<div class="noticias-loop-container">
+	<?php
+	if(have_posts()):
+		// Start the Loop.
+		while ( have_posts() ) : the_post();
 
-	<section id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
-		<div id="content" class="site-content" role="main">
+			/*
+			 * Include the post format-specific template for the content. If you want to
+			 * use this in a child theme, then include a file called called content-___.php
+			 * (where ___ is the post format) and that will be used instead.
+			 */
+			get_template_part( 'content', 'noticias' );
 
-			<?php if ( have_posts() ) : ?>
-
-				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'odin' ), single_cat_title( '', false ) ); ?></h1>
-
-					<?php
-						// Show an optional term description.
-						$term_description = term_description();
-						if ( ! empty( $term_description ) ) :
-							printf( '<div class="taxonomy-description">%s</div>', $term_description );
-						endif;
-					?>
-				</header><!-- .archive-header -->
-
-				<?php
-						// Start the Loop.
-						while ( have_posts() ) : the_post();
-
-						/*
-						 * Include the post format-specific template for the content. If you want to
-						 * use this in a child theme, then include a file called called content-___.php
-						 * (where ___ is the post format) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-
-						endwhile;
-
-						// Page navigation.
-						odin_paging_nav();
-
-					else :
-						// If no content, include the "No posts found" template.
-						get_template_part( 'content', 'none' );
-
-				endif;
-			?>
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
+			// If comments are open or we have at least one comment, load up the comment template.
+			//if ( comments_open() || get_comments_number() ) :
+			//	comments_template();
+			//		endif;
+		endwhile;
+		// Post navigation.
+		echo '<div class="text-center noticias-pagination">';
+		brasa_noticias_pagination();
+		echo '</div>';
+	endif;
+	?>
+</div><!-- #single-noticias-container.col-md-4 pull-right -->
 <?php
-get_sidebar();
-get_footer();
+get_footer('noticias');
