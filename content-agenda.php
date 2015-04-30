@@ -6,7 +6,7 @@ $date = DateTime::createFromFormat( 'Ymd', get_post_meta( get_the_ID(), 'evento_
 	<a href="<?php the_permalink();?>" class="col-md-12">
 		<div class="col-md-4 pull-left data">
 			<h3 class="col-md-12 mes">
-				<?php echo $date->format('M');?>
+				<?php echo date_i18n( 'M', $date->getTimestamp(), false );?>
 			</h3><!-- .col-md-12 mes -->
 			<h2 class="col-md-12 dia">
 				<?php echo $date->format('d');?>

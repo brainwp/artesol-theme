@@ -35,6 +35,10 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		$(this).tab( 'show' );
 	});
+	$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+		var modal = $(this);
+		console.log('ta chamando?');
+	});
 
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();
@@ -104,5 +108,9 @@ jQuery(document).ready(function($) {
 	$('.page-template-page-como-apoiar-pessoa-juridica section#trabalhar').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 	$('.page-template-page-como-apoiar-pessoa-fisica section#pat').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 
+	if($('body').hasClass('search')){
+		var size = $('.container.home').outerWidth(false) - $('#header').outerWidth(false) + 'px';
+		$('#menu-top>ul').css('width',size);
+	}
 });
 
