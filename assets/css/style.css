@@ -2395,6 +2395,7 @@ a.search-category{
 	max-width: 64.3% !important;
 	margin: 0px 1% !important;
 	background-size: cover;
+	background-color:#C2B59B;
 }
 .category-thumbnail .link{
 	text-align: right;

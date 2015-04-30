@@ -35,6 +35,10 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		$(this).tab( 'show' );
 	});
+	$(document).on('close.fndtn.reveal', '[data-reveal]', function () {
+		var modal = $(this);
+		console.log('ta chamando?');
+	});
 
 	// Tooltip.
 	$( '.odin-tooltip' ).tooltip();

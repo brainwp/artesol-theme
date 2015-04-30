@@ -81,14 +81,16 @@
 			<?php endif;?>
 			<?php if( is_category() || is_tax() ): ?>
 			    <?php $query_obj = get_queried_object();?>
+			    <?php $style = '';?>
 			    <?php if($field = get_field('tipo_thumb', $query_obj->taxonomy . '_' . $query_obj->term_id)): ?>
-					<div style="background: url(' <?php echo $field['sizes']['large']; ?>' ) center center no-repeat;background-size:cover;" class="destaque-1 col-md-8 col-sm-12 page-thumbnail category-thumbnail">
-					    	<a class="link" href="#">
-					    		<h1><?php echo single_cat_title();?></h1>
-					    		<p><?php echo category_description();?></p>
-					    	</a>
-					    </div><!-- destaque-1 -->
-				<?php endif; ?>
+			        <?php $style = 'background: url('.$field["sizes"]["large"].' ) center center no-repeat;background-size:cover';?>
+			    <?php endif;?>
+				<div style="<?php echo esc_attr($style);?>" class="destaque-1 col-md-8 col-sm-12 page-thumbnail category-thumbnail">
+					<a class="link" href="#">
+					    <h1><?php echo single_cat_title();?></h1>
+					    <p><?php echo category_description();?></p>
+					</a>
+			    </div><!-- destaque-1 -->
 			    <div class="col-md-12 clear" style="height:0px;"></div>
 			<?php endif;?>
 			<?php if(is_search()) get_sidebar();?>
