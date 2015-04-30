@@ -386,6 +386,7 @@ body.page .destaque-1 h3,
 	text-transform: uppercase;
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
 	font-family: "Gotham-Bold",sans-serif;
+	margin-left: 20px;
 }
 #slider-home.single .area{
 	color:#efb310;
@@ -393,12 +394,18 @@ body.page .destaque-1 h3,
 	text-transform: uppercase;
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
 	font-family: "Gotham-Bold",sans-serif;
+	margin-left: 20px;
 }
 #slider-home.single .item span{
 	color:white;
 	font-size:1.2em;
-	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
 }
+
+#slider-home.single .item span.resumo p {
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+	padding: 20px;
+}
+
 #slider-home.mult h3{
 	color:#494949;
 	font-size:1.5em;
@@ -988,7 +995,7 @@ body.post-type-archive-projetos {
 .post-type-archive-dlm_download .each-projeto h1.entry-title,
 .post-type-archive-dlm_download .each-projeto h1.entry-title{
 	color: #726658;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	margin-bottom: 10px;
 	text-decoration: none;
 	font-family: "Gotham-Bold", sans-serif;
@@ -1386,13 +1393,14 @@ body.category-agenda #rede-submenu a,
 }
 .page-template-page-servicos #capacitacao .desc {
 	color: #FFF;
-	bottom: 70px;
+	bottom: 40px;
 	font-size: 1.4em;
 	left: 40px;
 	text-align: left;
 	position: absolute;
 	width: 70%;
-	text-shadow: 0px 4px 6px #000;
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+	padding: 15px;
 }
 .page-template-page-servicos #capacitacao .desc h1 {
 	color: #dd7a00;
@@ -1408,13 +1416,14 @@ body.category-agenda #rede-submenu a,
 }
 .page-template-page-servicos #projetos-culturais .desc {
 	color: #FFF;
-	bottom: 70px;
+	bottom: 40px;
 	font-size: 1.4em;
 	right: 40px;
 	text-align: right;
 	position: absolute;
 	width: 70%;
-	text-shadow: 0px 4px 6px #000;
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+	padding: 15px;
 }
 .page-template-page-servicos #projetos-culturais .desc h1 {
 	color: #dd7a00;
@@ -1430,13 +1439,14 @@ body.category-agenda #rede-submenu a,
 }
 .page-template-page-servicos #consultorias .desc {
 	color: #FFF;
-	bottom: 70px;
+	bottom: 40px;
 	font-size: 1.4em;
 	left: 40px;
 	text-align: left;
 	position: absolute;
 	width: 70%;
-	text-shadow: 0px 4px 6px #000;
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+	padding: 15px;
 }
 .page-template-page-servicos #consultorias .desc h1 {
 	color: #dd7a00;
@@ -1452,13 +1462,14 @@ body.category-agenda #rede-submenu a,
 }
 .page-template-page-servicos #personalizados .desc {
 	color: #FFF;
-	bottom: 70px;
+	bottom: 40px;
 	font-size: 1.4em;
 	right: 40px;
 	text-align: right;
 	position: absolute;
 	width: 70%;
-	text-shadow: 0px 4px 6px #000;
+	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
+	padding: 15px;
 }
 .page-template-page-servicos #personalizados .desc h1 {
 	color: #dd7a00;
@@ -1845,7 +1856,7 @@ a.zilla-button:visited {
 	width: 50%;
 }
 .each-publicacao{
-	min-height:285px;
+	min-height:320px;
 	background:#E2E2E2 !important;
 	border-left:10px solid #dd7a00;
 	border-bottom:10px solid #dd7a00;
