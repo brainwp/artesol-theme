@@ -176,7 +176,7 @@ body.page .destaque-1 h3,
 }
 .container.home .destaque-2 h3  {
 	font-family: "Gotham-Bold",sans-serif;
-	
+
 }
 
 .container.home h1.entry-title {
@@ -1164,7 +1164,7 @@ body.single-projetos, body.page-template-page-rede-php{
 .page-template-page-rede-php section#conheca a.post-container,
 .page-template-page-comercio-justo section#cadeia-produtiva a.post-container
 {
-	font-family: "Istok Web",sans-serif;	
+	font-family: "Istok Web",sans-serif;
 	display: block;
 	text-decoration: none !important;
 	text-align: center;
@@ -1172,7 +1172,7 @@ body.single-projetos, body.page-template-page-rede-php{
 
 .page-template-page-rede-php section#conheca a.post-container h3,
 .page-template-page-comercio-justo section#cadeia-produtiva a.post-container h3{
-	font-family: 'Gotham-Bold';	
+	font-family: 'Gotham-Bold';
 	text-align: center;
 	color:#756b5f;
 }
@@ -1290,7 +1290,7 @@ body.single-projetos, body.page-template-page-rede-php{
 }
 
 .page-template-page-rede-php section#beneficios a.post-container h3{
-	font-family: 'Gotham-Bold';	
+	font-family: 'Gotham-Bold';
 	text-align: center;
 	color:#756b5f;
 }
@@ -1891,7 +1891,7 @@ a.zilla-button:visited {
 
 .each-publicacao .content p{
     line-height: 1.5;
-    font-size: 0.9em;	
+    font-size: 0.9em;
 }
 /* comercio justo template */
 .page-template-page-comercio-justo section#entenda{
@@ -2073,7 +2073,7 @@ a.zilla-button:visited {
 
 .page-template-page-artesanato-brasileiro section#valor-da-tradicao a.post-container h3,
 .page-template-page-artesanato-brasileiro section#formas-de-olhar-o-artesanato a.post-container h3{
-	font-family: 'Gotham-Bold';	
+	font-family: 'Gotham-Bold';
 	text-align: center;
 	color:#756b5f;
 }
