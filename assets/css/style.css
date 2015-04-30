@@ -2400,6 +2400,16 @@ body.search #header{
 	#menu-top li, #menu-top a{
 		text-align: center;
 	}
+	body.search #header{
+		width:100%;
+	}
+	nav#menu-top>ul{
+		width:100% !important;
+	}
+	#search-form, #search-form input{
+		width:100% !important;
+		margin:0 !important;
+	}
 }
 body.search #secondary{
 	width:100%;
@@ -2457,6 +2467,7 @@ body.search #search-form{
 }
 body.search #menu-top>ul{
 	margin-left:95%;
+	display: none;
 }
 /*category.php */
 .category-thumbnail{
