@@ -125,3 +125,11 @@ if ( ! function_exists( 'brasa_download_link' ) ) {
 		echo sprintf('<a class="%s" href="%s">%s</a>',$class,$download->get_the_download_link(),$text);
 	}
 }
+if ( ! function_exists( 'brasa_resumo' ) ) {
+
+	function brasa_resumo($texto, $limite){
+		$texto = substr($texto, 0, strrpos(substr($texto, 0, $limite), ' ')) . ' [...]';
+		return $texto;
+	}
+
+}
