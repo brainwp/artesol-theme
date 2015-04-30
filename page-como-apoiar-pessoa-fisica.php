@@ -28,7 +28,7 @@ get_header('rede');
 				<?php _e('Artesanato Brasileiro <br>e o<br>Patrimônio Imaterial','odin');?>
 			</h1><!-- .section-title -->
 			<div class="col-md-12 text-center">
-				<a href="#" class="btn-trabalhar">
+				<a href="<?php echo home_url('/artesanato-brasileiro'); ?>" class="btn-trabalhar">
 					<?php _e('Saiba Mais','odin');?>
 				</a>
 			</div><!-- .col-md-12 text-center -->

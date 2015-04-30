@@ -14,7 +14,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-md-12 each-projeto each-publicacao' ); ?>>
 		<header class="bg row"></header>
 		<div class="col-md-4 pull-left image-container">
-			<?php the_post_thumbnail('thumbnail');?>
+			<?php the_post_thumbnail();?>
 	    </div><!-- .col-md-4 pull-left image-container -->
 	    <div class="col-md-8 pull-right">
 	    	<?php the_title( '<h1 class="entry-title">', '</h1>' );	?>

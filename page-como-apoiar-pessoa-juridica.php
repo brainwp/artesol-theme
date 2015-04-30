@@ -31,7 +31,7 @@ get_header('rede');
 				<?php _e('Conheça os serviços que oferecemos. Nós podemos fazer um projeto sob medida para as suas necessidades.','odin');?>
 			</div><!-- .content -->
 			<div class="col-md-12 text-center">
-				<a href="#" class="btn-trabalhar">
+				<a href="<?php echo home_url('/servicos'); ?>" class="btn-trabalhar">
 					<?php _e('Saiba Mais','odin');?>
 				</a>
 			</div><!-- .col-md-12 text-center -->

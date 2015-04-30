@@ -91,9 +91,9 @@ get_header('rede');
 			$parent = new WP_Query( $args );
 			if ( $parent->have_posts() ) : ?>
 			<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-			    <?php $style = 'background:none;'?>
+			    <?php $style = 'background:#7F7F7F;'?>
 			    <?php if(has_post_thumbnail()): ?>
-			        <?php $style = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium', false );?>
+			        <?php $style = wp_get_attachment_image_src( get_post_thumbnail_id(), false );?>
 			        <?php $style = 'background:url('.$style[0].');';?>
 			    <?php endif;?>
 			    <div class="col-md-4">
@@ -114,14 +114,14 @@ get_header('rede');
 			<h2 class="section-title"><?php _e('Tipologia','odin');?></h2><!-- .section-title -->
 			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
 			<?php foreach ($tipos as $tipo):?>
-			     <a class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
+			     <div class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
 			     		<?php if($thumb = get_field('tipo_thumb', 'tipos_'.$tipo->term_id)): ?>
 			     		    <div class="img-container">
 			     		    	<img class="tipo-thumb" src="<?php echo $thumb['sizes']['medium'];?>">
 			                </div><!-- .img-container -->
 			            <?php endif;?>
 			        <h3 class="post-title"><?php echo $tipo->name;?></h3><!-- .post-title -->
-			     </a><!-- .col-md-4 post-container -->
+			     </div><!-- .col-md-4 post-container -->
 			<?php endforeach;?>
 		</div><!-- .row -->
 	</div><!-- .container -->
