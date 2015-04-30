@@ -68,14 +68,16 @@
 			</form><!-- #search-form -->
 			<?php if(is_single()): ?>
 				<?php while ( have_posts() ) : the_post(); ?>
+				    <?php $style = '';?>
 					<?php if ( has_post_thumbnail() ) : ?>
-					    <?php $img = wp_get_attachment_image_src(get_post_thumbnail_id(),'large'); ?>
-					    <div style="background: url(' <?php echo $img[0]; ?>' ) center center;" class="destaque-1 col-md-8 col-sm-12 page-thumbnail">
-					    	<a class="link" href="#">
-					    		<h1><?php the_title(); ?></h1>
-					    	</a>
-					    </div><!-- destaque-1 -->
-					<?php endif; ?>
+					    <?php $style = wp_get_attachment_image_src(get_post_thumbnail_id(),'large'); ?>
+					    <?php $style = 'background: url('.$style[0].') center center';?>
+					<?php endif;?>
+					<div style="<?php echo esc_attr($style);?>" class="destaque-1 col-md-8 col-sm-12 page-thumbnail">
+					    <a class="link" href="#">
+					    	<h1><?php the_title(); ?></h1>
+					    </a>
+					</div><!-- destaque-1 -->
 			   <?php endwhile; ?>
 			   <div class="col-md-12 clear" style="height:0px;"></div>
 			<?php endif;?>

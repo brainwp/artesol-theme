@@ -2470,7 +2470,7 @@ body.search #menu-top>ul{
 	display: none;
 }
 /*category.php */
-.category-thumbnail{
+.category-thumbnail, .page-thumbnail{
 	max-width: 64.3% !important;
 	margin: 0px 1% !important;
 	background-size: cover;
