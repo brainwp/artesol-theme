@@ -73,7 +73,7 @@
 					?>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
-			<?php if(!is_page_template('page-como-apoiar-pessoa-fisica.php') && !is_page_template('page-como-apoiar-pessoa-juridica.php')): ?>
+			<?php if(!is_page_template('page-como-apoiar-pessoa-fisica.php') && !is_page_template('page-como-apoiar-pessoa-juridica.php') && !is_category()): ?>
 			<div class="col-md-12 sticky-menu" id="rede-submenu">
 				<nav class="col-md-10 pull-right">
 					<?php
