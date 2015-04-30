@@ -1520,3 +1520,65 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+if(function_exists("register_field_group"))
+{
+	$id = get_category_by_slug('agenda');
+	$id = $id->term_id;
+	register_field_group(array (
+		'id' => 'acf_agenda',
+		'title' => 'Agenda',
+		'fields' => array (
+			array (
+				'key' => 'field_5540dd8489ee9',
+				'label' => 'Data do evento',
+				'name' => 'evento_data',
+				'type' => 'date_picker',
+				'required' => 1,
+				'date_format' => 'yymmdd',
+				'display_format' => 'dd/mm/yy',
+				'first_day' => 1,
+			),
+			array (
+				'key' => 'field_5540ddc989eea',
+				'label' => 'Horario',
+				'name' => 'evento_hora',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_5540ddd689eeb',
+				'label' => 'Localização',
+				'name' => 'evento_local',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => 3,
+				'formatting' => 'br',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_category',
+					'operator' => '==',
+					'value' => $id,
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}

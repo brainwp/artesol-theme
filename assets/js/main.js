@@ -28,11 +28,6 @@ jQuery(document).ready(function($) {
 				}, 1300);
 			}
 		});
-		$('.close-reveal-modal').click(function() {
-			$('#fundo-modal').css('width', '0');
-			$('#reveal-modal-id').css('visibility', 'hidden');
-
-		});
 	})
 
 	// Tabs.
@@ -107,7 +102,7 @@ jQuery(document).ready(function($) {
 
 	$('.page-template-page-comercio-justo section#atuacao').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 	$('.page-template-page-como-apoiar-pessoa-juridica section#trabalhar').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
-	$('.page-template-page-como-apoiar-pessoa-fisica section#patrimonio').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
+	$('.page-template-page-como-apoiar-pessoa-fisica section#pat').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 
 });
 

@@ -158,6 +158,11 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 
 add_action( 'after_setup_theme', 'odin_setup_features' );
 
+function brasa_custom_excerpt_length( $length ) {
+	return 13;
+}
+add_filter( 'excerpt_length', 'brasa_custom_excerpt_length', 999 );
+
 /**
  * Register widget areas.
  *
@@ -301,6 +306,12 @@ require_once get_template_directory() . '/inc/options.php';
  * Custom post types
  */
 require_once get_template_directory() . '/inc/cpts.php';
+
+/**
+ * Agenda Functions
+ */
+require_once get_template_directory() . '/inc/agenda-class.php';
+
 function modal() {
     	$option_home = get_option('home_cfg');
 		if ($option_home['modal_na_home'] != ""){?>
@@ -317,7 +328,7 @@ function modal() {
 			</div>
 	<?php }
 }
-add_action('wp_footer', 'modal');
+//add_action('wp_footer', 'modal');
 
 function thumbnail_bg( $id = '', $tamanho = 'thumbnail' ) {
 	global $post;
