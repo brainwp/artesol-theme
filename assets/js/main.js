@@ -108,5 +108,9 @@ jQuery(document).ready(function($) {
 	$('.page-template-page-como-apoiar-pessoa-juridica section#trabalhar').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 	$('.page-template-page-como-apoiar-pessoa-fisica section#pat').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 
+	if($('body').hasClass('search')){
+		var size = $('.container.home').outerWidth(false) - $('#header').outerWidth(false) + 'px';
+		$('#menu-top>ul').css('width',size);
+	}
 });
 

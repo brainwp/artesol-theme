@@ -2451,6 +2451,13 @@ a.search-category{
 	font-family: 'Istok Web',sans-serif;
 	font-size:1.1em;
 }
+body.search #search-form{
+	margin-top:100%;
+	margin-left:25%;
+}
+body.search #menu-top>ul{
+	margin-left:95%;
+}
 /*category.php */
 .category-thumbnail{
 	max-width: 64.3% !important;
