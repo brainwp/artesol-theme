@@ -1,49 +1,39 @@
 <?php
 /**
- * The template for displaying Search Results pages.
+ * The Template for displaying all single posts.
  *
  * @package Odin
  * @since 2.2.0
  */
 
-get_header(); ?>
+get_header('noticias'); ?>
+<div class="col-md-8 pull-right" id="single-noticias-container">
+	<h2 class="search-term-for">
+		<?php _e('Resultados da busca para:','odin');?>
+	</h2><!-- .search-term-for -->
+	<h1 class="search-term">
+        <?php if(!empty($_GET['s'])) echo $_GET['s'];?>
+	</h1><!-- .search-term -->
+	<?php
+		// Start the Loop.
+		while ( have_posts() ) : the_post();
 
-	<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
-		<div id="content" class="site-content" role="main">
+			/*
+			 * Include the post format-specific template for the content. If you want to
+			 * use this in a child theme, then include a file called called content-___.php
+			 * (where ___ is the post format) and that will be used instead.
+			 */
+			get_template_part( 'content', 'search' );
 
-			<?php if ( have_posts() ) : ?>
-
-				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'odin' ), get_search_query() ); ?></h1>
-				</header><!-- .page-header -->
-
-					<?php
-						// Start the Loop.
-						while ( have_posts() ) : the_post();
-
-							/*
-							 * Include the post format-specific template for the content. If you want to
-							 * use this in a child theme, then include a file called called content-___.php
-							 * (where ___ is the post format) and that will be used instead.
-							 */
-							get_template_part( 'content', get_post_format() );
-
-						endwhile;
-
-						// Post navigation.
-						odin_paging_nav();
-
-					else :
-						// If no content, include the "No posts found" template.
-						get_template_part( 'content', 'none' );
-
-				endif;
-			?>
-
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
-</div><!-- #primary -->
+			// If comments are open or we have at least one comment, load up the comment template.
+			//if ( comments_open() || get_comments_number() ) :
+			//	comments_template();
+			//		endif;
+		endwhile;
+		echo '<div class="text-center noticias-pagination">';
+		brasa_noticias_pagination();
+		echo '</div>';
+	?>
+</div><!-- #single-noticias-container.col-md-4 pull-right -->
 <?php
-get_sidebar();
-get_footer();
+get_footer('noticias');

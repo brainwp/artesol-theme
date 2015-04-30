@@ -826,6 +826,7 @@ body.page-template-page-institucional-php #aceleracao-footer,
 body.blog #aceleracao-footer,
 body.page-template-default #aceleracao-footer,
 body.single #aceleracao-footer,
+body.search #aceleracao-footer,
 body.page-template-page-servicos-php #aceleracao-footer,
 body.post-type-archive-dlm_download #aceleracao-footer,
 body.page-template-page-artesanato-brasileiro #aceleracao-footer
@@ -870,6 +871,7 @@ body.single-projetos #aceleracao-footer{
 body.page-template-page-institucional-php #aceleracao-footer a,
 body.blog #aceleracao-footer a,
 body.single #aceleracao-footer a,
+body.search #aceleracao-footer a,
 body.page-template-default #aceleracao a,
 body.page-template-page-servicos-php #aceleracao-footer a,
 body.post-type-archive-dlm_download #aceleracao-footer a,
@@ -883,6 +885,7 @@ body.page-template-page-institucional-php #aceleracao-footer a:hover,
 body.blog #aceleracao-footer a:hover,
 body.single #aceleracao-footer a:hover,
 body.page-template-default #aceleracao a:hover,
+body.search #aceleracao a:hover,
 body.page-template-page-servicos-php #aceleracao-footer a:hover,
 body.post-type-archive-dlm_download #aceleracao-footer a:hover
 body.page-template-page-artesanato-brasileiro #aceleracao-footer a:hover
@@ -2381,4 +2384,70 @@ body.category-agenda #como-apoiar .image{
 	color:#58595b;
 	font-family: 'Istok Web',sans-serif;
 	font-size:1.5em;
+}
+/* search.php */
+body.search #header{
+	width:33.3333%;
+	float:left;
+}
+@media only screen and (max-width:700px) {
+	#menu-top>ul{
+		display:block;
+		width:100%;
+		position:relative;
+		margin:0 !important;
+	}
+	#menu-top li, #menu-top a{
+		text-align: center;
+	}
+}
+body.search #secondary{
+	width:100%;
+}
+body.search .container.home .logo{
+	max-width: inherit;
+}
+body.search{
+	background: transparent url('../images/bg-container.jpg') repeat scroll center top / cover;
+}
+body.search #single-noticias-container{
+	background:transparent !important;
+}
+body.search .search-term-for{
+	color:#726658;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+}
+body.search .search-term{
+	color:#dd7a04;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+	width:100%;
+	display: block;
+	padding-bottom:20px;
+	border-bottom:2px solid #726658;
+}
+.search-link .post-title{
+	font-family: 'Gotham-Bold';
+	color:#726658;
+	text-transform: uppercase;
+}
+a.search-category{
+	color:#dd7a04;
+	font-family: 'Gotham-Bold';
+	text-transform: uppercase;
+}
+.meta-search .cat-separator{
+	font-family: 'Gotham-Bold';
+	color:#726658;
+}
+.meta-search .date{
+	color:#726658;
+	font-family: 'Istok Web',sans-serif;
+	font-size:1.1em;
+}
+.content-search{
+	color:#726658 !important;
+	font-family: 'Istok Web',sans-serif;
+	font-size:1.1em;
 }
