@@ -54,14 +54,14 @@ get_header('rede');
 			<h2 class="section-title"><?php _e('Tipologia','odin');?></h2><!-- .section-title -->
 			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
 			<?php foreach ($tipos as $tipo):?>
-			     <div class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
+			     <a class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">
 			     		<?php if($thumb = get_field('tipo_thumb', 'tipos_'.$tipo->term_id)): ?>
 			     		    <div class="img-container">
 			     		    	<img class="tipo-thumb" src="<?php echo $thumb['sizes']['medium'];?>">
 			                </div><!-- .img-container -->
 			            <?php endif;?>
 			        <h3 class="post-title"><?php echo $tipo->name;?></h3><!-- .post-title -->
-			     </div><!-- .col-md-4 post-container -->
+			     </a><!-- .col-md-4 post-container -->
 			<?php endforeach;?>
 		</div><!-- .row -->
 	</div><!-- .container -->
