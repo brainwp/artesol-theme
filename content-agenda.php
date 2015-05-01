@@ -13,7 +13,7 @@ $date = DateTime::createFromFormat( 'Ymd', get_post_meta( get_the_ID(), 'evento_
 			</h2><!-- .col-md-12 dia -->
 		</div><!-- .col-md-4 pull-left data -->
 		<div class="col-md-8 pull-right content">
-			<?php the_excerpt();?>
+			<?php echo brasa_resumo(get_the_content(),60);?>
 		</div><!-- .col-md-8 pull-right content -->
 		<div class="col-md-12 icon"></div><!-- .col-md-12 icon -->
 	</a>
