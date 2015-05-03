@@ -152,11 +152,24 @@ body.home, body.page, body.blog, body.single, body.category-agenda{
 .container.home .destaque-1 h2,
 .container.home .destaque-3 h2 {
 	color: #efb310;
-	font-size: 2.6em;
-	font-weight: bold;
+	font-size: 2.2em;
+	font-weight: normal;
 	margin: 0 auto;
 	max-width: 80%;
-	 	padding-top: 105px;
+	padding-top: 105px;
+	font-family: "Gotham-Bold",sans-serif;
+	text-transform: uppercase;
+}
+
+body.page .destaque-1 h3,
+.container.home .destaque-1 h3,
+.container.home .destaque-3 h3 {
+	color: #FFF;
+	margin: 15px auto 0 auto;
+	max-width: 80%;
+	text-align: center;
+	font-family: "Gotham-Bold",sans-serif;
+	text-transform: uppercase;
 }
 
 .container.home .destaque-2 h2 {
@@ -165,16 +178,12 @@ body.home, body.page, body.blog, body.single, body.category-agenda{
 	height: 132px;
 	margin-top: 40px;
 }
-body.page .destaque-1 h3,
-.container.home .destaque-1 h3,
-.container.home .destaque-2 h3,
-.container.home .destaque-3 h3 {
+
+.container.home .destaque-2 h3  {
 	color: #FFF;
 	margin: 15px auto 0 auto;
 	max-width: 80%;
 	text-align: center;
-}
-.container.home .destaque-2 h3  {
 	font-family: "Gotham-Bold",sans-serif;
 
 }
@@ -836,8 +845,8 @@ body.single #aceleracao-footer,
 body.search #aceleracao-footer,
 body.page-template-page-servicos-php #aceleracao-footer,
 body.post-type-archive-dlm_download #aceleracao-footer,
-body.page-template-page-artesanato-brasileiro #aceleracao-footer
-{
+body.page-template-page-artesanato-brasileiro #aceleracao-footer,
+body.post-type-archive-projetos #aceleracao-footer {
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
@@ -882,7 +891,8 @@ body.search #aceleracao-footer a,
 body.page-template-default #aceleracao a,
 body.page-template-page-servicos-php #aceleracao-footer a,
 body.post-type-archive-dlm_download #aceleracao-footer a,
-body.page-template-page-artesanato-brasileiro #aceleracao-footer a
+body.page-template-page-artesanato-brasileiro #aceleracao-footer a,
+body.post-type-archive-projetos #aceleracao-footer a
 {
 	background:#199b6c;
 	border-radius: 6px;
@@ -894,17 +904,13 @@ body.single #aceleracao-footer a:hover,
 body.page-template-default #aceleracao a:hover,
 body.search #aceleracao a:hover,
 body.page-template-page-servicos-php #aceleracao-footer a:hover,
-body.post-type-archive-dlm_download #aceleracao-footer a:hover
-body.page-template-page-artesanato-brasileiro #aceleracao-footer a:hover
+body.post-type-archive-dlm_download #aceleracao-footer a:hover,
+body.page-template-page-artesanato-brasileiro #aceleracao-footer a:hover,
+body.post-type-archive-projetos #aceleracao-footer a:hover
 {
 	background:#005D3B !important;
 }
 
-body.single-projetos #aceleracao-footer a{
-	border-radius:2px;
-	border-bottom:1px solid #998b70;
-	background:#c2b59b;
-}
 /* Projetos */
 body.post-type-archive-projetos {
 	background: url('../images/bg-container.jpg') center top transparent;
@@ -1168,6 +1174,14 @@ body.single-projetos, body.page-template-page-rede-php{
 	text-align: center;
 	padding-top:30px;
 }
+
+.page-template-page-rede-php section#conheca .content {
+    font-family: "Istok Web",sans-serif;
+    font-size: 1.3em;
+    color: #58595B;
+    text-align: center;
+}
+
 .page-template-page-rede-php section#conheca a.post-container,
 .page-template-page-comercio-justo section#cadeia-produtiva a.post-container
 {
@@ -1264,6 +1278,7 @@ body.single-projetos, body.page-template-page-rede-php{
 
 .page-template-page-rede-php section#destaques {
 	clear: both;
+	margin-left: 10px;
 }
 
 .page-template-page-rede-php section#map h2.section-title {
@@ -1294,6 +1309,7 @@ body.single-projetos, body.page-template-page-rede-php{
 .page-template-page-rede-php section#beneficios a.post-container{
 	display: block;
 	text-decoration: none !important;
+	min-height: 120px;
 }
 
 .page-template-page-rede-php section#beneficios a.post-container h3{
@@ -1311,8 +1327,8 @@ body.single-projetos, body.page-template-page-rede-php{
 	margin-left:15px;
 }
 .page-template-page-rede-php section#destaques .destaque-3{
-	float:right;
-	margin-right:0!important;
+	float:left;
+	margin-right:10px!important;
 }
 /* SERVIÇOS */
 body.page-template-page-servicos h1{
@@ -1850,7 +1866,9 @@ a.zilla-button:visited {
 	width: 100%;
 }
 .post-type-archive-projetos .page-header span,
-.post-type-archive-dlm_download .page-header span{
+.post-type-archive-dlm_download .page-header span,
+.single-projetos .page-header span
+{
 	float: left;
 	margin-left: 5%;
 	width: 50%;
@@ -2051,7 +2069,8 @@ a.zilla-button:visited {
 	text-align: center;
 	text-transform: uppercase;
 	text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
-	margin-top: 50px;
+	margin-top: 70px;
+	margin-bottom: 35px;
 }
 .page-template-page-artesanato-brasileiro section#entenda .content{
 	font-family: "Istok Web",sans-serif;
@@ -2215,6 +2234,8 @@ box-shadow:         0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 	background:url('../images/bg-trabalhar-footer.jpg') no-repeat;
 	background-size: cover;
 	clear: both
+	overflow: hidden;
+	padding: 80px 20px;
 }
 .page-template-page-como-apoiar-pessoa-juridica section#trabalhar .row{
 	padding:50px 0;
@@ -2269,10 +2290,12 @@ box-shadow:         0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 .page-template-page-como-apoiar-pessoa-fisica section#patrimonio{
 	background:url('../images/bg-pessoa-fisica-patrimonio.jpg') no-repeat;
 	background-size: cover;
-	clear: both
+	overflow: hidden;
+	clear: both;
+	padding: 80px 20px;
 }
 .page-template-page-como-apoiar-pessoa-fisica section#patrimonio .row{
-	padding:50px 0;
+	padding: 0px 0px 150px;
 }
 .page-template-page-como-apoiar-pessoa-fisica section#patrimonio .section-title{
 	font-family: 'Gotham-Bold',sans-serif;
@@ -2299,6 +2322,7 @@ body.category-agenda #como-apoiar{
 .header-agenda{
 	background:url('../images/bg-header-agenda.jpg') no-repeat;
 	background-size: cover;
+	margin-bottom: 20px;
 }
 .header-agenda .row{
 	padding-top:25px;
@@ -2323,10 +2347,10 @@ body.category-agenda #como-apoiar{
 	padding-top:10px;
 	padding-bottom:10px;
 	box-shadow: -3px 4px 5px 0px rgba(141,182,185,0.5);
-	height:110px;
+	min-height:145px;
 }
 .agenda-container a .mes, .agenda-modal .mes{
-	text-align: left;
+	text-align: center;
 	font-size:1.5em;
 	color:white !important;
 	font-family: 'Gotham-Bold',sans-serif;
@@ -2343,10 +2367,9 @@ body.category-agenda #como-apoiar{
 }
 .agenda-container a .data, .agenda-modal .data{
 	background:#1fa9b5;
-	padding:0;
-	padding-top:3px;
-	padding-bottom:3px;
+	padding:15px 0;
 	margin-top:10px;
+	text-align: center;
 }
 .agenda-container a .content{
 	margin-top:10px;
@@ -2512,4 +2535,26 @@ body.search #menu-top>ul{
 }
 .container.home.category .noticias-loop-container{
 	margin-top:20px;
+}
+
+/* comentários */
+
+#comments {
+	margin: 30px 0 20px;
+}
+#commentform {
+	font-size: 14px;
+	margin: 30px 0;
+	max-width: 80%;
+}
+h3#reply-title {
+	font-family: "Gotham-Bold",sans-serif;
+	text-transform: uppercase;
+}
+
+}
+#commentform label {
+	font-family: "Gotham-Bold",sans-serif;[
+	text-transform: uppercase !important;
+	font-weight: normal;
 }

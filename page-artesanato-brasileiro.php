@@ -111,7 +111,7 @@ get_header('rede');
 <section id="tipos" class="col-md-12">
 	<div class="container">
 		<div class="row">
-			<h2 class="section-title"><?php _e('Tipologia','odin');?></h2><!-- .section-title -->
+			<h2 class="section-title"><?php _e('Tipologias','odin');?></h2><!-- .section-title -->
 			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
 			<?php foreach ($tipos as $tipo):?>
 			     <a class="col-md-4 post-container" href="<?php echo get_term_link($tipo);?>">

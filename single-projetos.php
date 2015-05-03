@@ -22,9 +22,9 @@ get_header( 'projetos' ); ?>
 						?>
 					</h1>
 					<span>
-						<?php if($content = get_field('project_content','options')): ?>
-						    <?php echo esc_textarea($content);?>
-					    <?php endif;?>
+						<?php // if($content = get_field('project_content','options')): ?>
+						    <?php // echo esc_textarea($content);?>
+					    <?php // endif;?>
 					</span>
 				</header><!-- .page-header -->
 

@@ -52,4 +52,4 @@ get_header( 'projetos' ); ?>
 	</section><!-- #primary -->
 <div class="col-md-12 separator"></div><!-- .col-md-12 clear -->
 <?php
-get_footer();
+get_footer('aceleracao');

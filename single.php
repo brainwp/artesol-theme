@@ -18,12 +18,14 @@ get_header('noticias'); ?>
 			 * use this in a child theme, then include a file called called content-___.php
 			 * (where ___ is the post format) and that will be used instead.
 			 */
-			get_template_part( 'content', 'single-noticias' );
+			get_template_part( 'content', 'single-noticias' ); ?>
+</div><!-- #single-noticias-container.col-md-4 pull-right -->
+<div class="col-md-8 pull-right" id="comments">
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			//if ( comments_open() || get_comments_number() ) :
-			//	comments_template();
-			//		endif;
+			<?php // If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+					endif;
 		endwhile;
 	?>
 </div><!-- #single-noticias-container.col-md-4 pull-right -->
