@@ -68,6 +68,11 @@ get_header('rede');
 			<h2 class="section-title"><?php echo $historico->post_title;?></h2><!-- .section-title -->
 			<div class="col-md-12 content"><?php echo $historico->post_content;?></div><!-- .col-md-12 content -->
 		</div><!-- .row -->
+		<div class="col-md-12 text-center">
+			<a href="<?php echo home_url( '/comercio-justo/historico-completo' );?>" class="btn-mais">
+				<?php _e('Saiba Mais','odin');?>
+			</a>
+		</div><!-- .col-md-12 text-center -->
 	</div><!-- .container -->
 </section><!-- #historico -->
 <?php endif;?>
@@ -83,6 +88,11 @@ get_header('rede');
 			<h2 class="section-title"><?php echo $articulacao_internacional->post_title;?></h2><!-- .section-title -->
 			<div class="col-md-8 col-md-offset-2 content"><?php echo $articulacao_internacional->post_excerpt;?></div><!-- .col-md-12 content -->
 		</div><!-- .row -->
+		<div class="col-md-12 text-center">
+			<a href="<?php echo home_url( '/comercio-justo/articulacao-internacional' );?>" class="btn-mais">
+				<?php _e('Entenda','odin');?>
+			</a>
+		</div><!-- .col-md-12 text-center -->
 	</div><!-- .container -->
 </section><!-- #articulacao-internacional -->
 <?php endif;?>
@@ -92,6 +102,11 @@ get_header('rede');
 		<div class="row">
 			<h2 class="col-md-8 col-md-offset-2 section-title"><?php echo $atuacao->post_title;?></h2><!-- .section-title -->
 			<div class="col-md-8 col-md-offset-2 content"><?php echo $atuacao->post_excerpt;?></div><!-- .col-md-12 content -->
+		<div class="col-md-12 text-center">			
+			<a href="<?php echo home_url( '/comercio-justo/atuacao' );?>" class="btn-mais">
+				<?php _e('Leia Mais','odin');?>
+			</a>
+		</div><!-- .col-md-12 text-center -->
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #atuacao -->

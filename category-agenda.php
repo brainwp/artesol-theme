@@ -39,7 +39,7 @@ get_header('rede');
 				</a>
 			</div>
 			<div class="col-md-4">
-				<a href="http://www.artesol.org.br/site/comercio-justo/" class="projetos" style="background:transparent url(<?php echo get_bloginfo('template_url');?>/assets/images/bg-rede-widget.jpg) no-repeat scroll center center;background-size:cover;">
+				<a href="http://www.artesol.org.br/site/rede/" class="projetos" style="background:transparent url(<?php echo get_bloginfo('template_url');?>/assets/images/bg-rede-widget.jpg) no-repeat scroll center center;background-size:cover;">
 				    <div class="icon" style="background:url(<?php echo get_bloginfo('template_url');?>/assets/images/logo-rede-home.png) no-repeat scroll center top;width:100%"></div>
 				    	<h3>
 				    		<?php _e('Conheça o trabalho de aceleração social da Artesol','odin');?>
