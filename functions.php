@@ -221,6 +221,8 @@ function odin_enqueue_scripts() {
 
 	// Main jQuery.
 	wp_enqueue_script( 'odin-main', $template_url . '/assets/js/main.js', array(), null, true );
+	wp_localize_script( 'odin-main', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+
 	wp_enqueue_script( 'scroll', $template_url . '/assets/js/scroll.js', array(), null, true );
 	wp_enqueue_script('jquery');
 	wp_enqueue_script(
@@ -306,6 +308,11 @@ require_once get_template_directory() . '/inc/cpts.php';
  * Agenda Functions
  */
 require_once get_template_directory() . '/inc/agenda-class.php';
+
+/**
+ * Tipologia functions
+ */
+require_once get_template_directory() . '/inc/tipologia-class.php';
 
 function modal() {
     	$option_home = get_option('home_cfg');

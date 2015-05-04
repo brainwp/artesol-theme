@@ -112,5 +112,13 @@ jQuery(document).ready(function($) {
 		var size = $('.container.home').outerWidth(false) - $('#header').outerWidth(false) + 'px';
 		$('#menu-top>ul').css('width',size);
 	}
+
+	$('.tipo-open-modal').on('click',function(e){
+		$('#reveal-modal-id').foundation('reveal', 'open', {
+			url: ajax_object.ajax_url,
+			method: 'POST',
+			data: {action: 'tipologia_content', id: $(this).attr('data-id') }
+		});
+	});
 });
 
