@@ -23,19 +23,24 @@
 	</div><!-- .page-thumbnail-full -->
 </div><!-- .col-md-12 page-thumbnail-full -->
 <?php endif;?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if(!has_post_thumbnail()): ?>
-	    <?php the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' ); ?>
-    <?php endif;?>
-	<div class="entry-content">
-		<?php
-			the_content();
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'odin' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-12'); ?>>
+	<div class="container">
+		<div class="row">
+		    <?php if(!has_post_thumbnail()): ?>
+	            <?php the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' ); ?>
+            <?php endif;?>
+	        <div class="entry-content">
+		        <?php
+			    the_content();
+			    wp_link_pages( array(
+				    'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'odin' ) . '</span>',
+				    'after'       => '</div>',
+				    'link_before' => '<span>',
+				    'link_after'  => '</span>',
+			    ) );
+		        ?>
+	        </div><!-- .entry-content -->
+	        <?php if ( comments_open() || get_comments_number() ) comments_template();?>
+		</div><!-- .row -->
+	</div><!-- .container -->
 </article><!-- #post-## -->

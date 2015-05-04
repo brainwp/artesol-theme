@@ -2629,3 +2629,6 @@ h3#reply-title {
 	text-align: center;
 	padding-top: 5px;
 }
+.page-template-default article{
+	max-width: inherit !important;
+}
