@@ -6,10 +6,27 @@
  * @since 2.2.0
  */
 ?>
-
+<?php if(has_post_thumbnail()):?>
+<?php $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false );?>
+<div class="col-md-12 page-thumbnail-bg" style="background:url(<?php echo $img[0];?>) center center no-repeat;background-size:cover;">
+	<div class="page-thumbnail-full">
+		<div class="container">
+			<div class="row">
+				<div class="page-thumbnail-content">
+			        <h1 class="entry-title"><?php the_title();?></h1><!-- .entry-title -->
+		            <div class="col-md-12 text-center resumo">
+			            <?php if(has_excerpt()) the_excerpt();?>
+		            </div><!-- .col-md-12 text-center resumo -->
+	            </div><!-- .page-thumbnail-content -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</div><!-- .page-thumbnail-full -->
+</div><!-- .col-md-12 page-thumbnail-full -->
+<?php endif;?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' ); ?>
-
+	<?php if(!has_post_thumbnail()): ?>
+	    <?php the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' ); ?>
+    <?php endif;?>
 	<div class="entry-content">
 		<?php
 			the_content();

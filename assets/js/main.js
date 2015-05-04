@@ -107,6 +107,7 @@ jQuery(document).ready(function($) {
 	$('.page-template-page-comercio-justo section#atuacao').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 	$('.page-template-page-como-apoiar-pessoa-juridica section#trabalhar').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
 	$('.page-template-page-como-apoiar-pessoa-fisica section#pat').css('padding-bottom',$('#como-apoiar').outerHeight(false) + 'px');
+	$('.page-thumbnail-bg').css('height',$('.page-thumbnail-full').outerHeight(true) + 'px');
 
 	if($('body').hasClass('search')){
 		var size = $('.container.home').outerWidth(false) - $('#header').outerWidth(false) + 'px';

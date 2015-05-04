@@ -856,7 +856,7 @@ body.post-type-archive-dlm_download #aceleracao-footer,
 body.page-template-page-artesanato-brasileiro #aceleracao-footer,
 body.category #aceleracao-footer,
 body.error404 #aceleracao-footer,
-body.post-type-archive-projetos #aceleracao-footer 
+body.post-type-archive-projetos #aceleracao-footer
 {
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
@@ -2594,7 +2594,38 @@ h3#reply-title {
 
 }
 #commentform label {
-	font-family: "Gotham-Bold",sans-serif;[
+	font-family: "Gotham-Bold",sans-serif;
 	text-transform: uppercase !important;
 	font-weight: normal;
+}
+/* page.php */
+.page-thumbnail-full{
+	background-color:rgba(221,122,4,0.8);
+	margin:0;
+	width:100%;
+	position: absolute;
+}
+.page-thumbnail-bg{
+	margin:0;
+	padding:0 !important;
+}
+.page-thumbnail-full .entry-title{
+	color: #FFF;
+	font-family: "Gotham-Bold",sans-serif;
+    text-align: center;
+    font-size: 2.6em;
+    display: block;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.page-template-default nav#main-navigation{
+	margin-bottom:0px;
+}
+.page-thumbnail-full .resumo{
+	font-family: "Istok Web",sans-serif;
+	font-size: 1.2em;
+	color: #FFF;
+	text-shadow: -1px 2px 4px rgba(0, 0, 0, 0.5);
+	text-align: center;
+	padding-top: 5px;
 }
