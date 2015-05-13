@@ -14,10 +14,10 @@ get_header('rede');
 	    <div class="content">
 	    	<?php echo $comercio_justo->post_content;?>
 	    </div><!-- .col-md-12 content -->
-		<a class="col-md-12 entenda-btn-txt">
+		<a class="col-md-12 entenda-btn-txt scroll-click" href="#principios">
 			<?php _e('Saiba Mais','odin');?>
 		</a>
-		<a class="col-md-12 entenda-btn" href="#principios"></a>
+		<a class="col-md-12 entenda-btn scroll-click" href="#principios"></a>
 	</div><!-- .col-md-8 col-md-offset-2 -->
 </section><!-- #entenda -->
 <?php if(!empty($principios)): ?>
@@ -102,7 +102,7 @@ get_header('rede');
 		<div class="row">
 			<h2 class="col-md-8 col-md-offset-2 section-title"><?php echo $atuacao->post_title;?></h2><!-- .section-title -->
 			<div class="col-md-8 col-md-offset-2 content"><?php echo $atuacao->post_excerpt;?></div><!-- .col-md-12 content -->
-		<div class="col-md-12 text-center">			
+		<div class="col-md-12 text-center">
 			<a href="<?php echo home_url( '/comercio-justo/atuacao' );?>" class="btn-mais">
 				<?php _e('Leia Mais','odin');?>
 			</a>

@@ -13,10 +13,10 @@ get_header('rede');
 		<h1 class="section-title">
 			<?php echo apply_filters('the_content',$artesanato_brasileiro->post_content);?>
 		</h1>
-		<a class="col-md-12 entenda-btn-txt">
+		<a class="col-md-12 entenda-btn-txt scroll-click" href="#valor-da-tradicao">
 			<?php _e('Saiba Mais','odin');?>
 		</a>
-		<a class="col-md-12 entenda-btn" href="#principios"></a>
+		<a class="col-md-12 entenda-btn scroll-click" href="#valor-da-tradicao"></a>
 	</div><!-- .col-md-8 col-md-offset-2 -->
 </section><!-- #entenda -->
 <?php if(!empty($valor_da_tradicao)): ?>
