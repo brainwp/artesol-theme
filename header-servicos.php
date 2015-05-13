@@ -73,8 +73,12 @@
 							)
 						);
 					?>
+					<a href="#" id="search-interno-click" data-open="false"></a>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
+			<form action="<?php echo home_url('/');?>" id="search-interno" class="col-md-4 pull-right">
+				<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
+			</form><!-- #search-interno.col-md-4 pull-right -->
 			<div class="col-md-12 sticky-menu" id="servicos-submenu">
 				<nav class="col-md-12">
 					<?php

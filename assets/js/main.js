@@ -29,7 +29,18 @@ jQuery(document).ready(function($) {
 			}
 		});
 	})
-
+	$('#search-interno-click').on('click',function(e){
+		var open = $(this).attr('data-open');
+		if(open == 'false'){
+			$('form#search-interno').fadeIn('slow');
+			$('form#search-interno input').focus();
+			$(this).attr('data-open','true');
+		}
+		if(open == 'true'){
+			$('form#search-interno').fadeOut('slow');
+			$(this).attr('data-open','false');
+		}
+	});
 	// Tabs.
 	$( '.odin-tabs a' ).click(function(e) {
 		e.preventDefault();
