@@ -68,6 +68,7 @@ if ( ! function_exists( 'odin_setup_features' ) ) {
 				'servicos-submenu' => __( 'Menu Serviços', 'odin' ),
 				'comercio-justo-submenu' => __( 'Menu Comercio Justo', 'odin' ),
 				'artesanato-brasileiro-submenu' => __( 'Menu Artesanato Brasileiro', 'odin' ),
+				'menu-english' => __( 'Menu English', 'odin' ),
 				'footer-menu-1' => __( 'Footer Menu 1', 'odin' ),
 				'footer-menu-2' => __( 'Footer Menu 2', 'odin' ),
 				'footer-menu-3' => __( 'Footer Menu 3', 'odin' ),

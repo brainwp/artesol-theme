@@ -758,11 +758,11 @@ margin: 0 auto -26px;
 	margin: 66px auto -26px;
 }
 /*page institucional */
-body.page-template-page-institucional-php .destaque-1{
+body.page-template-page-institucional-php .destaque-1, body.page-template-page-english .destaque-1{
 	max-width: inherit !important;
 	margin:0 !important;
 }
-body.page-template-page-institucional-php .destaque-1 h2{
+body.page-template-page-institucional-php .destaque-1 h2, body.page-template-page-english .destaque-1 h2{
 	color:white !important;
 	font-family: "Gotham-Bold",sans-serif;
 	font-weight: 300 !important;
