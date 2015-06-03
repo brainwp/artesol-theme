@@ -40,13 +40,15 @@ get_header( 'home' ); ?>
 				     		<div class="mult-only">
 				     			<?php the_post_thumbnail( 'medium' ); ?>
 				     		</div><!-- .col-md-12 multi-only -->
-				     		<h3><?php the_title(); ?></h3>
 				     		<h4 class="area">
 				     			<?php if($cat = get_the_category()):?>
 				     				<?php echo $cat[0]->cat_name;?>
 				     		    <?php endif;?>
 				     		</h4><!-- .area -->
+						<h3><?php the_title(); ?></h3>
+						<div class="mult-only">
 				     		<span class="resumo"><?php the_excerpt();?></span>
+						</div><!-- multi-only -->
 				     		<span class="leia-mais btn-artesol"><?php _e('Leia mais', 'odin'); ?></span>
 				     	</a><!-- .item-container -->
 				     </div><!-- .item -->

@@ -400,19 +400,21 @@ body.page .destaque-1 h3,
 }
 #slider-home.single h3{
 	color:white;
-	font-size:1.9em;
+	font-size:2.5em;
 	text-transform: uppercase;
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
 	font-family: "Gotham-Bold",sans-serif;
 	margin-left: 20px;
+	margin-top: 10px;
 }
 #slider-home.single .area{
 	color:#efb310;
-	font-size:1.4em;
+	font-size:2em;
 	text-transform: uppercase;
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
 	font-family: "Gotham-Bold",sans-serif;
 	margin-left: 20px;
+	margin-top: 165px;
 }
 #slider-home.single .item span{
 	color:white;
@@ -452,9 +454,11 @@ body.page .destaque-1 h3,
 #slider-home.mult .item span.leia-mais{
 	display:inline;
 	border-radius: 3px;
-	float: right;
+	position: absolute;
+	bottom: 15px;
+	right: 0;
 	font-size: 0.9em;
-	margin-right: 10px;
+	margin-right: 15px;
 	background: #DD7A04;
 	font-family: 'Gotham-Bold',sans-serif;
 	text-transform: uppercase;
