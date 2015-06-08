@@ -58,9 +58,8 @@ get_header( 'home' ); ?>
 			</div><!-- #slider-home -->
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 			<div class="boxes">
-				<div class="col-md-4" style="margin-top:-40px;">
+				<div class="col-md-4" style="margin-top:-40px; margin-bottom: 15px;">
 				<?php if( get_field('box_home_repeater', 'option') ): ?>
-				    <div class="pull-right">
 				    	<?php while ( has_sub_field('box_home_repeater','option') ): ?>
 				    	    <div class="<?php echo get_sub_field('box_home_repeater_icon');?>">
 				    	    	<h3>
@@ -74,7 +73,7 @@ get_header( 'home' ); ?>
 				    	    	</a>
 				    	    </div><!-- servicos -->
                         <?php endwhile; ?>
-				    </div><!-- .pull-right -->
+
                 <?php endif;?>
 				</div>
 				<?php if( get_field('home_feature_1_title', 'option') ): ?>

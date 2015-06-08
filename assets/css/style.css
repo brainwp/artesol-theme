@@ -118,6 +118,31 @@ body.home, body.page, body.blog, body.single, body.category-agenda, body.error40
 	height: 60px;
 	width: 60px;
 }
+
+
+.icon-menu {
+	background: url('../images/icon-menu.jpg') center center no-repeat;
+	cursor: pointer;
+	height: 49px;
+	width: 49px;
+}
+.navbar-toggle {
+	border: none;
+	border-radius: 0px;
+	margin-left: 5px;
+	float: left;
+}
+
+.navbar-toggle:hover {
+	background-color: #DD8C2A;
+}
+
+.navbar-collapse {
+	border-top: none;
+	box-shadow: none;
+}
+
+
 .container.home .destaque-1 {
 	margin: 0 3%;
 }
@@ -456,7 +481,7 @@ body.page .destaque-1 h3,
 	border-radius: 3px;
 	position: absolute;
 	bottom: 15px;
-	right: 0;
+		right: 0;
 	font-size: 0.9em;
 	margin-right: 15px;
 	background: #DD7A04;
@@ -853,6 +878,7 @@ body.page article .content{
 	}
 }
 /* Aceleracao footer */
+body.page #aceleracao-footer,
 body.page-template-page-institucional-php #aceleracao-footer,
 body.blog #aceleracao-footer,
 body.page-template-default #aceleracao-footer,
@@ -863,15 +889,9 @@ body.post-type-archive-dlm_download #aceleracao-footer,
 body.page-template-page-artesanato-brasileiro #aceleracao-footer,
 body.category #aceleracao-footer,
 body.error404 #aceleracao-footer,
-body.post-type-archive-projetos #aceleracao-footer
+body.post-type-archive-projetos #aceleracao-footer,
+body.single-projetos #aceleracao-footer
 {
-	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
-	background-size:cover;
-	position: absolute;
-	margin-top:-458px;
-	background-attachment: fixed;
-}
-body.single-projetos #aceleracao-footer{
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
@@ -902,6 +922,7 @@ body.single-projetos #aceleracao-footer{
 	color:white;
 	text-align: center;
 }
+body.page #aceleracao-footer a,
 body.page-template-page-institucional-php #aceleracao-footer a,
 body.blog #aceleracao-footer a,
 body.single #aceleracao-footer a,
@@ -918,6 +939,7 @@ body.post-type-archive-projetos #aceleracao-footer a
 	border-radius: 6px;
 	text-decoration: none;
 }
+body.page #aceleracao-footer a:hover,
 body.page-template-page-institucional-php #aceleracao-footer a:hover,
 body.blog #aceleracao-footer a:hover,
 body.single #aceleracao-footer a:hover,
@@ -2711,6 +2733,7 @@ body.error404 #aceleracao-footer-margin{
 }
 #search-interno-click{
 	margin-top:10px;
+	margin-right: 10px;
 	float: right;
 	width:50px;
 	height:50px;
@@ -2735,4 +2758,139 @@ form#search-interno.projetos{
 
 .youtube-player {
 max-width: 540px;
+}
+
+#menu-mobile {
+	display: none;
+}
+
+
+@media only screen and (max-width:767px) {
+
+	#menu-mobile {
+		display: block;
+	}
+
+	 .logo-mobile {
+		background: #DD7A04 url("../images/logo-artesol.jpg") no-repeat scroll center 25px;
+		min-height: 225px;
+		max-width: 100%;
+		display: block;
+		position: relative;
+	}
+
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+	.container.home .logo {
+		display: none;
+	}
+
+	#menu-top {
+		display: none;
+	}
+
+	#slider-ctrl {
+		display: none;
+	}
+
+	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
+	    max-width: 100%;
+	    margin-bottom: 15px;
+	    margin-top: 15px;
+	}
+
+	.container.home {
+	    padding-bottom: 0px;
+	    padding-top: 0px;
+	}
+
+	.page-template-default .row {
+	    max-width: 100%;
+	}
+	.container {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+
+	#como-apoiar .links .link-container:first-child {
+	    padding: 0;
+	    text-align: center;
+	    border-right: none;
+	}
+
+	#como-apoiar .link-container {
+	    text-align: center;
+	    padding-left: 0px;
+	}
+
+	.container.home .destaque-2 {
+		margin: 0 3%;
+	}
+
+	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
+	    min-height: 260px;
+	}
+	
+	.container.home .destaque-1 h2, .container.home .destaque-3 h2 {
+	    padding-top: 70px;
+	}
+
+	.container.home .destaque-2 h2 {
+	    margin-top: 20px;
+	}
+
+	.container.home .destaque-2 h3 {
+	    font-size: 1.5em;
+	}
+
+	.container.home h1.entry-title {
+	    font-size: 2em;
+	    padding-bottom: 5px;
+	    margin-top: 5px;
+	}
+
+	#slider-home {
+	    padding: 0 3%;
+	}
+
+	#slider-home.single .area {
+	    margin-top: 55px;
+	    font-size: 1.4em;
+	}
+
+	#slider-home.single h3 {
+	    font-size: 2em;
+	}
+
+
+	#slider-home.single .item-container {
+	    padding: 20px;
+	}
+
+	#slider-home.single .item-container {
+	    height: 235px;
+	}
+
+	.slick-prev, .slick-next {
+	    top: 33%;
+	}
+
+	.container.home .boxes .projetos {
+	    min-height: 320px;
+	    margin-bottom: 15px;
+	}
+
+	#footer {
+	    padding: 135px 3% 15px;
+	}
+
+	#menu-normal {
+		display: none;
+	}
+
+	#como-apoiar {
+	    margin: -175px auto -27px;
+	}
 }
