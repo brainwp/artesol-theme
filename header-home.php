@@ -34,7 +34,11 @@
 <body <?php body_class(); ?>>
 	<div class="container home">
 		<header id="header" role="banner" class="header-home">
-
+			<div class="col-md-12 change-english">
+				<a href="<?php echo home_url('/english');?>" class="pull-right">
+					<?php _e('In English','odin');?>
+				</a>
+			</div><!-- .col-md-12 change-english -->
 <div id="menu-mobile">
 
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">

@@ -1124,7 +1124,7 @@ article#projetos-post .projetos-meta .repeater-projetos img{
 }
 
 .projetos-meta {
-	padding: 0; 
+	padding: 0;
 	margin-bottom: 20px;
 
 }
@@ -2844,7 +2844,7 @@ max-width: 540px;
 	#como-apoiar.is-aceleracao .link-container {
 	    display: inline-block;
 	    width: 100%;
-
+	}
 	#como-apoiar .link-container {
 	    text-align: center;
 	    padding-left: 0px;
@@ -2858,7 +2858,7 @@ max-width: 540px;
 	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
 	    min-height: 260px;
 	}
-	
+
 	.container.home .destaque-1 h2, .container.home .destaque-3 h2 {
 	    padding-top: 70px;
 	}
@@ -2968,6 +2968,15 @@ max-width: 540px;
 	#aceleracao-footer h3.section-title {
 	    font-size: 2em;
 	}
+	.change-english{
+		display: none;
+	}
 
-
+}
+/*english link */
+.change-english .pull-right{
+	display: inline-block;
+	font-family: "Gotham-Bold",sans-serif;
+	color:#DD7A04;
+	text-transform: uppercase;
 }
