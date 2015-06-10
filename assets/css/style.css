@@ -2815,68 +2815,6 @@ max-width: 540px;
 		display: none;
 	}
 
-	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
-	    max-width: 100%;
-	    margin-bottom: 15px;
-	    margin-top: 15px;
-	}
-
-	.container.home {
-	    padding-bottom: 0px;
-	    padding-top: 0px;
-	}
-
-	.page-template-default .row {
-	    max-width: 100%;
-	}
-	.container {
-	    padding-left: 0;
-	    padding-right: 0;
-	}
-
-
-	#como-apoiar .links .link-container:first-child {
-	    padding: 0;
-	    text-align: center;
-	    border-right: none;
-	}
-
-	#como-apoiar.is-aceleracao .link-container {
-	    display: inline-block;
-	    width: 100%;
-
-	#como-apoiar .link-container {
-	    text-align: center;
-	    padding-left: 0px;
-	    width: 100%;
-	}
-
-	.container.home .destaque-2 {
-		margin: 0 3%;
-	}
-
-	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
-	    min-height: 260px;
-	}
-	
-	.container.home .destaque-1 h2, .container.home .destaque-3 h2 {
-	    padding-top: 70px;
-	}
-
-	.container.home .destaque-2 h2 {
-	    margin-top: 20px;
-	}
-
-	.container.home .destaque-2 h3 {
-	    font-size: 1.5em;
-	}
-
-	.container.home h1.entry-title {
-	    font-size: 2em;
-	    padding-bottom: 5px;
-	    margin-top: 5px;
-	}
-
 	#slider-home {
 	    padding: 0 3%;
 	}
@@ -2915,11 +2853,6 @@ max-width: 540px;
 	#menu-normal {
 		display: none;
 	}
-
-	#como-apoiar {
-	    margin: -175px auto -27px;
-	}
-
 	.bg-title-projetos {
 	  margin-top: 290px;
 	  height: 100%;
@@ -2941,13 +2874,11 @@ max-width: 540px;
 
 	#como-apoiar {
 	    width: auto;
-	}
-
-	#como-apoiar.is-aceleracao {
 	    margin: 0px auto -90px;
-	    background: rgb(223, 100, 0) none repeat scroll 0% 0%;
+	    background: #E05D00 repeat scroll 0% 0%;
 	    display: block;
 	}
+
 
 	#como-apoiar .image {
 		background: none;
@@ -2967,6 +2898,68 @@ max-width: 540px;
 
 	#aceleracao-footer h3.section-title {
 	    font-size: 2em;
+	}
+
+	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
+	    max-width: 100%;
+	    margin-bottom: 15px;
+	    margin-top: 15px;
+	}
+
+	.container.home {
+	    padding: 0px;
+	}
+
+	.page .site-main {
+	    margin-bottom: 0px;
+	}
+
+	#como-apoiar .links .link-container:first-child {
+	    padding: 0;
+	    text-align: center;
+	    border-right: none;
+	}
+
+	#como-apoiar .link-container {
+	    text-align: center;
+	    padding-left: 0px;
+	    width: 100%;
+	}
+
+	.page-template-default .row {
+	    max-width: 100%;
+	}
+
+	.container {
+	    padding-left: 0;
+	    padding-right: 0;
+	}
+
+
+	.container.home .destaque-2 {
+		margin: 0 3%;
+	}
+
+	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
+	    min-height: 260px;
+	}
+	
+	.container.home .destaque-1 h2, .container.home .destaque-3 h2 {
+	    padding-top: 70px;
+	}
+
+	.container.home .destaque-2 h2 {
+	    margin-top: 20px;
+	}
+
+	.container.home .destaque-2 h3 {
+	    font-size: 1.5em;
+	}
+
+	.container.home h1.entry-title {
+	    font-size: 2em;
+	    padding-bottom: 5px;
+	    margin-top: 5px;
 	}
 
 
