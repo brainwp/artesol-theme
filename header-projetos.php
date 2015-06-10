@@ -38,6 +38,45 @@
 	<div class="container">
 		<header id="header" role="banner">
 
+<div id="menu-mobile">
+
+			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
+
+				<a class="logo-mobile" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+				</a>
+
+				<div class="navbar-header">
+					<button class="navbar-toggle icon-menu" data-toggle="collapse" data-target=".navbar-main-navigation">
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+					</button>
+
+					<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
+					<a href="#" id="search-interno-click" data-open="false"></a>
+
+				</div>
+
+				<div class="collapse navbar-collapse navbar-main-navigation">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main-menu',
+								'depth'          => 2,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav',
+								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
+								'walker'         => new Odin_Bootstrap_Nav_Walker()
+							)
+						);
+					?>
+				</div><!-- .navbar-collapse -->
+			</nav><!-- #main-menu -->
+			<form action="<?php echo home_url('/');?>" id="search-interno" class="col-md-4 pull-right">
+				<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
+			</form><!-- #search-interno.col-md-4 pull-right -->
+
+</div><!-- end #menu-mobile -->
+<div id="menu-normal">
+
 
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 
@@ -79,6 +118,7 @@
 			<form action="<?php echo home_url('/');?>" id="search-interno" class="col-md-4 pull-right projetos">
 				<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
 			</form><!-- #search-interno.col-md-4 pull-right -->
+</div><!-- end #menu-normal -->
 		</header><!-- #header -->
 
 		<div id="main" class="site-main row">

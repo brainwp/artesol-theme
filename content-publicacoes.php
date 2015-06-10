@@ -20,7 +20,8 @@
 	    	<?php the_title( '<h1 class="entry-title">', '</h1>' );	?>
 	    	<span class="content"><?php the_excerpt();?></span>
 	    </div>
-	    <div class="col-md-12 download-container">
+	   <div class="clear"></div>
+	    <div class="download-container">
 	    	<?php brasa_download_link(get_the_ID(), 'download-btn',__('Download'));?>
 	    </div><!-- .col-md-12 download-container -->
 	</article><!-- #post-## -->

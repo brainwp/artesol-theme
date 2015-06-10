@@ -14,7 +14,7 @@
 	<div class="col-md-4 pull-left thumbnail-projetos">
 		<?php the_post_thumbnail('medium');?>
 	</div><!-- .col-md-4 pull-left thumbnail-projetos -->
-	<div class="col-md-4 projetos-meta">
+	<div class="col-md-3 projetos-meta">
 		<h4 class="col-md-12"><?php _e('Localização:','odin');?></h4>
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_local', true ));?>
@@ -27,15 +27,15 @@
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_beneficiados', true ));?>
 		</div><!-- .col-md-12 meta-content -->
-	</div><!-- .col-md-4 projetos-meta -->
-	<div class="col-md-4 projetos-meta">
+	</div><!-- .col-md-3 projetos-meta -->
+	<div class="col-md-5 projetos-meta">
 		<?php if(get_field('project_repeater')): ?>
 		    <h4 class="col-md-12"><?php _e('Parceiro Financiador:','odin');?></h4>
 		    <div class="col-md-12 meta-content">
 		    	<?php while(has_sub_field('project_repeater')): ?>
-		    	    <a class="repeater-projetos" href="<?php echo the_sub_field('project_repeater_link');?>">
+		    	    <a class="repeater-projetos" href="<?php echo the_sub_field('project_repeater_link');?>" target="_blank">
 		    	    	<?php $img = get_sub_field('project_repeater_img');?>
-		    	    	<img src="<?php echo $img['sizes']['thumbnail'];?>" />
+		    	    	<img src="<?php echo $img['sizes']['large'];?>" />
 		            </a><!-- .col-md-12 meta-content -->
 		        <?php endwhile;?>
 		    </div><!-- .col-md-12 meta-content -->
@@ -44,6 +44,6 @@
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_type', true ));?>
 		</div><!-- .col-md-12 meta-content -->
-	</div><!-- .col-md-4 projetos-meta -->
+	</div><!-- .col-md-5 projetos-meta -->
 	<div class="col-md-12 projetos-content"><?php the_content();?></div><!-- .col-md-12 projetos-content -->
 </article><!-- #projetos-post -->

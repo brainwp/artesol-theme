@@ -36,7 +36,7 @@ get_header( 'home' ); ?>
 				<?php while ( $query->have_posts() ): $query->the_post(); ?>
 				     <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' ); ?>
 				     <div class="item">
-				     	<a class="item-container" style="background-image:url(<?php echo esc_attr($src[0]);?>)" href="<?php the_permalink();?>">
+				     	<a class="item-container" style="background-image:url(<?php echo esc_attr($src[0]);?>); background-size:cover;" href="<?php the_permalink();?>">
 				     		<div class="mult-only">
 				     			<?php the_post_thumbnail( 'medium' ); ?>
 				     		</div><!-- .col-md-12 multi-only -->

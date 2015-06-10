@@ -547,7 +547,7 @@ body.page .destaque-1 h3,
 #footer .endereco{
 	color:white;
 	font-family: 'Istok Web', sans-serif;
-	font-size: 1.1em;
+	font-size: 1em;
 	margin-top: 25px;
 }
 #footer .parceiro-iguatemi{
@@ -1002,20 +1002,26 @@ body.post-type-archive-projetos {
 	background-color: #E79532;
 }
 .bg-title-projetos {
-	background: url('../images/bg-title-projetos.jpg') center center #B5AEA5;
+	background: url('../images/bg-faixa-projetos.jpg') repeat center top #B5AEA5;
 	height: 150px;
 	position: absolute;
-	top: 70px;
+	margin-top: 70px;
 	width: 100%;
 }
+
+.post-type-archive-dlm_download .bg-title-projetos {
+	background: url('../images/bg-title-publicacoes.jpg') repeat center top #B5AEA5;
+}
+
 .post-type-archive-projetos .each-projeto,
 .post-type-archive-dlm_download .each-projeto {
-	background: url('../images/bg-content-each-projeto.jpg') left top repeat-y #E2E2E2;
-	margin-bottom: 15px;
-	margin-top: 15px;
-	padding-bottom: 40px;
-	position: relative;
-	border-bottom: 9px solid #FFB400;
+    background: transparent url("../images/bg-single-projetos.jpg") no-repeat scroll 0% 0% / cover;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-bottom: 40px;
+    position: relative;
+    border-bottom: 9px solid #F7D916;
+    border-left: 9px solid #F7D916;
 }
 .post-type-archive-projetos header.bg {
 	display: block;
@@ -1087,6 +1093,9 @@ article#projetos-post{
 	padding-bottom:10px;
 	background:url('../images/bg-single-projetos.jpg') no-repeat;
 	background-size:cover;
+	border-bottom: 9px solid #F7D916;
+	border-left: 9px solid #F7D916;
+	padding-top: 15px;
 }
 article#projetos-post h1{
 	font-family: 'Gotham-Bold';
@@ -1110,9 +1119,16 @@ article#projetos-post .projetos-meta .meta-content{
 	color:#818181;
 }
 article#projetos-post .projetos-meta .repeater-projetos img{
-	width:40px;
-	height:40px;
-}/
+	min-width: 40px;
+	height: 40px;
+}
+
+.projetos-meta {
+	padding: 0; 
+	margin-bottom: 20px;
+
+}
+
 article#projetos-post .projetos-content{
 	color:#6e6e6e;
 	font-family: 'Gotham-Bold', sans-serif;
@@ -1918,13 +1934,7 @@ a.zilla-button:visited {
 	background:url('../images/bg-container.jpg') no-repeat;
 	background-size:cover;
 }
-.post-type-archive-dlm_download .bg-title-projetos {
-	background: url('../images/bg-title-publicacoes.jpg') center center #B5AEA5;
-	height: 150px;
-	position: absolute;
-	top: 70px;
-	width: 100%;
-}
+
 .post-type-archive-projetos .page-header span,
 .post-type-archive-dlm_download .page-header span,
 .single-projetos .page-header span
@@ -1934,7 +1944,7 @@ a.zilla-button:visited {
 	width: 50%;
 }
 .each-publicacao{
-	min-height:320px;
+	min-height:335px;
 	background:#E2E2E2 !important;
 	border-left:10px solid #dd7a00;
 	border-bottom:10px solid #dd7a00;
@@ -1944,9 +1954,11 @@ a.zilla-button:visited {
 .download-btn{
 	display: inline;
 	border-radius: 3px;
-	float: right;
+	position: absolute;
 	font-size: 1em;
 	margin-right: 10px;
+	right: 5px;
+	bottom: 15px;
 	background: #DD7A04 none repeat scroll 0% 0%;
 	font-family: "Gotham-Bold",sans-serif;
 	text-transform: uppercase;
@@ -2791,6 +2803,14 @@ max-width: 540px;
 		display: none;
 	}
 
+	.navbar-header, .navbar-collapse {
+	background: #DD7A04;
+	}
+
+	.navbar-default .navbar-nav > li > a {
+	    color: #FFF;
+	}
+
 	#slider-ctrl {
 		display: none;
 	}
@@ -2814,15 +2834,21 @@ max-width: 540px;
 	    padding-right: 0;
 	}
 
+
 	#como-apoiar .links .link-container:first-child {
 	    padding: 0;
 	    text-align: center;
 	    border-right: none;
 	}
 
+	#como-apoiar.is-aceleracao .link-container {
+	    display: inline-block;
+	    width: 100%;
+
 	#como-apoiar .link-container {
 	    text-align: center;
 	    padding-left: 0px;
+	    width: 100%;
 	}
 
 	.container.home .destaque-2 {
@@ -2883,7 +2909,7 @@ max-width: 540px;
 	}
 
 	#footer {
-	    padding: 135px 3% 15px;
+	    padding: 90px 3% 15px;
 	}
 
 	#menu-normal {
@@ -2893,4 +2919,55 @@ max-width: 540px;
 	#como-apoiar {
 	    margin: -175px auto -27px;
 	}
+
+	.bg-title-projetos {
+	  margin-top: 290px;
+	  height: 100%;
+	  min-height: 180px;
+	}
+
+	.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1, .post-type-archive-dlm_download .page-header h1 {
+	font-size: 2em;
+	margin-left: 15px;
+	}
+
+	article#projetos-post h1 {
+	font-size: 2em;
+	}
+
+	article#projetos-post h3 {
+	    font-size: 1.5em;
+	}
+
+	#como-apoiar {
+	    width: auto;
+	}
+
+	#como-apoiar.is-aceleracao {
+	    margin: 0px auto -90px;
+	    background: rgb(223, 100, 0) none repeat scroll 0% 0%;
+	    display: block;
+	}
+
+	#como-apoiar .image {
+		background: none;
+		width: 100%;
+		height: auto;
+	}
+
+	#como-apoiar h3 {
+	    margin: 30px auto 15px;
+	    font-size: 2em;
+	    width: auto;
+	}
+
+	body.page #aceleracao-footer, body.page-template-page-institucional-php #aceleracao-footer, body.blog #aceleracao-footer, body.page-template-default #aceleracao-footer, body.single #aceleracao-footer, body.search #aceleracao-footer, body.page-template-page-servicos-php #aceleracao-footer, body.post-type-archive-dlm_download #aceleracao-footer, body.page-template-page-artesanato-brasileiro #aceleracao-footer, body.category #aceleracao-footer, body.error404 #aceleracao-footer, body.post-type-archive-projetos #aceleracao-footer, body.single-projetos #aceleracao-footer {
+	    margin-top: -795px;
+	}
+
+	#aceleracao-footer h3.section-title {
+	    font-size: 2em;
+	}
+
+
 }
