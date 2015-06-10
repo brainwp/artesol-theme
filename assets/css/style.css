@@ -2974,6 +2974,9 @@ max-width: 540px;
 
 }
 /*english link */
+.change-english{
+	padding:0;
+}
 .change-english .pull-right{
 	display: inline-block;
 	font-family: "Gotham-Bold",sans-serif;
