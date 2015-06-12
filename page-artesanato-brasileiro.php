@@ -94,14 +94,15 @@ get_header('rede');
 			    <?php $style = 'background:#7F7F7F;'?>
 			    <?php if(has_post_thumbnail()): ?>
 			        <?php $style = wp_get_attachment_image_src( get_post_thumbnail_id(), false );?>
-			        <?php $style = 'background:url('.$style[0].');';?>
+			        <?php $style = 'background:url('.$style[0].') center center / cover;';?>
 			    <?php endif;?>
-			    <div class="col-md-4">
-			    	<a class="post-container col-md-12 destaque-3" href="<?php the_permalink();?>" style="<?php echo $style;?>">
+			    <div class="col-md-4 destaque-3" style="<?php echo $style;?>">
+			    	<a class="post-container col-md-12" href="<?php the_permalink();?>">
 			    	    <h2 class="post-title"><?php the_title();?></h2><!-- .post-title -->
 			    	    <h3 class="post-content"><?php the_excerpt();?></h3><!-- .content -->
 			        </a>
 			    </div><!-- .col-md-4 -->
+
 		    <?php endwhile; ?>
 		    <?php wp_reset_postdata();  endif; ?>
 		</div><!-- .row -->

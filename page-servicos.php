@@ -27,7 +27,7 @@ get_header( 'servicos' );
 		<?php echo $capacitacao->post_excerpt; ?>
 	</div>
 </section><!-- #capacitacao -->
-
+  <div class="clear"></div><!-- .clear -->
 <?php endif ?>
 
 <?php if ( !empty( $projetos_culturais ) ): ?>
@@ -38,7 +38,7 @@ get_header( 'servicos' );
 		<?php echo $projetos_culturais->post_excerpt; ?>
 	</div>
 </section><!-- #projetos-culturais -->
-
+  <div class="clear"></div><!-- .clear -->
 <?php endif ?>
 
 <?php if ( !empty( $consultorias ) ): ?>
@@ -49,7 +49,7 @@ get_header( 'servicos' );
 		<?php echo $consultorias->post_excerpt; ?>
 	</div>
 </section><!-- #consultorias -->
-
+  <div class="clear"></div><!-- .clear -->
 <?php endif ?>
 
 <?php if ( !empty( $projetos_personalizados ) ): ?>
@@ -60,7 +60,7 @@ get_header( 'servicos' );
 		<?php echo $projetos_personalizados->post_excerpt; ?>
 	</div>
 </section><!-- #personalizados -->
-
+  <div class="clear"></div><!-- .clear -->
 <?php endif ?>
 
 <?php if ( !empty( $contrataram ) ): ?>

@@ -8,7 +8,6 @@
  * @package Odin
  * @since 2.2.0
  */
-echo '.';
 ?>
 <div id="aceleracao-footer-margin"></div><!-- #aceleracao-footer-margin -->
 <div class="col-md-12" id="aceleracao-footer">
@@ -19,7 +18,7 @@ echo '.';
 				<h3 class="section-title">
 					<?php _e('Conheça o trabalho de aceleração social da Artesol','odin');?>
 				</h3><!-- .section-title -->
-				<div class="col-md-8 text-center">
+				<div class="col-md-12 text-center">
 					<a href="<?php echo esc_url( home_url() ); ?>/rede"><?php _e('Mais sobre a Rede','odin');?></a>
 				</div><!-- .col-md-8 col-md-offset-2 -->
 			</div><!-- .col-md-8 col-md-offset-2 -->

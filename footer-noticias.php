@@ -14,12 +14,12 @@
 <div class="col-md-12" id="aceleracao-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
+			<div class="col-md-12 col-md-offset-2">
 				<div class="col-md-12 icon"></div><!-- .col-md-12 icon -->
 				<h3 class="section-title">
 					<?php _e('Conheça o trabalho de aceleração social da Artesol','odin');?>
 				</h3><!-- .section-title -->
-				<div class="col-md-8 text-center">
+				<div class="col-md-12 text-center">
 					<a href="<?php echo esc_url( home_url() ); ?>/rede"><?php _e('Mais sobre a Rede','odin');?></a>
 				</div><!-- .col-md-8 col-md-offset-2 -->
 			</div><!-- .col-md-8 col-md-offset-2 -->

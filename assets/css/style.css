@@ -2236,6 +2236,7 @@ a.zilla-button:visited {
 .page-template-page-artesanato-brasileiro section#patrimonio-imaterial-reconhecido .post-container{
 	margin:0 !important;
 	max-width: inherit !important;
+	display: block;
 }
 
 .page-template-page-artesanato-brasileiro section#patrimonio-imaterial-reconhecido .post-container:hover{
@@ -2824,7 +2825,7 @@ max-width: 540px;
 	}
 
 	#slider-home.single h3 {
-	    font-size: 2em;
+	    font-size: 1.8em;
 	}
 
 
@@ -2952,6 +2953,10 @@ max-width: 540px;
 		margin: 15px 0 0 0;
 	}
 
+	.container.home .destaque-3 {
+	    margin: 0px 0px 15px 0px;
+	}
+
 	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
 	    min-height: 260px;
 	}
@@ -2989,6 +2994,13 @@ max-width: 540px;
 
 	#header {
 		margin-bottom: 15px;
+	}
+
+	.page-template-page-artesanato-brasileiro section#entenda h1.section-title {
+	    padding-top: 30px;
+	    padding-bottom: 20px;
+	    margin-bottom:20px;
+	    margin-top: 0px;
 	}
 
 	.page-template-page-rede #header, .page-template-page-comercio-justo #header, .page-template-page-artesanato-brasileiro #header, .page-template-page-como-apoiar-pessoa-juridica #header, .page-template-page-como-apoiar-pessoa-fisica #header, .page-template-page-institucional #header, .page-template-page-english #header {
@@ -3082,6 +3094,19 @@ max-width: 540px;
 		max-width: 100%;
 		height: auto;
 		padding: 0 15px;
+	}
+
+	.page-template-page-home #menu-mobile .navbar {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+
+	#servicos-submenu {
+		display: none;
+	}
+
+	.page-template-page-rede-php section#conheca .text-center .btn, .page-template-page-comercio-justo section#cadeia-produtiva .text-center .btn {
+	    font-size: 1em;
 	}
 
 }
