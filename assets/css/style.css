@@ -799,7 +799,7 @@ body.page-template-page-institucional-php .destaque-1 h2, body.page-template-pag
 	font-family: "Gotham-Bold",sans-serif;
 	font-weight: 300 !important;
 	text-transform: none !important;
-	padding-top: 130px !important;
+	padding-top: 130px;
 }
 body.page #menu-institucional{
 	background:#c2b59b;
@@ -847,7 +847,7 @@ body.page article h1.post-title{
 	padding-top:10px;
 	padding-right:10px;
 	padding-left: 80px;
-	margin:0 !important;
+	margin:0;
 	display: block;
 	width: 100%;
 	background: #C2B59B url("../images/bg-page-title.jpg") no-repeat scroll left center;
@@ -1339,7 +1339,6 @@ body.single-projetos, body.page-template-page-rede-php{
 
 .page-template-page-rede-php section#destaques {
 	clear: both;
-	margin-left: 10px;
 }
 
 .page-template-page-rede-php section#map h2.section-title {
@@ -2949,8 +2948,8 @@ max-width: 540px;
 	}
 
 
-	.container.home .destaque-2 {
-		margin: 0 3%;
+	.container.home .destaque-1 {
+		margin: 15px 0 0 0;
 	}
 
 	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
@@ -2975,6 +2974,11 @@ max-width: 540px;
 	    margin-top: 5px;
 	}
 
+	body.page-template-page-home .boxes .col-md-4 {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	}
+
 	#como-apoiar.is-aceleracao .link-container {
 	    width: 100%;
 	}
@@ -2987,7 +2991,7 @@ max-width: 540px;
 		margin-bottom: 15px;
 	}
 
-	.page-template-page-rede #header, page-template-page-comercio-justo #header, page-template-page-artesanato-brasileiro #header {
+	.page-template-page-rede #header, .page-template-page-comercio-justo #header, .page-template-page-artesanato-brasileiro #header, .page-template-page-como-apoiar-pessoa-juridica #header, .page-template-page-como-apoiar-pessoa-fisica #header, .page-template-page-institucional #header, .page-template-page-english #header {
 		margin-bottom: 0px;
 	}
 
@@ -2998,6 +3002,11 @@ max-width: 540px;
 	#rede-submenu {
 		display: none;
 	}
+
+	.page-template-page-rede-php section#destaques .is_slider {
+		padding-left: 0px;
+		padding-right: 0px;
+	} 
 
 	.page-template-page-rede-php section#entenda a.entenda-btn-txt {
 		display: none;
@@ -3033,6 +3042,46 @@ max-width: 540px;
 
 	.slick-next {
 	    right: 10px;
+	}
+
+	.header-como-apoiar .icon-como-apoiar {
+	    display: none;
+	}
+
+	.header-como-apoiar .post-title {
+	    padding-top: 30px;
+	    margin-left: 0px;
+	    padding-bottom: 20px;
+	}
+
+	.page-template-page-como-apoiar-pessoa-juridica #como-apoiar .image, .page-template-page-como-apoiar-pessoa-fisica #como-apoiar .image {
+	    background: #00A669;
+	}
+
+	.page-template-page-como-apoiar-pessoa-juridica #como-apoiar .content, .page-template-page-como-apoiar-pessoa-fisica #como-apoiar .content {
+	    margin-top: 65px;
+	    margin-bottom: 60px;
+	}
+
+	body.page-template-page-institucional-php .destaque-1 h2, body.page-template-page-english .destaque-1 h2 {
+	    padding-top: 30px !important;
+	}
+
+	body.page article h1.post-title {
+	    padding: 10px;
+	    font-size: 2em;
+	    background: #C2B59B;
+	    margin-top: 10px;
+	}
+
+	.search-form-404 button {
+	    display: none;
+	}
+
+	.content img {
+		max-width: 100%;
+		height: auto;
+		padding: 0 15px;
 	}
 
 }

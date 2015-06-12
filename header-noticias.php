@@ -61,9 +61,7 @@
 								'theme_location' => 'main-menu',
 								'depth'          => 2,
 								'container'      => false,
-								'menu_class'     => 'nav navbar-nav',
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker()
+								'menu_class'     => 'nav navbar-nav'
 							)
 						);
 					?>
@@ -94,9 +92,7 @@
 						'theme_location' => 'main-menu',
 						'depth'          => 2,
 						'container'      => false,
-						'menu_class'     => 'nav navbar-nav menu-top',
-						'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-						'walker'         => new Odin_Bootstrap_Nav_Walker()
+						'menu_class'     => 'nav navbar-nav menu-top'
 						)
 				);
 				?>

@@ -10,12 +10,12 @@
 
 get_header( 'home' ); ?>
 
-	<div id="primary" class="<?php echo odin_classes_page_full(); ?>">
-		<div id="content" class="site-content" role="main">
-			<h1 class="entry-title col-md-6 pull-left"><?php _e( 'Destaques', 'odin' ); ?></h1>
+	<div id="content" role="main">
+
+			<h1 class="entry-title col-md-10 pull-left"><?php _e( 'Destaques', 'odin' ); ?></h1>
 			<div class="col-md-1 pull-right slider-icon" id="slider-ctrl">
 				<span></span>
-			</div><!-- .col-md-5 pull-right -->
+			</div><!-- .col-md-1 pull-right -->
 			<div id="slider-home">
 			<?php
 			// WP_Query arguments
@@ -71,11 +71,11 @@ get_header( 'home' ); ?>
 				    	    	<a class="btn-artesol <?php echo get_sub_field('box_home_repeater_btn');?>" href="<?php echo get_sub_field('box_home_repeater_link');?>">
 				    	    		<?php echo get_sub_field('box_home_repeater_btn_text');?>
 				    	    	</a>
-				    	    </div><!-- servicos -->
+				   	    </div><!-- home_repeater -->
                         <?php endwhile; ?>
 
                 <?php endif;?>
-				</div>
+				</div><!-- col-md-4 -->
 				<?php if( get_field('home_feature_1_title', 'option') ): ?>
 				        <?php $style = ''; ?>
 				        <?php if(get_field('home_feature_1_bg','option')): ?>
@@ -95,7 +95,7 @@ get_header( 'home' ); ?>
 				    	    		    <p><?php echo get_field('home_feature_1_resume','option');?></p>
 				    	    	    <?php endif; ?>
 				    	    	</a>
-				    	    </div><!-- servicos -->
+				    	    </div><!-- col-md-4 -->
                 <?php endif;?>
                 <?php if( get_field('home_feature_2_title', 'option') ): ?>
 				        <?php $style = ''; ?>
@@ -116,7 +116,7 @@ get_header( 'home' ); ?>
 				    	    		    <p><?php echo get_field('home_feature_2_resume','option');?></p>
 				    	    	    <?php endif; ?>
 				    	    	</a>
-				    	    </div><!-- servicos -->
+				    	    </div><!-- col-md-4 -->
                 <?php endif;?>
                 <?php if( get_field('home_feature_3_title', 'option') ): ?>
 				        <?php $style = ''; ?>
@@ -137,7 +137,7 @@ get_header( 'home' ); ?>
 				    	    		    <p><?php echo get_field('home_feature_3_resume','option');?></p>
 				    	    	    <?php endif; ?>
 				    	    	</a>
-				    	    </div><!-- servicos -->
+				    	    </div><!-- col-md-4 -->
                 <?php endif;?>
                 <?php if( get_field('home_feature_4_title', 'option') ): ?>
 				        <?php $style = ''; ?>
@@ -158,12 +158,9 @@ get_header( 'home' ); ?>
 				    	    		    <p><?php echo get_field('home_feature_4_resume','option');?></p>
 				    	    	    <?php endif; ?>
 				    	    	</a>
-				    	    </div><!-- servicos -->
+				    	    </div><!-- col-md-4 -->
                 <?php endif;?>
 			</div><!-- boxes -->
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
+	</div><!-- content -->
 <?php
 get_footer();

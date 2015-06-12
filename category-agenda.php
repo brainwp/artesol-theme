@@ -32,7 +32,7 @@ get_header('rede');
 	<div class="container home">
 		<div class="row boxes">
 			<div class="col-md-4">
-				<a href="http://www.artesol.org.br/site/projetos/" class="projetos">
+				<a href="http://www.artesol.org.br/site/projetos/" class="projetos" style="background:transparent url(<?php echo get_bloginfo('template_url');?>/assets/images/bg-projetos-widget.jpg) no-repeat scroll center center;background-size:cover;">
 				    <div class="icon"></div>
 			        <h3><?php _e('Projetos da Artesol','odin');?></h3>
 				    <p><?php _e('Conheça todos os projetos já realizados','odin');?></p>

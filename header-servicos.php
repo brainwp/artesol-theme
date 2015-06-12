@@ -38,6 +38,45 @@
 	<div class="container">
 		<header id="header" role="banner">
 
+<div id="menu-normal">
+				
+<nav id="main-navigation" class="navbar navbar-default" role="navigation">
+
+				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-artesol-projetos.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+				</a>
+
+				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
+					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<?php /*
+					<a class="navbar-brand" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+					*/ ?>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-main-navigation">
+					<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'main-menu',
+								'depth'          => 2,
+								'container'      => false,
+								'menu_class'     => 'nav navbar-nav'
+							)
+						);
+					?>
+
+					<a href="#" id="search-interno-click" data-open="false"></a>
+				</div><!-- .navbar-collapse -->
+			</nav><!-- #main-menu -->
+
+</div><!-- end #menu-normal -->
+
 <div id="menu-mobile">
 
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
@@ -62,32 +101,18 @@
 								'theme_location' => 'main-menu',
 								'depth'          => 2,
 								'container'      => false,
-								'menu_class'     => 'nav navbar-nav',
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker()
+								'menu_class'     => 'nav navbar-nav'
 							)
 						);
 					?>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
-			<form action="<?php echo home_url('/');?>" id="search-interno" class="col-md-4 pull-right">
-				<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
-			</form><!-- #search-interno.col-md-4 pull-right -->
-
 </div><!-- end #menu-mobile -->
-<div id="menu-normal">
-				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-artesol-projetos.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-				</a>
 
-				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
-				
-				<a href="#" id="search-interno-click" data-open="false"></a>
-			</nav><!-- #main-menu -->
-			<form action="<?php echo home_url('/');?>" id="search-interno" class="col-md-4 pull-right">
-				<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
-			</form><!-- #search-interno.col-md-4 pull-right -->
-</div><!-- end #menu-normal -->
+	<form action="<?php echo home_url('/');?>" id="search-interno" class="col-md-4 pull-right">
+		<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
+	</form><!-- #search-interno.col-md-4 pull-right -->
+
 			<div class="col-md-12 sticky-menu" id="servicos-submenu">
 				<nav class="col-md-12">
 					<?php
@@ -96,9 +121,7 @@
 					    		'theme_location' => 'servicos-submenu',
 					    		'depth'          => -1,
 					    		'container'      => false,
-					    		'menu_class'     => 'nav navbar-nav',
-					    		'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-					    		'walker'         => new Odin_Bootstrap_Nav_Walker()
+					    		'menu_class'     => 'nav navbar-nav'
 					    	)
 					    );
 					?>

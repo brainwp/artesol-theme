@@ -33,7 +33,7 @@
 
 <body <?php body_class(); ?>>
 	<div class="container home">
-		<header id="header" role="banner" class="header-home">
+		<header id="header" role="banner" class="header-home <?php echo odin_classes_page_full(); ?>">
 
 <div id="menu-mobile">
 
@@ -59,9 +59,7 @@
 								'theme_location' => 'main-menu',
 								'depth'          => 2,
 								'container'      => false,
-								'menu_class'     => 'nav navbar-nav',
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker()
+								'menu_class'     => 'nav navbar-nav'
 							)
 						);
 					?>
@@ -94,9 +92,7 @@
 						'theme_location' => 'main-menu',
 						'depth'          => 2,
 						'container'      => false,
-						'menu_class'     => 'nav navbar-nav menu-top',
-						'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-						'walker'         => new Odin_Bootstrap_Nav_Walker()
+						'menu_class'     => 'nav navbar-nav menu-top'
 						)
 				);
 				?>
@@ -154,4 +150,4 @@
 
 		</header><!-- #header -->
 
-		<div id="main" class="site-main row">
+		<div id="main" class="site-main <?php echo odin_classes_page_full(); ?>">
