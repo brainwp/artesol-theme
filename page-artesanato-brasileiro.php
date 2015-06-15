@@ -162,4 +162,4 @@ get_header('rede');
 </section><!-- #valor-da-tradicao.col-md-12 -->
 <?php endif;?>
 <div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
-<?php get_footer('artesanato');
+<?php get_footer('artesanato'); ?>

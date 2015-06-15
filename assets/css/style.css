@@ -142,6 +142,9 @@ body.home, body.page, body.blog, body.single, body.category-agenda, body.error40
 	box-shadow: none;
 }
 
+.container.home .destaque-1 {
+	margin: 0 3%;
+}
 
 .container.home .destaque-3 {
 	margin: 0 1.5%;
@@ -457,6 +460,7 @@ body.page .destaque-1 h3,
 	text-transform: uppercase;
 	padding-left:10px;
 	padding-right:10px;
+	margin-top: 0px;
 	font-family: 'Gotham-Bold';
 }
 #slider-home.mult .area{
@@ -2043,6 +2047,8 @@ a.zilla-button:visited {
 .page-template-page-comercio-justo section#principios .row{
 	padding-top:20px;
 	padding-bottom:20px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 .page-template-page-comercio-justo section#cadeia-produtiva .row{
 	padding-bottom:20px;
@@ -2114,6 +2120,8 @@ a.zilla-button:visited {
 .page-template-page-comercio-justo section#atuacao .row{
 	padding-top:20px;
 	padding-bottom: 60px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 /* page artesanato brasileiro */
 .page-template-page-artesanato-brasileiro section#entenda{

@@ -58,7 +58,7 @@ get_header( 'home' ); ?>
 			</div><!-- #slider-home -->
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 			<div class="boxes">
-				<div class="col-md-4" style="margin-top:-40px; margin-bottom: 15px;">
+				<div class="col-md-4" style="margin-top:-40px; margin-bottom: 25px;">
 				<?php if( get_field('box_home_repeater', 'option') ): ?>
 				    	<?php while ( has_sub_field('box_home_repeater','option') ): ?>
 				    	    <div class="<?php echo get_sub_field('box_home_repeater_icon');?>">
@@ -103,7 +103,7 @@ get_header( 'home' ); ?>
 				              <?php $style = get_field('home_feature_2_bg','option');?>
 				                <?php $style = 'background:transparent url("'.$style['sizes']['large'].'") no-repeat scroll center center;background-size:cover;'; ?>
 				        <?php endif;?>
-				    	    <div class="col-md-4">
+				    	    <div class="col-md-4"">
 				    	    	<a href="<?php echo get_field('home_feature_2_link','option');?>" class="<?php echo get_field('home_feature_2_class','option');?>" style="<?php echo esc_attr($style);?>">
 				    	    	    <?php $style = ''; ?>
 				    	    	    <?php if(get_field('home_feature_2_icon','option')): ?>
