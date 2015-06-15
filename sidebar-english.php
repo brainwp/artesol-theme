@@ -2,7 +2,7 @@
 /* sidebar english */
 ?>
 <div class="col-md-12" id="menu-institucional">
-	<h3><?php _e('Menu English','odin');?></h3>
+	<h3><?php _e('English Menu','odin');?></h3>
 	<?php
 	wp_nav_menu(
 		array(

@@ -963,6 +963,12 @@ body.post-type-archive-projetos #aceleracao-footer a:hover
 body.post-type-archive-projetos {
 	background: url('../images/bg-container.jpg') center top transparent;
 }
+
+.post-type-archive-projetos #primary {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 .post-type-archive-projetos .navbar-default,
 .single-projetos .navbar-default, .page-template-page-rede-php .navbar-default,
 .page-template-page-servicos .navbar-default,
@@ -2887,9 +2893,14 @@ max-width: 540px;
 	  min-height: 180px;
 	}
 
-	.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1, .post-type-archive-dlm_download .page-header h1 {
+	.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1 {
 	font-size: 2em;
 	margin-left: 15px;
+	}
+
+ 	.post-type-archive-dlm_download .page-header h1 {
+	font-size: 2em;
+	margin-left: 0px;
 	}
 
 	article#projetos-post h1 {
@@ -3115,7 +3126,7 @@ max-width: 540px;
 	body.page article h1.post-title {
 	    padding: 10px;
 	    font-size: 2em;
-	    background: #C2B59B;
+	    background: none;
 	    margin-top: 10px;
 	}
 	.change-english{
@@ -3145,8 +3156,31 @@ max-width: 540px;
 	    font-size: 1em;
 	}
 
+.container.home .destaque-1 h2, .container.home .destaque-3 h2 {
+    		font-size: 1.6em;
+	}
+
 	.slick-dots {
-	  display: none !important;
+		display: none !important;
+	}
+
+	.change-english {
+		display: none;	
+	}
+
+	.change-english-mobile {
+
+		display: inline-block;
+		font-family: "Gotham-Bold",sans-serif;
+		text-transform: uppercase;
+		margin-top: 15px;
+		margin-right: -10px;
+		z-index: 99999;
+
+	}
+	.change-english-mobile a {
+		color: #FFF;
+		text-decoration: none;
 	}
 
 }

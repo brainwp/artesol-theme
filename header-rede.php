@@ -79,6 +79,14 @@
 
 <div id="menu-mobile">
 
+			<div class="col-md-6 pull-right change-english-mobile">
+				<?php if($link = get_field( 'link_english', 'options' )):?>
+				<a href="<?php echo esc_url($link);?>" class="pull-right">
+					<?php _e('In English','odin');?>
+				</a>
+		        <?php endif;?>
+			</div><!-- .col-md-6 change-english-mobile -->
+
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 
 				<a class="logo-mobile" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
