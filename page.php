@@ -25,4 +25,4 @@ get_header( 'rede' ); ?>
 		endwhile;
 	    ?>
 <?php
-get_footer( 'artesanato' );
+get_footer( 'aceleracao' );

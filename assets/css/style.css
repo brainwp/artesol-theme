@@ -143,16 +143,15 @@ body.home, body.page, body.blog, body.single, body.category-agenda, body.error40
 }
 
 
-.container.home .destaque-1 {
-	margin: 0 3%;
-}
-
 .container.home .destaque-3 {
 	margin: 0 1.5%;
+	max-width: 30%;
+	min-height: 360px;
+	overflow: hidden;
+	position: relative;
 }
 .container.home .destaque-1,
-.container.home .destaque-2,
-.container.home .destaque-3 {
+.container.home .destaque-2 {
 	max-width: 31.3%;
 	min-height: 360px;
 	overflow: hidden;
@@ -167,6 +166,7 @@ body.home, body.page, body.blog, body.single, body.category-agenda, body.error40
 	top: 0;
 	width: 100%;
 	transition:200ms ease all;
+	text-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
 }
 
 .container.home .destaque-1 .link:hover,
@@ -176,8 +176,6 @@ body.home, body.page, body.blog, body.single, body.category-agenda, body.error40
 	text-shadow: 0px 4px 6px rgba(0, 0, 0, 1);
 }
 
-.container.home .destaque-1,
-.container.home .destaque-2,
 .container.home .destaque-3 h2 {
 	text-align: center;
 	text-shadow: 0px 2px 5px rgba(0, 0, 0, 1);
@@ -193,6 +191,7 @@ body.home, body.page, body.blog, body.single, body.category-agenda, body.error40
 	padding-top: 105px;
 	font-family: "Gotham-Bold",sans-serif;
 	text-transform: uppercase;
+	text-align: center;
 }
 
 body.page .destaque-1 h3,
@@ -203,7 +202,8 @@ body.page .destaque-1 h3,
 	max-width: 80%;
 	text-align: center;
 	font-family: "Gotham-Bold",sans-serif;
-	text-transform: uppercase;
+	text-transform: uppercase
+	text-align: center;
 }
 
 .container.home .destaque-2 h2 {
@@ -291,7 +291,7 @@ body.page .destaque-1 h3,
 	z-index:99;
 	background: none repeat scroll 0% 0% #dd7a04;
 	position: absolute;
-	margin-left: 31%;
+	margin-left: 30%;
 	margin-top: 300px;
 	width: 70%;
 }
@@ -2820,12 +2820,12 @@ max-width: 540px;
 	}
 
 	#slider-home.single .area {
-	    margin-top: 55px;
-	    font-size: 1.4em;
+	    margin-top: 45px;
+	    font-size: 1.2em;
 	}
 
 	#slider-home.single h3 {
-	    font-size: 1.8em;
+	    font-size: 1.4em;
 	}
 
 
@@ -2844,6 +2844,10 @@ max-width: 540px;
 	.container.home .boxes .projetos {
 	    min-height: 320px;
 	    margin-bottom: 15px;
+	}
+
+	.page-thumbnail h1 {
+	  font-size: 1.8em;
 	}
 
 	#footer {
@@ -2871,6 +2875,11 @@ max-width: 540px;
 	article#projetos-post h3 {
 	    font-size: 1.5em;
 	}
+
+#single-noticias-container {
+  padding-top: 10px;
+  margin-top: -20px;
+}
 
 	#como-apoiar {
 	    width: auto;
@@ -3107,6 +3116,10 @@ max-width: 540px;
 
 	.page-template-page-rede-php section#conheca .text-center .btn, .page-template-page-comercio-justo section#cadeia-produtiva .text-center .btn {
 	    font-size: 1em;
+	}
+
+	.slick-dots {
+	  display: none !important;
 	}
 
 }

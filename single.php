@@ -8,7 +8,7 @@
 
 get_header('noticias'); ?>
 <?php get_sidebar();?>
-<div class="col-md-8 pull-right" id="single-noticias-container">
+<div class="col-md-8" id="single-noticias-container">
 	<?php
 		// Start the Loop.
 		while ( have_posts() ) : the_post();
