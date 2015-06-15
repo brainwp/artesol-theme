@@ -15,8 +15,8 @@ get_header( 'projetos' ); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<div class="page-header">
-					<h1 class="page-title">
+				<header class="page-header">
+					<h1 class="publicacoes-archive-title col-md-1">
 						<?php
 							_e( 'Projetos', 'odin' );
 						?>
@@ -26,7 +26,7 @@ get_header( 'projetos' ); ?>
 						    <?php echo esc_textarea($content);?>
 					    <?php endif;?>
 					</span>
-				</div><!-- .page-header -->
+				</header><!-- .page-header -->
 
 				<?php
 					// Start the Loop.

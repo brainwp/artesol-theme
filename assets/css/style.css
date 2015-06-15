@@ -1944,14 +1944,19 @@ a.zilla-button:visited {
 	background-size:cover;
 }
 
-.post-type-archive-projetos .page-header span,
-.post-type-archive-dlm_download .page-header span,
-.single-projetos .page-header span
-{
+.post-type-archive-projetos .page-header span {
 	float: left;
-	margin-left: 5%;
+	margin-left: 30px;
 	width: 50%;
 }
+
+.post-type-archive-dlm_download .page-header span,
+.single-projetos .page-header span {
+	float: left;
+	margin-left: 15px;
+	width: 50%;
+}
+
 .each-publicacao{
 	min-height:335px;
 	background:#E2E2E2 !important;
@@ -2893,14 +2898,9 @@ max-width: 540px;
 	  min-height: 180px;
 	}
 
-	.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1 {
+	.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1, .post-type-archive-dlm_download .page-header h1 {
 	font-size: 2em;
-	margin-left: 15px;
-	}
-
- 	.post-type-archive-dlm_download .page-header h1 {
-	font-size: 2em;
-	margin-left: 0px;
+	margin-left: 5%;
 	}
 
 	article#projetos-post h1 {
