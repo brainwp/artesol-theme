@@ -33,11 +33,8 @@
 
 <body <?php body_class(); ?>>
 	<div class="container home">
-<<<<<<< HEAD
 		<header id="header" role="banner" class="header-home <?php echo odin_classes_page_full(); ?>">
 
-=======
-		<header id="header" role="banner" class="header-home">
 			<div class="col-md-12 change-english">
 				<?php if($link = get_field( 'link_english', 'options' )):?>
 				<a href="<?php echo esc_url($link);?>" class="pull-right">
@@ -45,9 +42,8 @@
 				</a>
 		        <?php endif;?>
 			</div><!-- .col-md-12 change-english -->
->>>>>>> 66cd987bfefd92a8825c33ef72edc54a43a3ad73
-<div id="menu-mobile">
 
+<div id="menu-mobile">
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 
 				<a class="logo-mobile" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

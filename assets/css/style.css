@@ -2793,9 +2793,14 @@ max-width: 540px;
 	font-family: "Gotham-Bold",sans-serif;
 	color:#DD7A04;
 	text-transform: uppercase;
+	margin-bottom: 15px;
+	margin-top: -5px;
+	text-decoration: none;
 }
 
-
+.change-english .pull-right:hover{
+	color:#E06100;
+}
 @media only screen and (max-width:767px) {
 
 	#menu-mobile {
