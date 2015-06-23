@@ -351,3 +351,75 @@ function brasa_change_slug_dlm($args){
 	return $args;
 }
 add_filter('dlm_cpt_dlm_download_args','brasa_change_slug_dlm');
+
+function artesol_map_user_fields($args){
+	$selected = get_user_meta( $args['user'], 'type_pin', true );
+	$map_table = '';
+    $map_table .= '<h3>'.__( "Tipo de usuário", "odin" ).'</h3>';
+    $map_table .= '<table class="form-table">';
+    $map_table .= '<tr>';
+
+    $map_table .= '<div style="float:left;display:inline-block;padding:10px">';
+    $map_table .= '<label>';
+    //$map_table .= '<img width="32" height="32" src="' . plugins_url( 'images/pins/big-blue.png', __FILE__ ) . '">';
+    $map_table .= '<div style="clear:both;width:100%;height:5px;padding-top:10px;"></div>';
+    $map_table .= __( "<b>Artesão ou Mestre</b>", "odin" ).'</label>';
+    $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    $map_table .= '<input type="radio" name="type_pin" value="artesao" '.checked("artesao",$selected,false).' />';
+    $map_table .= '</div>';
+
+    $map_table .= '<div style="float:left;display:inline-block;padding:10px">';
+    $map_table .= '<label>';
+    //$map_table .= '<img width="32" height="32" src="' . plugins_url( 'images/pins/big-blue.png', __FILE__ ) . '">';
+    $map_table .= '<div style="clear:both;width:100%;height:5px;padding-top:10px;"></div>';
+    $map_table .= __( "<b>Associações ou Cooperativas</b>", "odin" ).'</label>';
+    $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    $map_table .= '<input type="radio" name="type_pin" value="associacoes" '.checked("associacoes",$selected,false).' />';
+    $map_table .= '</div>';
+
+    $map_table .= '<div style="float:left;display:inline-block;padding:10px">';
+    $map_table .= '<label>';
+    //$map_table .= '<img width="32" height="32" src="' . plugins_url( 'images/pins/big-blue.png', __FILE__ ) . '">';
+    $map_table .= '<div style="clear:both;width:100%;height:5px;padding-top:10px;"></div>';
+    $map_table .= __( "<b>Lojistas</b>", "odin" ).'</label>';
+    $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    $map_table .= '<input type="radio" name="type_pin" value="lojistas" '.checked("lojistas",$selected,false).' />';
+    $map_table .= '</div>';
+
+    $map_table .= '<div style="float:left;display:inline-block;padding:10px">';
+    $map_table .= '<label>';
+    //$map_table .= '<img width="32" height="32" src="' . plugins_url( 'images/pins/big-blue.png', __FILE__ ) . '">';
+    $map_table .= '<div style="clear:both;width:100%;height:5px;padding-top:10px;"></div>';
+    $map_table .= __( "<b>Aceleradoras e Governos</b>", "odin" ).'</label>';
+    $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    $map_table .= '<input type="radio" name="type_pin" value="aceleradoras" '.checked("aceleradoras",$selected,false).' />';
+    $map_table .= '</div>';
+    $map_table .= '</td>';
+    $map_table .= '</tr>';
+    $map_table .= '</table>';
+
+    $args['html'] = $map_table;
+    return $args;
+}
+add_filter('geouser_map_pins','artesol_map_user_fields');
+
+function artesol_geouser_save($user_id){
+	if(isset($_POST['type_pin'])){
+		update_user_meta($user_id, 'type_pin', $_POST['type_pin']);
+	}
+}
+add_action('geouser_save','artesol_geouser_save');
+
+function brasa_save_tipos($tt_id = null,  $taxonomy = null){
+	$tipos = get_terms('tipos', array('hide_empty' => 0));
+
+	$terms = array();
+	if(is_array($tipos)){
+		foreach($tipos as $tipo){
+			$terms[$tipo->slug] = $tipo->name;
+		}
+		update_option('brasa_save_tipos',$terms);
+	}
+
+}
+add_action('edited_term_taxonomy','brasa_save_tipos');

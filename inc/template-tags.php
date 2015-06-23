@@ -129,7 +129,7 @@ if ( ! function_exists( 'brasa_resumo' ) ) {
 
 	function brasa_resumo($texto, $limite){
 		$texto = substr($texto, 0, strrpos(substr($texto, 0, $limite), ' ')) . ' [...]';
-		return $texto;
+		return wp_strip_all_tags($texto,true);
 	}
 
 }

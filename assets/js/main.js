@@ -134,5 +134,10 @@ jQuery(document).ready(function($) {
 			data: {action: 'tipologia_content', id: $(this).attr('data-id') }
 		});
 	});
+
+	if($('.map-margin').length > 0){
+		var margin = $('.iframe-container-map').outerHeight(true) - 100;
+		$('.map-margin').css('height', margin + 'px');
+	}
 });
 

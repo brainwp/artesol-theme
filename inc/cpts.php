@@ -74,6 +74,44 @@ function artesol_custom_post_type() {
 	);
 	register_taxonomy( 'tipos', array( 'projetos' ), $args );
 
+	$labels = array(
+		'name'                => _x( 'Membros da Rede', 'Post Type General Name', 'odin' ),
+		'singular_name'       => _x( 'Membros da Rede', 'Post Type Singular Name', 'odin' ),
+		'menu_name'           => __( 'Membros da Rede', 'odin' ),
+		'name_admin_bar'      => __( 'Membros da Rede', 'odin' ),
+		'parent_item_colon'   => __( 'Item parente', 'odin' ),
+		'all_items'           => __( 'Todos membros', 'odin' ),
+		'add_new_item'        => __( 'Adicionar novo membro', 'odin' ),
+		'add_new'             => __( 'Adicionar novo', 'odin' ),
+		'new_item'            => __( 'Novo membro', 'odin' ),
+		'edit_item'           => __( 'Editar membro', 'odin' ),
+		'update_item'         => __( 'Atualizar membro', 'odin' ),
+		'view_item'           => __( 'Ver membro', 'odin' ),
+		'search_items'        => __( 'Buscar membro', 'odin' ),
+		'not_found'           => __( 'Não encontrado', 'odin' ),
+		'not_found_in_trash'  => __( 'Não encontrado na lixeira', 'odin' ),
+	);
+	$args = array(
+		'label'               => __( 'membros', 'odin' ),
+		'description'         => __( 'Membros da Rede', 'odin' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
+		'taxonomies'          => array( 'tipos' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => false,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-networking',
+		'show_in_admin_bar'   => false,
+		'show_in_nav_menus'   => false,
+		'can_export'          => false,
+		'has_archive'         => true,
+		'exclude_from_search' => true,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'page',
+	);
+	register_post_type( 'membros', $args );
 }
 
 // Hook into the 'init' action

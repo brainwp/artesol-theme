@@ -39,7 +39,7 @@
 			<nav id="main-navigation" class="navbar navbar-default" role="navigation">
 
 <div id="menu-normal">
-				
+
 <nav id="main-navigation" class="navbar navbar-default" role="navigation">
 
 				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -122,7 +122,7 @@
 	</form><!-- #search-interno.col-md-4 pull-right -->
 
 			<?php global $page_default;?>
-			<?php if(!is_page_template('page-como-apoiar-pessoa-fisica.php') && !is_page_template('page-como-apoiar-pessoa-juridica.php') && !is_category() && !$page_default): ?>
+			<?php if(!is_page_template('page-como-apoiar-pessoa-fisica.php') && !is_page_template('page-como-apoiar-pessoa-juridica.php') && !is_category() && !$page_default && !is_post_type_archive() ): ?>
 			<div class="col-md-12 sticky-menu" id="rede-submenu">
 				<nav class="col-md-10 pull-right">
 					<?php

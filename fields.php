@@ -1523,6 +1523,7 @@ if(function_exists("register_field_group"))
 if(function_exists("register_field_group"))
 {
 	$id = get_category_by_slug('agenda');
+	if($id && is_object($id)){
 	$id = $id->term_id;
 	register_field_group(array (
 		'id' => 'acf_agenda',
@@ -1581,6 +1582,7 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+   }
 }
 if(function_exists("register_field_group"))
 {
@@ -1615,6 +1617,62 @@ if(function_exists("register_field_group"))
 		'options' => array (
 			'position' => 'normal',
 			'layout' => 'default',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_opcoes-de-usuario',
+		'title' => 'Opções de usuário',
+		'fields' => array (
+			array (
+				'key' => 'field_558860f0992eb',
+				'label' => 'Imagem do membro (avatar)',
+				'name' => 'user_avatar',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_55885f18992ea',
+				'label' => 'Descrição do usuário',
+				'name' => 'user_content',
+				'type' => 'wysiwyg',
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array (
+				'key' => 'field_55887823b72a8',
+				'label' => 'Tipologia',
+				'name' => 'user_type',
+				'type' => 'select',
+				'choices' => get_option('brasa_save_tipos', array()),
+				'default_value' => '',
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'ef_user',
+					'operator' => '==',
+					'value' => 'all',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'no_box',
 			'hide_on_screen' => array (
 			),
 		),
