@@ -7,7 +7,7 @@
  * Generates the title of the site optimized for SEO.
  */
 function odin_wp_title( $title, $sep ) {
-	global $page, $paged;
+	global $page, $paged, $wp_query;
 
 	if ( is_feed() ) {
 		return $title;
@@ -26,6 +26,10 @@ function odin_wp_title( $title, $sep ) {
 	if ( $paged >= 2 || $page >= 2 ) {
 		$title .= ' ' . $sep . ' ' . sprintf( __( 'Page %s', 'odin' ), max( $paged, $page ) );
 	}
+
+	if( isset($wp_query->query_vars['membros']) && !empty($wp_query->query_vars['membros'])){
+		$title .= ' ' . $sep . ' ' . $wp_query->query_vars['membros'];
+    }
 
 	return $title;
 }
@@ -122,3 +126,18 @@ function odin_modify_tag_rel( $taglink ) {
 
 add_filter( 'wp_tag_cloud', 'odin_modify_tag_rel' );
 add_filter( 'the_tags', 'odin_modify_tag_rel' );
+
+/**
+ * Add body class
+ */
+
+function odin_new_body_class($classes) {
+	global $wp_query;
+
+	if( isset($wp_query->query_vars['membros']) ){
+		$classes[] = 'single-membros';
+    }
+
+    return $classes;
+}
+add_filter('body_class', 'odin_new_body_class');

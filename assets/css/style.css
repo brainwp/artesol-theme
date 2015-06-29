@@ -1090,7 +1090,8 @@ body.post-type-archive-projetos {
 .page-template-page-servicos .page-header,
 .post-type-archive-dlm_download .page-header,
 .post-type-archive-membros .page-header,
-.single-projetos .page-header{
+.single-projetos .page-header,
+.single-membros .page-header{
 	border: none;
 	color: #FFF;
 	display: block;
@@ -2415,17 +2416,20 @@ box-shadow:         0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 .page-template-page-como-apoiar-pessoa-fisica .text-center{
 	padding-bottom:20px;
 }
-.page-template-page-como-apoiar-pessoa-fisica section#patrimonio{
+.page-template-page-como-apoiar-pessoa-fisica section#patrimonio,
+.single-membros section#patrimonio{
 	background:url('../images/bg-pessoa-fisica-patrimonio.jpg') no-repeat;
 	background-size: cover;
 	overflow: hidden;
 	clear: both;
 	padding: 80px 20px;
 }
-.page-template-page-como-apoiar-pessoa-fisica section#patrimonio .row{
+.page-template-page-como-apoiar-pessoa-fisica section#patrimonio .row,
+.single-membros section#patrimonio .row{
 	padding: 0px 0px 150px;
 }
-.page-template-page-como-apoiar-pessoa-fisica section#patrimonio .section-title{
+.page-template-page-como-apoiar-pessoa-fisica section#patrimonio .section-title,
+.single-membros section#patrimonio .section-title{
 	font-family: 'Gotham-Bold',sans-serif;
 	color:white;
 	text-shadow:2px 1px 4px rgba(0, 0, 0, 0.3);
@@ -2433,7 +2437,8 @@ box-shadow:         0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 	text-align: center;
 	margin-bottom: 30px;
 }
-.page-template-page-como-apoiar-pessoa-fisica section#patrimonio .content{
+.page-template-page-como-apoiar-pessoa-fisica section#patrimonio .content,
+.single-membros section#patrimonio .content{
 	font-family: "Istok Web",sans-serif;
 	font-size: 1.2em;
 	color: #FFF;
@@ -3208,7 +3213,8 @@ max-width: 540px;
 
 }
 /* membros da rede */
-body.post-type-archive-membros .bg-title-projetos{
+body.post-type-archive-membros .bg-title-projetos,
+body.single-membros .bg-title-projetos{
 	background:#B5AEA5 url("../images/bg-header-membros.jpg") repeat scroll center top;
 	background-size: cover;
 }
@@ -3242,7 +3248,10 @@ body.post-type-archive-membros .bg-title-projetos{
 .single-membros .page-header h1{
 	text-transform: none !important;
 }
-.post-type-archive-membros #aceleracao-footer-margin, .post-type-archive-membros #aceleracao-footer{
+.post-type-archive-membros #aceleracao-footer-margin, .post-type-archive-membros #aceleracao-footer, .single-membros #aceleracao-footer{
+	display: none;
+}
+.single-membros #aceleracao-footer-margin{
 	display: none;
 }
 .membros-link div{
@@ -3295,4 +3304,34 @@ body.post-type-archive-membros .bg-title-projetos{
 		clear: both;
 		width: 100%;
 	}
+}
+.product-list a{
+	display: inline-block;
+	height:180px;
+	overflow: hidden;
+	padding:3px;
+}
+.product-list a img{
+	width:100%;
+}
+.reveal-modal-data-img{
+	width:100%;
+	max-width: 100% !important;
+}
+.single-membros article#projetos-post h1{
+	color:#726658;
+	text-transform: uppercase !important;
+}
+.single-membros article#projetos-post{
+	background:#e2e2e2;
+	border-bottom: 9px solid #199b6c;
+	border-left: 9px solid #199b6c;
+}
+.single-membros section#patrimonio{
+	width: 100%;
+	position: absolute;
+	right:0;
+}
+.single-membros #como-apoiar.is-aceleracao{
+	margin: 25px auto -26px;
 }

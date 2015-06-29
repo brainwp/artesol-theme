@@ -427,7 +427,6 @@ function brasa_template_redirect( $template ){
 	global $wp_query;
 
     if( isset($wp_query->query_vars['membros']) && get_user_by( 'login', $wp_query->query_vars['membros']) ){
-    	echo 'true';
     	status_header(200);
         $wp_query->is_404 = false;
 
