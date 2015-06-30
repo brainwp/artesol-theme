@@ -6,8 +6,7 @@
  * @since 2.2.0
  */
 ?>
-<?php if(has_post_thumbnail()):?>
-<?php $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false );?>
+<?php if(has_post_thumbnail() && $img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )):?>
 <div class="col-md-12 page-thumbnail-bg" style="background:url(<?php echo $img[0];?>) no-repeat center center; background-size:cover;">
 	<div class="page-thumbnail-full">
 		<div class="container">
@@ -44,3 +43,4 @@
 		</div><!-- .row -->
 	</div><!-- .container -->
 </article><!-- #post-## -->
+<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->

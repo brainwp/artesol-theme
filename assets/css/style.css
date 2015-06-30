@@ -2744,6 +2744,16 @@ h3#reply-title {
 .page-template-default nav#main-navigation{
 	margin-bottom:0px;
 }
+.page-template-default #aceleracao-footer-margin,
+.page-template-page-artesanato-brasileiro #aceleracao-footer-margin{
+	clear: both;
+}
+.page-template-default #como-apoiar, .page-template-page-artesanato-brasileiro #como-apoiar{
+	margin: 85px auto -26px;
+}
+.page-template-default #comments{
+	margin-bottom: 160px;
+}
 .page-thumbnail-full .resumo{
 	font-family: "Istok Web",sans-serif;
 	font-size: 1.2em;

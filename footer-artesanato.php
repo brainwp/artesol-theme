@@ -10,7 +10,7 @@
  */
 ?>
 <div id="aceleracao-footer-margin"></div><!-- #aceleracao-footer-margin -->
-<div class="col-md-12" id="aceleracao-footer" style="display: none;">
+<div class="col-md-12" id="aceleracao-footer">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
