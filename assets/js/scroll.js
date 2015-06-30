@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
         }
 
     });
-    var _width = jQuery('.sticky-menu').parent('header').width();
+    var _width = jQuery('#header').width();
     jQuery(window).scroll(function(){
     	if  (jQuery(window).scrollTop() >= 70){
     		if(!jQuery('body').hasClass('admin-bar')){

@@ -70,18 +70,48 @@ get_header('rede');
 <section id="participe" class="col-md-12">
 	<div class="container">
 		<div class="row">
-			<?php $page = get_page_by_path( 'rede/participe', OBJECT, 'page' );?>
+			<?php $page = get_page_by_path( 'rede/membros', OBJECT, 'page' );?>
 			<h2 class="section-title"><?php echo $page->post_title;?></h2><!-- .section-title -->
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
-			<?php if(get_field('rede_participe_repeater')): ?>
-			<?php while(has_sub_field('rede_participe_repeater')): ?>
-			    <div class="col-md-3 each">
-			        <a href="<?php the_sub_field('link');?>">
-			        	<?php the_sub_field('text');?>
-			        </a>
-			    </div><!-- .col-md-3 -->
-	        <?php endwhile; ?>
-            <?php endif; ?>
+			<div class="col-md-6">
+				<a href="<?php echo get_post_type_archive_link('membros');?>?type_pin=artesao" class="col-md-12 membros-each">
+					<?php if($img = get_field('rede_artesao_img', get_the_ID())):?>
+					    <img src="<?php echo $img['sizes']['medium'];?>">
+				    <?php endif;?>
+				    <span><?php _e('Artesão <br><small>ou Mestre</small>','odin');?></span>
+			    </a>
+			</div><!-- .col-md-6 -->
+			<div class="col-md-6">
+				<a href="<?php echo get_post_type_archive_link('membros');?>?type_pin=associacoes" class="col-md-12 membros-each">
+					<?php if($img = get_field('rede_associacoes_img', get_the_ID())):?>
+					    <img src="<?php echo $img['sizes']['medium'];?>">
+				    <?php endif;?>
+				    <span><?php _e('Associações <br><small>ou Cooperativas</small>','odin');?></span>
+			    </a>
+			</div><!-- .col-md-6 -->
+			<div class="col-md-6">
+				<a href="<?php echo get_post_type_archive_link('membros');?>?type_pin=lojistas" class="col-md-12 membros-each">
+					<?php if($img = get_field('rede_lojistas_img', get_the_ID())):?>
+					    <img src="<?php echo $img['sizes']['medium'];?>">
+				    <?php endif;?>
+				    <span><?php _e('Lojistas','odin');?></span>
+			    </a>
+			</div><!-- .col-md-6 -->
+			<div class="col-md-6">
+				<a href="<?php echo get_post_type_archive_link('membros');?>?type_pin=aceleradoras" class="col-md-12 membros-each">
+					<?php if($img = get_field('rede_aceleradoras_img', get_the_ID())):?>
+					    <img src="<?php echo $img['sizes']['medium'];?>">
+				    <?php endif;?>
+				    <span><?php _e('Aceleradoras <br><small>e Governos</small>','odin');?></span>
+			    </a>
+			</div><!-- .col-md-6 -->
+			<?php if($link = get_field('rede_membros_participe', get_the_ID())):?>
+			<div class="col-md-12 text-center">
+				<a href="<?php echo esc_url($link);?>" class="btn btn-primary btn-lg btn-rede-leia">
+					<?php _e('Participe da rede','odin');?>
+				</a>
+			</div><!-- .col-md-12 text-center -->
+		    <?php endif;?>
 		</div><!-- .row -->
 	</div><!-- .container -->
 </section><!-- #participe.col-md-12 -->

@@ -1300,6 +1300,7 @@ body.single-projetos, body.page-template-page-rede-php{
 	padding-top:20px;
 }
 .page-template-page-rede-php section#conheca .text-center .btn,
+.btn-rede-leia,
 .page-template-page-comercio-justo section#cadeia-produtiva .text-center .btn{
 	font-family: 'Gotham-Bold';
 	color:white !important;
@@ -1385,18 +1386,42 @@ body.single-projetos, body.page-template-page-rede-php{
 	margin-top: -50px;
 	clear: both;
 }
-.page-template-page-rede-php section#participe a{
-	display:block;
-	background:rgba(176,173,154,0.3);
-	text-align: center;
+.page-template-page-rede-php section#participe a.membros-each{
 	color:white !important;
-	height: 80px;
-	padding-top: 20px;
-	transition:400ms ease all;
+	display: block;
+	float:left;
+	height:240px;
+	padding: 0;
+	overflow: hidden;
 }
-.page-template-page-rede-php section#participe a:hover{
-	background:rgba(176,173,154,0.7);
+.page-template-page-rede-php section#participe div.col-md-6{
+	margin-bottom:10px;
+}
+.page-template-page-rede-php section#participe a img{
+	width:100%;
+}
+.page-template-page-rede-php section#participe a span{
+	position: absolute;
+	display: block;
+	bottom: 0;
+	width:100%;
+	text-align: center;
+	background: rgba(25,155,108,0.7);
+	padding-bottom:15px;
+	font-family: 'Gotham-Bold';
 	padding-top:10px;
+	font-size:2.0em !important;
+	transition:1s cubic-bezier(1.000, 0.000, 0.000, 1.000) all;
+}
+.page-template-page-rede-php section#participe a:hover span{
+	opacity:0.70;
+	bottom:-100%;
+	transition:1s cubic-bezier(1.000, 0.000, 0.000, 1.000) all;
+}
+.page-template-page-rede-php section#participe a span small{
+	font-family: 'Gotham-Light', sans-serif;
+	font-size:0.8em;
+	font-weight: 300;
 }
 .page-template-page-rede-php section#beneficios a.post-container{
 	display: block;

@@ -1185,68 +1185,6 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
-	register_field_group(array (
-		'id' => 'acf_rede-participe',
-		'title' => 'Rede - Participe',
-		'fields' => array (
-			array (
-				'key' => 'field_552441788a0d1',
-				'label' => 'Links',
-				'name' => 'rede_participe_repeater',
-				'type' => 'repeater',
-				'sub_fields' => array (
-					array (
-						'key' => 'field_552442c36e155',
-						'label' => 'Texto do Link',
-						'name' => 'text',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
-					),
-					array (
-						'key' => 'field_552442608a0d2',
-						'label' => 'Link',
-						'name' => 'link',
-						'type' => 'text',
-						'column_width' => '',
-						'default_value' => '',
-						'placeholder' => '',
-						'prepend' => '',
-						'append' => '',
-						'formatting' => 'html',
-						'maxlength' => '',
-					),
-				),
-				'row_min' => 0,
-				'row_limit' => 4,
-				'layout' => 'table',
-				'button_label' => 'Adicionar Link',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'page_template',
-					'operator' => '==',
-					'value' => 'page-rede.php',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'default',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
-	));
 }
 if(function_exists("register_field_group"))
 {
@@ -1803,6 +1741,99 @@ if(function_exists("register_field_group"))
 		'options' => array (
 			'position' => 'normal',
 			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_rede-membros',
+		'title' => 'Rede - Membros',
+		'fields' => array (
+			array (
+				'key' => 'field_55bdbbdgdtrt92f0adce9b2',
+				'label' => 'Link do botão participe da rede',
+				'name' => 'rede_membros_participe',
+				'type' => 'text',
+			),
+			array (
+				'key' => 'field_5592f0adce9b2',
+				'label' => 'Artesão ou Mestre',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_5592f10ace9b3',
+				'label' => 'Imagem',
+				'name' => 'rede_artesao_img',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_55923r89r389r389e9b2',
+				'label' => 'Associações ou Cooperativas',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_5592f10r387r37r873ace9b3',
+				'label' => 'Imagem',
+				'name' => 'rede_associacoes_img',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		    array (
+				'key' => 'field_crieoeuru88989489',
+				'label' => 'Lojistas',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_grjauauxexdufuaslajaje39',
+				'label' => 'Imagem',
+				'name' => 'rede_lojistas_img',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+			array (
+				'key' => 'field_c64646488989489',
+				'label' => 'Aceleradoras e Governos',
+				'name' => '',
+				'type' => 'tab',
+			),
+			array (
+				'key' => 'field_gf8rfuaslajaje39',
+				'label' => 'Imagem',
+				'name' => 'rede_aceleradoras_img',
+				'type' => 'image',
+				'save_format' => 'object',
+				'preview_size' => 'thumbnail',
+				'library' => 'all',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-rede.php',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'normal',
+			'layout' => 'default',
 			'hide_on_screen' => array (
 			),
 		),
