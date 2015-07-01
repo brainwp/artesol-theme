@@ -2805,7 +2805,11 @@ h3#reply-title {
 	padding-top: 5px;
 }
 body.error404 #aceleracao-footer-margin{
-	display: none;
+	height:0 !important;
+	clear:both;
+}
+body.error404 #como-apoiar{
+	margin: 86px auto -26px;
 }
 .search-form-404{
 	background:#f0f0f0;
