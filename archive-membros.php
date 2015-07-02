@@ -172,7 +172,7 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 	<div class="iframe-container-map">
 		<?php $map = array();?>
 		<?php $map['embed'] = 'true';?>
-		<?php if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])) $map['type_pin'] = $_GET['type_pin'];?>
+		<?php if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])) $map['type_pin'][] = $_GET['type_pin'];?>
 		<?php if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])) $map['filter_type'] = $_GET['filter_type'];?>
 		<?php $map = add_query_arg($map,'http://wp.codeispoetry.info/mapa-artesol/');?>
 		<iframe src="<?php echo esc_url($map);?>" id="section-mapa"></iframe>
