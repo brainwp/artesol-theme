@@ -372,6 +372,15 @@ function artesol_map_user_fields($args){
     $map_table .= '<label>';
     //$map_table .= '<img width="32" height="32" src="' . plugins_url( 'images/pins/big-blue.png', __FILE__ ) . '">';
     $map_table .= '<div style="clear:both;width:100%;height:5px;padding-top:10px;"></div>';
+    $map_table .= __( "<b>Projeto</b>", "odin" ).'</label>';
+    $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    $map_table .= '<input type="radio" name="type_pin" value="projetos" '.checked("projetos",$selected,false).' />';
+    $map_table .= '</div>';
+
+    $map_table .= '<div style="float:left;display:inline-block;padding:10px">';
+    $map_table .= '<label>';
+    //$map_table .= '<img width="32" height="32" src="' . plugins_url( 'images/pins/big-blue.png', __FILE__ ) . '">';
+    $map_table .= '<div style="clear:both;width:100%;height:5px;padding-top:10px;"></div>';
     $map_table .= __( "<b>Associações ou Cooperativas</b>", "odin" ).'</label>';
     $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
     $map_table .= '<input type="radio" name="type_pin" value="associacoes" '.checked("associacoes",$selected,false).' />';
@@ -390,9 +399,9 @@ function artesol_map_user_fields($args){
     $map_table .= '<label>';
     //$map_table .= '<img width="32" height="32" src="' . plugins_url( 'images/pins/big-blue.png', __FILE__ ) . '">';
     $map_table .= '<div style="clear:both;width:100%;height:5px;padding-top:10px;"></div>';
-    $map_table .= __( "<b>Aceleradoras e Governos</b>", "odin" ).'</label>';
+    $map_table .= __( "<b>Agentes de Apoio</b>", "odin" ).'</label>';
     $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
-    $map_table .= '<input type="radio" name="type_pin" value="aceleradoras" '.checked("aceleradoras",$selected,false).' />';
+    $map_table .= '<input type="radio" name="type_pin" value="agentes" '.checked("agentes",$selected,false).' />';
     $map_table .= '</div>';
     $map_table .= '</td>';
     $map_table .= '</tr>';
