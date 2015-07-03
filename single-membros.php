@@ -19,30 +19,21 @@ get_header( 'projetos' ); ?>
 							_e( 'Membros da Rede', 'odin' );
 						?>
 					</h1>
-					<div class="col-md-7 pull-right membros-link">
-						<?php $link = get_post_type_archive_link('membros');?>
-						<div class="col-md-6">
-							<a href="<?php echo $link;?>?type_pin=artesao" class="col-md-12 btn btn-primary btn-large">
-								<?php _e('Artesão ou Mestre','odin');?>
-							</a>
-						</div><!-- .col-md-6 -->
-						<div class="col-md-6">
-							<a href="<?php echo $link;?>?type_pin=associacoes" class="col-md-12 btn btn-primary btn-large">
-								<?php _e('Associações ou Cooperativas','odin');?>
-							</a>
-						</div><!-- .col-md-6 -->
-						<div class="col-md-6">
-							<a href="<?php echo $link;?>?type_pin=lojistas" class="col-md-12 btn btn-primary btn-large">
-								<?php _e('Lojistas','odin');?>
-							</a>
-						</div><!-- .col-md-6 -->
-						<div class="col-md-6">
-							<a href="<?php echo $link;?>?type_pin=aceleradoras" class="col-md-12 btn btn-primary btn-large">
-								<?php _e('Aceleradoras e Governos','odin');?>
-							</a>
-						</div><!-- .col-md-6 -->
-					</div><!-- .col-md-8 pull-right membros-link -->
+					<div class="pull-right">
+						<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
+					</div><!-- .pull-right -->
 				</header><!-- .page-header -->
+				<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
+				<div class="nav-history">
+				   <?php if(isset($wp_query->query_vars['membros']) && get_user_by( 'login', $wp_query->query_vars['membros']) ) $user = get_user_by( 'login', $wp_query->query_vars['membros']);?>
+					<?php if($user && $type_pin = get_user_meta( $user->ID, 'type_pin', true)):?>
+					    <?php if($type_pin == 'artesao') $type = __('Artesão ou Mestre','odin');?>
+					    <?php if($type_pin == 'associacoes') $type = __('Associações ou Cooperativas','odin');?>
+					    <?php if($type_pin == 'lojistas') $type = __('Lojistas','odin');?>
+					    <?php if($type_pin == 'agentes') $type = __('Agentes de Apoio','odin');?>
+					    <?php printf(__('Membros >> <a href="%s">%s</a>','odin'),get_post_type_archive_link('membros') . '?type_pin='.$type_pin, $type);?>
+				    <?php endif;?>
+				</div><!-- .nav-history -->
 
 				<?php
 					global $wp_query;

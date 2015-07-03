@@ -3381,3 +3381,12 @@ body.single-membros .bg-title-projetos{
 .single-membros #como-apoiar.is-aceleracao{
 	margin: 25px auto -26px;
 }
+.single-membros .page-header{
+	margin-top:0;
+}
+.single-membros .page-header img{
+	margin-top:-20px;
+}
+.single-membros .page-header .publicacoes-archive-title{
+	margin-top:35px;
+}
