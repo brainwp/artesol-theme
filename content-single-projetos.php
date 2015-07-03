@@ -15,7 +15,7 @@
 		<?php the_post_thumbnail('medium');?>
 	</div><!-- .col-md-4 pull-left thumbnail-projetos -->
 	<div class="col-md-3 projetos-meta">
-		<h4 class="col-md-12"><?php _e('Localização:','odin');?></h4>
+		<h4 class="col-md-12"><?php _e('Cidade:','odin');?></h4>
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_local', true ));?>
 		</div><!-- .col-md-12 meta-content -->
@@ -40,6 +40,10 @@
 		        <?php endwhile;?>
 		    </div><!-- .col-md-12 meta-content -->
 		<?php endif;?>
+		<h4 class="col-md-12"><?php _e('Parceiros apoiadores:','odin');?></h4>
+		<div class="col-md-12 meta-content">
+			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_apoiadores', true ));?>
+		</div><!-- .col-md-12 meta-content -->
 		<h4 class="col-md-12"><?php _e('Gênero:','odin');?></h4>
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_type', true ));?>

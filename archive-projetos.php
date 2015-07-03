@@ -27,6 +27,35 @@ get_header( 'projetos' ); ?>
 					    <?php endif;?>
 					</span>
 				</header><!-- .page-header -->
+				<div class="col-md-3 pull-right filter-membros">
+					<span class="filter-title"><?php _e('Filtros','odin');?></span>
+				    <div class="dropdown">
+				    	<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    		<?php _e('Estado','odin');?>
+				    		<span class="caret"></span>
+				    	</button>
+				    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				            <?php $link = array();?>
+						    <?php $tipos = get_terms('membros_state', array('hide_empty' => 0));?>
+						    <?php foreach($tipos as $tipo):?>
+						        <?php $link['state'] = $tipo->slug;?>
+						        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('projetos'));?>
+						        <li>
+						        	<a href="<?php echo esc_url($filter_link);?>">
+						        		<?php echo apply_filters('the_title',$tipo->name);?>
+						        	</a>
+						        </li>
+					        <?php endforeach;?>
+					        <?php $link['state'] = '';?>
+					        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+					        <li>
+						        <a href="<?php echo esc_url($filter_link);?>">
+						        	<?php _e('Todos','odin');?>
+						        </a>
+						    </li>
+					    </ul>
+					</div>
+				</div><!-- .col-md-4 pull-right -->
 
 				<?php
 					// Start the Loop.

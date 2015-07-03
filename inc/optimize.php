@@ -141,3 +141,21 @@ function odin_new_body_class($classes) {
     return $classes;
 }
 add_filter('body_class', 'odin_new_body_class');
+
+/**
+ * Pre Get Posts
+ */
+
+function brasa_pre_get_posts($query) {
+	if( is_post_type_archive('projetos') && $query->is_main_query() && isset($_GET['state']) && !empty($_GET['state']) ){
+		$tax_query = array(
+			array(
+				'taxonomy' => 'membros_state',
+				'field'    => 'slug',
+				'terms'    => $_GET['state'],
+			),
+		);
+		$query->set('tax_query', $tax_query);
+    }
+}
+add_action( 'pre_get_posts', 'brasa_pre_get_posts' );
