@@ -407,6 +407,71 @@ function artesol_map_user_fields($args){
     $map_table .= '</tr>';
     $map_table .= '</table>';
 
+    if($selected && $selected == 'agentes'){
+    	$map_table .= '<div style="width: 20%; height: 5px; padding-top: 10px; float: left;">';
+    	$map_table .= __('<h3 style="float:left;text-align: left;line-height: 1.3;font-weight: 600;">Agentes de Apoio - Perfil</h3>','odin');
+    	$map_table .= '	</div>';
+    	$map_table .= '<div style="width:30%;padding-top:25px;float:left">';
+    	$map_table .= '<select name="membros_perfil">';
+    	$tipos = get_terms('membros_perfil', array('hide_empty' => 0));
+    	foreach($tipos as $tipo){
+    		$checked = '';
+    		if($tipo->slug == get_user_meta( $args['user'], 'membros_perfil', true)) $checked = 'selected';
+    		$map_table .= sprintf('<option %s value="%s">%s</option>',$checked,$tipo->slug,$tipo->name);
+    	}
+    	$map_table .= '</select>';
+    	$map_table .= '</div>';
+    	$map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    }
+
+    if($selected && $selected == 'artesao' || $selected && $selected == 'associacoes'){
+    	$map_table .= '<div style="width: 20%; height: 5px; padding-top: 10px; float: left;">';
+    	$map_table .= __('<h3 style="float:left;text-align: left;line-height: 1.3;font-weight: 600;">Saberes e Fazeres</h3>','odin');
+    	$map_table .= '	</div>';
+    	$map_table .= '<div style="width:30%;padding-top:25px;float:left">';
+    	$map_table .= '<select name="filter_type">';
+    	$tipos = get_terms('tipos', array('hide_empty' => 0));
+    	foreach($tipos as $tipo){
+    		$checked = '';
+    		if($tipo->slug == get_user_meta( $args['user'], 'user_type', true)) $checked = 'selected';
+    		$map_table .= sprintf('<option %s value="%s">%s</option>',$checked,$tipo->slug,$tipo->name);
+    	}
+    	$map_table .= '</select>';
+    	$map_table .= '</div>';
+    	$map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    }
+
+    if($selected && $selected == 'artesao' || $selected && $selected == 'associacoes'){
+    	$map_table .= '<div style="width: 20%; height: 5px; padding-top: 10px; float: left;">';
+    	$map_table .= __('<h3 style="float:left;text-align: left;line-height: 1.3;font-weight: 600;">Categoria</h3>','odin');
+    	$map_table .= '	</div>';
+    	$map_table .= '<div style="width:30%;padding-top:25px;float:left">';
+    	$map_table .= '<select name="membros_category">';
+    	$tipos = get_terms('membros_category', array('hide_empty' => 0));
+    	foreach($tipos as $tipo){
+    		$checked = '';
+    		if($tipo->slug == get_user_meta( $args['user'], 'user_category', true)) $checked = 'selected';
+    		$map_table .= sprintf('<option %s value="%s">%s</option>',$checked,$tipo->slug,$tipo->name);
+    	}
+    	$map_table .= '</select>';
+    	$map_table .= '</div>';
+    	$map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+    }
+    $map_table .= '<div style="width: 20%; height: 5px; padding-top: 10px; float: left;">';
+    $map_table .= __('<h3 style="float:left;text-align: left;line-height: 1.3;font-weight: 600;">Estado</h3>','odin');
+    $map_table .= '	</div>';
+    $map_table .= '<div style="width:30%;padding-top:25px;float:left">';
+    $map_table .= '<select name="user_state">';
+    $tipos = get_terms('membros_state', array('hide_empty' => 0));
+    foreach($tipos as $tipo){
+    	$checked = '';
+    	if($tipo->slug == get_user_meta( $args['user'], 'user_state', true)) $checked = 'selected';
+    	$map_table .= sprintf('<option %s value="%s">%s</option>',$checked,$tipo->slug,$tipo->name);
+    }
+    $map_table .= '</select>';
+    $map_table .= '</div>';
+    $map_table .= '<div style="clear:both;width:100%;height:5px"></div>';
+
     $args['html'] = $map_table;
     return $args;
 }
@@ -415,6 +480,18 @@ add_filter('geouser_map_pins','artesol_map_user_fields');
 function artesol_geouser_save($user_id){
 	if(isset($_POST['type_pin'])){
 		update_user_meta($user_id, 'type_pin', $_POST['type_pin']);
+	}
+	if(isset($_POST['membros_perfil'])){
+		update_user_meta($user_id, 'membros_perfil', $_POST['membros_perfil']);
+	}
+	if(isset($_POST['filter_type'])){
+		update_user_meta($user_id, 'user_type', $_POST['filter_type']);
+	}
+	if(isset($_POST['membros_category'])){
+		update_user_meta($user_id, 'user_category', $_POST['membros_category']);
+	}
+	if(isset($_POST['user_state'])){
+		update_user_meta($user_id, 'user_state', $_POST['user_state']);
 	}
 }
 add_action('geouser_save','artesol_geouser_save');

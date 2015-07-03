@@ -70,6 +70,27 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 		'compare' => '='
 	);
 }
+if(isset($_GET['state']) && !empty($_GET['state'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_state',
+	    'value'   => $_GET['state'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_category']) && !empty($_GET['user_category'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_category',
+	    'value'   => $_GET['user_category'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
+	$args['meta_query'][] = array(
+		'key'     => 'membros_perfil',
+	    'value'   => $_GET['user_perfil'],
+		'compare' => '='
+	);
+}
 ?>
 	<section id="primary" class="col-md-12">
 		<div id="content" class="site-content" role="main">
@@ -98,8 +119,8 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 							</a>
 						</div><!-- .col-md-6 -->
 						<div class="col-md-6">
-							<a href="<?php echo $link;?>?type_pin=aceleradoras" class="col-md-12 btn btn-primary btn-large">
-								<?php _e('Aceleradoras e Governos','odin');?>
+							<a href="<?php echo $link;?>?type_pin=agentes" class="col-md-12 btn btn-primary btn-large">
+								<?php _e('Agentes de Apoio','odin');?>
 							</a>
 						</div><!-- .col-md-6 -->
 					</div><!-- .col-md-8 pull-right membros-link -->
@@ -110,21 +131,22 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 					    <?php if($_GET['type_pin'] == 'artesao') $type = __('Artesão ou Mestre','odin');?>
 					    <?php if($_GET['type_pin'] == 'associacoes') $type = __('Associações ou Cooperativas','odin');?>
 					    <?php if($_GET['type_pin'] == 'lojistas') $type = __('Lojistas','odin');?>
-					    <?php if($_GET['type_pin'] == 'aceleradoras') $type = __('Aceleradoras e Governos','odin');?>
+					    <?php if($_GET['type_pin'] == 'agentes') $type = __('Agentes de Apoio','odin');?>
 					    <?php printf(__('Membros >> %s','odin'),$type);?>
 					<?php else: ?>
 				        <?php _e('Membros >> Todos','odin');?>
 				    <?php endif;?>
 				</div><!-- .nav-history -->
-				<div class="col-md-4 pull-right filter-membros">
+				<div class="col-md-5 pull-right filter-membros">
+					<span class="filter-title"><?php _e('Filtros','odin');?></span>
+					<?php if(isset($_GET['type_pin']) && $_GET['type_pin'] == 'artesao' || isset($_GET['type_pin']) && $_GET['type_pin'] == 'associacoes'):?>
 				    <div class="dropdown">
 				    	<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				    		<?php _e('Filtro','odin');?>
+				    		<?php _e('Saberes','odin');?>
 				    		<span class="caret"></span>
 				    	</button>
 				    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				            <?php $link = array();?>
-				            <?php if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])) $link['type_pin'] = $_GET['type_pin'];?>
+				            <?php $link = get_membros_query_args();?>
 						    <?php $tipos = get_terms('tipos', array('hide_empty' => 0));?>
 						    <?php foreach($tipos as $tipo):?>
 						        <?php $link['filter_type'] = $tipo->slug;?>
@@ -135,6 +157,96 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 						        	</a>
 						        </li>
 					        <?php endforeach;?>
+					        <?php $link['filter_type'] = '';?>
+					        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+					        <li>
+						        <a href="<?php echo esc_url($filter_link);?>">
+						        	<?php _e('Todos','odin');?>
+						        </a>
+						    </li>
+					    </ul>
+					</div>
+					<?php endif;?>
+					<?php if(isset($_GET['type_pin']) && $_GET['type_pin'] == 'artesao' || isset($_GET['type_pin']) && $_GET['type_pin'] == 'associacoes'):?>
+				    <div class="dropdown">
+				    	<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    		<?php _e('Categoria','odin');?>
+				    		<span class="caret"></span>
+				    	</button>
+				    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				            <?php $link = get_membros_query_args();?>
+						    <?php $tipos = get_terms('membros_category', array('hide_empty' => 0));?>
+						    <?php foreach($tipos as $tipo):?>
+						        <?php $link['user_category'] = $tipo->slug;?>
+						        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+						        <li>
+						        	<a href="<?php echo esc_url($filter_link);?>">
+						        		<?php echo apply_filters('the_title',$tipo->name);?>
+						        	</a>
+						        </li>
+					        <?php endforeach;?>
+					        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+					        <?php $link['user_category'] = '';?>
+					        <li>
+						        <a href="<?php echo esc_url($filter_link);?>">
+						        	<?php _e('Todos','odin');?>
+						        </a>
+						    </li>
+					    </ul>
+					</div>
+					<?php endif;?>
+					<?php if(isset($_GET['type_pin']) && $_GET['type_pin'] == 'agentes'):?>
+				    <div class="dropdown">
+				    	<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    		<?php _e('Perfil','odin');?>
+				    		<span class="caret"></span>
+				    	</button>
+				    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+				            <?php $link = get_membros_query_args();?>
+						    <?php $tipos = get_terms('membros_perfil', array('hide_empty' => 0));?>
+						    <?php foreach($tipos as $tipo):?>
+						        <?php $link['user_perfil'] = $tipo->slug;?>
+						        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+						        <li>
+						        	<a href="<?php echo esc_url($filter_link);?>">
+						        		<?php echo apply_filters('the_title',$tipo->name);?>
+						        	</a>
+						        </li>
+					        <?php endforeach;?>
+					        <?php $link['user_perfil'] = '';?>
+					        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+					        <li>
+						        <a href="<?php echo esc_url($filter_link);?>">
+						        	<?php _e('Todos','odin');?>
+						        </a>
+						    </li>
+					    </ul>
+					</div>
+					<?php endif;?>
+					<div class="dropdown">
+				    	<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    		<?php _e('Estado','odin');?>
+				    		<span class="caret"></span>
+				    	</button>
+				    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+				            <?php $link = get_membros_query_args();?>
+						    <?php $tipos = get_terms('membros_state', array('hide_empty' => 0));?>
+						    <?php foreach($tipos as $tipo):?>
+						        <?php $link['state'] = $tipo->slug;?>
+						        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+						        <li>
+						        	<a href="<?php echo esc_url($filter_link);?>">
+						        		<?php echo apply_filters('the_title',$tipo->name);?>
+						        	</a>
+						        </li>
+					        <?php endforeach;?>
+					        <?php $link['state'] = '';?>
+					        <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+					        <li>
+						        <a href="<?php echo esc_url($filter_link);?>">
+						        	<?php _e('Todos','odin');?>
+						        </a>
+						    </li>
 					    </ul>
 					</div>
 				</div><!-- .col-md-4 pull-right -->
@@ -151,9 +263,7 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 			    <?php
 			    if ( ! empty( $user_query->results ) ):
 			    $big = 999999999; // need an unlikely integer
-			    $url_args = array();
-			    if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])) $url_args['type_pin'] = $_GET['type_pin'];
-			    if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])) $url_args['filter_type'] = $_GET['filter_type'];
+			    $url_args = get_membros_query_args(true);
 			    echo paginate_links( array(
 			    	'format' => '?pagina=%#%',
 			    	'current' => $page,

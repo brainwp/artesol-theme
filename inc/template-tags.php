@@ -133,3 +133,28 @@ if ( ! function_exists( 'brasa_resumo' ) ) {
 	}
 
 }
+if ( ! function_exists( 'get_membros_query_args' ) ) {
+
+	function get_membros_query_args( $is_map = false ){
+		$args = array();
+		if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])){
+			$args['type_pin'] = $_GET['type_pin'];
+		}
+		if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
+			$args['filter_type'] = $_GET['filter_type'];
+		}
+		if(isset($_GET['state']) && !empty($_GET['state'])){
+			$args['state'] = $_GET['state'];
+		}
+		if(isset($_GET['user_category']) && !empty($_GET['user_category'])){
+			$args['user_category'] = $_GET['user_category'];
+		}
+		if($is_map){
+			if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
+				$args['filter_type'] = array($_GET['filter_type']);
+			}
+		}
+		return $args;
+	}
+
+}

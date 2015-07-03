@@ -74,6 +74,96 @@ function artesol_custom_post_type() {
 	);
 	register_taxonomy( 'tipos', array( 'projetos' ), $args );
 
+	// register taxonomy membros_category
+	$labels = array(
+		'name'                       => _x( 'Categorias', 'Taxonomy General Name', 'odin' ),
+		'singular_name'              => _x( 'Categoria', 'Taxonomy Singular Name', 'odin' ),
+		'menu_name'                  => __( 'Categorias', 'odin' ),
+		'all_items'                  => __( 'Todas Categorias', 'odin' ),
+		'parent_item'                => __( 'Categoria parente', 'odin' ),
+		'parent_item_colon'          => __( 'Categoria parente:', 'odin' ),
+		'new_item_name'              => __( 'Adicionar nova Categoria', 'odin' ),
+		'add_new_item'               => __( 'Adicionar nova Categoria', 'odin' ),
+		'edit_item'                  => __( 'Editar categoria', 'odin' ),
+		'update_item'                => __( 'Atualizar Categoria', 'odin' ),
+		'view_item'                  => __( 'Ver categoria', 'odin' ),
+		'separate_items_with_commas' => __( 'Categorias separadas por virgula', 'odin' ),
+		'add_or_remove_items'        => __( 'Adicionar ou remover Categorias', 'odin' ),
+		'choose_from_most_used'      => __( 'Escolha pelos mais usados', 'odin' ),
+		'popular_items'              => __( 'Categorias populares', 'odin' ),
+		'search_items'               => __( 'Buscar Categorias', 'odin' ),
+		'not_found'                  => __( 'Não encontrado', 'odin' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'membros_category', array( 'projetos' ), $args );
+    // register taxonomy membros_perfil
+	$labels = array(
+		'name'                       => _x( 'Perfil', 'Taxonomy General Name', 'odin' ),
+		'singular_name'              => _x( 'Perfil', 'Taxonomy Singular Name', 'odin' ),
+		'menu_name'                  => __( 'Perfil', 'odin' ),
+		'all_items'                  => __( 'Todas os Perfis', 'odin' ),
+		'parent_item'                => __( 'Perfil parente', 'odin' ),
+		'parent_item_colon'          => __( 'Perfil parente:', 'odin' ),
+		'new_item_name'              => __( 'Adicionar novo Perfil', 'odin' ),
+		'add_new_item'               => __( 'Adicionar novo Perfil', 'odin' ),
+		'edit_item'                  => __( 'Editar Perfil', 'odin' ),
+		'update_item'                => __( 'Atualizar Perfil', 'odin' ),
+		'view_item'                  => __( 'Ver perfil', 'odin' ),
+		'separate_items_with_commas' => __( 'Perfis separados por virgula', 'odin' ),
+		'add_or_remove_items'        => __( 'Adicionar ou remover Perfis', 'odin' ),
+		'choose_from_most_used'      => __( 'Escolha pelos mais usados', 'odin' ),
+		'popular_items'              => __( 'Perfis populares', 'odin' ),
+		'search_items'               => __( 'Buscar Perfis', 'odin' ),
+		'not_found'                  => __( 'Não encontrado', 'odin' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'membros_perfil', array( 'projetos' ), $args );
+	// register taxonomy membros_perfil
+	$labels = array(
+		'name'                       => _x( 'Estados', 'Taxonomy General Name', 'odin' ),
+		'singular_name'              => _x( 'Estado', 'Taxonomy Singular Name', 'odin' ),
+		'menu_name'                  => __( 'Estados', 'odin' ),
+		'all_items'                  => __( 'Todas os Estados', 'odin' ),
+		'parent_item'                => __( 'Estado parente', 'odin' ),
+		'parent_item_colon'          => __( 'Estado parente:', 'odin' ),
+		'new_item_name'              => __( 'Adicionar novo Estado', 'odin' ),
+		'add_new_item'               => __( 'Adicionar novo Estado', 'odin' ),
+		'edit_item'                  => __( 'Editar Estado', 'odin' ),
+		'update_item'                => __( 'Atualizar Estado', 'odin' ),
+		'view_item'                  => __( 'Ver estado', 'odin' ),
+		'separate_items_with_commas' => __( 'Estados separados por virgula', 'odin' ),
+		'add_or_remove_items'        => __( 'Adicionar ou remover Estados', 'odin' ),
+		'choose_from_most_used'      => __( 'Escolha pelos mais usados', 'odin' ),
+		'popular_items'              => __( 'Estados populares', 'odin' ),
+		'search_items'               => __( 'Buscar Estados', 'odin' ),
+		'not_found'                  => __( 'Não encontrado', 'odin' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'membros_state', array( 'projetos' ), $args );
 	$labels = array(
 		'name'                => _x( 'Membros da Rede', 'Post Type General Name', 'odin' ),
 		'singular_name'       => _x( 'Membros da Rede', 'Post Type Singular Name', 'odin' ),
@@ -96,7 +186,7 @@ function artesol_custom_post_type() {
 		'description'         => __( 'Membros da Rede', 'odin' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', ),
-		'taxonomies'          => array( 'tipos' ),
+		'taxonomies'          => array( 'tipos', 'membros_category' ),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,

@@ -36,11 +36,11 @@ Description: Tema WordPress desenvolvido exclusivamente para Artesol. Este tema 
 }
 @font-face {
     font-family: 'Gotham-Light';
-    src: url('../fonts/gotham-book/gotham-light.eot');
-    src: url('../fonts/gotham-book/gotham-light.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gotham-book/gotham-light.woff') format('woff'),
-         url('../fonts/gotham-book/gotham-light.ttf') format('truetype'),
-         url('../fonts/gotham-book/gotham-light.svg#gotham-light') format('svg');
+    src: url('../fonts/gotham-light/gotham-light.eot');
+    src: url('../fonts/gotham-light/gotham-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gotham-light/gotham-light.woff') format('woff'),
+         url('../fonts/gotham-light/gotham-light.ttf') format('truetype'),
+         url('../fonts/gotham-light/gotham-light.svg#gotham-light') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -3389,4 +3389,14 @@ body.single-membros .bg-title-projetos{
 }
 .single-membros .page-header .publicacoes-archive-title{
 	margin-top:35px;
+}
+.filter-title{
+	font-family: "Gotham-Medium",sans-serif;
+	color: #7F7568;
+	font-size: 1.4em;
+	padding-top: 5px;
+	display: inline-block;
+}
+.filter-membros .dropdown{
+	display: inline;
 }

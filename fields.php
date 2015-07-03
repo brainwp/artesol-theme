@@ -1586,16 +1586,6 @@ if(function_exists("register_field_group"))
 				'toolbar' => 'full',
 				'media_upload' => 'yes',
 			),
-			array (
-				'key' => 'field_55887823b72a8',
-				'label' => 'Tipologia',
-				'name' => 'user_type',
-				'type' => 'select',
-				'choices' => get_option('brasa_save_tipos', array()),
-				'default_value' => '',
-				'allow_null' => 0,
-				'multiple' => 0,
-			),
 		),
 		'location' => array (
 			array (

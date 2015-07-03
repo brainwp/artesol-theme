@@ -26,7 +26,7 @@ get_header( 'projetos' ); ?>
 				<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 				<div class="nav-history">
 				   <?php if(isset($wp_query->query_vars['membros']) && get_user_by( 'login', $wp_query->query_vars['membros']) ) $user = get_user_by( 'login', $wp_query->query_vars['membros']);?>
-					<?php if($user && $type_pin = get_user_meta( $user->ID, 'type_pin', true)):?>
+				   <?php if($user && $type_pin = get_user_meta( $user->ID, 'type_pin', true)):?>
 					    <?php if($type_pin == 'artesao') $type = __('Artesão ou Mestre','odin');?>
 					    <?php if($type_pin == 'associacoes') $type = __('Associações ou Cooperativas','odin');?>
 					    <?php if($type_pin == 'lojistas') $type = __('Lojistas','odin');?>
