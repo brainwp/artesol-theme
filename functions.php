@@ -26,8 +26,8 @@ if ( ! isset( $content_width ) ) {
 require_once get_template_directory() . '/core/classes/class-bootstrap-nav.php';
 require_once get_template_directory() . '/core/classes/class-shortcodes.php';
 require_once get_template_directory() . '/core/classes/class-thumbnail-resizer.php';
-require_once get_template_directory() . '/core/classes/class-theme-options.php';
-require_once get_template_directory() . '/core/classes/class-options-helper.php';
+//require_once get_template_directory() . '/core/classes/class-theme-options.php';
+//require_once get_template_directory() . '/core/classes/class-options-helper.php';
 // require_once get_template_directory() . '/core/classes/class-post-type.php';
 // require_once get_template_directory() . '/core/classes/class-taxonomy.php';
 // require_once get_template_directory() . '/core/classes/class-metabox.php';
@@ -298,7 +298,7 @@ require_once get_template_directory() . '/inc/template-tags.php';
 require_once get_template_directory() . '/inc/advanced-custom-fields/acf.php';
 require_once get_template_directory() . '/inc/acf-options-page/acf-options-page.php';
 require_once get_template_directory() . '/fields.php';
-require_once get_template_directory() . '/inc/options.php';
+//require_once get_template_directory() . '/inc/options.php';
 
 /**
  * Custom post types
@@ -314,24 +314,6 @@ require_once get_template_directory() . '/inc/agenda-class.php';
  * Tipologia functions
  */
 require_once get_template_directory() . '/inc/tipologia-class.php';
-
-function modal() {
-    	$option_home = get_option('home_cfg');
-		if ($option_home['modal_na_home'] != ""){?>
-			<div id="fundo-modal"
-			id="fundo-modal"></div>
-			<div id="reveal-modal-id" class="reveal-modal open" data-reveal="" >
-				<?php echo $option_home['modal_na_home']?>
-				<a style="position: absolute;
-				  top: 30px;
-				  right: 30px;
-				  font-size: 25px;"class="close-reveal-modal">
-					×
-				</a>
-			</div>
-	<?php }
-}
-//add_action('wp_footer', 'modal');
 
 function thumbnail_bg( $id = '', $tamanho = 'thumbnail' ) {
 	global $post;
