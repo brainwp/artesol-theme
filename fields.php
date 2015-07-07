@@ -1012,6 +1012,16 @@ if(function_exists("register_field_group"))
 				'maxlength' => '',
 			),
 			array (
+				'key' => 'field_559c0787b02d8',
+				'label' => 'Selecione a localização do projeto no mapa',
+				'name' => 'project_map',
+				'type' => 'google_map',
+				'center_lat' => '-15',
+				'center_lng' => '-55',
+				'zoom' => '4',
+				'height' => '',
+			),
+			array (
 				'key' => 'field_5520560ede943',
 				'label' => 'Duração',
 				'name' => 'project_time',
@@ -1036,7 +1046,7 @@ if(function_exists("register_field_group"))
 			),
 			array (
 				'key' => 'field_55205642de945',
-				'label' => 'Genero',
+				'label' => 'Gênero',
 				'name' => 'project_type',
 				'type' => 'text',
 				'default_value' => '',
