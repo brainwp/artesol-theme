@@ -503,3 +503,13 @@ function brasa_template_redirect( $template ){
     return $template;
 }
 add_filter( 'template_include', 'brasa_template_redirect' );
+
+function add_caption_slider_rede($html){
+	global $brasa_slider_item_id;
+	if(get_post_type($brasa_slider_item_id) != 'attachment '){
+		(string) $html .= '<div class="caption-slider col-md-12">'.get_the_title($brasa_slider_item_id) . '</div>';
+	}
+
+	return $html;
+}
+add_filter('brasa_slider_loop_before_image','add_caption_slider_rede');

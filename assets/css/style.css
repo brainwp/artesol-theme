@@ -1452,6 +1452,25 @@ body.single-projetos, body.page-template-page-rede-php{
 	float:left;
 	margin-right:10px!important;
 }
+.caption-slider{
+	position: absolute;
+	background:rgba(25, 155, 108, 0.7);
+	margin:0;
+	bottom:0;
+	z-index: 999;
+	font-size:1.7em;
+	color:#FFF;
+	font-family: 'Gotham-Bold';
+	padding-bottom:10px;
+	padding-top:10px;
+}
+#slider-destaques-rede a{
+	height:320px;
+	overflow: hidden;
+}
+#slider-destaques-rede a img{
+	height:auto;
+}
 /* SERVIÇOS */
 body.page-template-page-servicos #aceleracao-footer-margin{
 	clear: both;
