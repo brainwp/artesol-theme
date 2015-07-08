@@ -1453,11 +1453,86 @@ body.single-projetos, body.page-template-page-rede-php{
 	margin-right:10px!important;
 }
 /* SERVIÇOS */
+body.page-template-page-servicos #aceleracao-footer-margin{
+	clear: both;
+}
+body.page-template-page-servicos h3.section-title{
+	color:white;
+	font-family: 'Gotham-Bold',sans-serif;
+	text-transform: uppercase;
+}
+body.page-template-page-servicos #projetos-institucionais{
+	background: url('../images/bg-servicos-projetos-institucionais.jpg') no-repeat;
+	background-size:cover;
+	padding-top:40px;
+	padding-bottom: 40px;
+}
+body.page-template-page-servicos #projetos-institucionais .btn-more{
+	background:#dd7a00;
+	border-radius:0;
+	font-family: 'Gotham-Book',sans-serif;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.75);
+}
+body.page-template-page-servicos #consultorias{
+	background: url('../images/bg-servicos-consultoria.jpg') no-repeat;
+	background-size:cover;
+	padding-top:40px;
+	padding-bottom: 40px;
+}
+body.page-template-page-servicos #consultorias .btn-more{
+	background:#eab74a;
+	border-radius:0;
+	font-family: 'Gotham-Book',sans-serif;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.75);
+}
+body.page-template-page-servicos a.btn-more:hover{
+	transition:300ms ease all !important;
+	box-shadow:none !important;
+}
+body.page-template-page-servicos #disseminacao{
+	background: url('../images/bg-servicos-disseminacao.jpg') no-repeat;
+	background-size:cover;
+	padding-top:40px;
+	padding-bottom: 40px;
+}
+body.page-template-page-servicos #disseminacao .btn-more{
+	background:#bfaa49;
+	border-radius:0;
+	font-family: 'Gotham-Book',sans-serif;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.75);
+}
+body.page-template-page-servicos #portfolio{
+	background: url('../images/bg-servicos-portfolio.jpg') no-repeat;
+	background-size:cover;
+	padding-top:40px;
+	padding-bottom: 40px;
+}
+body.page-template-page-servicos #portfolio .btn-more{
+	background:#c8c05a;
+	border-radius:0;
+	font-family: 'Gotham-Book',sans-serif;
+	border:0;
+	padding-left:20px;
+	padding-right:20px;
+	box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.75);
+}
 body.page-template-page-servicos h1{
 	font-family: 'Gotham-Bold',sans-serif;
 }
 body.page-template-page-servicos .desc{
+	padding-top:10px;
+	font-size: 1.4em;
 	font-family: "Istok Web",sans-serif;
+	color:white;
 }
 .page-template-page-servicos .navbar,
 .page-template-page-comercio-justo .navbar,
@@ -1505,23 +1580,30 @@ body.category-agenda #rede-submenu a,
 .page-template-page-servicos .bg-title-projetos {
 	display: none;
 }
+.page-template-page-servicos #titulo{
+	background:url('../images/bg-servicos-header.jpg') center center no-repeat;
+	background-size:cover;
+}
 .page-template-page-servicos #titulo h1 {
 	font-family: "Gotham-Bold";
 	padding: 50px 10px 10px;
 	margin: 0px !important;
 	display: block;
 	width: 100%;
-	color: #726658;
+	color: #FFF;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 2.4em;
+	text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
 }
-.page-template-page-servicos .desc {
-	color: #494949;
+.page-template-page-servicos #titulo .desc{
+	color: #FFF;
 	float: none;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	margin: 0 auto 50px;
 	text-align: center;
+	font-family: 'Gotham-Book',sans-serif;
+	text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
 }
 /* >> Capacitacao */
 .page-template-page-servicos #capacitacao {
@@ -1569,74 +1651,13 @@ body.category-agenda #rede-submenu a,
 	text-transform: uppercase;
 	text-shadow: 0px 4px 6px #000;
 }
-/* >> Consultorias */
-.page-template-page-servicos #consultorias {
-	background-position: center;
-	min-height: 470px;
-	position: relative;
-	background-size: 100% auto !important;
-}
-.page-template-page-servicos #consultorias .desc {
-	color: #FFF;
-	bottom: 40px;
-	font-size: 1.4em;
-	left: 40px;
-	text-align: left;
-	position: absolute;
-	width: 70%;
-	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
-	padding: 15px;
-}
-.page-template-page-servicos #consultorias .desc h1 {
-	color: #dd7a00;
-	text-transform: uppercase;
-	text-shadow: 0px 4px 6px #000;
-}
-/* >> Projetos Personalizados */
-.page-template-page-servicos #personalizados {
-	background-position: center;
-	min-height: 470px;
-	position: relative;
-	background-size: 100% auto !important;
-}
-.page-template-page-servicos #personalizados .desc {
-	color: #FFF;
-	bottom: 40px;
-	font-size: 1.4em;
-	right: 40px;
-	text-align: right;
-	position: absolute;
-	width: 70%;
-	background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.5);
-	padding: 15px;
-}
-.page-template-page-servicos #personalizados .desc h1 {
-	color: #dd7a00;
-	text-transform: uppercase;
-	text-shadow: 0px 4px 6px #000;
-}
-/* >> Já nos Contrataram */
-.page-template-page-servicos #contrataram {
-	background-position: center;
-	min-height: 370px;
-	position: relative;
-}
-.page-template-page-servicos #contrataram h1 {
-	color: #726658;
-	margin: 50px auto 30px;
-	text-align: center;
-	text-transform: uppercase;
-}
-.page-template-page-servicos #contrataram .desc img {
-	margin: 0 auto;
-	max-width: 100%;
-}
 /* >> Fale Conosco */
 .page-template-page-servicos #fale-conosco {
 	float: none;
 	margin: 0 auto;
 }
-.page-template-page-servicos #fale-conosco h1 {
+.page-template-page-servicos #fale-conosco h1,
+.page-template-page-servicos #contrataram h1{
 	color: #726658;
 	margin: 50px auto 30px;
 	text-align: center;
@@ -2197,13 +2218,15 @@ a.zilla-button:visited {
 .page-template-page-artesanato-brasileiro #como-apoiar{
 	clear:both;
 }
-.page-template-page-artesanato-brasileiro section#entenda a.entenda-btn-txt{
+.page-template-page-artesanato-brasileiro section#entenda a.entenda-btn-txt,
+.page-template-page-servicos a.entenda-btn-txt{
 	font-family: 'Gotham-Book',sans-serif;
 	color:white !important;
 	text-align: center;
 	font-size:1.2em;
 }
-.page-template-page-artesanato-brasileiro section#entenda a.entenda-btn{
+.page-template-page-artesanato-brasileiro section#entenda a.entenda-btn,
+.page-template-page-servicos a.entenda-btn{
 	background:url('../images/btn-artesanato-brasileiro-entenda.jpg') no-repeat center;
 	height:22px;
 	margin-top:10px;
