@@ -1534,6 +1534,9 @@ body.page-template-page-servicos .desc{
 	font-family: "Istok Web",sans-serif;
 	color:white;
 }
+body.page-template-page-servicos #contrataram img{
+	max-width: 100%;
+}
 .page-template-page-servicos .navbar,
 .page-template-page-comercio-justo .navbar,
 body.category-agenda .navbar,
