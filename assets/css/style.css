@@ -564,6 +564,17 @@ body.page .destaque-1 h3,
 	font-size: 1em;
 	margin-top: 25px;
 }
+
+#footer .creditos-fotos{
+	color:white;
+	font-family: 'Istok Web', sans-serif;
+	font-size: 0.85em;
+	padding-top: 15px;
+	text-align: right;
+	display: block;
+	clear: both;
+}
+
 #footer .parceiro-iguatemi{
 	color:white;
 	font-size:26px;
@@ -1456,7 +1467,7 @@ body.single-projetos, body.page-template-page-rede-php{
 	position: absolute;
 	background:rgba(25, 155, 108, 0.7);
 	margin:0;
-	bottom:0;
+	top:0;
 	z-index: 999;
 	font-size:1.7em;
 	color:#FFF;
@@ -2368,6 +2379,15 @@ a.zilla-button:visited {
 	display: block;
 }
 /* como apoiar */
+
+body.page-template-page-rede #como-apoiar .image {
+    display: none;
+}
+
+body.post-type-archive-membros #como-apoiar .image {
+    display: none;
+}
+
 .header-como-apoiar{
 	background: url('../images/bg-como-apoiar.jpg') no-repeat;
 	clear:both;

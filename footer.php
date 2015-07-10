@@ -88,6 +88,8 @@
 			     	<?php _e('Download do release','odin'); ?>
 			     </a>
 		    <?php endif; ?>
+				<p class="creditos-fotos">Se alguma foto publicada for de sua autoria e você desejar a remoção ou a inserção de créditos, entre em contato que providenciaremos imediatamente.
+				</p>
 		</div><!-- .col-md-6 pull-right -->
 		<div class="col-md-12 end-footer">
 

@@ -52,7 +52,7 @@ get_header('rede');
 	<div class="container">
 		<div class="row">
 			<?php $page = get_page_by_path( 'rede/tipologia', OBJECT, 'page' );?>
-			<h2 class="section-title"><?php _e('Tipologias','odin');?></h2><!-- .section-title -->
+			<h2 class="section-title"><?php _e('Saberes e Fazeres / Técnicas','odin');?></h2><!-- .section-title -->
 			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
 			<?php foreach ($tipos as $tipo):?>
 			     <a class="col-md-4 post-container tipo-open-modal" href="#tipo_modal" data-id="<?php echo $tipo->term_id;?>">
@@ -102,7 +102,7 @@ get_header('rede');
 					<?php if($img = get_field('rede_aceleradoras_img', get_the_ID())):?>
 					    <img src="<?php echo $img['sizes']['medium'];?>">
 				    <?php endif;?>
-				    <span><?php _e('Aceleradoras <br><small>e Governos</small>','odin');?></span>
+				    <span><?php _e('Agentes de Apoio','odin');?></span>
 			    </a>
 			</div><!-- .col-md-6 -->
 			<?php if($link = get_field('rede_membros_participe', get_the_ID())):?>
