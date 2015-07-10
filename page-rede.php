@@ -53,7 +53,13 @@ get_header('rede');
 		<div class="row">
 			<?php $page = get_page_by_path( 'rede/tipologia', OBJECT, 'page' );?>
 			<h2 class="section-title"><?php _e('Tipologias','odin');?></h2><!-- .section-title -->
-			<?php $tipos = get_categories(array('taxonomy' => 'tipos', 'hide_empty' => 0));?>
+			<?php $tipos = get_categories(
+				array(
+				'taxonomy' => 'tipos',
+				'hide_empty' => 0,
+				'parent' => 0,
+				)
+			);?>
 			<?php foreach ($tipos as $tipo):?>
 			     <a class="col-md-4 post-container tipo-open-modal" href="#tipo_modal" data-id="<?php echo $tipo->term_id;?>">
 			     		<?php if($thumb = get_field('tipo_thumb', 'tipos_'.$tipo->term_id)): ?>
