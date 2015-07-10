@@ -6,9 +6,20 @@
 		<?php the_title();?>
 	</h1><!-- .post-title col-md-12 -->
 	<h3 class="col-md-12">
-		<?php if($cat = get_the_terms(get_the_ID(),'tipos')): ?>
-		<?php $cat = array_pop($cat);?>
-		    <?php echo $cat->name . ' - ' . get_post_meta( get_the_ID(), 'project_year', true );?>
+		<?php if($cats = get_the_terms(get_the_ID(),'tipos')): ?>
+			<?php $i = 0;?>
+			<?php $count = count($cats);?>
+			<?php foreach($cats as $cat):?>
+				<?php if($i > 0):?>
+				    <?php echo '- ';?>
+				<?php endif;?>
+				<?php if($i == $count - 1):?>
+					<?php echo apply_filters('the_title',$cat->name) . ' - ' . get_post_meta( get_the_ID(), 'project_year', true );?>
+			    <?php else: ?>
+			    	<?php echo apply_filters('the_title',$cat->name);?>
+		      	<?php endif;?>
+		      	<?php $i++;?>
+		    <?php endforeach;?>
 		<?php endif;?>
 	</h3>
 	<div class="col-md-4 pull-left thumbnail-projetos">
