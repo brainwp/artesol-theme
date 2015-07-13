@@ -39,7 +39,7 @@
 		<header id="header" role="banner">
 
 <div id="menu-normal">
-				
+
 <nav id="main-navigation" class="navbar navbar-default" role="navigation">
 
 				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -120,7 +120,7 @@
 	<form action="<?php echo home_url('/');?>" id="search-interno" class="col-md-4 pull-right">
 		<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
 	</form><!-- #search-interno.col-md-4 pull-right -->
-
+		<?php if(!is_post_type_archive()):?>
 			<div class="col-md-12 sticky-menu" id="servicos-submenu">
 				<nav class="col-md-12">
 					<?php
@@ -135,5 +135,6 @@
 					?>
 				</nav><!-- .col-md-8 pull-right -->
 			</div><!-- .col-md-12 -->
+		<?php endif;?>
 		</header><!-- #header -->
 	</div>

@@ -998,7 +998,8 @@ body.post-type-archive-projetos {
 .page-template-page-servicos .navbar-default,
 .post-type-archive-dlm_download .navbar-default,
 .post-type-archive-membros .navbar-default,
-.single-membros .navbar-default{
+.single-membros .navbar-default,
+.post-type-archive-produtos .navbar-default{
 	background-color: #DD7A00;
 	border: none;
 	border-radius: 0;
@@ -1009,7 +1010,8 @@ body.post-type-archive-projetos {
 .page-template-page-servicos .navbar-default .logo,
 .post-type-archive-dlm_download .navbar-default .logo,
 .single-membros .navbar-default .logo,
-.post-type-archive-membros .navbar-default .logo{
+.post-type-archive-membros .navbar-default .logo,
+.post-type-archive-produtos .navbar-default .logo{
 	float: left;
 	padding: 7px 15px;
 	width: auto;
@@ -1020,7 +1022,8 @@ body.post-type-archive-projetos {
 .page-template-page-servicos .logo img,
 .post-type-archive-dlm_download .logo img,
 .post-type-archive-membros .logo img,
-.single-membros .logo img{
+.single-membros .logo img,
+.post-type-archive-produtos .logo img{
 	max-width: 160px;
 }
 .post-type-archive-projetos .navbar-default .navbar-nav > li > a,
@@ -1028,8 +1031,8 @@ body.post-type-archive-projetos {
 .page-template-page-rede-php .navbar-nav > li > a,
 .post-type-archive-dlm_download .navbar-nav > li > a,
 .post-type-archive-membros .navbar-nav > li > a,
-.single-membros .navbar-nav > li > a
-{
+.single-membros .navbar-nav > li > a,
+.post-type-archive-produtos .navbar-nav > li > a{
 	color: #FFF;
 	padding-bottom: 25px;
 	padding-top: 25px;
@@ -1106,7 +1109,8 @@ body.post-type-archive-projetos {
 .post-type-archive-dlm_download .page-header,
 .post-type-archive-membros .page-header,
 .single-projetos .page-header,
-.single-membros .page-header{
+.single-membros .page-header,
+.post-type-archive-produtos .page-header{
 	border: none;
 	color: #FFF;
 	display: block;
@@ -1119,7 +1123,8 @@ body.post-type-archive-projetos {
 .page-template-page-rede-php .page-header h1,
 .post-type-archive-dlm_download .page-header h1,
 .post-type-archive-membros .page-header h1,
-.single-membros .page-header h1{
+.single-membros .page-header h1,
+.post-type-archive-produtos .page-header h1{
 	display: inline-block;
 	float: left;
 	width: auto;
@@ -3325,7 +3330,8 @@ max-width: 540px;
 }
 /* membros da rede */
 body.post-type-archive-membros .bg-title-projetos,
-body.single-membros .bg-title-projetos{
+body.single-membros .bg-title-projetos,
+body.post-type-archive-produtos .bg-title-projetos{
 	background:#B5AEA5 url("../images/bg-header-membros.jpg") repeat scroll center top;
 	background-size: cover;
 }
@@ -3464,4 +3470,41 @@ body.single-membros .bg-title-projetos{
 }
 .filter-membros .dropdown{
 	display: inline;
+}
+body.post-type-archive-produtos .bg-title-projetos{
+	z-index:-1;
+}
+body.post-type-archive-produtos .publicacoes-archive-title{
+	text-transform: none !important;
+}
+body.post-type-archive-produtos #como-apoiar{
+	clear: both;
+}
+body.post-type-archive-produtos{
+	background: url('../images/bg-container.jpg') no-repeat;
+	background-size:cover;
+}
+body.post-type-archive-produtos .page-header img{
+	margin-top:-35px;
+}
+body.post-type-archive-produtos .page-header{
+	overflow: inherit !important;
+}
+.each-produto{
+	height:500px;
+}
+.each-produto .product-list-archive img{
+	height:120px;
+}
+.each-produto .product-list-archive a{
+	padding:0;
+	padding-left:2px;
+	padding-right:2px;
+}
+.each-produto .caption-product{
+	display: inline-block;
+	position: absolute;
+	bottom:0;
+	left:0;
+	background: rgba(25, 155, 108, 0.7);
 }
