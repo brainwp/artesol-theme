@@ -129,6 +129,44 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 		</div><!-- .row -->
 	</div><!-- .container -->
 </div><!-- .col-md-12 produtos-container -->
-<div class="col-md-12" style="height:780px;"></div><!-- .col-md-12 -->
-<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
+<section id="tipos" class="col-md-12">
+	<div class="container">
+		<div class="row">
+			<?php $page = get_page_by_path( 'rede/tipologia', OBJECT, 'page' );?>
+
+			<h2 class="section-title"><?php _e('Tipologias','odin');?></h2><!-- .section-title -->
+			<?php $tipos = get_categories(
+				array(
+				'taxonomy' => 'tipos',
+				'hide_empty' => 0,
+				'parent' => 0,
+				)
+			);?>
+			<?php foreach ($tipos as $tipo):?>
+			     <a class="col-md-4 post-container tipo-open-modal" href="#tipo_modal" data-id="<?php echo $tipo->term_id;?>">
+			     		<?php if($thumb = get_field('tipo_thumb', 'tipos_'.$tipo->term_id)): ?>
+			     		    <div class="img-container">
+			     		    	<img class="tipo-thumb" src="<?php echo $thumb['sizes']['medium'];?>">
+			                </div><!-- .img-container -->
+			            <?php endif;?>
+			        <h3 class="post-title"><?php echo $tipo->name;?></h3><!-- .post-title -->
+			     </a><!-- .col-md-4 post-container -->
+			<?php endforeach;?>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #tipos.col-md-12 -->
+<section id="patrimonio">
+	<div class="container">
+		<div class="row">
+			<h1 class="section-title">
+				<?php _e('Artesanato Brasileiro <br>e o<br>Patrimônio Imaterial','odin');?>
+			</h1><!-- .section-title -->
+			<div class="col-md-12 text-center">
+				<a href="<?php echo home_url('/artesanato-brasileiro'); ?>" class="btn-trabalhar">
+					<?php _e('Saiba Mais','odin');?>
+				</a>
+			</div><!-- .col-md-12 text-center -->
+		</div><!-- .row -->
+	</div><!-- .container -->
+</section><!-- #patrimonio -->
 <?php get_footer('rede');?>

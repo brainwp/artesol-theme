@@ -11,13 +11,15 @@ global $user;
 	    <div class="product-list-archive">
 	    	<?php $i = 1;?>
 	        <?php while(has_sub_field('user_produtos', 'user_'.$user->ID)): ?>
-	            <?php if($i == 6) break;?>
+	            <?php if($i == 9) break;?>
 		        <?php $img = get_sub_field('product_img');?>
 		    	<a class="col-md-4" data-reveal-img="<?php echo $img['sizes']['large'];?>" href="#">
 		    	    <img src="<?php echo $img['sizes']['thumbnail'];?>" />
 		    	    <span class="caption-product col-md-12">
-		    	    	<?php $img = wp_prepare_attachment_for_js($img['id']);?>
-		    	    	<?php echo apply_filters('the_title', $img['caption']);?>
+		    	    	<div class="col-md-12">
+		    				<?php $img = wp_prepare_attachment_for_js($img['id']);?>
+		    	    		<?php echo apply_filters('the_title', $img['caption']);?>
+		    	    	</div><!-- .col-md-12 -->
 		    	    </span>
 		        </a><!-- .col-md-12 meta-content -->
 		        <?php $i++;?>
