@@ -5,7 +5,7 @@ class Brasa_Agenda{
 		//hooks
 		add_action( 'wp', array($this,'add_cron') );
 		add_action( 'brasa_agenda_cron', array($this,'do_cron') );
-		add_action( 'pre_get_posts', array($this, 'order_archive') );
+		add_action( 'pre_get_posts', array($this, 'order_archive'), 9999999 );
 	}
 
 	public function order_archive($query){
@@ -16,7 +16,7 @@ class Brasa_Agenda{
 
 		$query->set('orderby','meta_value');
 		$query->set('meta_key','evento_data');
-		$query->set('order','DESC');
+		$query->set('order','ASC');
 	}
 	public function add_cron(){
 		if( wp_next_scheduled( 'brasa_agenda_cron' ) )
