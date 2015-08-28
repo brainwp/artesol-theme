@@ -230,5 +230,5 @@ get_header('rede');
 	        </h2><!-- .section-title -->
 	</div><!-- .container -->
 </section><!-- #map -->
-<iframe src="http://a.brasawp.art.br/artesol/?embed" id="section-mapa"></iframe>
+<iframe src="http://mapa.artesol.org.br/?embed" id="section-mapa"></iframe>
 <?php get_footer('rede');?>
