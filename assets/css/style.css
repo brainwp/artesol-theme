@@ -1131,6 +1131,14 @@ body.post-type-archive-projetos {
 	font-family: "Gotham-Bold", sans-serif;
 	text-transform: uppercase;
 }
+.post-type-archive-projetos .page-header h1,
+.single-projetos .page-header h1,
+.post-type-archive-membros .page-header h1,
+.single-membros .page-header h1,
+.post-type-archive-produtos .page-header h1{
+	margin-left: 15px;
+}
+
 .single-projetos .page-header span,
 .page-template-page-rede-php .page-header span,
 .post-type-archive-dlm_download .page-header span{
@@ -1184,7 +1192,7 @@ article#projetos-post .projetos-meta .repeater-projetos img{
 article#projetos-post .projetos-content{
 	color:#6e6e6e;
 	font-family: 'Gotham', sans-serif;
-	margin: 0 20px;
+	margin: 20px 0;
 }
 body.single-projetos, body.page-template-page-rede-php{
 	background:url('../images/bg-container.jpg') no-repeat;
@@ -3339,7 +3347,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 .each-membro{
 	border-left: 10px solid #199b6c;
 	border-bottom: 10px solid #199b6c;
-	min-height:285px;
+	min-height:290px;
 	max-height:460px;
 	margin-bottom:20px;
 }
@@ -3502,6 +3510,7 @@ body.post-type-archive-produtos .page-header{
 	padding:0;
 	padding-left:2px;
 	padding-right:2px;
+	margin-bottom: 10px;
 }
 .each-produto .caption-product{
 	padding-left:0;
