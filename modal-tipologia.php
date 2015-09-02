@@ -14,7 +14,10 @@ $term = get_term($category_id,'tipos',OBJECT,null);
         <?php echo $term->description;?>
     </div><!-- .col-md-12 content -->
     <div class="col-md-12 text-center">
-    	<a class="btn btn-primary btn-lg" href="<?php echo get_term_link($term);?>">
+    	<?php $args = array();?>
+    	<?php $args['filter_type'] = $term->slug;?>
+    	<?php $link = add_query_arg($args, get_post_type_archive_link('produtos'));?>
+    	<a class="btn btn-primary btn-lg" href="<?php echo esc_url($link);?>">
     		<?php _e('Veja alguns produtos dessa tipologia','odin');?>
     	</a>
     </div><!-- .col-md-12 text-center -->

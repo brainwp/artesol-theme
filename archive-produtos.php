@@ -25,7 +25,7 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 	array_merge($args['meta_query'],$meta_query);
 }
 $count_query = new WP_User_Query($args);
-$per_page = 2; // número de registros por página
+$per_page = 8; // número de registros por página
 $page = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
 $pages = ceil($count_query->total_users/$per_page);
 $offset = ($per_page*$page)-$per_page;
@@ -109,7 +109,7 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 			<?php endif;?>
 			<div class="text-center noticias-pagination">
 			<?php
-			if ( ! empty( $user_query->results ) ):
+			if ( ! empty( $user_query->results ) && count( $user_query->results ) > $pages ):
 			$big = 999999999; // need an unlikely integer
 		    $url_args = array();
 		    if(isset($_GET['filter_type']) && ! empty( $_GET['filter_type'] )) $url_args['filter_type'] = $_GET['filter_type'];

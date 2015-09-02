@@ -158,3 +158,11 @@ if ( ! function_exists( 'get_membros_query_args' ) ) {
 	}
 
 }
+
+function brasa_get_resumo($text, $max){
+	$text = apply_filters('the_content', $text);
+	$text = wp_strip_all_tags( $text, true);
+    $text = substr($text, 0, strrpos(substr($text, 0, $max), ' ')) . '...';
+    return $texto;
+}
+
