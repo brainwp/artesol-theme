@@ -1183,7 +1183,8 @@ article#projetos-post .projetos-meta .repeater-projetos img{
 
 article#projetos-post .projetos-content{
 	color:#6e6e6e;
-	font-family: 'Gotham-Bold', sans-serif;
+	font-family: 'Gotham', sans-serif;
+	margin: 0 20px;
 }
 body.single-projetos, body.page-template-page-rede-php{
 	background:url('../images/bg-container.jpg') no-repeat;
@@ -2066,7 +2067,7 @@ a.zilla-button:visited {
 }
 
 .each-publicacao{
-	min-height:335px;
+	min-height:300px;
 	background:#E2E2E2 !important;
 	border-left:10px solid #dd7a00;
 	border-bottom:10px solid #dd7a00;
@@ -2094,7 +2095,7 @@ a.zilla-button:visited {
 }
 
 .each-publicacao .image-container{
-	padding:20px 0px;
+	padding: 0px;
 }
 .each-publicacao .image-container img{
 	max-width: 100%;
@@ -3338,14 +3339,15 @@ body.post-type-archive-produtos .bg-title-projetos{
 .each-membro{
 	border-left: 10px solid #199b6c;
 	border-bottom: 10px solid #199b6c;
-	height:290px;
-	min-height: inherit;
-	margin-bottom:10px;
+	min-height:285px;
+	max-height:460px;
+	margin-bottom:20px;
 }
 .each-membro .entry-title{
 	font-family: "Gotham-Bold",sans-serif;
 	text-transform: uppercase;
 	color:#726658 !important;
+	margin-top: 10px;
 }
 .membros-link a{
 	font-family: "Gotham-Light",sans-serif;
