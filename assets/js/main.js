@@ -151,5 +151,14 @@ jQuery(document).ready(function($) {
 		$('#reveal-modal-id').append('<a class="close-reveal-modal">×</a>');
 		$('#reveal-modal-id').foundation('reveal', 'open');
 	});
+	$('.product-list-archive a').on('click',function(e){
+		e.preventDefault();
+		var img_url = $(this).attr('data-reveal-img');
+		var img = '<img src="'+img_url+'" class="reveal-modal-data-img">';
+		$('#reveal-modal-id').append(img);
+		$('#reveal-modal-id').append('<a class="close-reveal-modal">×</a>');
+		$('#reveal-modal-id').foundation('reveal', 'open');
+	});
+
 });
 
