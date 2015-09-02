@@ -25,10 +25,6 @@ $user = get_user_by( 'login', $wp_query->query_vars['membros']);
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_user_meta($user->ID, 'user_local', true ));?>
 		</div><!-- .col-md-12 meta-content -->
-	    <h4 class="col-md-12"><?php _e('Duração:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_user_meta($user->ID, 'user_time', true ));?>
-		</div><!-- .col-md-12 meta-content -->
 	    <h4 class="col-md-12"><?php _e('Artesãos Beneficiados:','odin');?></h4>
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_user_meta($user->ID, 'user_beneficiados', true ));?>
