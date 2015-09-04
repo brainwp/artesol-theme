@@ -1,7 +1,7 @@
 <?php
 /* content single membros */
 global $wp_query;
-$user = get_user_by( 'login', $wp_query->query_vars['membros']);
+$user = get_user_by( 'slug', $wp_query->query_vars['membros']);
 ?>
 <article id="projetos-post" class="col-md-12">
 	<h1 class="post-title col-md-12">

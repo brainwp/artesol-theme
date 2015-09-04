@@ -27,7 +27,7 @@ global $user;
 	    </div><!-- .col-md-12 product-list-archive -->
 	   <div class="clear"></div>
 	   <div class="download-container">
-	    	<a href="<?php echo home_url('/membros/'.$user->user_login);?>" class="btn download-btn pull-right btn-membro">
+	    	<a href="<?php echo home_url('/membros/'.$user->user_nicename);?>" class="btn download-btn pull-right btn-membro">
 	    		<?php _e('Saiba Mais','odin');?>
 	    	</a>
 	    </div><!-- .col-md-12 download-container -->

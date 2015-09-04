@@ -494,7 +494,7 @@ add_action('edited_term_taxonomy','brasa_save_tipos');
 function brasa_template_redirect( $template ){
 	global $wp_query;
 
-    if( isset($wp_query->query_vars['membros']) && get_user_by( 'login', $wp_query->query_vars['membros']) ){
+    if( isset($wp_query->query_vars['membros']) && get_user_by( 'slug', $wp_query->query_vars['membros']) ){
     	status_header(200);
         $wp_query->is_404 = false;
 

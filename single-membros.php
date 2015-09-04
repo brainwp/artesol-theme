@@ -37,7 +37,7 @@ get_header( 'projetos' ); ?>
 
 				<?php
 					global $wp_query;
-					if( isset($wp_query->query_vars['membros']) && get_user_by( 'login', $wp_query->query_vars['membros']) ):
+					if( isset($wp_query->query_vars['membros']) && get_user_by( 'slug', $wp_query->query_vars['membros']) ):
 
 						/*
 						 * Include the post format-specific template for the content. If you want to
