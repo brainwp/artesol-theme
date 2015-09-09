@@ -25,10 +25,41 @@ $user = get_user_by( 'slug', $wp_query->query_vars['membros']);
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_user_meta($user->ID, 'user_local', true ));?>
 		</div><!-- .col-md-12 meta-content -->
-	    <h4 class="col-md-12"><?php _e('Artesãos Beneficiados:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_user_meta($user->ID, 'user_beneficiados', true ));?>
-		</div><!-- .col-md-12 meta-content -->
+		<?php if ( $field = get_user_meta( $user->ID, 'user_phone', true) ) : ?>
+	    	<h4 class="col-md-12"><?php _e('Telefone:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<?php echo esc_textarea( $field );?>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
+		<?php if ( $field = get_user_meta( $user->ID, 'user_email', true) ) : ?>
+	    	<h4 class="col-md-12"><?php _e('E-mail:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<a href="<?php echo esc_url( $field );?>">
+					<?php echo esc_url( $field );?>
+				</a>
+			</div><!-- .col-md-12 meta-content -->
+		<?php else : ?>
+			<h4 class="col-md-12"><?php _e('E-mail:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<a href="<?php echo esc_url( $user->user_email );?>">
+					<?php echo esc_url( $user->user_email );?>
+				</a>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
+		<?php if ( $field = get_user_meta( $user->ID, 'user_contato', true) ) : ?>
+			<h4 class="col-md-12"><?php _e('Contato:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<?php echo esc_textarea( $field );?>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
+		<?php if ( $field = get_user_meta( $user->ID, 'user_fb', true) ) : ?>
+			<h4 class="col-md-12"><?php _e('Facebook:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<a href="<?php echo esc_url( $field );?>">
+					<?php echo esc_url( $field );?>
+				</a>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
 	</div><!-- .col-md-3 projetos-meta -->
 	<div class="col-md-5 projetos-meta">
 		<?php if(get_field('user_financiadores', 'user_'.$user->ID)): ?>
@@ -42,10 +73,6 @@ $user = get_user_by( 'slug', $wp_query->query_vars['membros']);
 		        <?php endwhile;?>
 		    </div><!-- .col-md-12 meta-content -->
 		<?php endif;?>
-		<h4 class="col-md-12"><?php _e('Gênero:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_user_meta($user->ID, 'user_genero', true ));?>
-		</div><!-- .col-md-12 meta-content -->
 	</div><!-- .col-md-5 projetos-meta -->
 	<div class="col-md-12 projetos-content">
 		<?php if($content = get_user_meta($user->ID, 'user_content', true)):?>
