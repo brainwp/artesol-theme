@@ -26,7 +26,7 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 	array_merge($args['meta_query'],$meta_query);
 }
 $count_query = new WP_User_Query($args);
-$per_page = 1; // número de registros por página
+$per_page = 8; // número de registros por página
 $page = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
 $pages = ceil($count_query->total_users/$per_page);
 $offset = ($per_page*$page)-$per_page;
