@@ -513,3 +513,8 @@ function add_caption_slider_rede($html){
 	return $html;
 }
 add_filter('brasa_slider_loop_before_image','add_caption_slider_rede');
+
+function brasa_add_user_role(){
+	$result = add_role( 'comentadores', __('Comentadores', 'odin'), array() );
+}
+add_action( 'init', 'brasa_add_user_role' );
