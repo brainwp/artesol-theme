@@ -34,15 +34,15 @@ $user = get_user_by( 'slug', $wp_query->query_vars['membros']);
 		<?php if ( $field = get_user_meta( $user->ID, 'user_email', true) ) : ?>
 	    	<h4 class="col-md-12"><?php _e('E-mail:','odin');?></h4>
 			<div class="col-md-12 meta-content">
-				<a href="<?php echo esc_url( $field );?>">
-					<?php echo esc_url( $field );?>
+				<a href="mailto:<?php echo $field;?>">
+					<?php echo $field; ?>
 				</a>
 			</div><!-- .col-md-12 meta-content -->
 		<?php else : ?>
 			<h4 class="col-md-12"><?php _e('E-mail:','odin');?></h4>
 			<div class="col-md-12 meta-content">
-				<a href="<?php echo esc_url( $user->user_email );?>">
-					<?php echo esc_url( $user->user_email );?>
+				<a href="mailto:<?php echo $user->user_email;?>">
+					<?php echo $user->user_email;?>
 				</a>
 			</div><!-- .col-md-12 meta-content -->
 		<?php endif;?>
@@ -54,6 +54,14 @@ $user = get_user_by( 'slug', $wp_query->query_vars['membros']);
 		<?php endif;?>
 		<?php if ( $field = get_user_meta( $user->ID, 'user_fb', true) ) : ?>
 			<h4 class="col-md-12"><?php _e('Facebook:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<a href="<?php echo esc_url( $field );?>">
+					<?php echo esc_url( $field );?>
+				</a>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
+		<?php if ( $field = get_user_meta( $user->ID, 'user_site', true) ) : ?>
+			<h4 class="col-md-12"><?php _e('Site:','odin');?></h4>
 			<div class="col-md-12 meta-content">
 				<a href="<?php echo esc_url( $field );?>">
 					<?php echo esc_url( $field );?>

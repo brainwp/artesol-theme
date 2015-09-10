@@ -1681,7 +1681,17 @@ if(function_exists("register_field_group"))
 				'rows' => '',
 				'formatting' => 'br',
 			),
-
+			array (
+				'key' => 'field_55919f055480ujksdttutehaaaaa42428',
+				'label' => 'Site do Grupo',
+				'name' => 'user_site',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'br',
+			),
 			array (
 				'key' => 'field_55919eeeeewweyuggyr743874w3ra',
 				'label' => 'Facebook',
