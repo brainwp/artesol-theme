@@ -63,7 +63,7 @@ $user = get_user_by( 'slug', $wp_query->query_vars['membros']);
 	</div><!-- .col-md-3 projetos-meta -->
 	<div class="col-md-5 projetos-meta">
 		<?php if(get_field('user_financiadores', 'user_'.$user->ID)): ?>
-		    <h4 class="col-md-12"><?php _e('Parceiro Financiador:','odin');?></h4>
+		    <h4 class="col-md-12"><?php _e('Parceiros Financiadores:','odin');?></h4>
 		    <div class="col-md-12 meta-content">
 		    	<?php while(has_sub_field('user_financiadores', 'user_'.$user->ID)): ?>
 		    	    <a class="repeater-projetos" href="<?php echo the_sub_field('project_repeater_link');?>" target="_blank">

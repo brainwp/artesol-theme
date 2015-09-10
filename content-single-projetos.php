@@ -26,18 +26,24 @@
 		<?php the_post_thumbnail('medium');?>
 	</div><!-- .col-md-4 pull-left thumbnail-projetos -->
 	<div class="col-md-3 projetos-meta">
-		<h4 class="col-md-12"><?php _e('Cidade:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_local', true ));?>
-		</div><!-- .col-md-12 meta-content -->
-	    <h4 class="col-md-12"><?php _e('Duração:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_time', true ));?>
-		</div><!-- .col-md-12 meta-content -->
-	    <h4 class="col-md-12"><?php _e('Artesãos Beneficiados:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_beneficiados', true ));?>
-		</div><!-- .col-md-12 meta-content -->
+		<?php if ( $field = get_post_meta(get_the_ID(), 'project_local', true ) ) : ?>
+			<h4 class="col-md-12"><?php _e('Cidade:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<?php echo esc_textarea( $field );?>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
+		<?php if ( $field = get_post_meta(get_the_ID(), 'project_time', true ) ) : ?>
+	    	<h4 class="col-md-12"><?php _e('Duração:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<?php echo esc_textarea( $field );?>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
+		<?php if ( $field = get_post_meta(get_the_ID(), 'project_beneficiados', true ) ) : ?>
+	    	<h4 class="col-md-12"><?php _e('Artesãos Beneficiados:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<?php echo esc_textarea( $field );?>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
 	</div><!-- .col-md-3 projetos-meta -->
 	<div class="col-md-5 projetos-meta">
 		<?php if(get_field('project_repeater')): ?>
@@ -51,14 +57,18 @@
 		        <?php endwhile;?>
 		    </div><!-- .col-md-12 meta-content -->
 		<?php endif;?>
-		<h4 class="col-md-12"><?php _e('Parceiros apoiadores:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_apoiadores', true ));?>
-		</div><!-- .col-md-12 meta-content -->
-		<h4 class="col-md-12"><?php _e('Gênero:','odin');?></h4>
-		<div class="col-md-12 meta-content">
-			<?php echo esc_textarea(get_post_meta(get_the_ID(), 'project_type', true ));?>
-		</div><!-- .col-md-12 meta-content -->
+		<?php if ( $field = get_post_meta(get_the_ID(), 'project_apoiadores', true ) ) : ?>
+			<h4 class="col-md-12"><?php _e('Parceiros apoiadores:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<?php echo esc_textarea( $fields );?>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
+		<?php if ( $field = get_post_meta(get_the_ID(), 'project_type', true ) ) : ?>
+			<h4 class="col-md-12"><?php _e('Gênero:','odin');?></h4>
+			<div class="col-md-12 meta-content">
+				<?php echo esc_textarea( $field );?>
+			</div><!-- .col-md-12 meta-content -->
+		<?php endif;?>
 	</div><!-- .col-md-5 projetos-meta -->
 	<div class="col-md-12 projetos-content"><?php the_content();?></div><!-- .col-md-12 projetos-content -->
 </article><!-- #projetos-post -->
