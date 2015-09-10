@@ -25,7 +25,7 @@ $user = get_user_by( 'slug', $wp_query->query_vars['membros']);
 		<div class="col-md-12 meta-content">
 			<?php echo esc_textarea(get_user_meta($user->ID, 'user_local', true ));?>
 		</div><!-- .col-md-12 meta-content -->
-		<?php if ( $field = get_user_meta( $user->ID, 'user_phone', true) ) : ?>
+		<?php if ( $field = get_user_meta( $user->ID, 'telefone', true) ) : ?>
 	    	<h4 class="col-md-12"><?php _e('Telefone:','odin');?></h4>
 			<div class="col-md-12 meta-content">
 				<?php echo esc_textarea( $field );?>

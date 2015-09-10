@@ -1651,7 +1651,7 @@ if(function_exists("register_field_group"))
 			array (
 				'key' => 'field_55919f0554808',
 				'label' => 'Telefone',
-				'name' => 'user_phone',
+				'name' => 'telefone',
 				'type' => 'text',
 				'default_value' => '',
 				'placeholder' => '',
