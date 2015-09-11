@@ -9,6 +9,7 @@
  */
 get_header( 'projetos' );
 $args = array(
+	'role' => 'Subscriber',
 	'meta_query' => array(
 		array(
 			'key'     => 'type_pin',
@@ -41,6 +42,7 @@ $page = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
 $pages = ceil($count_query->total_users/$per_page);
 $offset = ($per_page*$page)-$per_page;
 $args = array(
+	'role' => 'Subscriber',
 	'number' => $per_page,
 	'offset' => $offset,
 	'meta_query' => array(

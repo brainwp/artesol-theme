@@ -158,6 +158,24 @@ if ( ! function_exists( 'get_membros_query_args' ) ) {
 	}
 
 }
+if ( ! function_exists( 'get_projetos_link' ) ) {
+
+	function get_projetos_link(  ){
+		$args = array();
+		if(isset($_GET['state']) && !empty($_GET['state'])){
+			$args['state'] = $_GET['state'];
+		}
+		if(isset($_GET['by_type']) && !empty($_GET['by_type'])){
+			$args['by_type'] = $_GET['by_type'];
+		}
+		if(isset($_GET['projetos_category']) && !empty($_GET['projetos_category'])){
+			$args['projetos_category'] = $_GET['projetos_category'];
+		}
+
+		return $args;
+	}
+
+}
 
 function brasa_get_resumo($text, $max){
 	$text = apply_filters('the_content', $text);

@@ -147,15 +147,16 @@ add_filter('body_class', 'odin_new_body_class');
  */
 
 function brasa_pre_get_posts($query) {
-	if( is_post_type_archive('projetos') && $query->is_main_query() && isset($_GET['state']) && !empty($_GET['state']) ){
-		$tax_query = array(
-			array(
-				'taxonomy' => 'membros_state',
-				'field'    => 'slug',
-				'terms'    => $_GET['state'],
-			),
-		);
-		$query->set('tax_query', $tax_query);
+	if( is_post_type_archive('projetos') && $query->is_main_query() ) {
+		if ( isset( $_GET['state'] ) && !empty( $_GET['state'] ) ) {
+			$query->set( 'membros_state', $_GET['state'] );
+		}
+		if ( isset( $_GET['by_type'] ) && !empty( $_GET['by_type'] ) ) {
+			$query->set( 'tipos', $_GET['by_type'] );
+		}
+		if ( isset( $_GET['projetos_category'] ) && !empty( $_GET['projetos_category'] ) ) {
+			$query->set( 'membros_category', $_GET['projetos_category'] );
+		}
     }
 }
 add_action( 'pre_get_posts', 'brasa_pre_get_posts' );
