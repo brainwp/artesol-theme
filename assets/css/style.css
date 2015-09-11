@@ -561,7 +561,7 @@ body.page .destaque-1 h3,
 #footer .endereco{
 	color:white;
 	font-family: 'Istok Web', sans-serif;
-	font-size: 1em;
+	font-size: 1.1em;
 	margin-top: 25px;
 }
 
@@ -1812,7 +1812,7 @@ body.category-agenda .navbar-default .navbar-nav > li > a:hover{
 	font-family: 'Gotham-Bold',sans-serif;
 }
 .page .site-main {
-	margin-bottom: 100px;
+	margin-bottom: 120px;
 }
 blockquote {
     font-size: 15.5px;
