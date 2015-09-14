@@ -1118,6 +1118,11 @@ body.post-type-archive-projetos {
 	overflow: hidden;
 	width: 100%;
 }
+
+.single-membros .page-header {
+	margin: 17px 0 20px 0;
+}
+
 .post-type-archive-projetos .page-header h1,
 .single-projetos .page-header h1,
 .page-template-page-rede-php .page-header h1,
@@ -1169,6 +1174,7 @@ article#projetos-post h3{
 }
 article#projetos-post .thumbnail-projetos img{
 	width:100%;
+	height: auto;
 }
 article#projetos-post .projetos-meta h4{
 	font-family: 'Gotham-Bold';
@@ -2109,6 +2115,7 @@ a.zilla-button:visited {
 	max-width: 100%;
 	max-height: 110px;
 	width: auto;
+	height: auto;
 }
 .each-publicacao h1{
 	font-family: 'Gotham-Bold',sans-serif;
@@ -3348,7 +3355,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 	border-left: 10px solid #199b6c;
 	border-bottom: 10px solid #199b6c;
 	min-height:290px;
-	max-height:460px;
+	max-height:520px;
 	margin-bottom:20px;
 }
 .each-membro .entry-title{
@@ -3466,7 +3473,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 	margin-top:0;
 }
 .single-membros .page-header img{
-	margin-top:-20px;
+	margin-top:-10px;
 }
 .single-membros .page-header .publicacoes-archive-title{
 	margin-top:35px;
@@ -3501,7 +3508,7 @@ body.post-type-archive-produtos .page-header{
 	overflow: inherit !important;
 }
 .each-produto{
-	height:500px;
+	height:520px;
 }
 .each-produto .product-list-archive img{
 	height:120px;
