@@ -12,6 +12,11 @@ get_header('rede');
 				<div class="col-md-4 pull-right icon-como-apoiar">
 					<h3><?php _e('Como Apoiar','odin');?></h3>
 					<h5><?php _e('Pessoa Jurídica','odin');?></h5>
+					<h4>					
+					<a href="<?php echo esc_url(get_field('link_pessoa_fisica', 'option'));?>">
+					<?php _e('Pessoa Física','odin');?>
+			  		</a>
+					</h4>
 				</div><!-- .col-md-4 pull-right icon-como-apoiar -->
 			</div><!-- .row -->
 		</div><!-- .container -->

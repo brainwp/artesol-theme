@@ -15,9 +15,11 @@ get_header( 'projetos' ); ?>
 
 				<header class="page-header">
 					<h1 class="publicacoes-archive-title">
+						<a href="<?php echo home_url('/membros'); ?>">
 						<?php
 							_e( 'Membros da Rede', 'odin' );
 						?>
+						</a>
 					</h1>
 					<div class="pull-right">
 						<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">

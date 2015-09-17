@@ -561,8 +561,9 @@ body.page .destaque-1 h3,
 #footer .endereco{
 	color:white;
 	font-family: 'Istok Web', sans-serif;
-	font-size: 1.1em;
-	margin-top: 25px;
+    font-size: 1em;
+    margin-top: 25px;
+    letter-spacing: 1px;
 }
 
 #footer .creditos-fotos{
@@ -586,7 +587,7 @@ body.page .destaque-1 h3,
 	text-transform: uppercase;
 	transition:200ms ease all;
 }
-#footer .parceiro-iguatemi:hover{
+#footer .parceiro-iguatemi:hover, #footer .imprensa-link:hover{
 	color: #EFB310;
 	text-decoration: none;
 }
@@ -609,6 +610,11 @@ body.page .destaque-1 h3,
 	text-decoration: none !important;
 	text-transform: uppercase;
 }
+
+a:hover.release-btn {
+	background: #E5AB19 none repeat scroll 0% 0%;
+}
+
 #footer .imprensa-link{
 	color:white;
 	font-size:16px;
@@ -636,7 +642,14 @@ body.page .destaque-1 h3,
 	color:white !important;
 	text-decoration: none !important;
 	border:transparent !important;
+	opacity: 0.85;
 }
+
+#footer .end-footer .social span, #footer .end-footer .social a:hover{
+	opacity: 1;
+}
+
+
 #footer .end-footer .social {
 	margin-top: 25px;
 }
@@ -708,6 +721,7 @@ body.page .destaque-1 h3,
 	min-height: 340px;
 	overflow: hidden;
 	width: 100%;
+	margin-bottom: 20px;
 }
 
 .container.home .boxes .projetos .icon {
@@ -731,6 +745,32 @@ body.page .destaque-1 h3,
 	text-align: center;
 	font-size: 1.2em;
 }
+
+
+@media (max-width:768px) {
+	.container.home .destaque-1 h2, .container.home .destaque-3 h2 {
+	    font-size: 1.8em;
+	}
+	 .container.home .destaque-1 h3,.container.home .destaque-2 h3, .container.home .destaque-3 h3 {
+	 font-size: 20px;
+	}
+
+	#slider-ctrl {
+		display: none;
+	}
+
+	#footer nav, #footer nav ul, #footer .col-md-6.pull-left, #footer .endereco {
+	    width: 100%;
+	}
+
+	#search-interno-click {
+		display: none !important;
+	}
+
+
+}
+
+
 /* Como apoiar */
 #como-apoiar{
 	margin-left: 33%;
@@ -1143,6 +1183,30 @@ body.post-type-archive-projetos {
 .post-type-archive-produtos .page-header h1{
 	margin-left: 15px;
 }
+
+.single-projetos .page-header h1 a,
+.single-membros .page-header h1 a {
+	text-decoration:none;
+	color: #FFF;	
+}
+
+.single-projetos .page-header h1 a:hover,
+.single-membros .page-header h1 a:hover {
+	text-decoration:none;
+	color: #EEE;	
+}
+
+.nav-history a:hover { 
+	text-decoration: none;
+	color: #217F56;
+}
+
+
+a:hover.projetos {
+	text-decoration: none;
+	color: #EEE !important;
+} 
+
 
 .single-projetos .page-header span,
 .page-template-page-rede-php .page-header span,
@@ -2080,8 +2144,8 @@ a.zilla-button:visited {
 	width: 50%;
 }
 
-.each-publicacao{
-	min-height:300px;
+.each-publicacao {
+	min-height:325px;
 	background:#E2E2E2 !important;
 	border-left:10px solid #dd7a00;
 	border-bottom:10px solid #dd7a00;
@@ -2109,11 +2173,11 @@ a.zilla-button:visited {
 }
 
 .each-publicacao .image-container{
-	padding: 0px;
+	padding: 20px 0px 0px;
 }
 .each-publicacao .image-container img{
 	max-width: 100%;
-	max-height: 110px;
+	max-height: 165px;
 	width: auto;
 	height: auto;
 }
@@ -2447,12 +2511,28 @@ box-shadow:         0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 	text-align: center;
 	font-family: "Istok Web",sans-serif;
 	color: #FFF;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	font-weight: 300;
 	font-weight: normal;
 	display: block;
-	padding-top:20px;
+	padding-top:12px;
 }
+
+.header-como-apoiar h4 a{
+	text-align: center;
+	font-family: "Istok Web",sans-serif;
+	color: #EFB310;
+	font-size: 1em;
+	font-weight: 300;
+	font-weight: normal;
+	display: block;
+	margin-top:0px;
+	text-decoration: none;
+}
+.header-como-apoiar h4 a:hover {
+	color: #E5AB19;
+}
+
 .como-apoiar-post-content{
 	font-family: "Istok Web",sans-serif;
 	color: #000;
@@ -2967,6 +3047,8 @@ max-width: 540px;
 	margin-bottom: 15px;
 	margin-top: -5px;
 	text-decoration: none;
+	width: 100%;
+	text-align: right;
 }
 
 .change-english .pull-right:hover{
@@ -3354,7 +3436,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 .each-membro{
 	border-left: 10px solid #199b6c;
 	border-bottom: 10px solid #199b6c;
-	min-height:290px;
+	min-height:325px;
 	max-height:520px;
 	margin-bottom:20px;
 }

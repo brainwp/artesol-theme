@@ -17,9 +17,11 @@ get_header( 'projetos' ); ?>
 
 				<header class="page-header">
 					<h1 class="page-title">
+						<a href="<?php echo home_url('/projetos'); ?>">
 						<?php
 							_e( 'Projetos', 'odin' );
 						?>
+						</a>
 					</h1>
 					<span>
 						<?php // if($content = get_field('project_content','options')): ?>
