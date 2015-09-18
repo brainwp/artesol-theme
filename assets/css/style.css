@@ -1766,6 +1766,7 @@ body.category-agenda #rede-submenu a,
 .page-template-page-servicos #fale-conosco {
 	float: none;
 	margin: 0 auto;
+	clear: both;
 }
 .page-template-page-servicos #fale-conosco h1,
 .page-template-page-servicos #contrataram h1{
