@@ -54,7 +54,9 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 		<div class="row">
 			<div class="col-md-12">
 				<h1 class="publicacoes-archive-title">
+					<a href="<?php echo home_url('/produtos'); ?>">
 					<?php _e( 'Produtos dos Membros', 'odin' );?>
+					</a>
 				</h1>
 				<div class="pull-right">
 					<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
@@ -70,7 +72,7 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 				<div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				    	<?php if( ! isset($_GET['filter_type']) ) :?>
-				    		<?php _e('Saberes','odin');?>
+				    		<?php _e('Técnicas','odin');?>
 				    	<?php else: ?>
 				    		<?php $term = get_term_by('slug', $_GET['filter_type'], 'tipos');?>
 				    		<?php echo apply_filters('the_title', $term->name);?>

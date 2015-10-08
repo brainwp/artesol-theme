@@ -408,7 +408,7 @@ function artesol_map_user_fields($args){
 
     if($selected && $selected == 'artesao' || $selected && $selected == 'associacoes'){
     	$map_table .= '<div style="width: 20%; height: 5px; padding-top: 10px; float: left;">';
-    	$map_table .= __('<h3 style="float:left;text-align: left;line-height: 1.3;font-weight: 600;">Saberes e Fazeres</h3>','odin');
+    	$map_table .= __('<h3 style="float:left;text-align: left;line-height: 1.3;font-weight: 600;">Técnicas</h3>','odin');
     	$map_table .= '	</div>';
     	$map_table .= '<div style="width:30%;padding-top:25px;float:left">';
     	$map_table .= '<select name="filter_type">';
