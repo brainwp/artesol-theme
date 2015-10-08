@@ -17,13 +17,45 @@ $args = array(
 		),
 	)
 );
+if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])){
+	$args = array(
+		'meta_query' => array(
+			array(
+				'key'     => 'type_pin',
+				'value'   => $_GET['type_pin'],
+				'compare' => '='
+			),
+		)
+	);
+}
 if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 	$meta_query = array(
 		'key'     => 'user_type',
 	    'value'   => $_GET['filter_type'],
 		'compare' => '='
 	);
-	array_merge($args['meta_query'],$meta_query);
+	$args['meta_query'][] = $meta_query;
+}
+if(isset($_GET['state']) && !empty($_GET['state'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_state',
+	    'value'   => $_GET['state'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_category']) && !empty($_GET['user_category'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_category',
+	    'value'   => $_GET['user_category'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
+	$args['meta_query'][] = array(
+		'key'     => 'membros_perfil',
+	    'value'   => $_GET['user_perfil'],
+		'compare' => '='
+	);
 }
 $count_query = new WP_User_Query($args);
 $per_page = 8; // número de registros por página
@@ -41,10 +73,44 @@ $args = array(
 		),
 	)
 );
+if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])){
+	$args = array(
+		'number' => $per_page,
+		'offset' => $offset,
+		'meta_query' => array(
+			array(
+				'key'     => 'type_pin',
+				'value'   => $_GET['type_pin'],
+				'compare' => '='
+			),
+		)
+	);
+}
 if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 	$args['meta_query'][] = array(
 		'key'     => 'user_type',
 	    'value'   => $_GET['filter_type'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['state']) && !empty($_GET['state'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_state',
+	    'value'   => $_GET['state'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_category']) && !empty($_GET['user_category'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_category',
+	    'value'   => $_GET['user_category'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
+	$args['meta_query'][] = array(
+		'key'     => 'membros_perfil',
+	    'value'   => $_GET['user_perfil'],
 		'compare' => '='
 	);
 }
@@ -98,6 +164,58 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 						</li>
 					</ul>
 				</div><!-- .dropdown -->
+				<div class="dropdown">
+				    <button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    	<?php _e('Estado','odin');?>
+				    	<span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+				        <?php $link = get_membros_query_args();?>
+					 	<?php $tipos = get_terms('membros_state', array('hide_empty' => 0));?>
+						<?php foreach($tipos as $tipo):?>
+							<?php $link['state'] = $tipo->slug;?>
+						   	<?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+						  	<li>
+						       	<a href="<?php echo esc_url($filter_link);?>">
+						        	<?php echo apply_filters('the_title',$tipo->name);?>
+						        </a>
+						    </li>
+					    <?php endforeach;?>
+					   	<?php $link['state'] = '';?>
+					    <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+					    <li>
+							<a href="<?php echo esc_url($filter_link);?>">
+						    	<?php _e('Todos','odin');?>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="dropdown">
+				    <button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    	<?php _e('Categoria','odin');?>
+				    	<span class="caret"></span>
+				    </button>
+				    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+				        <?php $link = get_membros_query_args();?>
+						<?php $tipos = get_terms('membros_category', array('hide_empty' => 0));?>
+						<?php foreach($tipos as $tipo):?>
+							<?php $link['user_category'] = $tipo->slug;?>
+							<?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+							<li>
+						        <a href="<?php echo esc_url($filter_link);?>">
+						        	<?php echo apply_filters('the_title',$tipo->name);?>
+						        </a>
+						    </li>
+					   	<?php endforeach;?>
+					    <?php $filter_link = add_query_arg($link,get_post_type_archive_link('membros'));?>
+					   	<?php $link['user_category'] = '';?>
+					    <li>
+						    <a href="<?php echo esc_url($filter_link);?>">
+						       	<?php _e('Todos','odin');?>
+						    </a>
+						</li>
+					</ul>
+				</div>
 			</div><!-- .filter-membros -->
 			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 			<?php $user_query = new WP_User_Query( $args );?>

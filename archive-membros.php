@@ -36,8 +36,29 @@ if(isset($_GET['filter_type']) && !empty($_GET['filter_type'])){
 	);
 	$args['meta_query'][] = $meta_query;
 }
+if(isset($_GET['state']) && !empty($_GET['state'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_state',
+	    'value'   => $_GET['state'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_category']) && !empty($_GET['user_category'])){
+	$args['meta_query'][] = array(
+		'key'     => 'user_category',
+	    'value'   => $_GET['user_category'],
+		'compare' => '='
+	);
+}
+if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
+	$args['meta_query'][] = array(
+		'key'     => 'membros_perfil',
+	    'value'   => $_GET['user_perfil'],
+		'compare' => '='
+	);
+}
 $count_query = new WP_User_Query($args);
-$per_page = 1; // número de registros por página
+$per_page = 8; // número de registros por página
 $page = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
 $pages = ceil($count_query->total_users/$per_page);
 $offset = ($per_page*$page)-$per_page;
@@ -251,6 +272,7 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 						    </li>
 					    </ul>
 					</div>
+
 				</div><!-- .col-md-4 pull-right -->
 				<?php $user_query = new WP_User_Query( $args );?>
 				<?php if ( ! empty( $user_query->results ) ): ?>
