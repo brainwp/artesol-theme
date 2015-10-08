@@ -149,7 +149,7 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 					</div><!-- .col-md-8 pull-right membros-link -->
 				</header><!-- .page-header -->
 
-				<div class="nav-history col-md-7">
+				<div class="nav-history col-md-6">
 					<?php if(isset($_GET['type_pin']) && !empty($_GET['type_pin'])):?>
 					    <?php if($_GET['type_pin'] == 'artesao') $type = __('Artesão ou Mestre','odin');?>
 					    <?php if($_GET['type_pin'] == 'associacoes') $type = __('Associações ou Cooperativas','odin');?>
@@ -160,12 +160,12 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 				        <?php _e('Membros >> Todos','odin');?>
 				    <?php endif;?>
 				</div><!-- .nav-history -->
-				<div class="col-md-5 pull-right filter-membros">
+				<div class="col-md-6 pull-right filter-membros">
 					<span class="filter-title"><?php _e('Filtros','odin');?></span>
 					<?php if(isset($_GET['type_pin']) && $_GET['type_pin'] == 'artesao' || isset($_GET['type_pin']) && $_GET['type_pin'] == 'associacoes'):?>
 				    <div class="dropdown">
 				    	<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				    		<?php _e('Saberes','odin');?>
+				    		<?php _e('Técnicas','odin');?>
 				    		<span class="caret"></span>
 				    	</button>
 				    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -274,6 +274,9 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 					</div>
 
 				</div><!-- .col-md-4 pull-right -->
+
+				<div class="clear"></div>
+
 				<?php $user_query = new WP_User_Query( $args );?>
 				<?php if ( ! empty( $user_query->results ) ): ?>
 				    <?php foreach ( $user_query->results as $user ): ?>

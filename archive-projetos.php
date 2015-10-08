@@ -31,7 +31,7 @@ get_header( 'projetos' ); ?>
 					<span class="filter-title"><?php _e('Filtros','odin');?></span>
 					<div class="dropdown">
 				    	<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				    		<?php _e('Saberes e Fazeres','odin');?>
+				    		<?php _e('Técnicas','odin');?>
 				    		<span class="caret"></span>
 				    	</button>
 				    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu3">

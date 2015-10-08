@@ -318,6 +318,19 @@ body.page .destaque-1 h3,
 #menu-top a:hover{
 	color: #992D00;
 }
+
+/*
+#main-navigation {
+	position: fixed;
+    width: 900px;
+    z-index: 99999;
+}
+
+#menu-normal {
+	padding-bottom: 50px;
+}
+*/
+
 @media only screen and (max-width:600px) {
 	#menu-top>ul{
 		display:block;
@@ -1185,13 +1198,15 @@ body.post-type-archive-projetos {
 }
 
 .single-projetos .page-header h1 a,
-.single-membros .page-header h1 a {
+.single-membros .page-header h1 a,
+.post-type-archive-produtos .page-header h1 a {
 	text-decoration:none;
 	color: #FFF;	
 }
 
 .single-projetos .page-header h1 a:hover,
-.single-membros .page-header h1 a:hover {
+.single-membros .page-header h1 a:hover,
+.post-type-archive-produtos .page-header h1 a:hover {
 	text-decoration:none;
 	color: #EEE;	
 }
@@ -2174,7 +2189,7 @@ a.zilla-button:visited {
 }
 
 .each-publicacao .image-container{
-	padding: 20px 0px 0px;
+	padding: 5px 0px 0px;
 }
 .each-publicacao .image-container img{
 	max-width: 100%;
@@ -2197,7 +2212,7 @@ a.zilla-button:visited {
 
 .each-publicacao .content p{
     line-height: 1.5;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 /* comercio justo template */
 .page-template-page-comercio-justo section#entenda{
@@ -3437,7 +3452,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 .each-membro{
 	border-left: 10px solid #199b6c;
 	border-bottom: 10px solid #199b6c;
-	min-height:325px;
+	min-height:314px;
 	max-height:520px;
 	margin-bottom:20px;
 }
@@ -3446,6 +3461,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 	text-transform: uppercase;
 	color:#726658 !important;
 	margin-top: 10px;
+	font-size: 1.6em;
 }
 .membros-link a{
 	font-family: "Gotham-Light",sans-serif;
@@ -3522,6 +3538,12 @@ body.post-type-archive-produtos .bg-title-projetos{
 		width: 100%;
 	}
 }
+
+.post-type-archive-produtos #reveal-modal-id,
+.single-membros #reveal-modal-id{ 
+	text-align: center;
+}
+
 .product-list a{
 	display: inline-block;
 	height:180px;
@@ -3529,11 +3551,11 @@ body.post-type-archive-produtos .bg-title-projetos{
 	padding:3px;
 }
 .product-list a img{
-	width:100%;
+	width: auto;
 }
 .reveal-modal-data-img{
-	width:100%;
-	max-width: 100% !important;
+	width: auto;
+	max-width: 80% !important;
 }
 .single-membros article#projetos-post h1{
 	color:#726658;
@@ -3567,6 +3589,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 	font-size: 1.4em;
 	padding-top: 5px;
 	display: inline-block;
+	margin-left: 35px;
 }
 .filter-membros .dropdown{
 	display: inline;

@@ -114,7 +114,7 @@ get_header('rede');
 <section id="tipos" class="col-md-12">
 	<div class="container">
 		<div class="row">
-			<h2 class="section-title"><?php _e('Saberes e Fazeres / Técnicas','odin');?></h2><!-- .section-title -->
+			<h2 class="section-title"><?php _e('Saberes e Fazeres | Técnicas','odin');?></h2><!-- .section-title -->
 			<?php $tipos = get_categories(
 				array(
 				'taxonomy' => 'tipos',

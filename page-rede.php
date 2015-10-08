@@ -53,7 +53,7 @@ get_header('rede');
 		<div class="row">
 			<?php $page = get_page_by_path( 'rede/tipologia', OBJECT, 'page' );?>
 
-			<h2 class="section-title"><?php _e('Saberes e Fazeres / Técnicas','odin');?></h2><!-- .section-title -->
+			<h2 class="section-title"><?php _e('Saberes e Fazeres | Técnicas','odin');?></h2><!-- .section-title -->
 			<?php $tipos = get_categories(
 				array(
 				'taxonomy' => 'tipos',
