@@ -8,28 +8,22 @@
  * @since 2.2.0
  */
 
-get_header(); ?>
-
-	<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
-		<div id="content" role="main">
-
+get_header('noticias'); ?>
+<?php get_sidebar();?>
+<div class="col-md-8" id="single-noticias-container">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article <?php post_class(); ?>>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<div class="entry-meta entry-content">
-							<?php
-								$metadata = wp_get_attachment_metadata();
-								printf( __( 'Image total size: %s pixels', 'odin' ), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'odin' ) ), $metadata['width'], $metadata['height'] ) );
-							?>
-						</div><!-- .entry-meta -->
-					</header><!-- .entry-header -->
 
 					<div class="entry-content entry-attachment">
 						<p class="attachment"><a href="<?php echo wp_get_attachment_url( $post->ID, 'full' ); ?>" title="<?php the_title_attribute(); ?>"><?php echo wp_get_attachment_image( $post->ID, 'full' ); ?></a></p>
 						<div class="entry-caption"><em><?php if ( ! empty( $post->post_excerpt ) ) the_excerpt(); ?></em></div>
 						<?php the_content(); ?>
-
+					<div class="entry-meta entry-content">
+						<?php
+							$metadata = wp_get_attachment_metadata();
+							printf( __( 'Image total size: %s pixels', 'odin' ), sprintf( '<a href="%1$s" title="%2$s"><span>%3$s</span> &times; <span>%4$s</span></a>', wp_get_attachment_url(), esc_attr( __( 'Full image link', 'odin' ) ), $metadata['width'], $metadata['height'] ) );
+						?>
+					</div><!-- .entry-meta -->
 						<ul class="pager">
 							<li class="previous"><?php previous_image_link( false, __( '&larr; Previous image', 'odin' ) ); ?></li>
 							<li class="next"><?php next_image_link( false, __( 'Next image &rarr;', 'odin' ) ); ?></li>
@@ -42,10 +36,11 @@ get_header(); ?>
 						<?php endif; ?>
 					</div><!-- .entry-content -->
 				</article>
+
+
 			<?php endwhile; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div><!-- #col-md-8 -->
 
 <?php
-get_footer();
+get_footer('noticias');
