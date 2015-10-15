@@ -125,7 +125,9 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 					</a>
 				</h1>
 				<div class="pull-right">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
+					<a href="<?php echo home_url('/rede'); ?>">
+						<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
+					</a>
 				</div><!-- .pull-right -->
 			</div><!-- .col-md-12 -->
 		</div><!-- .row -->

@@ -22,7 +22,9 @@ get_header( 'projetos' ); ?>
 						</a>
 					</h1>
 					<div class="pull-right">
-						<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
+				<a href="<?php echo home_url('/rede'); ?>">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
+				</a>
 					</div><!-- .pull-right -->
 				</header><!-- .page-header -->
 				<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
