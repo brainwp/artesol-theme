@@ -134,6 +134,9 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 <div class="col-md-12 produtos-container">
 	<div class="container">
 		<div class="row">
+			<?php if( isset($_GET['filter_type']) ) :?>
+				<?php get_template_part( 'parts/tecnicas-description' );?>
+			<?php endif;?>
 			<div class="col-md-12 filter-membros">
 				<div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

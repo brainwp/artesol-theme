@@ -62,7 +62,8 @@ get_header('rede');
 				)
 			);?>
 			<?php foreach ($tipos as $tipo):?>
-			     <a class="col-md-4 post-container tipo-open-modal" href="#tipo_modal" data-id="<?php echo $tipo->term_id;?>">
+				<?php $link = sprintf( '%s?filter_type=%s', get_post_type_archive_link( 'produtos' ), $tipo->slug ); ?>
+			     <a class="col-md-4 post-container" href="<?php echo $link;?>" data-id="<?php echo $tipo->term_id;?>">
 			     		<?php if($thumb = get_field('tipo_thumb', 'tipos_'.$tipo->term_id)): ?>
 			     		    <div class="img-container">
 			     		    	<img class="tipo-thumb" src="<?php echo $thumb['sizes']['medium'];?>">
