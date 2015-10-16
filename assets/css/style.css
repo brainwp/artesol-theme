@@ -565,7 +565,7 @@ body.page .destaque-1 h3,
 #footer{
 	background:url('../images/bg-footer.jpg') no-repeat;
 	background-size:cover;
-	padding-top:80px;
+	padding-top: 60px;
 }
 #footer h3{
 	font-family: 'Gotham-Bold';
@@ -1578,11 +1578,21 @@ section#tipos h3.post-title{
 #slider-destaques-rede a img{
 	height:auto;
 }
-/* SERVIÇOS */
-body.page-template-page-servicos #aceleracao-footer-margin{
+
+body.page-template-page-institucional #aceleracao-footer-margin,
+body.post-type-archive-projetos #aceleracao-footer-margin,
+body.single-projetos #aceleracao-footer-margin,
+body.single-post #aceleracao-footer-margin,
+body.post-type-archive-dlm_download #aceleracao-footer-margin,
+body.page-template-page-artesanato-brasileiro #aceleracao-footer-margin,
+body.page-template-page-servicos #aceleracao-footer-margin,
+body.blog #aceleracao-footer-margin {
 	clear: both;
-	margin-top: -200px;
+	margin-bottom: -200px;
 }
+
+/* SERVIÇOS */
+
 body.page-template-page-servicos h3.section-title{
 	color:white;
 	font-family: 'Gotham-Bold',sans-serif;
@@ -1906,7 +1916,7 @@ body.category-agenda .navbar-default .navbar-nav > li > a:hover{
 }
 
 .page-template-page-home-php .site-main {
-	margin-bottom: 110px;
+	margin-bottom: 135px;
 }
 blockquote {
     font-size: 15.5px;
@@ -2946,8 +2956,7 @@ h3#reply-title {
 .page-template-default nav#main-navigation{
 	margin-bottom:0px;
 }
-.page-template-default #aceleracao-footer-margin,
-.page-template-page-artesanato-brasileiro #aceleracao-footer-margin{
+.page-template-default #aceleracao-footer-margin {
 	clear: both;
 }
 .page-template-default #como-apoiar, .page-template-page-artesanato-brasileiro #como-apoiar{
@@ -3494,12 +3503,10 @@ body.post-type-archive-produtos .bg-title-projetos{
 .single-membros .page-header h1{
 	text-transform: none !important;
 }
-.post-type-archive-membros #aceleracao-footer-margin, .post-type-archive-membros #aceleracao-footer, .single-membros #aceleracao-footer{
+.post-type-archive-membros #aceleracao-footer, .single-membros #aceleracao-footer{
 	display: none;
 }
-.single-membros #aceleracao-footer-margin{
-	display: none;
-}
+
 .membros-link div{
 	padding-top:5px;
 }

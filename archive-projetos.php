@@ -133,6 +133,6 @@ get_header( 'projetos' ); ?>
 			?>
 		</div><!-- #content -->
 	</section><!-- #primary -->
-<div class="col-md-12 separator"></div><!-- .col-md-12 clear -->
+<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
 <?php
 get_footer('aceleracao');
