@@ -56,7 +56,7 @@ body.home, body.page, body.blog, body.single, body.category-agenda, body.error40
 }
 
 .page .hentry{
-	margin: 0 auto -100px;
+	margin: 0 auto -270px;
 }
 
 .page-template-default .row {
@@ -809,14 +809,14 @@ margin: 0 auto -26px;
 	width:350px;
 	height:350px;
 	background:url('../images/bg-como-apoiar.png') center center no-repeat;
-	background-size: 100%;
+	background-size: 76%;
 	position: absolute;
 }
 #como-apoiar h3{
-	margin: 25% auto 15px;
+	margin: 31% auto 10px;
 	color:white;
 	font-family: 'Gotham-Bold';
-	font-size:2.3em;
+	font-size:2em;
 	width: 200px;
 	text-align: center
 }
@@ -824,7 +824,7 @@ margin: 0 auto -26px;
 	float:inherit!important;
 	font-family: "Istok Web",sans-serif;
 	color:white;
-	font-size:1.7em;
+	font-size:1.3em;
 	font-weight: 300;
 	transition:200ms ease all;
 }
@@ -840,14 +840,13 @@ margin: 0 auto -26px;
 #como-apoiar .link-container{
 	padding-left: 5px;
 	text-align: left;
-	padding-left: 15px;
-	padding-right: 0;
+	padding-right: 75px;
 }
 #como-apoiar .links .link-container:first-child {
 	border-right: 2px solid white;
 	text-align: right;
-	padding-left: 15px;
-	padding-right: 17px;
+	padding-left: 75px;
+	padding-right: 10px;
 }
 @media screen and (max-width:700px) {
 	#footer{
@@ -976,22 +975,26 @@ body.single-projetos #aceleracao-footer
 	background:url('../images/bg-aceleracao-footer.jpg') no-repeat;
 	background-size:cover;
 	position: absolute;
-	margin-top:-458px;
+	margin-top:-333px;
 	background-attachment: fixed;
 }
 #aceleracao-footer div.row{
-	padding-bottom:247px;
+	padding-bottom:160px;
 }
 #aceleracao-footer .icon{
 	background:url('../images/rede-artesol.png') no-repeat center;
 	height:240px;
-	margin-top: 80px;
+	margin-top: 60px;
 }
 #aceleracao-footer h3.section-title{
-	font-family: 'Gotham-Bold';
-	color:white;
-	font-size:2.5em;
-	text-align: center;
+    font-family: 'Gotham-Bold';
+    color: white;
+    font-size: 2.2em;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto 20px;
+    float: initial;
+    text-transform: initial;
 }
 #aceleracao-footer a{
 	display:inline-block;
@@ -1578,6 +1581,7 @@ section#tipos h3.post-title{
 /* SERVIÇOS */
 body.page-template-page-servicos #aceleracao-footer-margin{
 	clear: both;
+	margin-top: -200px;
 }
 body.page-template-page-servicos h3.section-title{
 	color:white;
@@ -1898,7 +1902,11 @@ body.category-agenda .navbar-default .navbar-nav > li > a:hover{
 	font-family: 'Gotham-Bold',sans-serif;
 }
 .page .site-main {
-	margin-bottom: 120px;
+	margin-bottom: 0px;
+}
+
+.page-template-page-home-php .site-main {
+	margin-bottom: 110px;
 }
 blockquote {
     font-size: 15.5px;
@@ -3500,7 +3508,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 	background: #199b6c !important;
 }
 .nav-history{
-	padding-bottom:10px;
+	padding-bottom:20px;
 	font-family: "Gotham-Bold",sans-serif;
 	color:#7f7568;
 	font-size:1.9em;
@@ -3518,7 +3526,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 }
 .map-margin-top{
 	clear: both;
-	height:150px;
+	height:100px;
 }
 .iframe-container-map{
 	width: 100%;
@@ -3565,6 +3573,7 @@ body.post-type-archive-produtos .bg-title-projetos{
 .single-membros article#projetos-post h1{
 	color:#726658;
 	text-transform: uppercase !important;
+        font-size: 2.5em;
 }
 .single-membros article#projetos-post{
 	background:#e2e2e2;
