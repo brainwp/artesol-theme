@@ -38,7 +38,7 @@
 
 <div id="menu-normal">
 				
-<nav id="main-navigation" class="navbar navbar-default" role="navigation">
+<nav id="main-navigation" class="navbar navbar-default sticky-menu" role="navigation">
 
 				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-artesol-projetos.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">

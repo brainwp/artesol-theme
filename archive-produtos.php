@@ -139,7 +139,8 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 			<?php if( isset($_GET['filter_type']) ) :?>
 				<?php get_template_part( 'parts/tecnicas-description' );?>
 			<?php endif;?>
-			<div class="col-md-12 filter-membros">
+			<div class="col-md-6 pull-right filter-membros">
+					<span class="filter-title"><?php _e('Filtros','odin');?></span>
 				<div class="dropdown">
 					<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				    	<?php if( ! isset($_GET['filter_type']) ) :?>

@@ -1165,12 +1165,20 @@ body.post-type-archive-projetos {
 .post-type-archive-dlm_download .page-header,
 .post-type-archive-membros .page-header,
 .single-projetos .page-header,
-.single-membros .page-header,
-.post-type-archive-produtos .page-header{
+.single-membros .page-header{
 	border: none;
 	color: #FFF;
 	display: block;
 	margin: 17px 0 50px 0;
+	overflow: hidden;
+	width: 100%;
+}
+
+.post-type-archive-produtos .page-header{
+	border: none;
+	color: #FFF;
+	display: block;
+	margin: 17px 0 10px 0;
 	overflow: hidden;
 	width: 100%;
 }
@@ -1899,7 +1907,8 @@ body.category-agenda .navbar-default .navbar-nav > li > a:hover{
 	background-color: #E79532;
 }
 .page .entry-header,
-.error404 .entry-header  {
+.error404 .entry-header,
+.container-tipologia .entry-header {
 	color: #716557;
 	margin-bottom: 40px;
 	margin-top: 40px;
@@ -1907,10 +1916,17 @@ body.category-agenda .navbar-default .navbar-nav > li > a:hover{
 	text-transform: uppercase;
 }
 .page .entry-header h1,
-.error404 .entry-header h1 {
+.error404 .entry-header h1,
+.container-tipologia h1 {
 	font-weight: normal;
 	font-family: 'Gotham-Bold',sans-serif;
 }
+
+.container-tipologia .row {
+    max-width: 75%;
+    margin: 0 auto;
+}
+
 .page .site-main {
 	margin-bottom: 0px;
 }
@@ -2955,9 +2971,6 @@ h3#reply-title {
 }
 .page-template-default nav#main-navigation{
 	margin-bottom:0px;
-    position: fixed;
-    min-width: 900px;
-    z-index: 9999;
 }
 
 
