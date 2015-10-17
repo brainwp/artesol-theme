@@ -125,7 +125,9 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 					</a>
 				</h1>
 				<div class="pull-right">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
+					<a href="<?php echo home_url('/rede'); ?>">
+						<img src="<?php echo get_template_directory_uri();?>/assets/images/logo-rede-home.png">
+					</a>
 				</div><!-- .pull-right -->
 			</div><!-- .col-md-12 -->
 		</div><!-- .row -->
@@ -139,7 +141,7 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 			<?php endif;?>
 			<div class="col-md-12 filter-membros">
 				<div class="dropdown">
-					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					<button class="pull-right btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				    	<?php if( ! isset($_GET['filter_type']) ) :?>
 				    		<?php _e('Técnicas','odin');?>
 				    	<?php else: ?>
@@ -222,7 +224,7 @@ if(isset($_GET['user_perfil']) && !empty($_GET['user_perfil'])){
 					</ul>
 				</div>
 			</div><!-- .filter-membros -->
-			<div class="col-md-12 clear"></div><!-- .col-md-12 clear -->
+			<div class="clear"></div><!-- .col-md-12 clear -->
 			<?php $user_query = new WP_User_Query( $args );?>
 			<?php if ( ! empty( $user_query->results ) ): ?>
 				<?php foreach ( $user_query->results as $user ): ?>

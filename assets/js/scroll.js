@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
     $('.sticky-menu a[href^="#"], .scroll-click').on('click', function(event) {
-    	console.log('wtf');
+
         var target = $( $(this).attr('href') );
 
         if( target.length ) {

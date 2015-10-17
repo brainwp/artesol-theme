@@ -8,16 +8,12 @@
  * @since 2.2.0
  */
 
-get_header(); ?>
-
-	<div id="primary" class="<?php echo odin_classes_page_sidebar(); ?>">
-		<div id="content" role="main">
+get_header('noticias'); ?>
+<?php get_sidebar();?>
+<div class="col-md-8" id="single-noticias-container">
 
 			<?php while ( have_posts() ) : the_post(); $metadata = wp_get_attachment_metadata(); ?>
 				<article <?php post_class(); ?>>
-					<header class="entry-header">
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</header><!-- .entry-header -->
 					<div class="entry-content entry-attachment">
 						<?php echo esc_attr( wp_audio_shortcode( array( 'src' => wp_get_attachment_url() ) ) ); ?>
 
@@ -34,8 +30,7 @@ get_header(); ?>
 				</article>
 			<?php endwhile; ?>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+		</div><!-- #col-md-8 -->
 
 <?php
-get_footer();
+get_footer('noticias');
