@@ -2955,7 +2955,13 @@ h3#reply-title {
 }
 .page-template-default nav#main-navigation{
 	margin-bottom:0px;
+    position: fixed;
+    min-width: 900px;
+    z-index: 9999;
 }
+
+
+
 .page-template-default #aceleracao-footer-margin {
 	clear: both;
 }
@@ -2977,6 +2983,7 @@ h3#reply-title {
 }
 .page-template-default article{
 	max-width: inherit !important;
+        margin-top: 80px !important;
 }
 /* error 404*/
 .page-404{

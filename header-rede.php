@@ -40,7 +40,7 @@
 
 <div id="menu-normal">
 
-<nav id="main-navigation" class="navbar navbar-default" role="navigation">
+<nav id="main-navigation" class="navbar navbar-default sticky-menu" role="navigation">
 
 				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-artesol-projetos.png" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
@@ -73,6 +73,30 @@
 
 					<a href="#" id="search-interno-click" data-open="false"></a>
 				</div><!-- .navbar-collapse -->
+
+			<?php global $page_default;?>
+			<?php if(!is_page_template('page-como-apoiar-pessoa-fisica.php') && !is_page_template('page-como-apoiar-pessoa-juridica.php') && !is_category() && !$page_default && !is_post_type_archive() ): ?>
+
+			<div class="col-md-12" id="rede-submenu">
+				<nav class="col-md-10 pull-right">
+					<?php
+					    $menu_id = 'rede-submenu';
+					    if(is_page_template('page-comercio-justo.php' )) $menu_id = 'comercio-justo-submenu';
+					    if(is_page_template('page-artesanato-brasileiro.php' )) $menu_id = 'artesanato-brasileiro-submenu';
+
+					    wp_nav_menu(
+					    	array(
+					    		'theme_location' => $menu_id,
+					    		'depth'          => -1,
+					    		'container'      => false,
+					    		'menu_class'     => 'nav navbar-nav'
+					    	)
+					    );
+					?>
+				</nav><!-- .col-md-8 pull-right -->
+			</div><!-- .col-md-12 -->
+		    <?php endif;?>
+
 			</nav><!-- #main-menu -->
 
 </div><!-- end #menu-normal -->
@@ -121,26 +145,5 @@
 		<input name="s" type="text" placeholder="<?php _e('Digite a frase e pressione enter!','odin');?>" class="col-md-12" />
 	</form><!-- #search-interno.col-md-4 pull-right -->
 
-			<?php global $page_default;?>
-			<?php if(!is_page_template('page-como-apoiar-pessoa-fisica.php') && !is_page_template('page-como-apoiar-pessoa-juridica.php') && !is_category() && !$page_default && !is_post_type_archive() ): ?>
-			<div class="col-md-12 sticky-menu" id="rede-submenu">
-				<nav class="col-md-10 pull-right">
-					<?php
-					    $menu_id = 'rede-submenu';
-					    if(is_page_template('page-comercio-justo.php' )) $menu_id = 'comercio-justo-submenu';
-					    if(is_page_template('page-artesanato-brasileiro.php' )) $menu_id = 'artesanato-brasileiro-submenu';
-
-					    wp_nav_menu(
-					    	array(
-					    		'theme_location' => $menu_id,
-					    		'depth'          => -1,
-					    		'container'      => false,
-					    		'menu_class'     => 'nav navbar-nav'
-					    	)
-					    );
-					?>
-				</nav><!-- .col-md-8 pull-right -->
-			</div><!-- .col-md-12 -->
-		    <?php endif;?>
 		</header><!-- #header -->
 	</div>
