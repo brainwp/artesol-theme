@@ -1622,7 +1622,7 @@ body.page-template-page-servicos #projetos-institucionais .btn-more{
 	box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.75);
 }
 body.page-template-page-servicos #consultorias{
-	background: url('../images/bg-servicos-consultoria.jpg') no-repeat;
+	background: url('../images/bg-servicos-disseminacao.jpg') no-repeat;
 	background-size:cover;
 	padding-top:40px;
 	padding-bottom: 40px;
@@ -1641,7 +1641,7 @@ body.page-template-page-servicos a.btn-more:hover{
 	box-shadow:none !important;
 }
 body.page-template-page-servicos #disseminacao{
-	background: url('../images/bg-servicos-disseminacao.jpg') no-repeat;
+	background: url('../images/bg-servicos-consultoria.jpg') no-repeat;
 	background-size:cover;
 	padding-top:40px;
 	padding-bottom: 40px;
@@ -1686,7 +1686,7 @@ body.page-template-page-servicos #contrataram img{
 .page-template-page-comercio-justo .navbar,
 body.category-agenda .navbar,
 body.error404 .navbar,
-.page-template-page-artesanato-brasileiro .navbar{
+.page-template-page-artesanato-brasileiro .blogavidanostrinta.blogspot.com.brnavbar{
 	margin-bottom: 0;
 }
 #servicos-submenu,
