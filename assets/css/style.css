@@ -1622,7 +1622,7 @@ body.page-template-page-servicos #projetos-institucionais .btn-more{
 	box-shadow: 0px 3px 4px 0px rgba(50, 50, 50, 0.75);
 }
 body.page-template-page-servicos #consultorias{
-	background: url('../images/bg-servicos-disseminacao.jpg') no-repeat;
+	background: url('../images/bg-servicos-consultoria.jpg') no-repeat;
 	background-size:cover;
 	padding-top:40px;
 	padding-bottom: 40px;
@@ -1641,7 +1641,7 @@ body.page-template-page-servicos a.btn-more:hover{
 	box-shadow:none !important;
 }
 body.page-template-page-servicos #disseminacao{
-	background: url('../images/bg-servicos-consultoria.jpg') no-repeat;
+	background: url('../images/bg-servicos-disseminacao.jpg') no-repeat;
 	background-size:cover;
 	padding-top:40px;
 	padding-bottom: 40px;
@@ -3127,7 +3127,7 @@ max-width: 540px;
 	}
 
 	.navbar {
-		margin-bottom: 0px;
+		margin-bottom: 0px !important;
 	}
 
 	.container.home .logo {
@@ -3687,4 +3687,9 @@ body.post-type-archive-produtos section#tipos{
 	background:#c9c6b8;
 	margin-top:30px;
 	margin-bottom:0;
+}
+
+
+.navbar {
+	margin-bottom: 0px !important;
 }
