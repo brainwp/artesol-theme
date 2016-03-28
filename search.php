@@ -8,27 +8,28 @@
 
 get_header('noticias'); ?>
 <div class="col-md-8 pull-right" id="single-noticias-container">
-	<?php if(have_posts()): ?>
-	<h2 class="search-term-for">
-		<?php _e('Resultados da busca para:','odin');?>
-	</h2><!-- .search-term-for -->
-	<h1 class="search-term">
-        <?php if(!empty($_GET['s'])) echo $_GET['s'];?>
-	</h1><!-- .search-term -->
-    <?php else: ?>
-    <h1 class="search-term">
-        <?php _e('Sua busca não obteve resultados, tente novamente usando outro termo.','odin');?>
-	</h1><!-- .search-term -->
-    <?php endif;?>
-
-<?php if ( isset( $_GET['s'] ) ) : ?>
-	<?php $args = array(
-	    	'meta_key' => 'nickname',
-	    	'meta_value' => $_GET['s'],
-	    	'meta_compare' => 'like'
-		);
-	$user_query = new WP_User_Query( $args );
+	<?php if ( isset( $_GET['s'] ) ) : ?>
+		<?php $args = array(
+		    	'meta_key' => 'nickname',
+		    	'meta_value' => $_GET['s'],
+		    	'meta_compare' => 'like'
+			);
+		$user_query = new WP_User_Query( $args );
 	?>
+	<?php endif;?>
+	<?php if(have_posts()|| ! empty ( $user_query )): ?>
+		<h2 class="search-term-for">
+			<?php _e('Resultados da busca para:','odin');?>
+		</h2><!-- .search-term-for -->
+		<h1 class="search-term">
+			<?php if(!empty($_GET['s'])) echo $_GET['s'];?>
+		</h1><!-- .search-term -->
+	<?php else: ?>
+		<h1 class="search-term">
+			<?php _e('Sua busca não obteve resultados, tente novamente usando outro termo.','odin');?>
+		</h1><!-- .search-term -->
+	<?php endif;?>
+
 
 	<?php if ( ! empty ( $user_query ) ) : ?>
 	    
@@ -52,7 +53,6 @@ get_header('noticias'); ?>
 		</h3>
 
 	<?php endif;?>
-<?php endif;?>
 
 <?php wp_reset_query(); ?>
 
