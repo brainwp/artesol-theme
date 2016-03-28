@@ -18,3 +18,6 @@
 <a href="<?php the_permalink();?>" class="col-md-12 content-search">
 	<?php the_excerpt();?>
 </a>
+
+
+

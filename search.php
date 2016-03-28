@@ -20,6 +20,42 @@ get_header('noticias'); ?>
         <?php _e('Sua busca não obteve resultados, tente novamente usando outro termo.','odin');?>
 	</h1><!-- .search-term -->
     <?php endif;?>
+
+<?php if ( isset( $_GET['s'] ) ) : ?>
+	<?php $args = array(
+	    	'meta_key' => 'nickname',
+	    	'meta_value' => $_GET['s'],
+	    	'meta_compare' => 'like'
+		);
+	$user_query = new WP_User_Query( $args );
+	?>
+
+	<?php if ( ! empty ( $user_query ) ) : ?>
+	    
+		<?php foreach ( $user_query->get_results() as $user ) : ?>
+			<a href="<?php echo home_url() . '/membros/' . $user->nickname; ?>" class="search-link">
+				<h3 class="col-md-12 post-title">
+					<?php echo $user->display_name; ?>
+				</h3><!-- .col-md-12 post-title -->
+			</a>
+			<a class="col-md-12 content-search">
+				<?php if($content = get_user_meta($user->ID, 'user_content', true)):?>
+				    <?php echo apply_filters('the_content',$content);?>
+			    	<?php endif;?>
+			</a>
+	    	<?php endforeach;?>
+
+	<?php else : ?>
+
+		<h3 class="col-md-12 post-title">
+			<?php echo "Nenhum membro da rede encontrado para o termo " . $_GET['s']; ?>
+		</h3>
+
+	<?php endif;?>
+<?php endif;?>
+
+<?php wp_reset_query(); ?>
+
 	<?php
 		// Start the Loop.
 		while ( have_posts() ) : the_post();
