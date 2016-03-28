@@ -518,3 +518,46 @@ function brasa_add_user_role(){
 	$result = add_role( 'comentadores', __('Comentadores', 'odin'), array() );
 }
 add_action( 'init', 'brasa_add_user_role' );
+
+/**
+ * Function get_excerpt
+ *
+ * @since  0.1
+ *
+ * @param  string $content with text to excerpt.
+ * @param  string $limit number of the limit.
+ * @param  string $after with element to print in end excerpt.
+ *
+ * @return string
+ */
+
+function get_excerpt( $content = '', $limit = '', $after = '' ){
+	
+	if ( $limit ) {
+		$l = $limit;
+	} else {
+		$l = '140';
+	}
+
+	if ( $content ) {
+		$excerpt = $content;
+	} else {
+		$excerpt = get_the_content();
+	}
+ 
+	$excerpt = preg_replace( " (\[.*?\])",'',$excerpt );
+	$excerpt = strip_shortcodes( $excerpt );
+	$excerpt = strip_tags( $excerpt );
+	$excerpt = substr( $excerpt, 0, $l );
+	$excerpt = substr( $excerpt, 0, strripos($excerpt, " " ) );
+	$excerpt = trim( preg_replace( '/\s+/', ' ', $excerpt ) );
+	
+	if ( $after ) {
+		$a = $after;
+	} else {
+		$a = '...';
+	}
+
+	$excerpt = $excerpt . $a;
+	return $excerpt;
+}

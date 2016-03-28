@@ -33,14 +33,14 @@ get_header('noticias'); ?>
 	<?php if ( ! empty ( $user_query ) ) : ?>
 	    
 		<?php foreach ( $user_query->get_results() as $user ) : ?>
-			<a href="<?php echo home_url() . '/membros/' . $user->nickname; ?>" class="search-link">
+			<a href="<?php echo home_url() . '/membros/' . $user->user_nicename; ?>" class="search-link">
 				<h3 class="col-md-12 post-title">
 					<?php echo $user->display_name; ?>
 				</h3><!-- .col-md-12 post-title -->
 			</a>
 			<a class="col-md-12 content-search">
 				<?php if($content = get_user_meta($user->ID, 'user_content', true)):?>
-				    <?php echo apply_filters('the_content',$content);?>
+				    <?php echo get_excerpt($content,300);?>
 			    	<?php endif;?>
 			</a>
 	    	<?php endforeach;?>
