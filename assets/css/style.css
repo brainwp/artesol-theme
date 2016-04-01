@@ -2631,7 +2631,7 @@ body.post-type-archive-produtos section#patrimonio .content{
 /* category agenda */
 body.category-agenda #como-apoiar{
 	clear:both;
-	margin: -212px auto -126px;
+	margin: 25px auto 25px;
 }
 .header-agenda{
 	background:url('../images/bg-header-agenda.jpg') no-repeat;
@@ -2654,6 +2654,7 @@ body.category-agenda #como-apoiar{
 .agenda-container{
 	padding-top:10px;
 	padding-bottom:10px;
+	min-height:145px;
 }
 .agenda-container a{
 	background:#e2e2e2;
@@ -2661,7 +2662,7 @@ body.category-agenda #como-apoiar{
 	padding-top:10px;
 	padding-bottom:10px;
 	box-shadow: -3px 4px 5px 0px rgba(141,182,185,0.5);
-	min-height:145px;
+	overflow: auto;
 }
 .agenda-container a .mes, .agenda-modal .mes{
 	text-align: center;
@@ -2707,9 +2708,7 @@ body.category-agenda #como-apoiar{
 .agenda-pagination a.next, .agenda-pagination a.prev{
 	color:#1fa9b5
 }
-body.category-agenda #como-apoiar .image{
-	top:-100px;
-}
+	
 #reveal-modal-id .prev-post-reveal-nav, #reveal-modal-id .next-post-reveal-nav{
 	display:none;
 }
@@ -3246,6 +3245,10 @@ max-width: 540px;
 	    width: auto;
 	}
 
+	body.category-agenda #como-apoiar {
+	    margin: 25px auto -20px;
+	}
+
 	body.page #aceleracao-footer, body.page-template-page-institucional-php #aceleracao-footer, body.blog #aceleracao-footer, body.page-template-default #aceleracao-footer, body.single #aceleracao-footer, body.search #aceleracao-footer, body.page-template-page-servicos-php #aceleracao-footer, body.post-type-archive-dlm_download #aceleracao-footer, body.page-template-page-artesanato-brasileiro #aceleracao-footer, body.category #aceleracao-footer, body.error404 #aceleracao-footer, body.post-type-archive-projetos #aceleracao-footer, body.single-projetos #aceleracao-footer {
 	    margin-top: -600px;
 	}
@@ -3348,6 +3351,10 @@ max-width: 540px;
 	}
 
 	#header {
+		margin-bottom: 15px;
+	}
+
+	.category-agenda #header {
 		margin-bottom: 15px;
 	}
 
@@ -3479,6 +3486,22 @@ max-width: 540px;
 
 	body.page-template-page-institucional #aceleracao-footer-margin, body.post-type-archive-projetos #aceleracao-footer-margin, body.single-projetos #aceleracao-footer-margin, body.single-post #aceleracao-footer-margin, body.post-type-archive-dlm_download #aceleracao-footer-margin, body.page-template-page-artesanato-brasileiro #aceleracao-footer-margin, body.page-template-page-servicos #aceleracao-footer-margin, body.blog #aceleracao-footer-margin {
 	    margin-bottom: 0px;
+	}
+	body.search #header {
+	    width: 100%;
+	}
+
+	.header-agenda {
+	    margin-top: -15px;
+	}
+
+	
+	.agenda-container a .content {
+		width: 70%;
+	}
+
+	.agenda-container a .content p {
+		overflow: hidden;
 	}
 
 }
