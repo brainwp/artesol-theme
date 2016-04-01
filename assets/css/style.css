@@ -3521,6 +3521,22 @@ body.single-membros form#search-interno{
 		padding-bottom: 50px;
 	}
 
+	.page-template-page-rede-php section#participe a.membros-each {
+	    float: none;
+	}
+
+	.page-template-page-servicos #fale-conosco {
+	    margin: 0 20px;
+	}
+
+	body.page #menu-institucional {
+	    margin-top: -10px;
+	}
+
+	#comments {
+	    margin: 0;
+	}
+
 	.embed-youtube {
 		width: 100%;
 	}
