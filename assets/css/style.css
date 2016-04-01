@@ -2109,19 +2109,12 @@ a.zilla-button:visited {
 	background-size:cover;
 }
 
-.post-type-archive-projetos .page-header span {
+.post-type-archive-projetos .page-header span, .post-type-archive-dlm_download .page-header span {
 	float: left;
-	margin-left: 30px;
+	margin-left: 25px;
 	width: 50%;
+	margin-top: 25px;
 }
-
-.post-type-archive-dlm_download .page-header span,
-.single-projetos .page-header span {
-	float: left;
-	margin-left: 15px;
-	width: 50%;
-}
-
 .each-publicacao {
 	min-height:332px;
 	background:#E2E2E2 !important;
@@ -2999,6 +2992,119 @@ body.single-membros form#search-interno{
 
 #menu-mobile {
 	display: none;
+}
+
+body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title-projetos, body.post-type-archive-produtos .bg-title-projetos {
+    background: #B5AEA5 url("../images/bg-header-membros.jpg") repeat scroll center top;
+    background-size: cover;
+}
+
+/* MEMBROS */
+
+.post-type-archive-membros .page-header h1, .single-membros .page-header h1 {
+    text-transform: none !important;
+}
+
+.membros-link a {
+    font-family: "Gotham-Light",sans-serif;
+    background: #1b644a;
+    transition: 300ms ease all;
+    border-radius: 0 !important;
+    font-size: 0.9em;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: inline-block;
+    border: 0 !important;
+}
+
+.membros-link div {
+    padding-top: 5px;
+}
+
+.nav-history {
+    padding-bottom: 10px;
+    font-family: "Gotham-Bold",sans-serif;
+    color: #7f7568;
+    font-size: 1.6em;
+    margin-top: 10px;
+}
+
+.filter-membros {
+    margin-top: 10px;
+    padding: 0;
+}
+
+.filter-title {
+    font-family: "Gotham-Medium",sans-serif;
+    color: #7F7568;
+    font-size: 1.4em;
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 35px;
+    position: absolute;
+}
+
+.each-membro {
+    border-left: 10px solid #199b6c;
+    border-bottom: 10px solid #199b6c;
+    min-height: 314px;
+    max-height: 520px;
+    margin-bottom: 20px;
+}
+
+.each-membro .entry-title {
+    font-family: "Gotham-Bold",sans-serif;
+    text-transform: uppercase;
+    color: #726658 !important;
+    margin-top: 10px;
+    font-size: 1.6em;
+}
+
+.btn-membro {
+    position: absolute;
+    background: #199b6c !important;
+}
+
+.single-membros article#projetos-post {
+    background: #e2e2e2;
+    border-bottom: 9px solid #199b6c;
+    border-left: 9px solid #199b6c;
+}
+
+.single-membros article#projetos-post h1 {
+    color: #726658;
+    text-transform: uppercase !important;
+}
+
+.single-membros .page-header .publicacoes-archive-title {
+    margin-top: 35px;
+    font-size: 2.6em;
+}
+
+.single-membros .page-header img {
+    margin-top: -10px;
+}
+
+.single-membros section#patrimonio {
+    width: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.iframe-container-map {
+    width: 100%;
+    position: absolute;
+    clear: both;
+    right: 0;
+}
+
+.map-margin-top {
+    clear: both;
+    height: 150px;
+}
+
+.post-type-archive-membros #aceleracao-footer-margin, .post-type-archive-membros #aceleracao-footer, .single-membros #aceleracao-footer {
+    display: none;
 }
 
 /*english link */
