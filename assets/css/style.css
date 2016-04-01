@@ -2554,7 +2554,7 @@ box-shadow:         0px 3px 14px 0px rgba(0, 0, 0, 0.25);
 .page-template-page-como-apoiar-pessoa-juridica #como-apoiar .content,
 .page-template-page-como-apoiar-pessoa-fisica #como-apoiar .content{
 	font-family: 'Gotham-Bold',sans-serif;
-	font-size:0.8em;
+	font-size:1.1em;
 	color:white;
 	margin-top:160px;
 	text-align: center
@@ -2993,7 +2993,8 @@ body.single-membros form#search-interno{
 }
 
 .youtube-player {
-max-width: 540px;
+	max-width: 540px;
+	width: 100%;
 }
 
 #menu-mobile {
@@ -3502,6 +3503,26 @@ max-width: 540px;
 
 	.agenda-container a .content p {
 		overflow: hidden;
+	}
+
+	body.blog #aceleracao-footer-margin {
+	    margin-bottom: 50px;
+
+	}
+
+	.noticias-loop-container .btn-leia {
+	    position: relative;
+	    margin-top: 20px;
+
+	}
+
+	.noticias-loop-container .inside {
+		min-height: 230px;
+		padding-bottom: 50px;
+	}
+
+	.embed-youtube {
+		width: 100%;
 	}
 
 }
