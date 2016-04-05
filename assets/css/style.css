@@ -3211,8 +3211,16 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 
 @media screen and (max-width:768px) {
 
+	.page .hentry {
+	    margin: 0 auto;
+	}
+
 	.page-template-default article {
 	    margin-top: 20px !important;
+	}
+
+	#como-apoiar.is-aceleracao {
+	    margin: 30px auto -35px;
 	}
 
 	.container.home .destaque-1 h2, .container.home .destaque-3 h2 {
@@ -3316,7 +3324,7 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 
 	.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1, .post-type-archive-dlm_download .page-header h1 {
 	font-size: 2em;
-	margin-left: 5%;
+	margin-left: 2%;
 	}
 
 	article#projetos-post h1 {
@@ -3459,6 +3467,10 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 
 	#header {
 		margin-bottom: 15px;
+	}
+
+	.page-template-default #header {
+		margin-bottom: 0px;
 	}
 
 	.category-agenda #header {
