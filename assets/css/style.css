@@ -348,7 +348,7 @@ body.page .destaque-1 h3,
 	background: none repeat scroll 0% 0% #dd7a04;
 	position: absolute;
 	margin-left: 8%;
-	margin-top: 36%;
+	margin-top: 37%;
 	width:280px;
 }
 
@@ -1872,8 +1872,9 @@ blockquote {
 }
 /* index.php */
 .noticias-loop-container{
-	height:370px;
+	height:370px !important;
 	margin-bottom: 20px;
+	clear: both;
 }
 .noticias-loop-container:nth-of-type(1),.noticias-loop-container:nth-of-type(2){
 	height:360px;
@@ -2130,7 +2131,7 @@ a.zilla-button:visited {
 	font-size: 1em;
 	margin-right: 10px;
 	right: 5px;
-	bottom: 15px;
+	bottom: 10px;
 	background: #DD7A04 none repeat scroll 0% 0%;
 	font-family: "Gotham-Bold",sans-serif;
 	text-transform: uppercase;
@@ -3030,6 +3031,7 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 }
 
 .filter-membros {
+    margin-left: 15px;
     margin-top: 10px;
     padding: 0;
 }
@@ -3040,7 +3042,6 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
     font-size: 1.4em;
     padding-top: 5px;
     display: inline-block;
-    margin-left: 35px;
     position: absolute;
 }
 
@@ -3317,9 +3318,35 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 		display: none;
 	}
 	.bg-title-projetos {
-	  margin-top: 290px;
-	  height: 100%;
-	  min-height: 180px;
+	    margin-top: -100px;
+	    height: 100%;
+	    background-size: initial !important;
+	}
+
+	.filter-title {
+	    position: inherit;
+	    margin-bottom: 20px;
+	    position: inherit;
+	    clear: both;
+	    width: 100%;
+	}
+
+	filter-membros {
+	    margin-top: 0px;
+    	    margin-left: 20px;
+	}
+
+	.filter-membros .dropdown {
+		float: left;
+	}
+
+	.map-margin-top {
+	    clear: both;
+	    height: 20px;
+	}
+
+	.post-type-archive-membros #como-apoiar {
+	    height: 245px;
 	}
 
 	.post-type-archive-projetos .page-header h1, .single-projetos .page-header h1, .page-template-page-rede-php .page-header h1, .post-type-archive-dlm_download .page-header h1 {
