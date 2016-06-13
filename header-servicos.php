@@ -71,7 +71,7 @@
 						);
 					?>
 
-					<a href="#" id="search-interno-click" data-open="false"></a>
+					<a href="#" class="search-interno-click" data-open="false"></a>
 				</div><!-- .navbar-collapse -->
 
 		<?php if(!is_post_type_archive()):?>
@@ -116,7 +116,7 @@
 					</button>
 
 					<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
-					<a href="#" id="search-interno-click" data-open="false"></a>
+					<a href="#" class="search-interno-click" data-open="false"></a>
 
 				</div>
 
