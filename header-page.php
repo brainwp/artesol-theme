@@ -37,7 +37,7 @@
 		<header id="header" role="banner">
 
 <div id="menu-normal">
-				
+
 <nav id="main-navigation" class="navbar navbar-default sticky-menu" role="navigation">
 
 				<a class="logo" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
@@ -69,7 +69,7 @@
 						);
 					?>
 
-					<a href="#" id="search-interno-click" data-open="false"></a>
+					<a href="#" class="search-interno-click" data-open="false"></a>
 				</div><!-- .navbar-collapse -->
 			</nav><!-- #main-menu -->
 
@@ -96,7 +96,7 @@
 					</button>
 
 					<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'odin' ); ?>"><?php _e( 'Skip to content', 'odin' ); ?></a>
-					<a href="#" id="search-interno-click" data-open="false"></a>
+					<a href="#" class="search-interno-click" data-open="false"></a>
 
 				</div>
 

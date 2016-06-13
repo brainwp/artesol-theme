@@ -1151,17 +1151,17 @@ body.post-type-archive-projetos {
 .single-membros .page-header h1 a,
 .post-type-archive-produtos .page-header h1 a {
 	text-decoration:none;
-	color: #FFF;	
+	color: #FFF;
 }
 
 .single-projetos .page-header h1 a:hover,
 .single-membros .page-header h1 a:hover,
 .post-type-archive-produtos .page-header h1 a:hover {
 	text-decoration:none;
-	color: #EEE;	
+	color: #EEE;
 }
 
-.nav-history a:hover { 
+.nav-history a:hover {
 	text-decoration: none;
 	color: #217F56;
 }
@@ -1170,7 +1170,7 @@ body.post-type-archive-projetos {
 a:hover.projetos {
 	text-decoration: none;
 	color: #EEE !important;
-} 
+}
 
 
 .single-projetos .page-header span,
@@ -2701,7 +2701,7 @@ body.category-agenda #como-apoiar{
 .agenda-pagination a.next, .agenda-pagination a.prev{
 	color:#1fa9b5
 }
-	
+
 #reveal-modal-id .prev-post-reveal-nav, #reveal-modal-id .next-post-reveal-nav{
 	display:none;
 }
@@ -2958,7 +2958,7 @@ body.error404 #como-apoiar{
 	border:none !important;
 	height:45px;
 }
-#search-interno-click{
+.search-interno-click{
 	margin-top:10px;
 	margin-right: 10px;
 	float: right;
@@ -3145,11 +3145,11 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 		position:relative;
 		margin:0 !important;
 	}
-	
+
 	#menu-top li, #menu-top a {
 		text-align: center;
 	}
-	
+
 	#search-form{
 		width:100%;
 		position:relative;
@@ -3230,7 +3230,7 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 	    width: 100%;
 	}
 
-	#search-interno-click {
+	.search-interno-click {
 		display: block;
 	}
 
@@ -3602,7 +3602,7 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 	    margin-top: -15px;
 	}
 
-	
+
 	.agenda-container a .content {
 		width: 70%;
 	}

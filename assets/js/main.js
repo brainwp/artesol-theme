@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
 			}
 		});
 	})
-	$('#search-interno-click').on('click',function(e){
+	$('.search-interno-click').on('click',function(e){
 		var open = $(this).attr('data-open');
 		if(open == 'false'){
 			$('form#search-interno').fadeIn('slow');
