@@ -262,13 +262,23 @@ body.page .destaque-1 h3,
 }
 
 /* Boxes da Home */
-.container.home .boxes {
+
+.container.home .boxes.coluna-1 {
+    max-width: 31.3%;
+    min-height: 360px;
+    overflow: hidden;
+    float: left;
+}
+
+.container.home .boxes.destaque-1, .container.home .boxes.destaque-2 {
+    float: left;
+    width: 100%;
 }
 
 .container.home .boxes .servicos {
 	color: #726658; /* Marrom */
 	overflow: hidden;
-	width: 100%;
+	width: auto;
 }
 
 .container.home .boxes .servicos h3 {
@@ -282,7 +292,7 @@ body.page .destaque-1 h3,
 	color: #1fa9b5; /* Azul */
 	margin-top: 10px;
 	overflow: hidden;
-	width: 100%;
+	width: auto;
 }
 
 .container.home .boxes .agenda h3 {
@@ -292,12 +302,17 @@ body.page .destaque-1 h3,
 	font-family: 'Gotham-Bold',sans-serif;
 }
 
+.coluna-1 .servicos span, .coluna-1 .agenda span  {
+	width: 96%;
+    display: inherit;
+}
+
 .container.home .boxes .servicos .btn-artesol,
 .container.home .boxes .agenda .btn-artesol {
 	color: #FFF;
 	float: right;
 	font-size: 0.75em;
-	margin-top: 10px;
+	margin-top: 20px;
 	font-family: "Gotham-Bold",sans-serif;
 	text-transform: uppercase;
 	padding: 4px 6px;
@@ -308,6 +323,7 @@ body.page .destaque-1 h3,
 .container.home .boxes .agenda a.btn-artesol {
 	text-decoration: none;
 }
+
 /*menu*/
 #menu-top>ul{
 	display:none;
@@ -872,9 +888,8 @@ body.page #menu-institucional ul li a:hover{
 	background:#c7bba7;
 	color:white;
 }
-body.page .boxes{
-	padding:0;
-	margin-top:10px;
+.slick-slider {
+    margin-bottom: 20px;
 }
 body.page article h1.post-title{
 	font-family: 'Gotham-Bold';
@@ -1864,7 +1879,7 @@ body.category-agenda .navbar-default .navbar-nav > li > a:hover{
 }
 
 .page-template-page-home-php .site-main {
-	margin-bottom: 135px;
+	margin-bottom: 100px;
 }
 blockquote {
     font-size: 15.5px;
@@ -3276,7 +3291,7 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 	}
 
 	#slider-home {
-	    padding: 0 3%;
+	    padding: 0;
 	}
 
 	#slider-home.single .area {
