@@ -399,9 +399,14 @@ body.page .destaque-1 h3,
 	text-decoration:none !important;
 	display:block;
 }
-#slider-home.mult .item{
-	margin-left:10px;
+#slider-home.mult .item {
+	margin-right: 20px;
 }
+
+#slider-home.mult .item:nth-child(3) {
+    margin-right: 0px;
+}
+
 #slider-home div.mult-only{
 	display:none;
 }
@@ -3416,6 +3421,10 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 
 	#aceleracao-footer h3.section-title {
 	    font-size: 2em;
+	}
+
+	.container.home .boxes.coluna-1 {
+    max-width: 100%;
 	}
 
 	.container.home .destaque-1, .container.home .destaque-2, .container.home .destaque-3 {
