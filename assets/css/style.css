@@ -845,6 +845,7 @@ margin: 0 auto -26px;
 body.page-template-page-institucional-php .destaque-1, body.page-template-page-english .destaque-1{
 	max-width: inherit !important;
 	margin:0 !important;
+	float: right;
 }
 body.page-template-page-institucional-php .destaque-1 h2, body.page-template-page-english .destaque-1 h2{
 	color:white !important;
@@ -853,11 +854,20 @@ body.page-template-page-institucional-php .destaque-1 h2, body.page-template-pag
 	text-transform: none !important;
 	padding-top: 130px;
 }
+body.page-template-page-institucional-php article.col-md-8, body.page-template-page-english-php article.col-md-8{
+	padding-left: 5px !important;
+}
+
+body.page-template-page-institucional-php #main, body.page-template-page-english-php #main{
+    margin-top: 10px;
+}
+
 body.page #menu-institucional{
 	background:#c2b59b;
 	padding:10px;
 	padding-left:0;
 }
+
 body.page footer #menu-institucional{
 	background-color: transparent;
 }
@@ -913,7 +923,7 @@ body.page article h1.post-title{
 }
 body.page article .content{
 	font-family: "Istok Web",sans-serif;
-	padding:10px;
+	padding:20px;
 }
 
 /* Aceleracao footer */
@@ -1894,7 +1904,6 @@ blockquote {
 .noticias-loop-container{
 	height:370px !important;
 	margin-bottom: 20px;
-	clear: both;
 }
 .noticias-loop-container:nth-of-type(1),.noticias-loop-container:nth-of-type(2){
 	height:360px;
@@ -2137,7 +2146,7 @@ a.zilla-button:visited {
 	margin-top: 25px;
 }
 .each-publicacao {
-	min-height:332px;
+	min-height:350px;
 	background:#E2E2E2 !important;
 	border-left:10px solid #dd7a00;
 	border-bottom:10px solid #dd7a00;
@@ -3590,6 +3599,7 @@ body.post-type-archive-membros .bg-title-projetos, body.single-membros .bg-title
 	    font-size: 2em;
 	    background: none;
 	    margin-top: 10px;
+	    margin-left: 0px;
 	}
 	.change-english{
 		display: none;

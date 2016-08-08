@@ -27,7 +27,7 @@ get_header( 'projetos' ); ?>
 					    <?php endif;?>
 					</span>
 				</header><!-- .page-header -->
-
+  <div class="clear"></div>
 				<?php
 					// Start the Loop.
 					while ( have_posts() ) : the_post();
