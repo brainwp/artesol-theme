@@ -1215,8 +1215,7 @@ a:hover.projetos {
 article#projetos-post{
 	margin-bottom:80px;
 	padding-bottom:10px;
-	background:url('../images/bg-single-projetos.jpg') no-repeat;
-	background-size:cover;
+	background:url('../images/bg-single-projetos.jpg') repeat;
 	border-bottom: 9px solid #F7D916;
 	border-left: 9px solid #F7D916;
 	padding-top: 15px;
